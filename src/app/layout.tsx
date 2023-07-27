@@ -1,13 +1,10 @@
 import { fallbackLocale, getMessages } from "@locales/index";
 import "./globals.css";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import Providers from "./providers";
-
-export const Pretendard = localFont({
-  src: "../../public/fonts/PretendardVariable.woff2",
-});
+import classNames from "classnames";
+import { Pretendard } from "@constants/constant";
 
 export async function generateMetadata() {
   const locale = fallbackLocale; // now언어
@@ -62,7 +59,14 @@ const LocaleLayout = async ({ children }: { children: React.ReactNode }) => {
     <html lang={locale}>
       <Providers>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <body className={Pretendard.className}>{children}</body>
+          <body
+            className={classNames(
+              "min-h-screen w-full text-white",
+              Pretendard.className
+            )}
+          >
+            {children}
+          </body>
         </NextIntlClientProvider>
       </Providers>
     </html>

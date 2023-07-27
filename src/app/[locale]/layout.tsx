@@ -3,11 +3,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import classNames from "classnames";
+import Header from "@components/sections/Header";
 
 export const Pretendard = localFont({
   src: "../../../public/fonts/PretendardVariable.woff2",
 });
-
 export async function generateMetadata({ params: { locale = "en" } }) {
   const messages = await getMessages(locale); // now언어 메시지 로드
   const t = createTranslator({ locale, messages }); // text 번역
@@ -54,9 +54,14 @@ const LocaleLayout = async ({
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body
-          className={classNames("min-h-screen w-full", Pretendard.className)}
+          className={classNames(
+            "min-h-screen w-full text-white",
+            Pretendard.className
+          )}
         >
+          <Header />
           {children}
+          {/* <Footer /> */}
         </body>
       </NextIntlClientProvider>
     </html>
