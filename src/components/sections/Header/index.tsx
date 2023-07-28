@@ -41,10 +41,19 @@ const Header: FC = () => {
 
   const [open, setOpen] = useState(false);
   const [navOn, setNavOn] = useState(false);
+  const [navShow, setNavShow] = useState(false);
 
   const onClose = useCallback(() => {
     setOpen(false);
   }, []);
+
+  const handleLanguageChange = (targetLocale: Locale) => {
+    const processedLocale = processLocale(targetLocale);
+    const [_, locale, ...rest] = pathname.split("/");
+    if (locale !== processedLocale) {
+      router.replace(`/${processedLocale}/${rest.join("/")}`);
+    }
+  };
 
   useEffect(() => {
     const [_, ...routes] = pathname.split("/");
@@ -62,16 +71,17 @@ const Header: FC = () => {
     }
   }, [pathname, router]);
 
-  const handleLanguageChange = (targetLocale: Locale) => {
-    const processedLocale = processLocale(targetLocale);
-    const [_, locale, ...rest] = pathname.split("/");
-    if (locale !== processedLocale) {
-      router.replace(`/${processedLocale}/${rest.join("/")}`);
-    }
-  };
+  useEffect(() => {
+    setTimeout(() => setNavShow(true), 2000);
+  });
 
   return (
-    <div id="navbar" className="fixed top-0 w-full z-50 ">
+    <div
+      id="navbar"
+      className={`${
+        navShow && "opacity-100"
+      } opacity-0 duration-500 fixed top-0 w-full z-50`}
+    >
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative md:hidden" onClose={setOpen}>
@@ -172,9 +182,11 @@ const Header: FC = () => {
                       <Link
                         key={page.name}
                         href={page.href}
-                        className={`relative duration-200 text-sm flex items-center`}
+                        className="relative duration-200 text-sm flex items-center "
                       >
-                        {page.name}
+                        <span className="duration-200 hover:-translate-y-0.5">
+                          {page.name}
+                        </span>
                         {localizedPathname === page.href && (
                           <div className="w-full mx-auto absolute bg-indigo-400 h-0.5 rounded-md -bottom-1"></div>
                         )}

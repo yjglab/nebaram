@@ -3,7 +3,7 @@ import LogoAnimation from "./LogoAnimation";
 
 const BannerSection: FC = () => {
   return (
-    <div>
+    <div className="min-h-[70svh] flex items-center">
       <LogoAnimation />
     </div>
   );
