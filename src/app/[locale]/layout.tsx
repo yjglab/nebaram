@@ -55,7 +55,7 @@ const LocaleLayout = async ({
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body
           className={classNames(
-            "min-h-screen w-full text-white",
+            "mx-auto max-w-7xl px-6 lg:px-8 text-white",
             Pretendard.className
           )}
         >

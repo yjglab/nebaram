@@ -1,7 +1,13 @@
+import BannerSection from "@components/sections/BannerSection";
 import { NextPage } from "next";
+import Head from "next/head";
 
 const MainPage: NextPage = () => {
-  return <></>;
+  return (
+    <>
+      <BannerSection />
+    </>
+  );
 };
 
 export default MainPage;

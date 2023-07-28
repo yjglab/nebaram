@@ -59,14 +59,7 @@ const LocaleLayout = async ({ children }: { children: React.ReactNode }) => {
     <html lang={locale}>
       <Providers>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <body
-            className={classNames(
-              "min-h-screen w-full text-white",
-              Pretendard.className
-            )}
-          >
-            {children}
-          </body>
+          <body className={Pretendard.className}>{children}</body>
         </NextIntlClientProvider>
       </Providers>
     </html>
