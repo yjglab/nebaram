@@ -196,7 +196,7 @@ const Header: FC = () => {
                 </Popover.Group>
               </div>
               <div>
-                <DropMenu title="Language" chevron={true} width={12}>
+                <DropMenu title="Language" chevron={true} width={24}>
                   {supportedLocalesMap.map((localeMap) => (
                     <Menu.Item key={localeMap.locale}>
                       {({ active }) => (
@@ -205,7 +205,7 @@ const Header: FC = () => {
                             handleLanguageChange(localeMap.locale as Locale)
                           }
                           className={`${
-                            active ? "bg-slate-100" : "text-slate-700"
+                            active ? "bg-indigo-400" : "text-black"
                           } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                         >
                           {localeMap.name}
