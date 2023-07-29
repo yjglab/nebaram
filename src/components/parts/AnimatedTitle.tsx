@@ -17,7 +17,7 @@ const AnimatedTitle: FC<Props> = (props) => {
   return (
     <div
       className={classNames(
-        "flex flex-wrap gap-2 font-bold tracking-tight text-gray-900 dark:text-gray-50",
+        "flex flex-wrap gap-2 font-semibold tracking-tight text-gray-900 dark:text-gray-50",
         size === "sm" && "text-2xl sm:text-3xl",
         size === "md" && "text-3xl sm:text-4xl",
         size === "lg" && "text-4xl sm:text-5xl",
