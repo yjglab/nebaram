@@ -6,13 +6,14 @@ import { FC } from "react";
 import { BannerLogoKeyframe } from "@constants/animations";
 
 const LogoSpinner = styled.img`
-  animation: ${BannerLogoKeyframe} 3s ease-in-out forwards;
+  animation: ${BannerLogoKeyframe} 3s ease-out forwards;
 `;
 
 const LogoAnimation: FC = () => {
   return (
-    <div className=" h-1/2">
-      <LogoSpinner src={clogo} className="w-36" />
+    <div className="z-10 h-1/2">
+      {/* 반응형 크기조정하기 */}
+      <LogoSpinner src={clogo} className="w-56" />
     </div>
   );
 };

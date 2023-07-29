@@ -6,7 +6,7 @@ import React, { FC } from "react";
 
 interface Props {
   children: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xlg";
   align?: "left" | "center" | "right";
   className?: string;
 }
@@ -21,6 +21,7 @@ const AnimatedTitle: FC<Props> = (props) => {
         size === "sm" && "text-2xl sm:text-3xl",
         size === "md" && "text-3xl sm:text-4xl",
         size === "lg" && "text-4xl sm:text-5xl",
+        size === "xlg" && "text-5xl sm:text-6xl",
         align === "left" && "justify-start",
         align === "center" && "justify-center",
         align === "right" && "justify-end",

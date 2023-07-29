@@ -6,7 +6,26 @@ export const SpinKeyframe = keyframes`
   100% {
   }
 `;
-
+export const ScrollIndicatorKeyframe = keyframes`
+  0%{
+    transform: translateY(0%);
+  }
+  10%{
+    transform: translateY(-20%);
+  }
+  60%{
+    transform: translateY(-20%);
+  }
+  65%{
+    transform: translateY(0%);
+  }
+  70%{
+    transform: translateY(-10%);
+  }
+  80%{
+    transform: translateY(0%);
+  }
+`;
 export const BannerLogoKeyframe = keyframes`
   0% {
     opacity: 0;
