@@ -22,7 +22,7 @@ const LogoAnimation: FC = () => {
           borderRadius: "100%",
         }}
       >
-        <LogoSpinner src={clogo} className="w-56" />
+        <LogoSpinner src={clogo} className="w-44 lg:w-60" />
       </motion.div>
     </div>
   );

@@ -25,16 +25,16 @@ const BannerSection: FC = () => {
 
   return (
     <div className="min-h-screen flex items-center relative justify-center">
-      <div className="flex flex-col w-full h-full relative bottom-20 justify-center items-center">
-        <LogoAnimation />
-        <AnimCircleVideo introVideoShow={introVideoShow} />
-      </div>
-      <div className="absolute bottom-[20%]">
+      <div className="absolute z-10 top-[15%]">
         {introShow && (
           <AnimatedTitle align="center" size="lg">
-            {t("BannerSection.bannerTitle")}
+            {t("BannerSection.title")}
           </AnimatedTitle>
         )}
+      </div>
+      <div className="flex flex-col w-full h-full relative top-8 justify-center items-center">
+        <LogoAnimation />
+        <AnimCircleVideo introVideoShow={introVideoShow} />
       </div>
       <ScrollIndicator className="hover:translate-y-2 duration-300 absolute bottom-6 mx-auto">
         <ChevronDownIcon className="w-16 text-indigo-400" />

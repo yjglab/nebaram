@@ -51,7 +51,7 @@ const AnimCircleVideo: FC<Props> = ({ introVideoShow }) => {
             src="/videos/banner_video.mp4"
             className={classNames(
               introVideoShow ? "opacity-100" : "opacity-0",
-              "duration-1000  -z-10"
+              "duration-[1s]  -z-10"
             )}
           />
         </div>
