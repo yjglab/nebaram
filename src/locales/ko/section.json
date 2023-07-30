@@ -5,6 +5,18 @@
   "IntroSection": {
     "title": "만들고 싶었던 당신의 웹 서비스, 오직 네바람에서",
     "description1": "기획부터 개발, 디자인, 배포까지. 작업에 필요한 단계 중 원하는 파트를 함께 진행해드려요.",
-    "description2": "이제껏 경험 못 했던 쉽고 편리한 웹 솔루션 서비스, 네바람과 함께라면 빠르게 구현할 수 있어요."
+    "description2": "이제껏 경험 못 했던 쉽고 편리한 웹 솔루션 서비스, 네바람과 함께라면 빠르게 구현할 수 있어요.",
+    "intro1Team": "네바람 기획",
+    "intro1Title": "기획팀은 상식적입니다.",
+    "intro1Src": "https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    "intro2Team": "네바람 디자인",
+    "intro2Title": "디자인팀은 상식적입니다.",
+    "intro2Src": "https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    "intro3Team": "네바람 프론트엔드",
+    "intro3Title": "프론트팀은 상식적입니다.",
+    "intro3Src": "https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+    "intro4Team": "네바람 백엔드",
+    "intro4Title": "백팀은 상식적입니다.",
+    "intro4Src": "https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
   }
 }

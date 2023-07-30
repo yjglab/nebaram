@@ -7,7 +7,7 @@ import { FC } from "react";
 import { BannerLogoKeyframe } from "@constants/animations";
 
 const LogoSpinner = styled.img`
-  animation: ${BannerLogoKeyframe} 3s ease-out forwards;
+  animation: ${BannerLogoKeyframe} 0s ease-out forwards;
 `;
 
 const LogoAnimation: FC = () => {
