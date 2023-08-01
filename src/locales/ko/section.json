@@ -11,7 +11,7 @@
     "team1Src": "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
     "team2": "네바람 디자인",
     "team2Title": "디자인팀은 상식적입니다.",
-    "team2Src": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    "team2Src": "https://img.freepik.com/free-photo/young-woman-working-animation-studio_23-2149208035.jpg?w=1800&t=st=1690892392~exp=1690892992~hmac=ccaddac5c0b42888f43891a8977b7dd9fc9ffb30750fef7bf836868325568079",
     "team3": "네바람 프론트엔드",
     "team3Title": "프론트팀은 상식적입니다.",
     "team3Src": "https://images.unsplash.com/flagged/photo-1563536310477-c7b4e3a800c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
@@ -22,6 +22,7 @@
   "OutcomeSection": {
     "header1": "새로움을 추구하는 사람들이 모여,",
     "header2": "웹 서비스의 새로운 패러다임을 만듭니다.",
+    "src": "https://img.freepik.com/free-photo/paperwork_1098-18063.jpg?w=1800&t=st=1690895656~exp=1690896256~hmac=f279b08db08215255bcefd1bbf11fa8b89f87da93d29f93ad8fd6c0348ab357e",
     "title1": "누적 작업일",
     "value1": "{days}일+",
     "title2": "누적 매출액",
@@ -30,5 +31,13 @@
     "value3": "{workers}명+",
     "title4": "작업한 서비스",
     "value4": "{services}개+"
+  },
+  "ObjectiveSection": {
+    "title": "네바람 스퀘어의 목표",
+    "description1": "우리는 누구나 쉽게 웹 서비스를 만들고 접근할 수 있는 그날까지 끝없이 달려가는 팀입니다.",
+    "description2": "어렵고 멀게만 느껴지는 분야가 되지 않도록 각 스퀘어의 멤버들이 여러분과 작업을 함께 진행합니다.",
+    "src1": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3",
+    "src2": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3",
+    "src3": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3"
   }
 }

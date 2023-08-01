@@ -45,7 +45,7 @@ const TeamSection: FC = () => {
   };
 
   return (
-    <div className="px-[4vw] lg:px-[24vw] mt-44 min-h-screen py-24 sm:py-36 flex flex-col items-center">
+    <div className="px-[4vw] lg:px-[24vw] min-h-screen py-24 sm:py-36 flex flex-col items-center">
       <div className="text-center w-full">
         <AnimatedTitle size="lg" align="center">
           {t("TeamSection.title")}

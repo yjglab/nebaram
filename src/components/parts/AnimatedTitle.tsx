@@ -6,7 +6,7 @@ import React, { FC } from "react";
 
 interface Props {
   children: string;
-  size?: "sm" | "md" | "lg" | "xlg";
+  size?: "xs" | "sm" | "md" | "lg" | "xlg";
   align?: "left" | "center" | "right";
   className?: string;
 }
@@ -18,6 +18,7 @@ const AnimatedTitle: FC<Props> = (props) => {
     <div
       className={classNames(
         "flex flex-wrap gap-2 font-semibold tracking-tight text-gray-900 dark:text-gray-50",
+        size === "xs" && "text-xl sm:text-2xl",
         size === "sm" && "text-2xl sm:text-3xl",
         size === "md" && "text-3xl sm:text-4xl",
         size === "lg" && "text-4xl sm:text-5xl",

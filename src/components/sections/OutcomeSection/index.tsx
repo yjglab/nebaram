@@ -74,7 +74,7 @@ const OutcomeSection: FC = () => {
       <div ref={backgroundRef} className="w-full h-full absolute">
         <ShadowBoxTop className="bg-black w-full h-36 z-10 absolute -top-36 shadow-black"></ShadowBoxTop>
         <Image
-          src="https://images.unsplash.com/photo-1519155031214-e8d583928bf2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          src={t("OutcomeSection.src")}
           layout="fill"
           objectFit="cover"
           style={{ opacity: backgroundOpacity }}
@@ -103,7 +103,7 @@ const OutcomeSection: FC = () => {
                 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="text-xl font-semibold leading-6 text-gray-400">
+                <p className="text-xl font-semibold leading-6 text-indigo-400">
                   {outcome.title}
                 </p>
                 <p className="-mt-1 tracking-wide text-[66px] font-bold text-gray-900 dark:text-gray-50">
