@@ -81,9 +81,9 @@ const OutcomeSection: FC = () => {
           className="absolute"
           alt=""
         />
-        <ShadowBoxBottom className="bg-black w-full h-36 z-10 absolute -bottom-36 shadow-black"></ShadowBoxBottom>
+        <ShadowBoxBottom className="bg-black w-full h-36 absolute -bottom-36 shadow-black"></ShadowBoxBottom>
       </div>
-      <div className="w-full max-w-7xl px-44 pb-32 pt-36 h-full lg:shrink-0">
+      <div className="w-full z-20 max-w-7xl px-44 pb-32 pt-36 h-full lg:shrink-0">
         <div className="sticky top-[25%] mt-4">
           <div className="gap-4 flex flex-col">
             <AnimatedTitle>{t("OutcomeSection.header1")}</AnimatedTitle>
@@ -98,7 +98,7 @@ const OutcomeSection: FC = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{
                   type: "tween",
-                  duration: 0.7,
+                  duration: 1,
                   delay: index * 0.2,
                 }}
                 viewport={{ once: true, amount: 0.5 }}

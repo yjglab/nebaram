@@ -1,7 +1,7 @@
 "use client";
 
 import BannerSection from "@components/sections/BannerSection";
-import IntroSection from "@components/sections/IntroSection";
+import TeamSection from "@components/sections/TeamSection";
 import OutcomeSection from "@components/sections/OutcomeSection";
 import {
   Locale,
@@ -37,7 +37,7 @@ const MainPage: NextPage = () => {
     <div className="sr-only flex flex-col items-stretch">
       <BannerSection />
       <OutcomeSection />
-      <IntroSection />
+      <TeamSection />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import BannerSection from "@components/sections/BannerSection";
-import IntroSection from "@components/sections/IntroSection";
+import TeamSection from "@components/sections/TeamSection";
 import OutcomeSection from "@components/sections/OutcomeSection";
 import { NextPage } from "next";
 
@@ -8,7 +8,7 @@ const MainPage: NextPage = () => {
     <>
       <BannerSection />
       <OutcomeSection />
-      <IntroSection />
+      <TeamSection />
     </>
   );
 };
