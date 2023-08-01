@@ -45,11 +45,16 @@ const TeamSection: FC = () => {
   };
 
   return (
-    <div className="px-[4vw] lg:px-[24vw] min-h-screen py-24 sm:py-36 flex flex-col items-center">
+    <div className="px-[4vw] lg:px-[24vw] min-h-screen py-24 sm:py-32 flex flex-col items-center">
       <div className="text-center w-full">
-        <AnimatedTitle size="lg" align="center">
-          {t("TeamSection.title")}
-        </AnimatedTitle>
+        <div className="gap-4 flex flex-col">
+          <AnimatedTitle size="lg" align="center">
+            {t("TeamSection.sectionTitle1")}
+          </AnimatedTitle>
+          <AnimatedTitle size="lg" align="center">
+            {t("TeamSection.sectionTitle2")}
+          </AnimatedTitle>
+        </div>
         <motion.div
           className="relative mt-8"
           initial={{ opacity: 0, y: 50 }}

@@ -3,6 +3,7 @@ import TeamSection from "@components/sections/TeamSection";
 import OutcomeSection from "@components/sections/OutcomeSection";
 import { NextPage } from "next";
 import ObjectiveSection from "@components/sections/ObjectiveSection";
+import HistorySection from "@components/sections/HistorySection";
 
 const MainPage: NextPage = () => {
   return (
@@ -10,6 +11,7 @@ const MainPage: NextPage = () => {
       <BannerSection />
       <OutcomeSection />
       <ObjectiveSection />
+      <HistorySection />
       <TeamSection />
     </>
   );

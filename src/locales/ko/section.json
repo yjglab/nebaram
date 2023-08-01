@@ -3,7 +3,8 @@
     "title": "네바람에서 여러분의 새 바람을 실현하세요"
   },
   "TeamSection": {
-    "title": "만들고 싶었던 당신의 웹 서비스, 오직 네바람에서",
+    "sectionTitle1": "만들고 싶었던 당신의 웹 서비스,",
+    "sectionTitle2": "오직 네바람에서",
     "description1": "기획부터 개발, 디자인, 배포까지. 작업에 필요한 단계 중 원하는 파트를 함께 진행해드려요.",
     "description2": "이제껏 경험 못 했던 쉽고 편리한 웹 솔루션 서비스, 네바람과 함께라면 빠르게 구현할 수 있어요.",
     "team1": "네바람 기획",
@@ -32,10 +33,49 @@
     "title4": "작업한 서비스",
     "value4": "{services}개+"
   },
+  "HistorySection": {
+    "sectionTitle1": "네바람은 지금도",
+    "sectionTitle2": "빠르게 성장하고 있습니다",
+    "content1": {
+      "year": "2023",
+      "month": "2023.08",
+      "content": "네바람 공식 홈페이지 배포"
+    },
+    "content2": {
+      "year": "",
+      "month": "2023.05",
+      "content": "실시간 채팅룸 서비스, BlooWays 배포"
+    },
+    "content3": {
+      "year": "",
+      "month": "2023.02",
+      "content": "웹 서비스 직무 커뮤니티 서비스, BlooBolt 배포"
+    },
+    "content4": {
+      "year": "",
+      "month": "2023.01",
+      "content": "네바람 Bloo Series 제작"
+    },
+    "content5": {
+      "year": "2022",
+      "month": "2022.10",
+      "content": "웹 전시 오브젝트 정보 디자인, Museum Union Gallery 배포"
+    },
+    "content6": {
+      "year": "",
+      "month": "2022.07",
+      "content": "디저트 브랜드, THERA 리브랜딩"
+    },
+    "content7": {
+      "year": "2021",
+      "month": "2021.03",
+      "content": "네바람 웹 솔루션 서비스 설립"
+    }
+  },
   "ObjectiveSection": {
     "title": "네바람 스퀘어의 목표",
     "description1": "우리는 누구나 쉽게 웹 서비스를 만들고 접근할 수 있는 그날까지 끝없이 달려가는 팀입니다.",
-    "description2": "어렵고 멀게만 느껴지는 분야가 되지 않도록 각 스퀘어의 멤버들이 여러분과 작업을 함께 진행합니다.",
+    "description2": "어렵고 멀게만 느껴지는 분야가 되지 않도록 각 스퀘어의 멤버들이 여러분과 함께 작업을 진행합니다.",
     "src1": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3",
     "src2": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3",
     "src3": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3"
