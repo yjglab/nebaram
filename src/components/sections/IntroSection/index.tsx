@@ -1,7 +1,7 @@
 "use client";
 
 import AnimatedTitle from "@components/parts/AnimatedTitle";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { FC, MouseEvent, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -45,11 +45,13 @@ const IntroSection: FC = () => {
   };
 
   return (
-    <div className="px-[4vw] lg:px-[24vw] min-h-screen py-24 sm:py-36 flex flex-col items-center">
+    <div className="px-[4vw] lg:px-[24vw] mt-44 min-h-screen py-24 sm:py-36 flex flex-col items-center">
       <div className="text-center w-full">
-        <AnimatedTitle align="center">{t("IntroSection.title")}</AnimatedTitle>
+        <AnimatedTitle size="lg" align="center">
+          {t("IntroSection.title")}
+        </AnimatedTitle>
         <motion.div
-          className="relative"
+          className="relative mt-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

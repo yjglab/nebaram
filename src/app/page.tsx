@@ -1,5 +1,8 @@
 "use client";
 
+import BannerSection from "@components/sections/BannerSection";
+import IntroSection from "@components/sections/IntroSection";
+import OutcomeSection from "@components/sections/OutcomeSection";
 import {
   Locale,
   fallbackLocale,
@@ -30,7 +33,13 @@ const MainPage: NextPage = () => {
     }
   }, [navigator, pathname]);
 
-  return <div className=""></div>;
+  return (
+    <div className="sr-only flex flex-col items-stretch">
+      <BannerSection />
+      <OutcomeSection />
+      <IntroSection />
+    </div>
+  );
 };
 
 export default MainPage;

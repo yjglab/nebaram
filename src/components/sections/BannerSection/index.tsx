@@ -18,13 +18,14 @@ const BannerSection: FC = () => {
 
   const [introShow, setIntroShow] = useState(false);
   const [introVideoShow, setIntroVideoShow] = useState(false);
+
   useEffect(() => {
     setTimeout(() => setIntroShow(true), 1500);
     setTimeout(() => setIntroVideoShow(true), 2000);
   });
 
   return (
-    <div className="min-h-screen flex items-center relative justify-center">
+    <div className="z-20  min-h-screen flex items-center relative justify-center">
       <div className="absolute z-10 top-[15%]">
         {introShow && (
           <AnimatedTitle align="center" size="lg">
@@ -37,7 +38,7 @@ const BannerSection: FC = () => {
         <AnimCircleVideo introVideoShow={introVideoShow} />
       </div>
       <ScrollIndicator className="hover:translate-y-2 duration-300 absolute bottom-6 mx-auto">
-        <ChevronDownIcon className="w-16 text-indigo-400" />
+        <ChevronDownIcon className="w-14 text-white" />
       </ScrollIndicator>
     </div>
   );
