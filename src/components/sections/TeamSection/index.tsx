@@ -14,25 +14,49 @@ const TeamSection: FC = () => {
       id: 1,
       team: t("TeamSection.team1"),
       src: t("TeamSection.team1Src"),
-      title: t("TeamSection.team1Title"),
+      title1: t("TeamSection.team1Title1"),
+      title2: t("TeamSection.team1Title2"),
+      description: t.rich("TeamSection.team1Description", {
+        span: (children) => (
+          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+        ),
+      }),
     },
     {
       id: 2,
       team: t("TeamSection.team2"),
       src: t("TeamSection.team2Src"),
-      title: t("TeamSection.team2Title"),
+      title1: t("TeamSection.team2Title1"),
+      title2: t("TeamSection.team2Title2"),
+      description: t.rich("TeamSection.team2Description", {
+        span: (children) => (
+          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+        ),
+      }),
     },
     {
       id: 3,
       team: t("TeamSection.team3"),
       src: t("TeamSection.team3Src"),
-      title: t("TeamSection.team3Title"),
+      title1: t("TeamSection.team3Title1"),
+      title2: t("TeamSection.team3Title2"),
+      description: t.rich("TeamSection.team3Description", {
+        span: (children) => (
+          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+        ),
+      }),
     },
     {
       id: 4,
       team: t("TeamSection.team4"),
       src: t("TeamSection.team4Src"),
-      title: t("TeamSection.team4Title"),
+      title1: t("TeamSection.team4Title1"),
+      title2: t("TeamSection.team4Title2"),
+      description: t.rich("TeamSection.team4Description", {
+        span: (children) => (
+          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+        ),
+      }),
     },
   ];
   const [teamCardHover, setTeamCardHover] = useState("");
@@ -73,7 +97,10 @@ const TeamSection: FC = () => {
         {teamCard.map((card, index) => (
           <motion.div
             key={card.id}
-            className="relative px-10 overflow-hidden py-10 flex flex-col h-[40vh] sm:h-[45vw] md:h-[45vw] lg:h-[35vw] 2xl:h-[30vw] rounded-2xl bg-white/20"
+            id={card.team}
+            onMouseEnter={handleCardHover}
+            onMouseLeave={handleCardLeave}
+            className="relative px-10 overflow-hidden py-10 flex flex-col h-[40vh] sm:h-[45vw] md:h-[45vw] lg:h-[35vw] 2xl:h-[30vw] rounded-2xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{
@@ -84,40 +111,47 @@ const TeamSection: FC = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div
-              id={card.team}
-              onMouseEnter={handleCardHover}
-              onMouseLeave={handleCardLeave}
-              className="hover:opacity-100 top-0 opacity-0 duration-200 z-20 backdrop-blur-md w-full h-full absolute left-0 bg-white/10"
+              className={classNames(
+                teamCardHover === card.team ? "opacity-100" : "opacity-0",
+                "top-0 duration-200 z-20 backdrop-blur-md w-full h-full absolute left-0 bg-black/40"
+              )}
+            />
+            <div
+              className={classNames(
+                teamCardHover === card.team
+                  ? "bottom-4 opacity-0"
+                  : "bottom-0 opacity-100",
+                "z-20 text-base relative font-semibold leading-6 duration-100"
+              )}
             >
-              aa
+              {card.team}
             </div>
-            <div className="">
-              <div
-                className={classNames(
-                  teamCardHover === card.team
-                    ? "bottom-4 opacity-0"
-                    : "bottom-0 opacity-100",
-                  "z-20 text-base relative font-semibold leading-6 duration-100"
-                )}
-              >
-                {card.team}
-              </div>
-              <div
-                className={classNames(
-                  teamCardHover === card.team
-                    ? "bottom-10 text-xl"
-                    : "bottom-0",
-                  "z-20 relative duration-300 text-3xl font-semibold leading-8 mt-4 tracking-tight"
-                )}
-              >
-                {card.title}
-              </div>
+            <div
+              className={classNames(
+                teamCardHover === card.team
+                  ? "bottom-10 text-xl gap-0 "
+                  : "bottom-0 gap-2",
+                "z-20 flex flex-col relative duration-300 text-3xl font-semibold leading-8 mt-4 tracking-tight"
+              )}
+            >
+              <p>{card.title1}</p>
+              <p>{card.title2}</p>
+            </div>
+            <div
+              className={classNames(
+                teamCardHover === card.team
+                  ? "bottom-6 text-gray-300 opacity-100"
+                  : "-bottom-4 opacity-0",
+                "z-20 relative duration-300"
+              )}
+            >
+              {card.description}
             </div>
             <Image
               src={card.src}
               layout="fill"
               objectFit="cover"
-              className="absolute"
+              className="absolute opacity-60"
               alt=""
             />
           </motion.div>
