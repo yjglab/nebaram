@@ -15,7 +15,7 @@ const ShadowBoxBottom = styled.div`
   box-shadow: 0 -30px 130px 90px black;
 `;
 const OutcomeSection: FC = () => {
-  const t = useTranslations("section");
+  const t = useTranslations("owner");
   const backgroundRef = useRef(null);
   const backgroundInView = useInView(backgroundRef);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0);
@@ -23,7 +23,7 @@ const OutcomeSection: FC = () => {
   useEffect(() => {
     const scrollHandler = () => {
       const opacity = window.scrollY / 1000 - 0.6;
-      const downValue = (window.scrollY / 1000 - 2) * 2;
+      const downValue = (window.scrollY / 1000 - 2) * 3;
       if (opacity <= 1) {
         setBackgroundOpacity(opacity);
       } else {
@@ -43,38 +43,50 @@ const OutcomeSection: FC = () => {
       id: 1,
       title: t("OutcomeSection.title1"),
       value: t("OutcomeSection.value1", {
-        days: dayjs().diff(dayjs("2021-02-08"), "day"),
+        days: dayjs().diff(dayjs("2020-07-08"), "day"),
       }),
     },
     {
       id: 2,
       title: t("OutcomeSection.title2"),
       value: t("OutcomeSection.value2", {
-        sales: "1억 ",
+        attends: "3000",
       }),
     },
     {
       id: 3,
-      title: t("OutcomeSection.title3"),
+      title: t.rich("OutcomeSection.title3", {
+        span: (children) => (
+          <span className="ml-1 text-gray-400 font-medium text-sm">
+            {children}
+          </span>
+        ),
+      }),
       value: t("OutcomeSection.value3", {
-        workers: 10,
+        services: 18,
       }),
     },
     {
       id: 4,
-      title: t("OutcomeSection.title4"),
+      title: t.rich("OutcomeSection.title4", {
+        span: (children) => (
+          <span className="ml-1 text-gray-400 font-medium text-sm">
+            {children}
+          </span>
+        ),
+      }),
       value: t("OutcomeSection.value4", {
-        services: 8,
+        awards: 1,
       }),
     },
   ];
 
   return (
-    <div className="mt-24 h-[130vh] mx-auto relative ">
+    <div className="mt-24 h-[110vh] mx-auto relative ">
       <div ref={backgroundRef} className="w-full h-full absolute">
         <ShadowBoxTop className="bg-black w-full h-36 z-10 absolute -top-36 shadow-black"></ShadowBoxTop>
         <Image
-          src={t("OutcomeSection.src")}
+          src="/images/outcome-section/outcome-m-1.jpeg"
           layout="fill"
           objectFit="cover"
           style={{ opacity: backgroundOpacity }}

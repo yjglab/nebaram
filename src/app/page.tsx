@@ -1,8 +1,8 @@
 "use client";
 
-import BannerSection from "@components/sections/BannerSection";
-import TeamSection from "@components/sections/TeamSection";
-import OutcomeSection from "@components/sections/OutcomeSection";
+import BannerSection from "@components/about/BannerSection";
+import TeamSection from "@components/about/TeamSection";
+import OutcomeSection from "@components/about/OutcomeSection";
 import {
   Locale,
   fallbackLocale,

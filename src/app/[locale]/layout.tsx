@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import classNames from "classnames";
-import Header from "@components/sections/Header";
+import Header from "@components/parts/Header";
+import Footer from "@components/parts/Footer";
 
 export const Pretendard = localFont({
   src: "../../../public/fonts/PretendardVariable.woff2",
@@ -61,7 +62,7 @@ const LocaleLayout = async ({
         >
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </body>
       </NextIntlClientProvider>
     </html>

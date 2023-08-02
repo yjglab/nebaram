@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import HistoryGraph from "./HistoryGraph";
 
 const HistorySection: FC = () => {
-  const t = useTranslations("section");
+  const t = useTranslations("about");
 
   return (
     <div className="px-[4vw] lg:px-[24vw] h-screen py-20 sm:py-44 flex flex-col items-center">

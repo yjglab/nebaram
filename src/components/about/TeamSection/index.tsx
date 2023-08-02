@@ -8,12 +8,12 @@ import Image from "next/image";
 import classNames from "classnames";
 
 const TeamSection: FC = () => {
-  const t = useTranslations("section");
+  const t = useTranslations("about");
   const teamCard = [
     {
       id: 1,
       team: t("TeamSection.team1"),
-      src: t("TeamSection.team1Src"),
+      src: "/images/square-section/square-s-1.jpeg",
       title1: t("TeamSection.team1Title1"),
       title2: t("TeamSection.team1Title2"),
       description: t.rich("TeamSection.team1Description", {
@@ -25,7 +25,7 @@ const TeamSection: FC = () => {
     {
       id: 2,
       team: t("TeamSection.team2"),
-      src: t("TeamSection.team2Src"),
+      src: "/images/square-section/square-s-2.jpeg",
       title1: t("TeamSection.team2Title1"),
       title2: t("TeamSection.team2Title2"),
       description: t.rich("TeamSection.team2Description", {
@@ -37,7 +37,7 @@ const TeamSection: FC = () => {
     {
       id: 3,
       team: t("TeamSection.team3"),
-      src: t("TeamSection.team3Src"),
+      src: "/images/square-section/square-s-3.jpeg",
       title1: t("TeamSection.team3Title1"),
       title2: t("TeamSection.team3Title2"),
       description: t.rich("TeamSection.team3Description", {
@@ -49,7 +49,7 @@ const TeamSection: FC = () => {
     {
       id: 4,
       team: t("TeamSection.team4"),
-      src: t("TeamSection.team4Src"),
+      src: "/images/square-section/square-s-4.jpeg",
       title1: t("TeamSection.team4Title1"),
       title2: t("TeamSection.team4Title2"),
       description: t.rich("TeamSection.team4Description", {

@@ -1,9 +1,9 @@
-import BannerSection from "@components/sections/BannerSection";
-import TeamSection from "@components/sections/TeamSection";
-import OutcomeSection from "@components/sections/OutcomeSection";
+import BannerSection from "@components/about/BannerSection";
+import TeamSection from "@components/about/TeamSection";
+import OutcomeSection from "@components/about/OutcomeSection";
 import { NextPage } from "next";
-import ObjectiveSection from "@components/sections/ObjectiveSection";
-import HistorySection from "@components/sections/HistorySection";
+import ObjectiveSection from "@components/about/ObjectiveSection";
+import HistorySection from "@components/about/HistorySection";
 
 const MainPage: NextPage = () => {
   return (

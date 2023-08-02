@@ -14,7 +14,7 @@ const ScrollIndicator = styled.div`
 `;
 
 const BannerSection: FC = () => {
-  const t = useTranslations("section");
+  const t = useTranslations("about");
 
   const [introShow, setIntroShow] = useState(false);
   const [introVideoShow, setIntroVideoShow] = useState(false);

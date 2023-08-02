@@ -9,14 +9,14 @@ import classNames from "classnames";
 import Slider from "../../parts/Slider";
 
 const ObjectiveSection: FC = () => {
-  const t = useTranslations("section");
+  const t = useTranslations("owner");
   const images = [
     t("ObjectiveSection.src1"),
     t("ObjectiveSection.src2"),
     t("ObjectiveSection.src3"),
   ];
   return (
-    <div className=" mt-44 py-24 min-h-screen sm:py-36 flex flex-col items-center">
+    <div className=" mt-36 py-24 min-h-screen sm:py-36 flex flex-col items-center">
       <div className="text-center w-full flex flex-col items-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}

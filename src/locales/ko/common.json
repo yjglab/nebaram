@@ -1,5 +1,86 @@
 {
-  "title": {
-    "name": "Jaekyeong Yuk"
+  "Header": {
+    "about": "네바람 소개",
+    "owner": "개발자",
+    "careers": "채용"
+  },
+  "Footer": {
+    "copyright": "© 2023 Jaekyeong Yuk, All rights reserved.",
+    "companyName": "nebaram",
+    "description": "여러분의 새 바람을 실현합니다",
+    "presidentNameLabel": "대표자명",
+    "presidentName": "육재경",
+    "email": "yjgdesign@gmail.com",
+
+    "services": {
+      "name": "서비스",
+      "content1": {
+        "name": "BlooBolt",
+        "link": "https://bloobolt.com"
+      },
+      "content2": {
+        "name": "BlooWays",
+        "link": "https://blooways.online"
+      },
+      "content3": {
+        "name": "Museum Union Gallery",
+        "link": "https://mug-lab.fly.dev"
+      },
+      "content4": {
+        "name": "TIRA",
+        "link": "https://tira-santorini.fly.dev"
+      }
+    },
+    "squares": {
+      "name": "스퀘어",
+      "content1": {
+        "name": "네바람 전략기획",
+        "link": "/"
+      },
+      "content2": {
+        "name": "네바람 디자인",
+        "link": "/"
+      },
+      "content3": {
+        "name": "네바람 프론트엔드",
+        "link": "/"
+      },
+      "content4": {
+        "name": "네바람 백엔드",
+        "link": "/"
+      }
+    },
+    "company": {
+      "name": "회사",
+      "content1": {
+        "name": "회사 소개",
+        "link": "/"
+      },
+      "content2": {
+        "name": "채용",
+        "link": "/careers"
+      },
+      "content3": {
+        "name": "블로그",
+        "link": "https://yjg-lab.tistory.com"
+      }
+    },
+    "contact": {
+      "name": "문의",
+      "content1": {
+        "name": "서비스 문의",
+        "link": "/"
+      },
+      "content2": {
+        "name": "광고 문의",
+        "link": "/"
+      }
+    }
+  },
+  "404": {
+    "title": "알 수 없는 경로",
+    "description": "페이지가 삭제되었거나, 잘못된 경로입니다",
+    "toHome": "",
+    "toContact": "문의하기"
   }
 }

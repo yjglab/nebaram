@@ -11,27 +11,27 @@
     "team1Title1": "창의적인 전략으로",
     "team1Title2": "성장과 성공을 선도합니다",
     "team1Description": "<span>미래를 엮는 기획의 선두주자</span> 혁신적인 아이디어와 미래 지향적인 전략으로 클라이언트의 성공을 위한 웹 서비스를 기획합니다. 변화하는 시장에서도 확고한 비전을 갖고 최신 데이터 트렌드와 분석 방법을 활용하여 클라이언트의 비즈니스 성과를 극대화합니다.",
-    "team1Src": "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+    "team1Src": "/images/square-section/square-s-1.jpeg",
     "team2": "네바람 디자인 스퀘어",
     "team2Title1": "기존에 없던 UI/UX의",
     "team2Title2": "새로운 방향을 개척합니다",
     "team2Description": "<span>창의성과 감각으로 빚어낸 디지털 아트워크</span> 창의성과 예술적 감각을 바탕으로 독특하고 매력적인 디지털 아트워크를 만들어냅니다. 클라이언트의 브랜드와 메시지를 시각적으로 표현하며, 사용자들에게 빠르게 전달하는 디자인을 제공합니다.",
-    "team2Src": "https://img.freepik.com/free-photo/close-up-photographer-hands-using-graphic-tablet-stylus-while-retouching-pictures-photography-studio-artist-doing-retouch-work-with-editing-software-computer-equipment_482257-38106.jpg?w=1480&t=st=1690966383~exp=1690966983~hmac=3f9e62bfbaeeac3559cc5531652543f6011e60fcf79dc59ae9f485f05751b05a",
+    "team2Src": "/images/square-section/square-s-2.jpeg",
     "team3": "네바람 프론트엔드 스퀘어",
     "team3Title1": "사용자 경험을",
     "team3Title2": "최우선으로 생각합니다",
     "team3Description": "<span>뛰어난 사용자 경험과 시각적 매력을 위한 웹 프론트엔드 솔루션</span> 사용자의 니즈를 파악하고, 최신 웹 기술을 이용해 디자인 스퀘어와 협업하여 뛰어난 사용자 경험과 시각적으로 매력적인 프론트 환경을 개발합니다.",
-    "team3Src": "https://img.freepik.com/free-photo/group-smart-asian-architect-interior-design-team-consulting-with-constrction-engineer-work-brainstrom-meeting-with-house-project-blueprint-home-mockup-house-renovation-structure-background_609648-1087.jpg?w=1800&t=st=1690913033~exp=1690913633~hmac=85ef4b963696e8e191e5bb61e6de11ed1fc5cfcfa06b233a21e796e771f90b58",
+    "team3Src": "/images/square-section/square-s-3.jpeg",
     "team4": "네바람 백엔드 스퀘어",
     "team4Title1": "절대 무너지지 않는 ",
     "team4Title2": "안정적인 동력을 만듭니다",
     "team4Description": "<span>확장 가능하고 안정적인 웹 백엔드 솔루션</span> 확장 가능한 아키텍처와 강력한 서버 기술을 활용하여 클라이언트의 비즈니스 요구에 부응하는 안정적인 웹 백엔드 솔루션을 제공합니다. 높은 성능과 가용성을 유지하며, 클라이언트의 온라인 비즈니스 성장을 지원합니다.",
-    "team4Src": "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+    "team4Src": "/images/square-section/square-s-4.jpeg"
   },
   "OutcomeSection": {
     "header1": "새로움을 추구하는 사람들이 모여,",
     "header2": "웹 서비스의 새로운 패러다임을 만듭니다.",
-    "src": "https://img.freepik.com/free-photo/paperwork_1098-18063.jpg?w=1800&t=st=1690895656~exp=1690896256~hmac=f279b08db08215255bcefd1bbf11fa8b89f87da93d29f93ad8fd6c0348ab357e",
+    "src": "/images/outcome-section/outcome-s-1.jpeg",
     "title1": "누적 작업일",
     "value1": "{days}일+",
     "title2": "누적 매출액",
@@ -77,15 +77,15 @@
     "content7": {
       "year": "2021",
       "month": "2021.03",
-      "content": "네바람 웹 솔루션 서비스 설립"
+      "content": "네바람 웹 솔루션 서비스 기획"
     }
   },
   "ObjectiveSection": {
     "title": "네바람 스퀘어의 목표",
     "description1": "우리는 누구나 쉽게 웹 서비스를 만들고 접근할 수 있는 그날까지 끝없이 달려가는 팀입니다.",
     "description2": "어렵고 멀게만 느껴지는 분야가 되지 않도록 각 스퀘어의 멤버들이 여러분과 함께 작업을 진행합니다.",
-    "src1": "https://img.freepik.com/free-photo/japanese-woman-reading-from-notebook-while-japanese-man-is-working-his-laptop-restaurant_23-2149319372.jpg?w=740&t=st=1690893462~exp=1690894062~hmac=8529c753dee74b2d18083fe6368a731693fc9ddc5865a89e53bcf6c634a0b4f3",
-    "src2": "https://img.freepik.com/free-photo/side-view-cropped-unrecognizable-business-people-working-common-desk_1098-20474.jpg?w=1800&t=st=1690966583~exp=1690967183~hmac=c8e9430044e1696c51c6760c3b802df218bfc1c4ce351655f71f3f7f590a863e",
-    "src3": "https://img.freepik.com/free-photo/asian-businessmen-businesswomen-meeting-brainstorming-ideas-about-creative-web-design-planning-application-developing-template-layout-mobile-phone-project-working-together-small-office_7861-2682.jpg?w=1480&t=st=1690966627~exp=1690967227~hmac=9e993acbb0e1562964a20435d83256be0b0ca7ad101b3e6dd4900c7e2020aed0"
+    "src1": "/images/about/objective-section/objectives-m-1.jpeg",
+    "src2": "/images/about/objective-section/objectives-m-1.jpeg",
+    "src3": "/images/about/objective-section/objectives-m-1.jpeg"
   }
 }

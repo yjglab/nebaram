@@ -17,16 +17,11 @@ import { poppins } from "@constants/constant";
 import { clogo } from "@constants/images";
 import Image from "next/image";
 import DropMenu from "@components/parts/DropMenu";
-
-const navigation = {
-  categories: [],
-  pages: [
-    { name: "About", href: "/" },
-    { name: "Careers", href: "/careers" },
-  ],
-};
+import { useTranslations } from "next-intl";
 
 const Header: FC = () => {
+  const t = useTranslations("common");
+
   const router = useRouter();
   const pathname = usePathname();
   const localizedPathname = useMemo(() => {
@@ -38,6 +33,15 @@ const Header: FC = () => {
       return pathname;
     }
   }, [pathname]);
+
+  const navigation = {
+    categories: [],
+    pages: [
+      { name: t("Header.about"), href: "/" },
+      { name: t("Header.owner"), href: "/owner" },
+      { name: t("Header.careers"), href: "/careers" },
+    ],
+  };
 
   const [open, setOpen] = useState(false);
   const [navOn, setNavOn] = useState(false);
@@ -72,7 +76,7 @@ const Header: FC = () => {
   }, [pathname, router]);
 
   useEffect(() => {
-    setTimeout(() => setNavShow(true), 2000);
+    setTimeout(() => setNavShow(true), 1500); // 2000
   });
 
   return (
@@ -151,7 +155,7 @@ const Header: FC = () => {
       </Transition.Root>
 
       {/* 모바일 + PC */}
-      <header className={`relative duration-200`}>
+      <header className="relative duration-200">
         <nav
           aria-label="Top"
           className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8"
