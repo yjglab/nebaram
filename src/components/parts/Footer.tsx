@@ -82,6 +82,11 @@ const Footer: FC = () => {
           name: t("Footer.company.content3.name"),
           link: t("Footer.company.content3.link"),
         },
+        {
+          id: 4,
+          name: t("Footer.company.content4.name"),
+          link: t("Footer.company.content4.link"),
+        },
       ],
     },
     {

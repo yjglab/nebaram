@@ -18,6 +18,7 @@ import { clogo } from "@constants/images";
 import Image from "next/image";
 import DropMenu from "@components/parts/DropMenu";
 import { useTranslations } from "next-intl";
+import { bannerOnDelay } from "@components/owner/BannerSection";
 
 const Header: FC = () => {
   const t = useTranslations("common");
@@ -39,7 +40,7 @@ const Header: FC = () => {
     pages: [
       { name: t("Header.about"), href: "/" },
       { name: t("Header.owner"), href: "/owner" },
-      { name: t("Header.careers"), href: "/careers" },
+      { name: t("Header.projects"), href: "/projects" },
     ],
   };
 
@@ -76,7 +77,7 @@ const Header: FC = () => {
   }, [pathname, router]);
 
   useEffect(() => {
-    setTimeout(() => setNavShow(true), 1500); // 2000
+    setTimeout(() => setNavShow(true), bannerOnDelay);
   });
 
   return (

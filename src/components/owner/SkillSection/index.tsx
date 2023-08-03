@@ -143,7 +143,7 @@ const SkillSection: FC = () => {
                 skillCardHover === card.skill
                   ? "bottom-4 opacity-0"
                   : "bottom-0 opacity-100",
-                "z-20 text-base relative font-semibold leading-6 duration-100"
+                "z-20 text-base relative text-indigo-400 font-semibold leading-6 duration-100"
               )}
             >
               {card.skill}

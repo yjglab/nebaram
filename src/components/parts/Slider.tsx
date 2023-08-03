@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
@@ -72,12 +72,18 @@ const Slider: React.FC<Props> = ({ images }) => {
         />
       </AnimatePresence>
       <div className="z-20 flex w-full justify-between">
-        <div className="ml-4 w-12 h-12" onClick={() => paginate(-1)}>
+        <button
+          className="-ml-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
+          onClick={() => paginate(-1)}
+        >
           <ChevronLeftIcon />
-        </div>
-        <div className="mr-4 w-12 h-12" onClick={() => paginate(1)}>
+        </button>
+        <button
+          className="-mr-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
+          onClick={() => paginate(1)}
+        >
           <ChevronRightIcon />
-        </div>
+        </button>
       </div>
     </>
   );

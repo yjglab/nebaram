@@ -57,7 +57,7 @@ const OutcomeSection: FC = () => {
       id: 3,
       title: t.rich("OutcomeSection.title3", {
         span: (children) => (
-          <span className="ml-1 text-gray-400 font-medium text-sm">
+          <span className="ml-1 text-amber-500 font-medium text-sm">
             {children}
           </span>
         ),
@@ -70,7 +70,7 @@ const OutcomeSection: FC = () => {
       id: 4,
       title: t.rich("OutcomeSection.title4", {
         span: (children) => (
-          <span className="ml-1 text-gray-400 font-medium text-sm">
+          <span className="ml-1 text-amber-500 font-medium text-sm">
             {children}
           </span>
         ),
@@ -85,14 +85,15 @@ const OutcomeSection: FC = () => {
     <div className="mt-24 h-[110vh] mx-auto relative ">
       <div ref={backgroundRef} className="w-full h-full absolute">
         <ShadowBoxTop className="bg-black w-full h-36 z-10 absolute -top-36 shadow-black"></ShadowBoxTop>
-        <Image
-          src="/images/outcome-section/outcome-m-1.jpeg"
-          layout="fill"
-          objectFit="cover"
-          style={{ opacity: backgroundOpacity }}
-          className="absolute"
-          alt=""
-        />
+        <div className="absolute w-full h-full opacity-50">
+          <Image
+            src="/images/owner/outcome-section/image-01.jpg"
+            layout="fill"
+            objectFit="cover"
+            style={{ opacity: backgroundOpacity }}
+            alt=""
+          />
+        </div>
         <ShadowBoxBottom className="bg-black w-full h-36 absolute -bottom-36 shadow-black"></ShadowBoxBottom>
       </div>
       <div className="w-full z-20 max-w-7xl px-44 pb-32 pt-36 h-full lg:shrink-0">
@@ -115,7 +116,7 @@ const OutcomeSection: FC = () => {
                 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="text-xl font-semibold leading-6 text-indigo-400">
+                <p className="text-xl font-bold leading-6 text-indigo-400">
                   {outcome.title}
                 </p>
                 <p className="-mt-1 tracking-wide text-[66px] font-bold text-gray-900 dark:text-gray-50">

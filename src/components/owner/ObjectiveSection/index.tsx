@@ -2,21 +2,16 @@
 
 import AnimatedTitle from "@components/parts/AnimatedTitle";
 import { useTranslations } from "next-intl";
-import { FC, MouseEvent, useState } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import classNames from "classnames";
+
 import Slider from "../../parts/Slider";
 
 const ObjectiveSection: FC = () => {
   const t = useTranslations("owner");
-  const images = [
-    t("ObjectiveSection.src1"),
-    t("ObjectiveSection.src2"),
-    t("ObjectiveSection.src3"),
-  ];
+  const images = ["/images/owner/outcome-section/image-01.jpg"];
   return (
-    <div className=" mt-36 py-24 min-h-screen sm:py-36 flex flex-col items-center">
+    <div className="overflow-x-hidden mt-36 py-24 min-h-screen sm:py-36 flex flex-col items-center">
       <div className="text-center w-full flex flex-col items-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}
@@ -26,7 +21,7 @@ const ObjectiveSection: FC = () => {
           aria-hidden="true"
           initial={{ opacity: 0, scaleX: 0, originX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1, originX: 0 }}
-          transition={{ duration: 1.3, delay: 0.7 }}
+          transition={{ duration: 1.5, delay: 1 }}
           viewport={{ once: true, amount: 0.5 }}
         />
         <motion.div
@@ -48,7 +43,7 @@ const ObjectiveSection: FC = () => {
         </motion.div>
       </div>
       <motion.div
-        className="w-[80vw] h-[50vw] overflow-hidden mt-24 relative flex justify-center items-center"
+        className="w-[65vw] h-[38vw] mt-24 relative flex justify-center items-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
