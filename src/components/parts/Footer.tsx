@@ -108,7 +108,7 @@ const Footer: FC = () => {
   ];
   return (
     <footer>
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-6 py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div>
@@ -159,7 +159,7 @@ const Footer: FC = () => {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-4">
             {footerMenu.map((menu) => (
               <div key={menu.id}>
                 <p className="font-medium text-gray-900 dark:text-white">

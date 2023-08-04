@@ -90,7 +90,11 @@ const HistoryGraph = () => {
         span: (children) => (
           <span className="text-indigo-400 ">{children}</span>
         ),
-        div: (children) => <div className="text-sm">{children}</div>,
+        div: (children) => (
+          <span className="ml-2 text-gray-200 text-xs md:text-sm">
+            {children}
+          </span>
+        ),
       }),
     },
     {
@@ -112,79 +116,83 @@ const HistoryGraph = () => {
   ];
 
   return (
-    <div className="mt-32 ml-16 w-full h-full flex ">
+    <div className="mt-24 w-full h-full  ">
       {/* 연도 */}
-      <div className="h-full relative -top-2.5 w-32 flex flex-col items-center">
-        {datas.map((content, index) => (
+      <div className="flex h-full w-full justify-center">
+        <div className="h-full relative -top-2.5 w-24 md:w-32 flex flex-col items-center">
+          {datas.map((content, index) => (
+            <motion.div
+              key={content.id}
+              style={{ top: index * graphGap }}
+              className="absolute font-semibold text-lg md:text-2xl"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                type: "tween",
+                duration: 0.8,
+                delay: index * 0.15,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              {content.year}
+            </motion.div>
+          ))}
+        </div>
+        {/* 바 */}
+        <div className="w-6 relative flex flex-col items-center">
           <motion.div
-            key={content.id}
-            style={{ top: index * graphGap }}
-            className="absolute font-semibold text-2xl"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.8,
-              delay: index * 0.15,
-            }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            {content.year}
-          </motion.div>
-        ))}
-      </div>
-      {/* 바 */}
-      <div className="h-full w-6 relative flex flex-col items-center">
-        <motion.div
-          className="mt-2 grow bg-gray-500 w-0.5 h-[137%] absolute"
-          aria-hidden="true"
-          initial={{ opacity: 0, originY: 0, scaleY: 0 }}
-          whileInView={{ opacity: 1, originY: 0, scaleY: 1 }}
-          transition={{ duration: 1.4, delay: 0.5 }}
-          viewport={{ once: true, amount: 0.5 }}
-        />
-        {datas.map((content, index) => (
-          <motion.div
-            key={content.id}
-            style={{ top: index * graphGap }}
-            className={classNames(
-              content.year
-                ? "ring-amber-500 w-2.5 h-2.5"
-                : "ring-gray-500 w-1.5 h-1.5",
-              "ring-4  bg-black rounded-full absolute"
-            )}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.8,
-              delay: index * 0.15,
-            }}
+            className="mt-2 grow bg-gray-500 w-0.5 h-[900px] lg:h-[910px] md:h-full absolute"
+            aria-hidden="true"
+            initial={{ opacity: 0, originY: 0, scaleY: 0 }}
+            whileInView={{ opacity: 1, originY: 0, scaleY: 1 }}
+            transition={{ duration: 1.4, delay: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
           />
-        ))}
-      </div>
-      <div className="h-full w-full ml-16 relative -top-[9px] flex flex-col ">
-        {datas.map((content, index) => (
-          <motion.div
-            key={content.id}
-            style={{ top: index * graphGap }}
-            className="absolute  text-xl flex flex-col gap-0.5"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.8,
-              delay: index * 0.15,
-            }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <div className="text-gray-500 text-lg font-semibold">
-              {content.month}
-            </div>
-            <div>{content.content}</div>
-          </motion.div>
-        ))}
+          {datas.map((content, index) => (
+            <motion.div
+              key={content.id}
+              style={{ top: index * graphGap }}
+              className={classNames(
+                content.year
+                  ? "ring-amber-500 w-2.5 h-2.5"
+                  : "ring-gray-500 w-1.5 h-1.5",
+                "ring-4 bg-black rounded-full absolute"
+              )}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                type: "tween",
+                duration: 0.8,
+                delay: index * 0.15,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            />
+          ))}
+        </div>
+        <div className="h-full w-[90%] sm:w-[75%] lg:w-[60%] ml-[4%] relative -top-[7px] md:-top-[9px] flex flex-col ">
+          {datas.map((content, index) => (
+            <motion.div
+              key={content.id}
+              style={{ top: index * graphGap }}
+              className="absolute  text-xl flex flex-col gap-0.5"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                type: "tween",
+                duration: 0.8,
+                delay: index * 0.15,
+              }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <div className="text-gray-500 text-base xl:text-lg font-semibold">
+                {content.month}
+              </div>
+              <div className="text-base md:text-lg xl:text-xl tracking-tight">
+                {content.content}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
