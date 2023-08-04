@@ -44,9 +44,24 @@ const Slider: React.FC<Props> = ({ images }) => {
   return (
     <>
       <AnimatePresence initial={false} custom={direction}>
+        <div className="z-20 w-full flex justify-between my-auto">
+          <button
+            className="ml-2 sm:-ml-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
+            onClick={() => paginate(-1)}
+          >
+            <ChevronLeftIcon />
+          </button>
+          <button
+            className="mr-2 sm:-mr-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
+            onClick={() => paginate(1)}
+          >
+            <ChevronRightIcon />
+          </button>
+        </div>
+
         <motion.img
           key={page}
-          className="max-w-[70vw] absolute rounded-2xl object-cover w-full h-full"
+          className="max-w-[85vw] top-0 absolute md:max-w-[70vw] h-full rounded-2xl object-cover w-full"
           src={images[imageIndex]}
           custom={direction}
           variants={variants}
@@ -71,20 +86,6 @@ const Slider: React.FC<Props> = ({ images }) => {
           }}
         />
       </AnimatePresence>
-      <div className="z-20 flex w-full justify-between">
-        <button
-          className="-ml-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
-          onClick={() => paginate(-1)}
-        >
-          <ChevronLeftIcon />
-        </button>
-        <button
-          className="-mr-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
-          onClick={() => paginate(1)}
-        >
-          <ChevronRightIcon />
-        </button>
-      </div>
     </>
   );
 };

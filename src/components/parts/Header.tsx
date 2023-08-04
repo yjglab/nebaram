@@ -74,12 +74,9 @@ const Header: FC = () => {
   }, [pathname, router]);
 
   return (
-    <div
-      id="navbar"
-      className="backdrop-blur-md pt-0.5 bg-black/30 duration-500 fixed top-0 w-full z-50"
-    >
+    <div id="navbar" className="z-50 backdrop-blur-md bg-black/30 fixed w-full">
       {/* 모바일 */}
-      <Transition.Root show={open} as={Fragment}>
+      {/* <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative md:hidden" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
@@ -90,7 +87,7 @@ const Header: FC = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0  bg-opacity-25" />
+            <div className="fixed inset-0 bg-opacity-25" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-50 flex justify-end">
@@ -103,22 +100,19 @@ const Header: FC = () => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="bg-white/10 backdrop-blur-sm relative flex w-full max-w-xs flex-col overflow-y-auto  pb-12 shadow-xl">
+              <Dialog.Panel className="bg-white/10 backdrop-blur-sm relative flex w-full max-w-xs flex-col overflow-y-auto pb-12 shadow-xl">
                 <div className="flex px-6 py-3  item-center justify-end">
                   <button
                     type="button"
                     className="-m-2 inline-flex items-center justify-center rounded-md p-2 "
                     onClick={() => setOpen(false)}
                   >
-                    <XMarkIcon
-                      className="h-6 w-6 stroke-2"
-                      aria-hidden="true"
-                    />
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
 
                 {/* Links */}
-                <div className="space-y-6  px-4 py-6">
+      {/* <div className="space-y-6  px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div
                       onClick={onClose}
@@ -144,13 +138,13 @@ const Header: FC = () => {
             </Transition.Child>
           </div>
         </Dialog>
-      </Transition.Root>
+      </Transition.Root> */}
 
       {/* 모바일 + PC */}
-      <header className="relative duration-200 pb-2">
+      <header className="relative duration-200">
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 xl:px-0">
           <div className="relative">
-            <div className="duration-200 flex w-full h-12 items-center justify-between relative">
+            <div className="h-16 duration-200 flex w-full items-center justify-between relative">
               <div className="flex">
                 <div className="flex ml-2">
                   <Link className="flex items-center" href="/">
@@ -165,7 +159,7 @@ const Header: FC = () => {
                     </span>
                   </Link>
                 </div>
-                <Popover.Group className="items-center hidden md:ml-8 md:flex md:self-stretch">
+                <Popover.Group className="hidden md:ml-8 md:block md:self-stretch">
                   <div className="flex space-x-8">
                     {navigation.pages.map((page) => (
                       <Link
@@ -206,16 +200,16 @@ const Header: FC = () => {
               </div>
 
               {/* 모바일 메뉴 트리거 */}
-              <button
+              {/* <button
                 type="button"
-                className="rounded-md p-2 bg-black md:hidden absolute right-0"
+                className="rounded-md p-2  md:hidden absolute right-0"
                 onClick={() => setOpen(true)}
               >
                 <Bars3Icon
                   className="h-6 w-6 text-white  stroke-2"
                   aria-hidden="true"
                 />
-              </button>
+              </button> */}
             </div>
           </div>
         </nav>

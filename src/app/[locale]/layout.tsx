@@ -54,12 +54,7 @@ const LocaleLayout = async ({
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <body
-          className={classNames(
-            "mx-auto max-w-7xl px-6 lg:px-8 text-white",
-            Pretendard.className
-          )}
-        >
+        <body className={classNames(Pretendard.className)}>
           <Header />
           {children}
           <Footer />

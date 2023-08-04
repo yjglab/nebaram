@@ -96,13 +96,13 @@ const OutcomeSection: FC = () => {
         </div>
         <ShadowBoxBottom className="bg-black w-full h-36 absolute -bottom-36 shadow-black"></ShadowBoxBottom>
       </div>
-      <div className="w-full z-20 max-w-7xl px-44 pb-32 pt-36 h-full lg:shrink-0">
+      <div className="w-full z-20 max-w-7xl px-8 lg:px-44 pb-32 pt-36 h-full lg:shrink-0">
         <div className="sticky top-[25%] mt-4">
-          <div className="gap-4 flex flex-col">
+          <div className="gap-8 md:gap-4 flex flex-col">
             <AnimatedTitle>{t("OutcomeSection.header1")}</AnimatedTitle>
             <AnimatedTitle>{t("OutcomeSection.header2")}</AnimatedTitle>
           </div>
-          <dl className="mt-20 grid grid-cols-2 gap-x-12 gap-y-4">
+          <dl className="flex flex-col sm:grid grid-cols-2 mt-20 gap-x-12 gap-y-8 sm:gap-y-12 ">
             {outcomeLists.map((outcome, index) => (
               <motion.div
                 key={outcome.id}
@@ -116,10 +116,10 @@ const OutcomeSection: FC = () => {
                 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="text-xl font-bold leading-6 text-indigo-400">
+                <p className="text-lg lg:text-xl font-bold leading-6 text-indigo-400">
                   {outcome.title}
                 </p>
-                <p className="-mt-1 tracking-wide text-[66px] font-bold text-gray-900 dark:text-gray-50">
+                <p className="text-5xl lg:text-7xl mt-3 tracking-wide font-bold ">
                   {outcome.value}
                 </p>
               </motion.div>
