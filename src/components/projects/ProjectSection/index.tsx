@@ -6,12 +6,16 @@ import Image from "next/image";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import HeaderSection from "../HeaderSection";
 
 const ProjectSection: FC = () => {
-  const [category, setCategory] = useState("development");
-  const [thumbLoaded, setThumbLoaded] = useState(false);
-
   const t = useTranslations("projects");
+  const [selectedCategory, setSelectedCategory] = useState(
+    t("HeaderSection.category2")
+  );
+  const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [projectCardHover, setprojectCardHover] = useState("");
+
   const projectCard = [
     {
       id: 1,
@@ -100,7 +104,6 @@ const ProjectSection: FC = () => {
     },
   ];
 
-  const [projectCardHover, setprojectCardHover] = useState("");
   const handleCardHover = (e: MouseEvent<HTMLDivElement>) => {
     setprojectCardHover(e.currentTarget.id);
   };
@@ -113,21 +116,11 @@ const ProjectSection: FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen font-medium">
-      <header className="mx-auto max-w-2xl px-4 py-3 sm:px-6  lg:max-w-7xl lg:px-8">
-        <div className="flex items-center justify-between pb-5 pt-24">
-          <div className="flex gap-1.5">
-            <h1 className="text-[40px] font-semibold ">
-              {t("ProjectSection.sectionTitle")}
-            </h1>
-          </div>
-          <span>{t("ProjectSection.sectionDescription")}</span>
-          {/* 카테고리 추가하기 */}
-        </div>
-      </header>
+    <div className="min-h-screen font-medium px-8">
+      <HeaderSection selectedCategory={selectedCategory} />
 
       <main>
-        <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div className="mt-10 mx-auto max-w-2xl lg:max-w-7xl ">
           <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-6">
             {projectCard.map((card, index) => (
               <motion.div
@@ -135,7 +128,7 @@ const ProjectSection: FC = () => {
                 id={card.title1}
                 onMouseEnter={handleCardHover}
                 onMouseLeave={handleCardLeave}
-                className="relative p-10 sm:p-8 lg:p-10 overflow-hidden  flex flex-col aspect-square rounded-2xl"
+                className="relative p-7 lg:p-10 overflow-hidden  flex flex-col aspect-square rounded-2xl"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
@@ -159,7 +152,7 @@ const ProjectSection: FC = () => {
                     projectCardHover === card.title1
                       ? "bottom-4 opacity-0"
                       : "bottom-0 opacity-100",
-                    "text-lg sm:text-sm lg:text-lg z-20 relative text-indigo-400 font-semibold leading-6 duration-200"
+                    "text-sm lg:text-lg z-20 relative text-indigo-400 font-semibold leading-6 duration-200"
                   )}
                 >
                   {card.category}
@@ -168,8 +161,8 @@ const ProjectSection: FC = () => {
                   className={classNames(
                     projectCardHover === card.title1
                       ? "bottom-10 text-xl gap-0"
-                      : "bottom-0 gap-2 sm:gap-0 lg:gap-2",
-                    "text-3xl sm:text-xl lg:text-3xl z-20 flex flex-col relative duration-300 font-semibold leading-8 mt-4 tracking-tight"
+                      : "bottom-0 gap-0 lg:gap-2",
+                    "text-xl lg:text-3xl z-20 flex flex-col relative duration-300 font-semibold leading-8 lg:mt-4 tracking-tight"
                   )}
                 >
                   <p>{card.title1}</p>
@@ -177,7 +170,7 @@ const ProjectSection: FC = () => {
                     className={classNames(
                       projectCardHover === card.title1
                         ? "text-gray-400 text-sm"
-                        : "text-white text-lg sm:text-sm lg:text-lg",
+                        : "text-white text-sm lg:text-lg",
                       "duration-300 tracking-tight font-medium"
                     )}
                   >
@@ -194,9 +187,7 @@ const ProjectSection: FC = () => {
                   )}
                 >
                   <div>{card.description1}</div>
-                  <div className="block sm:hidden xl:block">
-                    {card.description2}
-                  </div>
+                  <div className="hidden xl:block">{card.description2}</div>
                   <div className="text-indigo-400">자세히 보기</div>
                 </div>
                 <Image

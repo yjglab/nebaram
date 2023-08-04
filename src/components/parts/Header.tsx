@@ -18,6 +18,7 @@ import { clogo } from "@constants/images";
 import Image from "next/image";
 import DropMenu from "@components/parts/DropMenu";
 import { useTranslations } from "next-intl";
+import HeaderNotice from "./HeaderNotice";
 
 const Header: FC = () => {
   const t = useTranslations("common");
@@ -44,7 +45,6 @@ const Header: FC = () => {
   };
 
   const [open, setOpen] = useState(false);
-
   const onClose = useCallback(() => {
     setOpen(false);
   }, []);
@@ -76,7 +76,7 @@ const Header: FC = () => {
   return (
     <div
       id="navbar"
-      className="backdrop-blur-md pt-0.5 pb-2 bg-black/30 duration-500 fixed top-0 w-full z-50"
+      className="backdrop-blur-md pt-0.5 bg-black/30 duration-500 fixed top-0 w-full z-50"
     >
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
@@ -147,11 +147,8 @@ const Header: FC = () => {
       </Transition.Root>
 
       {/* 모바일 + PC */}
-      <header className="relative duration-200">
-        <nav
-          aria-label="Top"
-          className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8"
-        >
+      <header className="relative duration-200 pb-2">
+        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 xl:px-0">
           <div className="relative">
             <div className="duration-200 flex w-full h-12 items-center justify-between relative">
               <div className="flex">
@@ -223,6 +220,8 @@ const Header: FC = () => {
           </div>
         </nav>
       </header>
+
+      {/* <HeaderNotice /> */}
     </div>
   );
 };

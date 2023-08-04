@@ -161,7 +161,7 @@ const HistoryGraph = () => {
               delay: index * 0.15,
             }}
             viewport={{ once: true, amount: 0.5 }}
-          ></motion.div>
+          />
         ))}
       </div>
       <div className="h-full w-full ml-16 relative -top-[9px] flex flex-col ">

@@ -1,11 +1,16 @@
 {
+  "HeaderSection": {
+    "category1": "모든 프로젝트",
+    "category2": "개발",
+    "category3": "디자인"
+  },
   "ProjectSection": {
     "sectionTitle": "프로젝트 둘러보기",
     "sectionDescription": "진행한 모든 프로젝트를 둘러보세요",
 
     "project1Category": "Front-end Development",
     "project1Title1": "Nebaram",
-    "project1Title2": "개발자 육재경을 소개하는 공간",
+    "project1Title2": "개발자 육재경을 소개하는 퍼스널 브랜드",
     "project1Description1": "네바람은 네 가지 대표 역량을 갖춘 저를 표현하는 의미로 만든 퍼스널 브랜드에요. 네바람 서비스를 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 사람들에게 알리고 싶어 제작했어요.",
     "project1Description2": "<span>사용된 기술</span>TypeScript, React.js, Next.js, React-Query, TailwindCSS, Emotion, Firebase",
 
