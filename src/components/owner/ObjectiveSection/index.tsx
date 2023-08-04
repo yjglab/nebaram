@@ -30,12 +30,12 @@ const ObjectiveSection: FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <p className="mx-auto mt-6 break-keep md:max-w-[80%] md:text-3xl">
+          <p className="mx-auto mt-6 break-keep md:text-3xl">
             <span className="font-semibold leading-[2.7rem]">
               {t("ObjectiveSection.description1")}
             </span>
           </p>
-          <p className="mx-auto break-keep md:max-w-[80%] md:text-3xl">
+          <p className="mx-auto break-keep md:text-3xl">
             <span className="font-semibold leading-[2.7rem]">
               {t("ObjectiveSection.description2")}
             </span>

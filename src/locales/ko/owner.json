@@ -18,8 +18,8 @@
   },
   "ObjectiveSection": {
     "title": "개발자로서의 목표",
-    "description1": "ㅊㅊㅊ",
-    "description2": "ㅊㅊㅊ",
+    "description1": "개발자로서의 목표개발자로서의 목표",
+    "description2": "개발자로서의 목표개발자로서의 목표",
     "src1": "/images/objective-section/objectives-m-1.jpeg",
     "src2": "/images/objective-section/objectives-m-1.jpeg",
     "src3": "/images/objective-section/objectives-m-1.jpeg"
@@ -91,7 +91,7 @@
     "description2": "덕분에 다른 직무자들과도 무리없이 소통할 수 있죠",
 
     "skill1": "Front-End",
-    "skill1Title1": "부드럽지만 독특한",
+    "skill1Title1": "부드러우면서 독특한",
     "skill1Title2": "화면 개발을 선호해요",
     "skill1Description1": "<span></span>데이터를 적합한 시점에 요청하고 불러와 여러가지 애니메이션 효과를 적용해 표현할 수 있어요. 라이브러리를 활용해 효율적으로 개발할 수 있지만 순수 자바스크립트로도 얼마든지 구현할 수 있답니다. 구현이 끝나면 사용자의 입장이 되어 기능들이 의도한대로 동작하는 지 지속적으로 확인하고 있어요.",
     "skill1Description2": "<span>사용하는 기술</span>TypeScript, JavaScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR, Socket.io-client",

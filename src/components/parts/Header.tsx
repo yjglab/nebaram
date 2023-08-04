@@ -18,7 +18,6 @@ import { clogo } from "@constants/images";
 import Image from "next/image";
 import DropMenu from "@components/parts/DropMenu";
 import { useTranslations } from "next-intl";
-import { bannerOnDelay } from "@components/owner/BannerSection";
 
 const Header: FC = () => {
   const t = useTranslations("common");
@@ -45,8 +44,6 @@ const Header: FC = () => {
   };
 
   const [open, setOpen] = useState(false);
-  const [navOn, setNavOn] = useState(false);
-  const [navShow, setNavShow] = useState(false);
 
   const onClose = useCallback(() => {
     setOpen(false);
@@ -76,16 +73,10 @@ const Header: FC = () => {
     }
   }, [pathname, router]);
 
-  useEffect(() => {
-    setTimeout(() => setNavShow(true), bannerOnDelay);
-  });
-
   return (
     <div
       id="navbar"
-      className={`${
-        navShow && "opacity-100"
-      } opacity-0 duration-500 fixed top-0 w-full z-50`}
+      className="backdrop-blur-md pt-0.5 pb-2 bg-black/30 duration-500 fixed top-0 w-full z-50"
     >
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
@@ -162,11 +153,7 @@ const Header: FC = () => {
           className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8"
         >
           <div className="relative">
-            <div
-              className={`${
-                navOn ? "md:h-14" : "md:h-16"
-              } duration-200 flex w-full h-12 items-center justify-between relative`}
-            >
+            <div className="duration-200 flex w-full h-12 items-center justify-between relative">
               <div className="flex">
                 <div className="flex ml-2">
                   <Link className="flex items-center" href="/">
