@@ -90,9 +90,9 @@ const SkillSection: FC = () => {
   };
 
   return (
-    <div className="mt-52 px-[4vw] lg:px-[24vw] min-h-screen py-24 sm:py-32 flex flex-col items-center">
+    <div className="mt-52 px-[9%] sm:px-[12%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%]  min-h-screen py-24 sm:py-32 flex flex-col items-center">
       <div className="text-center w-full">
-        <div className="gap-4 flex flex-col">
+        <div className="gap-2 md:gap-4 flex flex-col">
           <AnimatedTitle size="lg" align="center">
             {t("SkillSection.sectionTitle1")}
           </AnimatedTitle>
@@ -114,14 +114,14 @@ const SkillSection: FC = () => {
           </p>
         </motion.div>
       </div>
-      <div className="mt-24 grid grid-cols-1 w-full h-full sm:grid-cols-2 gap-6 xl:gap-10 3xl:gap-12 overflow-hidden">
+      <div className="mt-16 md:mt-24 grid grid-cols-1 w-full h-full md:grid-cols-2 gap-6 lg:gap-14 overflow-hidden">
         {skillCard.map((card, index) => (
           <motion.div
             key={card.id}
             id={card.skill}
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardLeave}
-            className="relative px-10 overflow-hidden py-10 flex flex-col h-[40vh] sm:h-[45vw] md:h-[45vw] lg:h-[35vw] 2xl:h-[30vw] rounded-2xl"
+            className="relative p-[8%] overflow-hidden flex flex-col h-[40vh]  md:h-[45vw] lg:h-[35vw] 2xl:h-[30vw] rounded-2xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{
@@ -151,9 +151,9 @@ const SkillSection: FC = () => {
             <div
               className={classNames(
                 skillCardHover === card.skill
-                  ? "bottom-10 text-xl gap-0 text-indigo-400 "
-                  : "bottom-0 gap-2",
-                "z-20 flex flex-col relative duration-300 text-3xl font-semibold leading-8 mt-4 tracking-tight"
+                  ? "bottom-10 text-base leading-0 gap-0 xl:text-lg 2xl:text-xl text-indigo-400 "
+                  : "bottom-0 text-2xl md:3xl 2xl:text-3xl gap-0 lg:gap-1 xl:gap-2 leading-8",
+                "z-20 flex flex-col relative duration-300 font-semibold  mt-4 tracking-tight"
               )}
             >
               <p>{card.title1}</p>
@@ -165,7 +165,7 @@ const SkillSection: FC = () => {
                 skillCardHover === card.skill
                   ? "bottom-6  opacity-100"
                   : "-bottom-4 opacity-0",
-                "z-20 relative duration-300 flex flex-col gap-4"
+                "text-sm xl:text-base 2xl:text-lg z-20 relative duration-300 flex flex-col gap-4"
               )}
             >
               <div>{card.description1}</div>

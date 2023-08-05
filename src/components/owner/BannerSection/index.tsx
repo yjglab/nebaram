@@ -22,13 +22,11 @@ const BannerSection: FC = () => {
     }, bannerOnDelay);
   });
   return (
-    <div className="z-20  min-h-screen flex items-center relative justify-center">
+    <div className="z-20 w-full min-h-screen flex items-center relative justify-center">
       <div
         className={classNames(
-          bannerOn
-            ? "top-[15%] scale-[0.65] flex-row gap-2"
-            : "top-[45%] flex-col gap-4",
-          "absolute z-10 duration-1000 flex "
+          bannerOn ? "top-[15%] scale-75 gap-2 sm:gap-4" : "top-[45%] gap-4",
+          "absolute flex-col z-10 w-full duration-1000 flex "
         )}
       >
         <AnimatedTitle align="center" size="lg">

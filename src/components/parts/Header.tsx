@@ -18,7 +18,6 @@ import { clogo } from "@constants/images";
 import Image from "next/image";
 import DropMenu from "@components/parts/DropMenu";
 import { useTranslations } from "next-intl";
-import HeaderNotice from "./HeaderNotice";
 
 const Header: FC = () => {
   const t = useTranslations("common");
@@ -74,9 +73,12 @@ const Header: FC = () => {
   }, [pathname, router]);
 
   return (
-    <div id="navbar" className="z-50 backdrop-blur-md bg-black/30 fixed w-full">
+    <div
+      id="navbar"
+      className="z-50 backdrop-blur-md bg-black/30 fixed top-0 w-full"
+    >
       {/* 모바일 */}
-      {/* <Transition.Root show={open} as={Fragment}>
+      <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative md:hidden" onClose={setOpen}>
           <Transition.Child
             as={Fragment}
@@ -100,19 +102,18 @@ const Header: FC = () => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="bg-white/10 backdrop-blur-sm relative flex w-full max-w-xs flex-col overflow-y-auto pb-12 shadow-xl">
+              <Dialog.Panel className="bg-white/10 backdrop-blur-lg relative flex w-full max-w-xs flex-col overflow-y-auto pb-12 shadow-xl">
                 <div className="flex px-6 py-3  item-center justify-end">
                   <button
                     type="button"
-                    className="-m-2 inline-flex items-center justify-center rounded-md p-2 "
+                    className="-m-2 top-1.5 relative inline-flex items-center justify-center rounded-md p-2 "
                     onClick={() => setOpen(false)}
                   >
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </div>
-
                 {/* Links */}
-      {/* <div className="space-y-6  px-4 py-6">
+                <div className="space-y-5 px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div
                       onClick={onClose}
@@ -124,27 +125,39 @@ const Header: FC = () => {
                       </Link>
                     </div>
                   ))}
+
+                  <div className="w-full h-[1.2px] bg-white/30" />
+
+                  {supportedLocalesMap.map((localeMap) => (
+                    <div key={localeMap.locale} className="flow-root">
+                      <button
+                        onClick={() =>
+                          handleLanguageChange(localeMap.locale as Locale)
+                        }
+                        className={`-m-2 block p-2`}
+                      >
+                        {localeMap.name}
+                      </button>
+                    </div>
+                  ))}
                 </div>
 
                 <div className="absolute bottom-5 mt-2 px-4 py-6 w-full">
-                  <div className="flex w-full justify-center gap-1 items-center left-0 right-0 mx-auto">
-                    <img alt="" src="" className="w-8" />
-                  </div>
                   <p className="mt-4 text-center text-xs leading-6 ">
-                    © 2023 Jaekyeong Yuk. All rights reserved.
+                    {t("Footer.copyright")}
                   </p>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>
         </Dialog>
-      </Transition.Root> */}
+      </Transition.Root>
 
       {/* 모바일 + PC */}
       <header className="relative duration-200">
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 xl:px-0">
           <div className="relative">
-            <div className="h-16 duration-200 flex w-full items-center justify-between relative">
+            <div className="h-14 duration-200 flex w-full items-center justify-between relative">
               <div className="flex">
                 <div className="flex ml-2">
                   <Link className="flex items-center" href="/">
@@ -155,11 +168,11 @@ const Header: FC = () => {
                         "ml-1.5 font-[500] text-lg"
                       )}
                     >
-                      nebaram
+                      {t("Header.companyName")}
                     </span>
                   </Link>
                 </div>
-                <Popover.Group className="hidden md:ml-8 md:block md:self-stretch">
+                <Popover.Group className="hidden md:ml-8 md:flex items-center md:self-stretch">
                   <div className="flex space-x-8">
                     {navigation.pages.map((page) => (
                       <Link
@@ -178,7 +191,7 @@ const Header: FC = () => {
                   </div>
                 </Popover.Group>
               </div>
-              <div>
+              <div className="hidden md:block">
                 <DropMenu title="Language" chevron={true} width={24}>
                   {supportedLocalesMap.map((localeMap) => (
                     <Menu.Item key={localeMap.locale}>
@@ -200,7 +213,7 @@ const Header: FC = () => {
               </div>
 
               {/* 모바일 메뉴 트리거 */}
-              {/* <button
+              <button
                 type="button"
                 className="rounded-md p-2  md:hidden absolute right-0"
                 onClick={() => setOpen(true)}
@@ -209,7 +222,7 @@ const Header: FC = () => {
                   className="h-6 w-6 text-white  stroke-2"
                   aria-hidden="true"
                 />
-              </button> */}
+              </button>
             </div>
           </div>
         </nav>

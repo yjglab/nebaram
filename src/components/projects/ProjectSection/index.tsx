@@ -128,7 +128,7 @@ const ProjectSection: FC = () => {
                 id={card.title1}
                 onMouseEnter={handleCardHover}
                 onMouseLeave={handleCardLeave}
-                className="relative p-7 lg:p-10 overflow-hidden  flex flex-col aspect-square rounded-2xl"
+                className="relative p-8 lg:p-10 overflow-hidden flex flex-col aspect-square rounded-2xl"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{
