@@ -129,8 +129,8 @@ const HistoryGraph = () => {
               whileInView={{ opacity: 1 }}
               transition={{
                 type: "tween",
-                duration: 0.8,
-                delay: index * 0.15,
+                duration: 0.7,
+                delay: index * 0.09,
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -162,8 +162,8 @@ const HistoryGraph = () => {
               whileInView={{ opacity: 1 }}
               transition={{
                 type: "tween",
-                duration: 0.8,
-                delay: index * 0.15,
+                duration: 0.7,
+                delay: index * 0.09,
               }}
               viewport={{ once: true, amount: 0.5 }}
             />
@@ -179,8 +179,8 @@ const HistoryGraph = () => {
               whileInView={{ opacity: 1 }}
               transition={{
                 type: "tween",
-                duration: 0.8,
-                delay: index * 0.15,
+                duration: 0.7,
+                delay: index * 0.09,
               }}
               viewport={{ once: true, amount: 0.5 }}
             >

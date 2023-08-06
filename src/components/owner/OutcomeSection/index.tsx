@@ -14,29 +14,12 @@ const ShadowBoxTop = styled.div`
 const ShadowBoxBottom = styled.div`
   box-shadow: 0 -30px 130px 90px black;
 `;
+
 const OutcomeSection: FC = () => {
   const t = useTranslations("owner");
   const backgroundRef = useRef(null);
   const backgroundInView = useInView(backgroundRef);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0);
-
-  useEffect(() => {
-    const scrollHandler = () => {
-      const opacity = window.scrollY / 1000 - 0.6;
-      const downValue = (window.scrollY / 1000 - 2) * 3;
-      if (opacity <= 1) {
-        setBackgroundOpacity(opacity);
-      } else {
-        setBackgroundOpacity(1 - downValue);
-      }
-    };
-    if (backgroundInView) {
-      window.addEventListener("scroll", scrollHandler);
-    }
-    return () => {
-      window.removeEventListener("scroll", scrollHandler);
-    };
-  }, [backgroundInView, backgroundOpacity, setBackgroundOpacity]);
 
   const outcomeLists = [
     {
@@ -81,8 +64,26 @@ const OutcomeSection: FC = () => {
     },
   ];
 
+  useEffect(() => {
+    const scrollHandler = () => {
+      const opacity = window.scrollY / 1000 - 0.6;
+      const downValue = (window.scrollY / 1000 - 2) * 3;
+      if (opacity <= 1) {
+        setBackgroundOpacity(opacity);
+      } else {
+        setBackgroundOpacity(1 - downValue);
+      }
+    };
+    if (backgroundInView) {
+      window.addEventListener("scroll", scrollHandler);
+    }
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, [backgroundInView, backgroundOpacity, setBackgroundOpacity]);
+
   return (
-    <div className="mt-24 h-[110vh] mx-auto relative ">
+    <div className="mt-24 h-[120vh] mx-auto relative ">
       <div ref={backgroundRef} className="w-full h-full absolute">
         <ShadowBoxTop className="bg-black w-full h-36 z-10 absolute -top-36 shadow-black"></ShadowBoxTop>
         <div className="absolute w-full h-full opacity-50">

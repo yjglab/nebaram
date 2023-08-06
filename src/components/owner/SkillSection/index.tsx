@@ -90,7 +90,7 @@ const SkillSection: FC = () => {
   };
 
   return (
-    <div className="mt-52 px-[9%] sm:px-[12%] lg:px-[15%] xl:px-[20%] 2xl:px-[25%]  min-h-screen py-24 sm:py-32 flex flex-col items-center">
+    <div className="mt-52 min-h-screen py-24 sm:py-32 flex flex-col items-center">
       <div className="text-center w-full">
         <div className="gap-2 md:gap-4 flex flex-col">
           <AnimatedTitle size="lg" align="center">
@@ -114,14 +114,14 @@ const SkillSection: FC = () => {
           </p>
         </motion.div>
       </div>
-      <div className="mt-16 md:mt-24 grid grid-cols-1 w-full h-full md:grid-cols-2 gap-6 lg:gap-14 overflow-hidden">
+      <div className="mt-16 md:mt-24 grid grid-cols-1 h-full sm:grid-cols-2 gap-6 lg:gap-10 overflow-hidden">
         {skillCard.map((card, index) => (
           <motion.div
             key={card.id}
             id={card.skill}
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardLeave}
-            className="relative p-[8%] overflow-hidden flex flex-col h-[40vh]  md:h-[45vw] lg:h-[35vw] 2xl:h-[30vw] rounded-2xl"
+            className="relative p-[10%] overflow-hidden flex flex-col w-[300px] h-[400px] lg:w-[400px] lg:h-[500px] rounded-2xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{
