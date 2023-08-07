@@ -1,7 +1,14 @@
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import {
+  ArrowPathIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  EllipsisHorizontalIcon,
+} from "@heroicons/react/20/solid";
+import classNames from "classnames";
 
 const variants = {
   enter: (direction: number) => {
@@ -34,34 +41,49 @@ interface Props {
 }
 const Slider: React.FC<Props> = ({ images }) => {
   const [[page, direction], setPage] = useState([0, 0]);
-  const imageIndex = wrap(0, images.length, page);
+  const [imageLoading, setImageLoading] = useState(false);
 
+  const imageIndex = wrap(0, images.length, page);
+  const imageLoaded = () => {
+    setImageLoading(false);
+  };
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
+    setImageLoading(true);
   };
 
   return (
     <>
       <AnimatePresence initial={false} custom={direction}>
-        <div className="z-20 w-full flex justify-between my-auto">
-          <button
-            className="ml-2 sm:-ml-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
-            onClick={() => paginate(-1)}
-          >
-            <ChevronLeftIcon />
-          </button>
-          <button
-            className="mr-2 sm:-mr-16 w-12 h-12 duration-100 hover:scale-[1.2] hover:text-indigo-400"
-            onClick={() => paginate(1)}
-          >
-            <ChevronRightIcon />
-          </button>
-        </div>
-
+        <button
+          className="absolute left-0 z-20 ml-2 sm:-ml-16 w-12 h-12 duration-100 text-indigo-400 hover:scale-[1.2] hover:text-indigo-400"
+          onClick={() => paginate(-1)}
+        >
+          <ChevronLeftIcon />
+        </button>
+        <button
+          className="absolute right-0 z-20 mr-2 sm:-mr-16 w-12 h-12 duration-100 text-indigo-400 hover:scale-[1.2] hover:text-indigo-400"
+          onClick={() => paginate(1)}
+        >
+          <ChevronRightIcon />
+        </button>
+        {imageLoading && (
+          <div className="flex -translate-x-[50%] left-1/2 flex-col items-center absolute z-20">
+            <div className="text-white font-semibold mb-4">
+              이미지가 로드되고 있습니다
+            </div>
+            <div className="flex justify-center items-center w-12 h-12 p-1.5 animate-spin rounded-full">
+              <EllipsisHorizontalIcon className="w-10 text-amber-500" />
+            </div>
+          </div>
+        )}
         <motion.img
           key={page}
-          className="w-full top-0 absolute h-full rounded-2xl object-cover"
+          className={`${
+            imageLoading ? "border border-white/80" : "border-none border-0"
+          } w-full top-0 absolute h-full rounded-lg md:rounded-2xl object-cover border-white`}
           src={images[imageIndex]}
+          onLoad={imageLoaded}
           custom={direction}
           variants={variants}
           initial="enter"
