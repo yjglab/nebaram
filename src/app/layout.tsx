@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import Providers from "./providers";
-import classNames from "classnames";
 import { Pretendard } from "@constants/constant";
 
 export async function generateMetadata() {

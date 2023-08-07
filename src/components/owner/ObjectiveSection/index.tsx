@@ -11,7 +11,7 @@ const ObjectiveSection: FC = () => {
   const t = useTranslations("owner");
   const images = ["/images/owner/outcome-section/image-01.jpg"];
   return (
-    <div className="px-[5%] sm:px-[15%] lg:px-[22%] overflow-x-hidden mt-36 py-24 min-h-screen sm:py-36 flex flex-col items-center">
+    <div className="overflow-x-hidden mt-36 py-24 min-h-screen sm:py-36 flex flex-col items-center">
       <div className="z-20 text-center w-full flex flex-col items-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}
@@ -25,7 +25,7 @@ const ObjectiveSection: FC = () => {
           viewport={{ once: true, amount: 0.5 }}
         />
         <motion.div
-          className="px-4 relative mt-8"
+          className="px-4 relative mt-8 gap-4 flex flex-col 2xl:gap-0.5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -43,7 +43,15 @@ const ObjectiveSection: FC = () => {
         </motion.div>
       </div>
       <motion.div
-        className="aspect-video w-full h-full mt-24 relative flex justify-center items-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0 }}
+        className="w-full mt-24 mb-4 text-amber-500 font-semibold text-center"
+      >
+        {t("ObjectiveSection.sliderTitle")}
+      </motion.div>
+      <motion.div
+        className="aspect-video w-[80%] lg:w-[900px] xl:w-[1000px] relative flex items-center"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{

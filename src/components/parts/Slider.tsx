@@ -60,7 +60,7 @@ const Slider: React.FC<Props> = ({ images }) => {
 
         <motion.img
           key={page}
-          className="max-w-[85vw] top-0 absolute md:max-w-[70vw] h-full rounded-2xl object-cover w-full"
+          className="w-full top-0 absolute h-full rounded-2xl object-cover"
           src={images[imageIndex]}
           custom={direction}
           variants={variants}

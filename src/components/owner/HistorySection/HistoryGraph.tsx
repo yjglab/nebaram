@@ -130,7 +130,7 @@ const HistoryGraph = () => {
               transition={{
                 type: "tween",
                 duration: 0.7,
-                delay: index * 0.09,
+                delay: index * 0.065,
               }}
               viewport={{ once: true, amount: 0.5 }}
             >
@@ -145,7 +145,7 @@ const HistoryGraph = () => {
             aria-hidden="true"
             initial={{ opacity: 0, originY: 0, scaleY: 0 }}
             whileInView={{ opacity: 1, originY: 0, scaleY: 1 }}
-            transition={{ duration: 1.4, delay: 0.5 }}
+            transition={{ duration: 1.2, delay: 0.5 }}
             viewport={{ once: true, amount: 0.5 }}
           />
           {datas.map((content, index) => (
@@ -163,7 +163,7 @@ const HistoryGraph = () => {
               transition={{
                 type: "tween",
                 duration: 0.7,
-                delay: index * 0.09,
+                delay: index * 0.065,
               }}
               viewport={{ once: true, amount: 0.5 }}
             />
@@ -180,7 +180,7 @@ const HistoryGraph = () => {
               transition={{
                 type: "tween",
                 duration: 0.7,
-                delay: index * 0.09,
+                delay: index * 0.065,
               }}
               viewport={{ once: true, amount: 0.5 }}
             >

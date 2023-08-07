@@ -7,35 +7,46 @@
   "ProjectSection": {
     "sectionTitle": "프로젝트 둘러보기",
     "sectionDescription": "진행한 모든 프로젝트를 둘러보세요",
+    "project1": {
+      "category": "Front-end Development",
+      "title1": "Nebaram",
+      "title2": "개발자 육재경을 소개하는 퍼스널 브랜드",
+      "description1": "네바람은 네 가지 중요 역량을 갖춘 저를 표현하는 의미로 만든 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 사람들에게 알리고 싶어 제작했어요.",
+      "description2": "TypeScript, React.js, Next.js, React-Query, TailwindCSS, Emotion, Firebase",
+      "details": {}
+    },
+    "project2": {
+      "category": "Full Stack Development",
+      "title1": "BlooBolt",
+      "title2": "서비스 개발 직무자들의 소통 커뮤니티",
+      "description1": "소프트웨어 개발자와 기획자, 디자인 직무자들이 소통의 어려움을 해결하고 서로의 포지션의 역할을 이해하여 서비스를 원만히 만들게하고자 기획한 소통 커뮤니티에요.",
+      "description2": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
+      "details": {}
+    },
+    "project3": {
+      "category": "Full Stack Development",
+      "title1": "BlooWays",
+      "title2": "실시간 채팅룸 및 메시지 서비스",
+      "description1": "자신과 비슷한 사람들이 모인 공간을 직접 만들어 실시간으로 대화를 나눌 수 있는 서비스에요.",
+      "description2": "TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
+      "details": {}
+    },
+    "project4": {
+      "category": "Front-end Development",
+      "title1": "MUG",
+      "title2": "세계 전시 정보를 안내하는 인터랙션 웹",
+      "description1": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 웹 서비스에요. 스크롤 애니메이션과 정렬 및 필터링 애니메이션을 이용한 사용자 인터랙션 구현에 집중한 프로젝트에요.",
+      "description2": "JavaScript, Pug, SCSS, Express.js, MongoDB",
+      "details": {}
+    },
 
-    "project1Category": "Front-end Development",
-    "project1Title1": "Nebaram",
-    "project1Title2": "개발자 육재경을 소개하는 퍼스널 브랜드",
-    "project1Description1": "네바람은 네 가지 대표 역량을 갖춘 저를 표현하는 의미로 만든 퍼스널 브랜드에요. 네바람 서비스를 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 사람들에게 알리고 싶어 제작했어요.",
-    "project1Description2": "<span>사용된 기술</span>TypeScript, React.js, Next.js, React-Query, TailwindCSS, Emotion, Firebase",
-
-    "project2Category": "Full Stack Development",
-    "project2Title1": "BlooBolt",
-    "project2Title2": "서비스 개발 직무자들의 소통 커뮤니티",
-    "project2Description1": "소프트웨어 개발자와 기획자, 디자인 직무자들이 소통의 어려움을 해결하고 서로의 포지션의 역할을 이해하여 서비스를 원만히 만들게하고자 기획한 소통 커뮤니티에요.",
-    "project2Description2": "<span>사용된 기술</span>TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
-
-    "project3Category": "Full Stack Development",
-    "project3Title1": "BlooWays",
-    "project3Title2": "실시간 채팅룸 및 메시지 서비스",
-    "project3Description1": "자신과 비슷한 사람들이 모인 공간을 직접 만들어 실시간으로 대화를 나눌 수 있는 서비스에요.",
-    "project3Description2": "<span>사용된 기술</span>TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
-
-    "project4Category": "Front-end Development",
-    "project4Title1": "MUG",
-    "project4Title2": "세계 전시 정보를 안내하는 인터랙션 웹",
-    "project4Description1": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 웹 서비스에요. 스크롤 애니메이션과 정렬 및 필터링 애니메이션을 이용한 사용자 인터랙션 구현에 집중한 프로젝트에요.",
-    "project4Description2": "<span>사용된 기술</span>JavaScript, Pug, SCSS, Express.js, MongoDB",
-
-    "project5Category": "Full Stack Development",
-    "project5Title1": "Tira Santorini",
-    "project5Title2": "그리스 섬을 배경으로 기획한 케이크 전문점 소개",
-    "project5Description1": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
-    "project5Description2": "<span>사용된 기술</span>JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB"
+    "project5": {
+      "category": "Full Stack Development",
+      "title1": "Tira Santorini",
+      "title2": "그리스 섬을 배경으로 기획한 케이크 전문점 소개",
+      "description1": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
+      "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
+      "details": {}
+    }
   }
 }

@@ -14,7 +14,7 @@ const SkillSection: FC = () => {
     {
       id: 1,
       skill: t("SkillSection.skill1"),
-      src: "/images/about/square-section/square-s-1.jpeg",
+      src: "/images/owner/skill-section/skill_01.jpeg",
       title1: t("SkillSection.skill1Title1"),
       title2: t("SkillSection.skill1Title2"),
       description1: t.rich("SkillSection.skill1Description1", {
@@ -31,7 +31,7 @@ const SkillSection: FC = () => {
     {
       id: 2,
       skill: t("SkillSection.skill2"),
-      src: "/images/about/square-section/square-s-2.jpeg",
+      src: "/images/owner/skill-section/skill_02.jpeg",
       title1: t("SkillSection.skill2Title1"),
       title2: t("SkillSection.skill2Title2"),
       description1: t.rich("SkillSection.skill2Description1", {
@@ -48,7 +48,7 @@ const SkillSection: FC = () => {
     {
       id: 3,
       skill: t("SkillSection.skill3"),
-      src: "/images/about/square-section/square-s-3.jpeg",
+      src: "/images/owner/skill-section/skill_03.jpeg",
       title1: t("SkillSection.skill3Title1"),
       title2: t("SkillSection.skill3Title2"),
       description1: t.rich("SkillSection.skill3Description1", {
@@ -65,7 +65,7 @@ const SkillSection: FC = () => {
     {
       id: 4,
       skill: t("SkillSection.skill4"),
-      src: "/images/about/square-section/square-s-4.jpeg",
+      src: "/images/owner/skill-section/skill_04.jpeg",
       title1: t("SkillSection.skill4Title1"),
       title2: t("SkillSection.skill4Title2"),
       description1: t.rich("SkillSection.skill4Description1", {
