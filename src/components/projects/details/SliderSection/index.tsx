@@ -17,7 +17,7 @@ const SliderSection = () => {
   ];
 
   return (
-    <div className=" overflow-x-hidden py-14 md:py-20 min-h-screen flex flex-col items-center">
+    <div className=" overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
       <div className="w-full flex justify-center">
         <div className="mb-4 text-sm lg:text-base font-medium flex text-black py-1.5 px-3 rounded-lg bg-white">
           <a
