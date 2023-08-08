@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import {
@@ -38,8 +38,9 @@ const swipePower = (offset: number, velocity: number) => {
 
 interface Props {
   images: Array<string>;
+  setSlideNumber?: (n: number) => void;
 }
-const Slider: React.FC<Props> = ({ images }) => {
+const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [imageLoading, setImageLoading] = useState(false);
 
@@ -49,8 +50,9 @@ const Slider: React.FC<Props> = ({ images }) => {
   };
   const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
-    setImageLoading(true);
+    setSlideNumber && setImageLoading(true);
   };
+  useEffect(() => setSlideNumber && setSlideNumber(imageIndex), [imageIndex]); // slide 번호 조정 (0, 1, 2..)
 
   return (
     <>

@@ -5,21 +5,28 @@ import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
+import { useState } from "react";
 
 const SliderSection = () => {
   const t = useTranslations("projects");
   const { id: projectId } = useParams();
-  const images = [
-    t(`ProjectSection.project${projectId}.details.slide1.src`),
-    t(`ProjectSection.project${projectId}.details.slide2.src`),
-    t(`ProjectSection.project${projectId}.details.slide3.src`),
-    t(`ProjectSection.project${projectId}.details.slide4.src`),
-  ];
+  const [slideNumber, setSlideNumber] = useState(0);
+
+  const slideData = Array.from({ length: 20 }, (_, i) => i + 1).map((id) => ({
+    id: id,
+    scope: t(`ProjectSection.project${projectId}.details.slide${id}.scope`),
+    src: t(`ProjectSection.project${projectId}.details.slide${id}.src`),
+    title: t(`ProjectSection.project${projectId}.details.slide${id}.title`),
+    description: t(
+      `ProjectSection.project${projectId}.details.slide${id}.description`
+    ),
+  }));
+  const slideImages = slideData.map((data) => data.src).filter((data) => data);
 
   return (
     <div className=" overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
       <div className="w-full flex justify-center">
-        <div className="mb-4 text-sm lg:text-base font-medium flex text-black py-1.5 px-3 rounded-lg bg-white">
+        <div className="mb-4 text-sm lg:text-base font-medium flex text-white py-1 px-2.5 rounded-lg bg-white/20">
           <a
             href={t(`ProjectSection.project${projectId}.details.github`)}
             rel="referrer"
@@ -56,12 +63,24 @@ const SliderSection = () => {
         }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <Slider images={images} />
+        <Slider images={slideImages} setSlideNumber={setSlideNumber} />
       </motion.div>
 
-      <div className="w-[90%] text-sm lg:text-base mt-2 lg:mt-4 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 flex justify-between">
-        <div className="font-medium">타이틀</div>
-        <div>1/2</div>
+      <div className="w-[90%] text-sm lg:text-base mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 ">
+        <div className="flex items-center justify-between w-full">
+          <div className="flex items-center gap-3">
+            <div className="font-semibold py-1 px-2.5 bg-white/20 rounded-lg">
+              {slideData[slideNumber].scope}
+            </div>
+            <div className="font-semibold">{slideData[slideNumber].title}</div>
+          </div>
+          <div>
+            {slideNumber + 1} / {slideImages.length}
+          </div>
+        </div>
+        <div className="mt-2.5 pl-1 font-light leading-7">
+          {slideData[slideNumber].description}
+        </div>
       </div>
     </div>
   );
