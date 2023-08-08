@@ -7,6 +7,8 @@
   "ProjectSection": {
     "sectionTitle": "프로젝트 둘러보기",
     "sectionDescription": "진행한 모든 프로젝트를 둘러보세요",
+    "projectDescriptionLabel": "서비스 설명",
+
     "project1": {
       "category": "Front-end Development",
       "title1": "Nebaram",
@@ -28,7 +30,9 @@
       "description2": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
 
       "details": {
+        "githubLinkLabel": "주요 기능 소개 GitHub",
         "github": "https://github.com/yjglab/BlooBolt/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C",
+        "productionLinkLabel": "프로덕션 페이지",
         "production": "https://bloobolt.com",
 
         "header": "원만한 소통을 위한 모두의 공간",
@@ -38,7 +42,7 @@
         "outline": "<span>기획 의도</span><div>서비스 개발에 필요한 개발자들, 기획자, 디자이너들이 모여서 직무에 관한 질문을 통해서 지식을 얻어가거나 최신 트렌드 같은 이야기들을 주제로 소통을 할 수 있는 커뮤니티 공간입니다. 기획부터 디자인/퍼블리싱, 프론트, 백엔드 개발을 모두 진행했고 현재 aws로 배포되어있는 반응형 SPA 웹 서비스입니다. 포스트를 만들고 글과 사진, 코멘트를 통해 소통하며 프로필 만들기, 팔로우, 랭크 시스템 등 여러가지 기능을 넣은 프로젝트이며 꾸준히 새로운 기능 및 버전 업데이트를 진행하고 있습니다.</div>",
         "implementsLabel": "구현 기능",
         "implements": {
-          "content1": "<span>사용자</span><div>일반/소셜 회원 가입, 로그인, 비밀번호 변경/재발급, 프로필 아바타 및 내용 제작, 사용자 랭크, 트레이스(팔로우), 사용자 신고, 사용자 이용 정지</div>",
+          "content1": "<span>사용자</span><div>일반/소셜 회원 가입, 가입 이메일 인증, 로그인, 비밀번호 변경/재발급, 프로필 아바타 및 내용 제작, 사용자 랭크, 트레이스(팔로우), 사용자 신고, 사용자 이용 정지</div>",
           "content2": "<span>포스트</span><div>포스트 생성/삭제/수정/블라인드, 다중 이미지 업로드, 이미지 슬라이더, 이미지 압축, 포스트 공감 기능, 코멘트 생성/수정/삭제, 포스트 검색, 해시태그 검색, 무한 스크롤링 포스트 로드, 추천 포스트 로드</div>",
           "content3": "<span>공통</span><div>서버사이드 렌더링, 반응형 웹 스크린</div>",
           "content4": "",
@@ -144,22 +148,185 @@
           "description": "랭크는 6~1이 존재하며 랭크를 올리기 위해 필요한 블루포인트(Bloo Point)는 사용자의 참여도 수치를 의미합니다. 랭크 9는 관리자를 의미합니다. 랭크의 초기 상태는 0이며 포스트 한 개를 작성하면 Rank 6으로 상승합니다. 포스트, 코멘트를 올릴 경우 10p, 프롯을 받거나 트레이스 요청을 받은 경우 100p가 부여됩니다. 포스트, 코멘트를 삭제하거나 프롯 취소, 트레이스 연결이 해제되면 받은 포인트가 회수됩니다. 코멘트를 올린 포스트가 자신의 포스트인 경우 포인트를 받지 않습니다."
         },
         "slide16": {
+          "scope": "사용자",
+          "src": "https://user-images.githubusercontent.com/70316567/244854139-86656d46-73e6-41ce-a62c-e4ce04c079e1.gif",
+          "title": "회원가입과 로그인 (일반 계정 가입)",
+          "description": "이메일 인증을 통해서만 가입이 가능합니다. 일반 계정 가입은 이메일, 사용자명, 비밀번호, 직군(user class) 정보를 받으며 이메일은 인증 절차를 시도하여 해당 이메일로 코드를 전송하고 코드가 일치하면 가입을 승인합니다. 가입이 완료되면 회원별로 사용자 코드가 부여됩니다. 이 코드는 회원들의 개인정보나 암호를 변경 시에 활용될 수 있습니다."
+        },
+        "slide17": {
+          "scope": "사용자",
+          "src": "https://user-images.githubusercontent.com/70316567/244883445-0e184246-37d4-43fb-a1e2-4200d0bf3b65.gif",
+          "title": "회원가입과 로그인 (소셜 계정 가입)",
+          "description": "구글, 카카오 연결을 제공하고 선택한 로그인 전략을 실행합니다. 소셜 계정으로 가입한 경우 서비스에서 필요로하는 사용자명과 직군 정보를 추가로 입력해야 서비스를 이용할 수 있습니다."
+        },
+        "slide18": {
+          "scope": "사용자",
+          "src": "https://user-images.githubusercontent.com/70316567/244890211-7a9ca143-d7d2-41e4-9b43-808b590b37f5.gif",
+          "title": "비밀번호를 잊어버린 경우",
+          "description": "일반 계정 사용자에 한하여 비밀번호를 잊어버린 경우 지원 페이지(/support)에서 가입 시 전송된 사용자 코드를 사용하여 무작위 문자열의 임시 비밀번호 코드를 발급받을 수 있습니다."
+        },
+        "slide19": {
           "scope": "ETC",
           "src": "https://user-images.githubusercontent.com/70316567/244891102-3ba5a1c0-840c-461c-a7ac-597fa1d24226.gif",
           "title": "처음 사용자용 가이드",
           "description": "랭크는 6~1이 존재하며 랭크를 올리기 위해 필요한 블루포인트(Bloo Point)는 사용자의 참여도 수치를 의미합니다. 랭크 9는 관리자를 의미합니다. 랭크의 초기 상태는 0이며 포스트 한 개를 작성하면 Rank 6으로 상승합니다. 포스트, 코멘트를 올릴 경우 10p, 프롯을 받거나 트레이스 요청을 받은 경우 100p가 부여됩니다. 포스트, 코멘트를 삭제하거나 프롯 취소, 트레이스 연결이 해제되면 받은 포인트가 회수됩니다. 코멘트를 올린 포스트가 자신의 포스트인 경우 포인트를 받지 않습니다."
         },
-        "slide17": {
+        "slide20": {
           "scope": "ETC",
           "src": "https://user-images.githubusercontent.com/70316567/244891090-5a9f3b9c-a4b8-489f-b0d1-67cbfe68f27c.gif",
           "title": "버전 로그 페이지",
           "description": "서비스 버전의 새로운 기능과 변경 내역을 알려드립니다."
         },
-        "slide18": {
+        "slide21": {
           "scope": "ETC",
           "src": "https://user-images.githubusercontent.com/70316567/222087547-b7920a38-e99e-4802-850b-2e87307ab343.jpg",
           "title": "반응형 웹 스크린",
           "description": "BlooBolt 서비스는 100% 반응형 웹 스크린으로 동작하여 어떤 크기의 기기에서도 최적화된 화면으로 표시됩니다."
+        }
+      }
+    },
+    "project3": {
+      "category": "Full Stack Development",
+      "title1": "BlooWays",
+      "title2": "실시간 채팅룸 및 메시지 서비스",
+      "description1": "자신과 비슷한 사람들이 모인 공간을 직접 만들어 실시간으로 대화를 나눌 수 있는 서비스에요.",
+      "description2": "TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
+
+      "details": {
+        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "github": "https://github.com/yjglab/BlooWays/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C",
+        "productionLinkLabel": "프로덕션 페이지",
+        "production": "https://blooways.online",
+
+        "header": "나와 비슷한 사람을 만날 수 있는 가장 빠른 곳",
+        "headerDescription": "소켓 통신을 이용한 실시간 데이터 전송 서비스",
+
+        "outlineLabel": "개요",
+        "outline": "<span>기획 의도</span><div>BlooWays는 소켓 통신을 활용하여 1대1 또는 다수의 멤버들과 실시간 라이브 메시지를 주고받을 수 있는 서비스입니다. 블루웨이와 에리어는 각각 크고 작은 개념의 대화 공간이며, 사용자는 여러 개의 대화 공간을 생성하고 원하는 멤버를 초대하여 자신과 유사한 성향을 가진 멤버들과 소통할 수 있습니다.</div>",
+        "implementsLabel": "구현 기능",
+        "implements": {
+          "content1": "<span>공통</span><div>실시간 데이터 전송, 반응형 웹 스크린</div>",
+          "content2": "<span>사용자</span><div>일반/소셜 회원 가입, 로그인, 사용자명 변경</div>",
+          "content3": "<span>블루웨이 및 에리어(NSP)</span><div>블루웨이 생성, 에리어 생성, 멤버 초대하기, 실시간 메시지 통신, 접속중인 사용자 인디케이팅, 포스트 공감 기능, 멤버 언급하기, 이미지 전송, 미확인 메시지 인디케이팅, 인피니트 스크롤링</div>",
+          "content4": "",
+          "content5": ""
+        },
+        "issuesLabel": "이슈",
+        "issues": "<span>수신하지 않은 메시지에 대한 알림 처리</span><div>A에리어에 있는 사용자가 B에리어에서 전송된 메시지에 대한 수신 알림을 받지 못함. 사용자가 각 에리어별로 입장한 시간, 마지막으로 메시지를 전송한 시간을 저장 후 API 요청. 전송된 시간 보다 데이터 생성일이 더 큰 메시지들의 개수를 체크, 클라이언트로 전송하여 해결</div>",
+        "skillsLabel": "기술",
+        "skills": {
+          "skill1": "<span>Front-end</span><div>TypeScript, React, React-Router, SWR, Tailwind, Styled-Components</div>",
+          "skill2": "<span>Back-end</span><div>Express, Sequelize(MySQL), Socket.io</div>",
+          "skill3": "<span>Deploy</span><div>AWS(EC2+S3)</div>",
+          "skill4": "<span>Secure</span><div>Nginx + HTTPS</div>"
+        },
+        "slide1": {
+          "scope": "사용자",
+          "src": "https://user-images.githubusercontent.com/70316567/244482519-9eee11ed-68ec-430c-87b0-3df5c0b5e233.gif",
+          "title": "멤버 가입과 로그인 (일반 계정 로그인)",
+          "description": "일반 계정 및 소셜 계정으로 멤버 가입과 로그를 관리할 수 있습니다. 멤버로 가입되면 모든 블루웨이 멤버들이 속해있는 '전체 블루웨이'가 자동으로 추가됩니다."
+        },
+        "slide2": {
+          "scope": "사용자",
+          "src": "https://user-images.githubusercontent.com/70316567/244483592-82f2c768-a8ae-4f13-bceb-8e5cf839f5d3.gif",
+          "title": "멤버 가입과 로그인 (소셜 계정 로그인)",
+          "description": "일반 계정 및 소셜 계정으로 멤버 가입과 로그를 관리할 수 있습니다. 멤버로 가입되면 모든 블루웨이 멤버들이 속해있는 '전체 블루웨이'가 자동으로 추가됩니다."
+        },
+        "slide3": {
+          "scope": "블루웨이",
+          "src": "https://user-images.githubusercontent.com/70316567/244487699-dad71027-af44-48bd-98ef-c30cf4f2fe69.gif",
+          "title": "새로운 블루웨이 생성하기",
+          "description": "블루웨이는 멤버들이 모일 수 있는 가장 큰 개념의 공간입니다. 하나의 블루웨이는 여러개의 작은 공간인 에리어로 이루어지며 블루웨이에 초대된 멤버는 자신의 블루웨이 명단에 초대받은 블루웨이가 표시됩니다. 블루웨이 이름과 링크, 설명란 입력을 통해 생성할 수 있습니다. 링크는 기본적으로 블루웨이명과 자동으로 매치되지만 사용자가 임의로 입력할 수 있습니다. 예를 들어 링크를 chocolate으로 입력했다면 이 블루웨이의 링크는 (https://blooways.online/blooway/chocolate) 이 됩니다. 설명란은 생성할 블루웨이가 어떤 곳인지를 나타냅니다. 입력된 설명은 블루웨이 명 우측에 표시됩니다."
+        },
+        "slide4": {
+          "scope": "블루웨이",
+          "src": "https://user-images.githubusercontent.com/70316567/244487734-d08a86ae-e22b-4f65-a071-0416a0ea120e.gif",
+          "title": "블루웨이에 멤버 초대하기",
+          "description": "멤버의 이메일을 통해 블루웨이 멤버 명단에 등록할 수 있습니다."
+        },
+        "slide5": {
+          "scope": "에리어와 프라이빗 토크",
+          "src": "https://user-images.githubusercontent.com/70316567/244491591-ade96a68-8530-44db-9f57-6f29f23adf72.gif",
+          "title": "새로운 에리어 생성하여 초대하기",
+          "description": "에리어는 블루웨이에 속하는 작은 개념의 공간(Room)입니다. 에리어에 멤버를 초대할 수 있으며 같은 블루웨이 멤버여도 초대받지 못한 멤버의 에리어 명단에는 해당 에리어가 표시되지 않습니다. 프라이빗 토크는 멤버와 1:1 대화를 할 수 있는 공간입니다. 프라이빗 토크를 할 수 있는 명단은 같은 블루웨이에 속한 멤버들을 대상으로 생성됩니다. 에리어를 생성하여 멤버의 이메일을 통해 초대할 수 있습니다."
+        },
+        "slide6": {
+          "scope": "에리어와 프라이빗 토크",
+          "src": "https://user-images.githubusercontent.com/70316567/244768288-dd6edabe-0ac3-4f7f-bc31-6c69163c5949.gif",
+          "title": "에리어의 모든 멤버들과 실시간 토크 주고받기",
+          "description": "특정 에리어에 속한 모든 멤버들과 실시간 소켓 통신을 이용해 대화를 주고 받을 수 있습니다. 시연 이미지는 브라우저 창 2개를 이용해 예시를 구현하고 있는 상황이므로 포커스 하고 있지 않은 브라우저에서는 실시간 메시지가 전송되지 않는 것처럼 보이나 정상적인 상황입니다. 브라우저가 포커스 되어있지 않거나 백그라운드 탭일 경우 네트워크 요청이 지연되거나 일시 중지되므로 실시간 메시지가 수신되지 않습니다. 이는 브라우저가 해당 상황에서 일부 동작을 제한하여 성능을 향상시키기 위해 최적화하는 과정이므로 실제 대화시에는 각자 사용하는 브라우저를 포커스 하기 때문에 문제되지 않습니다."
+        },
+        "slide7": {
+          "scope": "에리어와 프라이빗 토크",
+          "src": "https://user-images.githubusercontent.com/70316567/244769669-1ce25d5f-0eb1-4979-ae19-bbed3a629065.gif",
+          "title": "멤버 언급하기",
+          "description": "같은 에리어에 속한 멤버들을 @ 입력을 통해 언급할 수 있습니다 @를 입력 시 트리거가 동작하여 현재 속해있는 에리어 명단을 표시하고 입력 시 해당 멤버와의 프라이빗 토크 페이지로 이동할 수 있는 링크를 생성합니다."
+        },
+        "slide8": {
+          "scope": "에리어와 프라이빗 토크",
+          "src": "https://user-images.githubusercontent.com/70316567/244759560-68cc8b61-84dd-46d5-a029-9a758f0663c4.gif",
+          "title": "이미지 전송하기",
+          "description": "토크 입력 폼 하단의 이미지 버튼을 통해 다수의 이미지를 전송하거나 이미지 파일을 드래그하여 전송할 수 있습니다. 이미지 클릭 시 이미지를 상세보기 할 수 있는 캐루셀을 띄웁니다."
+        },
+        "slide9": {
+          "scope": "에리어와 프라이빗 토크",
+          "src": "https://user-images.githubusercontent.com/70316567/244761028-de588b3a-234b-4e90-8b0f-cf46846ada98.gif",
+          "title": "수신하지 않은 토크 확인하기",
+          "description": "같은 에리어에 있지 않을 때 상대 멤버들이 메시지를 보내는 경우 이 메시지들의 개수를 내가 읽지 않은 토크로 표시합니다. 프라이빗 토크에도 적용됩니다."
+        },
+        "slide10": {
+          "scope": "공통",
+          "src": "https://user-images.githubusercontent.com/70316567/244943925-9ce4dc95-8e95-408d-ba52-d833c3d4d95d.gif",
+          "title": "인피니트 스크롤링",
+          "description": "사용자 경험 향상과 서비스 특성상 쌓인 대용량 토크 데이터의 분산 전송을 위해 무한 스크롤링이 적용됩니다. 초기 20개의 토크를 로드하며 스크롤을 올리면 20개씩 토크 데이터가 추가됩니다. 스크롤 도중 새로운 토크가 전송될 경우 바로보기 버튼이 생성됩니다."
+        },
+        "slide11": {
+          "scope": "공통",
+          "src": "https://user-images.githubusercontent.com/70316567/244778313-0e9d4d2b-9f63-4ea1-b19a-69e232d5dcb8.gif",
+          "title": "반응형 웹 스크린",
+          "description": "BlooWays 서비스는 100% 반응형 웹 스크린으로 동작하여 어떤 크기의 기기에서도 최적화된 화면으로 표시됩니다."
+        },
+        "slide12": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide13": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide14": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide15": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide16": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide17": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide18": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
         },
         "slide19": {
           "scope": "",
@@ -172,16 +339,14 @@
           "src": "",
           "title": "",
           "description": ""
+        },
+        "slide21": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
         }
       }
-    },
-    "project3": {
-      "category": "Full Stack Development",
-      "title1": "BlooWays",
-      "title2": "실시간 채팅룸 및 메시지 서비스",
-      "description1": "자신과 비슷한 사람들이 모인 공간을 직접 만들어 실시간으로 대화를 나눌 수 있는 서비스에요.",
-      "description2": "TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
-      "details": {}
     },
     "project4": {
       "category": "Front-end Development",
@@ -189,7 +354,162 @@
       "title2": "세계 전시 정보를 안내하는 인터랙션 웹",
       "description1": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 웹 서비스에요. 스크롤 애니메이션과 정렬 및 필터링 애니메이션을 이용한 사용자 인터랙션 구현에 집중한 프로젝트에요.",
       "description2": "JavaScript, Pug, SCSS, Express.js, MongoDB",
-      "details": {}
+
+      "details": {
+        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "github": "https://github.com/yjglab/MuG",
+        "productionLinkLabel": "프로덕션 페이지",
+        "production": "https://mug-lab.fly.dev",
+
+        "header": "한눈에 바라보는 거대한 예술 전시관",
+        "headerDescription": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 반응형 웹 서비스",
+
+        "outlineLabel": "개요",
+        "outline": "<span>기획 의도</span><div>크롤링 된 전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 반응형 웹 서비스입니다. 파이썬 Selenium을 이용해 Robot 배제 프로토콜 허용 범위안에서 전시 데이터를 모았으며 이 데이터를 카드 형식으로 디자인하여 페이지에 로드합니다. 사용자 인터랙션과 애니메이션 구현, 퍼블리싱에 집중한 프로젝트입니다. 컨트롤러에서 사용자가 페이지를 요청하면 셔플 된 MongoDB 데이터를 불러와서 객체로 전송해줍니다. Pug에서 전달받은 데이터를 페이지에 렌더링합니다.</div>",
+        "implementsLabel": "구현 기능",
+        "implements": {
+          "content1": "<span>공통</span><div>스크롤 애니메이션, 카드 소팅 애니메이션, 전시명/전시관/전시국 검색 필터링, 박물관/미술관 필터링, 카드 클릭 애니메이션, 반응형 웹 스크린</div>",
+          "content2": "",
+          "content3": "",
+          "content4": "",
+          "content5": ""
+        },
+        "issuesLabel": "이슈",
+        "issues": "<span>카드 클릭/닫기 클릭 시 위치 조정</span><div>카드 클릭 시 카드별 위치에서 천천히 확대되며 중앙 배치, 닫기 클릭 시 원위치로 조정해야 하는 상황 -> 사용자 브라우저의 Viewport 크기를 계산, 클릭한 카드의 좌푯값(X, Y)을 감산하여 해결</div>",
+        "skillsLabel": "기술",
+        "skills": {
+          "skill1": "<span>Front-end</span><div>JavaScript, JQuery, Pug, SCSS</div>",
+          "skill2": "<span>Back-end</span><div>Express, MongoDB, Python</div>",
+          "skill3": "<span>Deploy</span><div>Flyio</div>",
+          "skill4": ""
+        },
+        "slide1": {
+          "scope": "인트로 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/246902735-ad6c4f25-e2d1-4497-a794-b1a1e325da8c.gif",
+          "title": "서비스 소개",
+          "description": "인트로 페이지는 서비스의 사용 방법을 영상과 텍스트로 간단히 안내합니다. 사용자의 마우스 스크롤링에 따라 변화하는 입체적인 애니메이션 요소를 표현합니다."
+        },
+        "slide2": {
+          "scope": "메인 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/246903059-85c69c87-0429-4c05-9fd9-5495a1859097.gif",
+          "title": "전시 슬라이드",
+          "description": "메인 페이지의 상단에는 무작위 전시 5개를 슬라이더로 보여줍니다. 전시는 일정시간마다 변경되고 컨트롤러로 움직일 수 있습니다."
+        },
+        "slide3": {
+          "scope": "메인 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/246903076-4f47a43f-9ac1-4982-8fd4-2f3d75a4fd0d.gif",
+          "title": "전시 슬라이드",
+          "description": "클릭 시 해당 전시의 실제 페이지로 이동합니다."
+        },
+        "slide4": {
+          "scope": "메인 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/246904605-908ca20c-4c32-44f9-be62-492cb43e206f.gif",
+          "title": "메인 카드 호버링",
+          "description": "스크롤을 아래로 내리면 전시 카드들이 나타나고 마우스를 올리면 해당 전시의 간단한 정보를 커서에 표시합니다. 카드에는 분류(박물관 전시/미술관 전시), 전시국가가 아이콘으로 표시됩니다."
+        },
+        "slide5": {
+          "scope": "메인 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/246907465-60c5bfaa-ae5a-4865-aca3-3518273110da.gif",
+          "title": "메인 카드 클릭",
+          "description": "클릭 시 카드가 팝업되며 상세 정보를 표시합니다."
+        },
+        "slide6": {
+          "scope": "메인 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/246907447-7962a927-1e98-4cd5-bd57-abd07b0b2add.gif",
+          "title": "메인 카드 클릭",
+          "description": "카드의 상세 정보에는 전시의 제목, 전시관, 국가와 국기, 전시 내용 텍스트가 표시되며 해당 전시 페이지로 이동할 수 있는 링크를 제공합니다."
+        },
+        "slide7": {
+          "scope": "카드 필터링",
+          "src": "https://user-images.githubusercontent.com/70316567/246910683-17b8733a-a708-4956-82ff-e6f35e2c933c.gif",
+          "title": "분류(박물관 전시 / 미술관 전시)로 필터링하기",
+          "description": ""
+        },
+        "slide8": {
+          "scope": "카드 필터링",
+          "src": "https://user-images.githubusercontent.com/70316567/246910768-28269919-3850-45a1-930e-fbfff2aeac7c.gif",
+          "title": "타이틀로 필터링하기",
+          "description": ""
+        },
+        "slide9": {
+          "scope": "카드 필터링",
+          "src": "https://user-images.githubusercontent.com/70316567/246910780-49bfc411-765f-43ce-ab53-23a66297a262.gif",
+          "title": "전시관으로 필터링하기",
+          "description": ""
+        },
+        "slide10": {
+          "scope": "카드 필터링",
+          "src": "https://user-images.githubusercontent.com/70316567/246910795-d45def6c-a025-4c23-bff2-9cdbd1ad9554.gif",
+          "title": "전시국으로 필터링하기",
+          "description": ""
+        },
+        "slide11": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide12": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide13": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide14": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide15": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide16": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide17": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide18": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide19": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide20": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide21": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        }
+      }
     },
 
     "project5": {
@@ -198,7 +518,488 @@
       "title2": "그리스 섬을 배경으로 기획한 케이크 전문점 소개",
       "description1": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
       "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
-      "details": {}
+
+      "details": {
+        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "github": "https://github.com/yjglab/tira-santorini",
+        "productionLinkLabel": "프로덕션 페이지",
+        "production": "https://tira-santorini.fly.dev/",
+
+        "header": "집안에서 맛보는 그릭 티라미수",
+        "headerDescription": "그리스 섬을 배경으로 기획한 케이크 전문점 소개 사이트",
+
+        "outlineLabel": "개요",
+        "outline": "<span>기획 의도</span><div>TIRA는 그리스 산토리니에 존재하는 여섯 마을을 배경으로 한 티라미수 전문 디저트 브랜드입니다. 산토리니 마을들의 특징과 색상, 형태 등을 반영하여 패키지의 디자인과 제품의 맛이 각 마을과 가장 잘 부합하도록 선정된 다양한 티라미수 패키지를 제공합니다.</div>",
+        "implementsLabel": "구현 기능",
+        "implements": {
+          "content1": "<span>공통</span><div>GSAP를 이용해 스크롤에 따라 부드럽게 반응하는 브랜드 소개 페이지 구현. 제품 소개와 장바구니, 가격 조정 기능 구현. 서비스 가입과 프로필 제작 및 수정 기능 구현</div>",
+          "content2": "",
+          "content3": "",
+          "content4": "",
+          "content5": ""
+        },
+        "issuesLabel": "이슈",
+        "issues": "<span>가로 스크롤 구현과 화면 스냅 기능</span><div>사용자 스크롤 시 세로가 아닌 가로로 화면이 자연스럽게 스냅 되는 독특한 UX를 제공하기 위한 의도. 각 섹션의 요소들을 가로로 배치 후 GSAP의 to 메서드를 이용해 요소가 X축으로 이동하도록 설정. ScrollTrigger의 snap과 pin속성을 이용해 화면 고정 시 부드러운 동작을 구현하여 해결</div>",
+        "skillsLabel": "기술",
+        "skills": {
+          "skill1": "<span>Front-end</span><div>JavaScript, JQuery, GSAP, Pug, SCSS</div>",
+          "skill2": "<span>Back-end</span><div>Express, MongoDB</div>",
+          "skill3": "<span>Deploy</span><div>Flyio</div>",
+          "skill4": ""
+        },
+        "slide1": {
+          "scope": "인트로 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/247320856-21132a08-6982-4291-b7e8-281f86e7b31d.gif",
+          "title": "인트로 페이지 소개",
+          "description": "티라 매장을 소개합니다. 사용자 스크롤링에 따라 애니메이션 요소들을 나타냅니다."
+        },
+        "slide2": {
+          "scope": "스토리 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/247320819-d3e4e7dd-dd49-4ce8-9616-f38875fcdfcc.gif",
+          "title": "스토리 페이지 소개",
+          "description": "티라 브랜드의 스토리를 소개합니다. 사용자 스크롤링에 따라 애니메이션 요소들을 나타냅니다."
+        },
+        "slide3": {
+          "scope": "샵 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/247320897-aa7fda01-8601-4ec9-ba67-d385523b7167.gif",
+          "title": "샵 페이지 소개",
+          "description": "티라 제품을 구매할 수 있는 페이지입니다. 제품을 선택하여 장바구니에 담을 수 있습니다."
+        },
+        "slide4": {
+          "scope": "샵 페이지",
+          "src": "https://user-images.githubusercontent.com/70316567/247320934-58ee70db-4fc0-4210-8e4d-cfe89a7b5691.gif",
+          "title": "샵 페이지 소개",
+          "description": "티라 제품을 구매할 수 있는 페이지입니다. 제품을 선택하여 장바구니에 담을 수 있습니다."
+        },
+        "slide5": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide6": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide7": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide8": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide9": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide10": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide11": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide12": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide13": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide14": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide15": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide16": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide17": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide18": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide19": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide20": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide21": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        }
+      }
+    },
+    "project6": {
+      "category": "Publishing",
+      "title1": "Journet",
+      "title2": "그리스 섬을 배경으로 기획한 케이크 전문점 소개",
+      "description1": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
+      "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
+
+      "details": {
+        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "github": "",
+        "productionLinkLabel": "프로덕션 페이지",
+        "production": "https://blooways.online",
+
+        "header": "",
+        "headerDescription": "",
+
+        "outlineLabel": "개요",
+        "outline": "<span>기획 의도</span><div>웹 전시회를 진행합니다. 이번 전시회는 여행이라는 키워드를 중심으로 journey와 internet을 연결한 전시명으로 Journet을 제작하였습니다. 여행은 인간이 가장 높은 수준의 즐거움을 얻을 수 있는 유람입니다. 바이러스로 인해 고통스럽고 우울한 삶을 지내왔던 이들에게 시각적으로나마 유의미한 경험을 제공하고자 합니다.</div>",
+        "implementsLabel": "구현 기능",
+        "implements": {
+          "content1": "<span>공통</span><div></div>",
+          "content2": "<span></span><div></div>",
+          "content3": "<span></span><div></div>",
+          "content4": "",
+          "content5": ""
+        },
+        "issuesLabel": "이슈",
+        "issues": "<span></span><div></div>",
+        "skillsLabel": "기술",
+        "skills": {
+          "skill1": "<span>Front-end</span><div></div>",
+          "skill2": "<span>Back-end</span><div></div>",
+          "skill3": "<span>Deploy</span><div></div>",
+          "skill4": "<span>Secure</span><div></div>"
+        },
+        "slide1": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide2": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide3": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide4": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide5": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide6": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide7": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide8": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide9": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide10": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide11": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide12": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide13": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide14": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide15": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide16": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide17": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide18": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide19": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide20": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide21": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        }
+      }
+    },
+    "project7": {
+      "category": "Publishing",
+      "title1": "Tira Santorini",
+      "title2": "그리스 섬을 배경으로 기획한 케이크 전문점 소개",
+      "description1": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
+      "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
+
+      "details": {
+        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "github": "",
+        "productionLinkLabel": "프로덕션 페이지",
+        "production": "https://blooways.online",
+
+        "header": "",
+        "headerDescription": "",
+
+        "outlineLabel": "개요",
+        "outline": "<span>기획 의도</span><div></div>",
+        "implementsLabel": "구현 기능",
+        "implements": {
+          "content1": "<span>공통</span><div></div>",
+          "content2": "<span></span><div></div>",
+          "content3": "<span></span><div></div>",
+          "content4": "",
+          "content5": ""
+        },
+        "issuesLabel": "이슈",
+        "issues": "<span></span><div></div>",
+        "skillsLabel": "기술",
+        "skills": {
+          "skill1": "<span>Front-end</span><div></div>",
+          "skill2": "<span>Back-end</span><div></div>",
+          "skill3": "<span>Deploy</span><div></div>",
+          "skill4": "<span>Secure</span><div></div>"
+        },
+        "slide1": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide2": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide3": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide4": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide5": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide6": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide7": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide8": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide9": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide10": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide11": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide12": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide13": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide14": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide15": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide16": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide17": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide18": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide19": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide20": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        },
+        "slide21": {
+          "scope": "",
+          "src": "",
+          "title": "",
+          "description": ""
+        }
+      }
     }
   }
 }

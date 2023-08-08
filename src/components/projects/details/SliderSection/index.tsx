@@ -12,7 +12,7 @@ const SliderSection = () => {
   const { id: projectId } = useParams();
   const [slideNumber, setSlideNumber] = useState(0);
 
-  const slideData = Array.from({ length: 20 }, (_, i) => i + 1).map((id) => ({
+  const slideData = Array.from({ length: 21 }, (_, i) => i + 1).map((id) => ({
     id: id,
     scope: t(`ProjectSection.project${projectId}.details.slide${id}.scope`),
     src: t(`ProjectSection.project${projectId}.details.slide${id}.src`),
@@ -24,16 +24,16 @@ const SliderSection = () => {
   const slideImages = slideData.map((data) => data.src).filter((data) => data);
 
   return (
-    <div className=" overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
+    <div className="overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
       <div className="w-full flex justify-center">
-        <div className="mb-4 text-sm lg:text-base font-medium flex text-white py-1 px-2.5 rounded-lg bg-white/20">
+        <div className="mb-4 text-sm lg:text-base flex text-white py-1 px-2.5 rounded-lg bg-white/20">
           <a
             href={t(`ProjectSection.project${projectId}.details.github`)}
             rel="referrer"
             target="_blank"
             className="mr-2 hover:text-indigo-400 duration-200 flex items-center"
           >
-            주요 기능 소개
+            {t(`ProjectSection.project${projectId}.details.githubLinkLabel`)}
             <ArrowTopRightOnSquareIcon className="w-4 ml-1 stroke-2" />
           </a>
           |
@@ -43,7 +43,9 @@ const SliderSection = () => {
             target="_blank"
             className="ml-2 hover:text-indigo-400 duration-200 flex items-center"
           >
-            프로덕션 페이지
+            {t(
+              `ProjectSection.project${projectId}.details.productionLinkLabel`
+            )}
             <ArrowTopRightOnSquareIcon className="w-4 ml-1 stroke-2" />
           </a>
         </div>
@@ -66,10 +68,10 @@ const SliderSection = () => {
         <Slider images={slideImages} setSlideNumber={setSlideNumber} />
       </motion.div>
 
-      <div className="w-[90%] text-sm lg:text-base mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 ">
+      <div className="w-[90%] min-h-[50px] text-sm lg:text-base mt-5 md:mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 ">
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center gap-3">
-            <div className="font-semibold py-1 px-2.5 bg-white/20 rounded-lg">
+            <div className="font-semibold py-1 px-2.5 bg-indigo-400 rounded-lg">
               {slideData[slideNumber].scope}
             </div>
             <div className="font-semibold">{slideData[slideNumber].title}</div>
@@ -78,7 +80,7 @@ const SliderSection = () => {
             {slideNumber + 1} / {slideImages.length}
           </div>
         </div>
-        <div className="mt-2.5 pl-1 font-light leading-7">
+        <div className="mt-2.5 pl-1 font-light leading-6 md:leading-7">
           {slideData[slideNumber].description}
         </div>
       </div>

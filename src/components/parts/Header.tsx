@@ -102,7 +102,7 @@ const Header: FC = () => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="bg-white/10 backdrop-blur-lg relative flex w-full max-w-xs flex-col overflow-y-auto pb-12 shadow-xl">
+              <Dialog.Panel className="bg-white/[0.05] shadow-2xl shadow-black backdrop-blur-xl relative flex w-full max-w-xs flex-col overflow-y-auto pb-12">
                 <div className="flex px-6 py-3  item-center justify-end">
                   <button
                     type="button"
@@ -194,7 +194,7 @@ const Header: FC = () => {
               <div className="hidden md:block">
                 <DropMenu title="Language" chevron={true} width={24}>
                   {supportedLocalesMap.map((localeMap) => (
-                    <Menu.Item key={localeMap.locale}>
+                    <Menu.Item key={localeMap.name}>
                       {({ active }) => (
                         <button
                           onClick={() =>
