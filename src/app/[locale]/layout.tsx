@@ -36,6 +36,7 @@ export async function generateMetadata({ params: { locale = "en" } }) {
         },
       ],
     },
+    icons: "/images/common/icon.png",
     scripts: [{}],
   } as Metadata;
 }

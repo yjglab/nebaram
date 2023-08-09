@@ -21,10 +21,17 @@ const DescriptSection = () => {
     },
     implements: {
       label: t(`ProjectSection.project${projectId}.details.implementsLabel`),
-      data: Array.from({ length: 5 }, (_, i) => i + 1).map((id) => ({
+      data: Array.from(
+        {
+          length: parseInt(
+            t(`ProjectSection.project${projectId}.details.implementsCount`)
+          ),
+        },
+        (_, i) => i
+      ).map((id) => ({
         id: id,
         content: t.rich(
-          `ProjectSection.project${projectId}.details.implements.content${id}`,
+          `ProjectSection.project${projectId}.details.implements.${id}`,
           {
             span: (children) => (
               <span className="py-0.5 font-semibold mb-2.5">{children}</span>
@@ -49,10 +56,17 @@ const DescriptSection = () => {
     },
     skills: {
       label: t(`ProjectSection.project${projectId}.details.skillsLabel`),
-      data: Array.from({ length: 4 }, (_, i) => i + 1).map((id) => ({
+      data: Array.from(
+        {
+          length: parseInt(
+            t(`ProjectSection.project${projectId}.details.skillsCount`)
+          ),
+        },
+        (_, i) => i
+      ).map((id) => ({
         id: id,
         content: t.rich(
-          `ProjectSection.project${projectId}.details.skills.skill${id}`,
+          `ProjectSection.project${projectId}.details.skills.${id}`,
           {
             span: (children) => (
               <span className="py-0.5 font-semibold mb-2.5">{children}</span>

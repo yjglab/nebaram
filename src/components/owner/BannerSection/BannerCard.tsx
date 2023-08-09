@@ -23,7 +23,7 @@ const cardSvgVariants = {
 
 const BannerCard = () => {
   return (
-    <div className="scale-[0.65] md:scale-[0.85] lg:scale-[1] w-full h-full absolute top-10 flex items-center justify-center">
+    <div className="scale-[0.65]  md:scale-[0.85] lg:scale-[1] w-full h-full absolute top-10 flex items-center justify-center">
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
@@ -31,7 +31,7 @@ const BannerCard = () => {
         className="w-full absolute flex items-center justify-center"
       >
         <motion.div
-          className="w-[412px] h-[584px] flex items-center justify-center relative transform origin-[10%_60%]"
+          className=" w-[412px] h-[584px] flex items-center justify-center relative transform origin-[10%_60%]"
           variants={{
             offscreen: {
               opacity: 0,
@@ -48,7 +48,7 @@ const BannerCard = () => {
           <Image
             src="/images/owner/banner-section/card.jpg"
             objectFit="cover"
-            className="rounded-3xl"
+            className="shadow shadow-white/20 rounded-3xl"
             alt="owner.jpg"
             fill
           />

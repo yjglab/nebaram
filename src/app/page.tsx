@@ -12,6 +12,8 @@ import {
 import { NextPage } from "next";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
+import ObjectiveSection from "@components/about/ObjectiveSection";
+import HistorySection from "@components/about/HistorySection";
 
 const MainPage: NextPage = () => {
   const pathname = usePathname(); // 브라우저 경로
@@ -37,6 +39,8 @@ const MainPage: NextPage = () => {
     <div className="sr-only flex flex-col items-stretch">
       <BannerSection />
       <OutcomeSection />
+      <ObjectiveSection />
+      <HistorySection />
       <TeamSection />
     </div>
   );

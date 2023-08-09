@@ -73,7 +73,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
             imageLoading
               ? "border md:border-2 border-amber-500"
               : "border md:border-2 border-white/20"
-          } w-full top-0 absolute h-full rounded-lg md:rounded-2xl object-cover border-white`}
+          } w-full top-0 absolute h-full rounded-lg md:rounded-2xl object-cover `}
           src={images[imageIndex]}
           onLoad={imageLoaded}
           custom={direction}

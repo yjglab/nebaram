@@ -46,6 +46,7 @@ export async function generateMetadata() {
         },
       ],
     },
+    icons: "/images/common/icon.png",
     scripts: [{}],
   } as Metadata;
 }

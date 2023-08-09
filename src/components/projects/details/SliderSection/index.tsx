@@ -11,17 +11,22 @@ const SliderSection = () => {
   const t = useTranslations("projects");
   const { id: projectId } = useParams();
   const [slideNumber, setSlideNumber] = useState(0);
-
-  const slideData = Array.from({ length: 21 }, (_, i) => i + 1).map((id) => ({
-    id: id,
-    scope: t(`ProjectSection.project${projectId}.details.slide${id}.scope`),
-    src: t(`ProjectSection.project${projectId}.details.slide${id}.src`),
-    title: t(`ProjectSection.project${projectId}.details.slide${id}.title`),
+  const slideData = Array.from(
+    {
+      length: parseInt(
+        t(`ProjectSection.project${projectId}.details.slidesCount`)
+      ),
+    },
+    (_, i) => i
+  ).map((id) => ({
+    scope: t(`ProjectSection.project${projectId}.details.slides.${id}.scope`),
+    src: t(`ProjectSection.project${projectId}.details.slides.${id}.src`),
+    title: t(`ProjectSection.project${projectId}.details.slides.${id}.title`),
     description: t(
-      `ProjectSection.project${projectId}.details.slide${id}.description`
+      `ProjectSection.project${projectId}.details.slides.${id}.description`
     ),
   }));
-  const slideImages = slideData.map((data) => data.src).filter((data) => data);
+  const slideImages = slideData.map((data) => data.src);
 
   return (
     <div className="overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
@@ -49,9 +54,6 @@ const SliderSection = () => {
             <ArrowTopRightOnSquareIcon className="w-4 ml-1 stroke-2" />
           </a>
         </div>
-        {/* <div className="px-6 w-[90%] sm:w-[80%] lg:w-[900px] xl:w-[1000px] mx-auto break-all">
-          설명부분
-        </div> */}
       </div>
 
       <motion.div

@@ -121,7 +121,7 @@ const SkillSection: FC = () => {
             id={card.skill}
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardLeave}
-            className="relative p-[10%] overflow-hidden flex flex-col w-[300px] h-[400px] lg:w-[400px] lg:h-[500px] rounded-2xl"
+            className="relative p-[10%] border border-white/10 overflow-hidden flex flex-col w-[300px] h-[400px] lg:w-[400px] lg:h-[500px] rounded-2xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{
