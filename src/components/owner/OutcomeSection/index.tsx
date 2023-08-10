@@ -7,6 +7,7 @@ import { FC, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import dayjs from "dayjs";
 import Image from "next/image";
+import OutcomeValue from "./OutcomeValue";
 
 const ShadowBoxTop = styled.div`
   box-shadow: 0 30px 130px 90px black;
@@ -120,9 +121,7 @@ const OutcomeSection: FC = () => {
                 <p className="text-lg lg:text-xl font-bold leading-6 text-indigo-400">
                   {outcome.title}
                 </p>
-                <p className="text-5xl lg:text-7xl mt-3 tracking-wide font-bold ">
-                  {outcome.value}
-                </p>
+                <OutcomeValue value={parseInt(outcome.value)} />
               </motion.div>
             ))}
           </dl>

@@ -120,7 +120,7 @@ const Header: FC = () => {
                       key={page.name}
                       className="flow-root"
                     >
-                      <Link href={page.href} className="-m-2 block p-2">
+                      <Link href={page.href} className="block p-2">
                         {page.name}
                       </Link>
                     </div>
@@ -178,7 +178,10 @@ const Header: FC = () => {
                       <Link
                         key={page.name}
                         href={page.href}
-                        className="relative duration-200 text-sm flex items-center "
+                        className={classNames(
+                          page.href === "/" ? "cursor-not-allowed" : "",
+                          "relative duration-200 text-sm flex items-center"
+                        )}
                       >
                         <span className="duration-200 hover:-translate-y-0.5">
                           {page.name}

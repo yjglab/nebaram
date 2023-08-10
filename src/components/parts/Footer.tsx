@@ -125,17 +125,18 @@ const Footer: FC = () => {
               </Link>
             </div>
 
-            <div className="mt-4 max-w-xs text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-4 gap-1 flex flex-col max-w-xs text-sm text-gray-500 dark:text-gray-400">
               <p>{t("Footer.description")}</p>
               <p>
                 {t("Footer.presidentNameLabel")} | {t("Footer.presidentName")}
               </p>
+              <p> {t("Footer.email")}</p>
             </div>
 
             <ul className="mt-8 flex gap-6">
               <li>
                 <a
-                  href="/"
+                  href="https://github.com/yjglab"
                   rel="noreferrer"
                   target="_blank"
                   className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
@@ -166,7 +167,7 @@ const Footer: FC = () => {
                   {menu.name}
                 </p>
 
-                <ul className="mt-6 space-y-4 text-sm">
+                <ul className="mt-4 md:mt-6 space-y-3 md:space-y-4 text-sm">
                   {menu.contents.map((content) => (
                     <li key={content.id}>
                       <a

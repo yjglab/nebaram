@@ -34,7 +34,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 2,
       category: t("ProjectSection.project2.category"),
-      src: "/images/projects/project-section/bloobolt_thumb.png",
+      src: "/images/projects/project-section/bloobolt_thumb.jpg",
       title1: t("ProjectSection.project2.title1"),
       title2: t("ProjectSection.project2.title2"),
       description1: t("ProjectSection.project2.description1"),
@@ -43,7 +43,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 3,
       category: t("ProjectSection.project3.category"),
-      src: "/images/projects/project-section/blooways_thumb.png",
+      src: "/images/projects/project-section/blooways_thumb.jpg",
       title1: t("ProjectSection.project3.title1"),
       title2: t("ProjectSection.project3.title2"),
       description1: t("ProjectSection.project3.description1"),
@@ -52,7 +52,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 4,
       category: t("ProjectSection.project4.category"),
-      src: "/images/projects/project-section/mug_thumb.png",
+      src: "/images/projects/project-section/mug_thumb.jpg",
       title1: t("ProjectSection.project4.title1"),
       title2: t("ProjectSection.project4.title2"),
       description1: t("ProjectSection.project4.description1"),
@@ -61,7 +61,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 5,
       category: t("ProjectSection.project5.category"),
-      src: "/images/projects/project-section/tira_thumb.png",
+      src: "/images/projects/project-section/tira_thumb.jpg",
       title1: t("ProjectSection.project5.title1"),
       title2: t("ProjectSection.project5.title2"),
       description1: t("ProjectSection.project5.description1"),

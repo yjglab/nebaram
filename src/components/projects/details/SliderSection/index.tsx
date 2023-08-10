@@ -77,7 +77,7 @@ const SliderSection = () => {
       </motion.div>
 
       <motion.div
-        className="w-[90%] min-h-[50px] text-sm lg:text-base mt-5 md:mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 "
+        className="w-[90%] min-h-[50px] text-sm lg:text-base mt-14 md:mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 "
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ type: "tween", duration: 0.5, delay: 1.6 }}

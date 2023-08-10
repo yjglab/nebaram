@@ -5,7 +5,8 @@ import { useTranslations } from "next-intl";
 import { FC } from "react";
 import { motion } from "framer-motion";
 import AnimatedTitle from "@components/parts/AnimatedTitle";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 const HeaderSection: FC = () => {
   const t = useTranslations("projects");
@@ -20,18 +21,27 @@ const HeaderSection: FC = () => {
       ),
     },
   };
+  const navigator = useRouter();
+  const handleNavigateBack = () => {
+    navigator.back();
+  };
   return (
     <header className="mt-16 mx-auto lg:max-w-6xl">
       <div className="flex px-6 xl:px-4 gap-2 text-sm lg:text-lg md:gap-0 relative justify-between items-center">
-        <motion.div
-          className=""
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ type: "tween", duration: 0.5, delay: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
+        <div
+          onClick={handleNavigateBack}
+          className="flex items-center relative cursor-pointer right-2 hover:bg-white/20 rounded-xl pl-1 pr-3 py-0.5 duration-200"
         >
-          {projectData.title1}
-        </motion.div>
+          <ChevronLeftIcon className="w-6 mr-1" />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ type: "tween", duration: 0.5, delay: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            {projectData.title1}
+          </motion.div>
+        </div>
         <motion.div
           className="text-sm"
           initial={{ opacity: 0 }}

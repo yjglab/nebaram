@@ -21,14 +21,18 @@ const QuestionSection = () => {
       title: t(`QuestionSection.questions.2.title`),
       description: t(`QuestionSection.questions.2.description`),
     },
+    {
+      id: 3,
+      title: t(`QuestionSection.questions.3.title`),
+      description: t(`QuestionSection.questions.3.description`),
+    },
   ];
 
   return (
     <div className="px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-6xl">
-      <div className="text-2xl md:text-3xl font-semibold mb-8">
+      <div className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12">
         {t("QuestionSection.sectionTitle")}
       </div>
-      <div className="w-full h-[1.5px] mb-8 md:mb-10 bg-white/30" />
 
       {questionData.map((data, index) => (
         <motion.div

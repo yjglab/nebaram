@@ -8,7 +8,7 @@ import classNames from "classnames";
 import BannerCard from "./BannerCard";
 import BannerTitle from "./BannerTitle";
 
-export const bannerOnDelay = 1600;
+export const bannerOnDelay = 1300;
 const ScrollIndicator = styled.div`
   animation: ${ScrollIndicatorKeyframe} 2.5s ease-out infinite;
 `;

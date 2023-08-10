@@ -58,7 +58,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
     <div>
       <AnimatePresence initial={false} custom={direction}>
         {imageLoading && (
-          <div className="flex -translate-x-[50%] left-1/2 flex-col items-center absolute z-20">
+          <div className="flex -translate-x-[50%] -translate-y-6 left-1/2 flex-col items-center absolute z-20">
             <div className="text-white text-sm md:text-base font-semibold mb-4">
               이미지를 불러오고 있습니다
             </div>
