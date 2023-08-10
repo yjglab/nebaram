@@ -15,12 +15,18 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
     t("HeaderSection.category3"),
   ];
   return (
-    <header className="mt-24 md:mt-32 px-1 mx-auto max-w-2xl lg:max-w-7xl ">
+    <header className="mt-24 md:mt-32 px-8 mx-auto max-w-2xl lg:max-w-7xl ">
       <div className="flex flex-col gap-2 text-sm lg:text-lg md:gap-0 relative justify-between">
         <div className="flex gap-1.5">
-          <AnimatedTitle align="center" size="lg">
+          <motion.div
+            className="md:text-5xl sm:text-4xl text-3xl font-semibold"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ type: "tween", duration: 0.5, delay: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             {t("ProjectSection.sectionTitle")}
-          </AnimatedTitle>
+          </motion.div>
         </div>
         <motion.div
           className="md:absolute text-gray-200 bottom-0 right-0"
@@ -41,7 +47,7 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
           <motion.div
             key={category}
             className={classNames(
-              selectedCategory === category ? "text-amber-500" : ""
+              selectedCategory === category && "text-amber-500"
             )}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

@@ -31,7 +31,13 @@ const SliderSection = () => {
   return (
     <div className="overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
       <div className="w-full flex justify-center">
-        <div className="mb-4 text-sm lg:text-base flex text-white py-1 px-2.5 rounded-lg bg-white/20">
+        <motion.div
+          className="mb-4 text-sm lg:text-base flex text-white py-1 px-2.5 rounded-lg bg-white/20"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "tween", duration: 0.5, delay: 1.4 }}
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <a
             href={t(`ProjectSection.project${projectId}.details.github`)}
             rel="referrer"
@@ -53,7 +59,7 @@ const SliderSection = () => {
             )}
             <ArrowTopRightOnSquareIcon className="w-4 ml-1 stroke-2" />
           </a>
-        </div>
+        </motion.div>
       </div>
 
       <motion.div
@@ -70,7 +76,13 @@ const SliderSection = () => {
         <Slider images={slideImages} setSlideNumber={setSlideNumber} />
       </motion.div>
 
-      <div className="w-[90%] min-h-[50px] text-sm lg:text-base mt-5 md:mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 ">
+      <motion.div
+        className="w-[90%] min-h-[50px] text-sm lg:text-base mt-5 md:mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 "
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "tween", duration: 0.5, delay: 1.6 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center gap-3">
             <div className="font-semibold py-1 px-2.5 bg-indigo-400 rounded-lg">
@@ -85,7 +97,7 @@ const SliderSection = () => {
         <div className="mt-2.5 pl-1 font-light leading-6 md:leading-7">
           {slideData[slideNumber].description}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

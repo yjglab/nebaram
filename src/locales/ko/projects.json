@@ -13,13 +13,12 @@
       "category": "Front-end Development",
       "title1": "Nebaram",
       "title2": "개발자 육재경을 소개하는 퍼스널 브랜드",
-      "description1": "네바람은 네 가지 중요 역량을 갖춘 저를 표현하는 의미로 만든 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 사람들에게 알리고 싶어 제작했어요.",
+      "description1": "네바람은 네 가지 중요 역량을 갖춘 저를 표현하는 의미로 만든 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 알리고 싶어 제작했어요.",
       "description2": "TypeScript, React.js, Next.js, React-Query, TailwindCSS, Emotion, Firebase",
+
       "details": {
         "header": "새 바람을 실현할 첫 도약",
-        "headerDescription": "네 가지 중요 역량을 갖춘 개발자 육재경의 강점을 소개하고 목표하는 바와 이루기위한 과정을 보여주는 퍼스널 브랜드",
-        "src1": "/images/projects/project-section/bloobolt_thumb.png",
-        "src2": "https://user-images.githubusercontent.com/70316567/244487699-dad71027-af44-48bd-98ef-c30cf4f2fe69.gif"
+        "headerDescription": "네 가지 중요 역량을 갖춘 개발자 육재경의 강점을 소개하고 목표하는 바와 이루기위한 과정을 보여주는 퍼스널 브랜드"
       }
     },
     "project2": {

@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Locale, fallbackLocale, processLocale } from "@locales";
 import { ProjectData } from "@app/[locale]/projects/page";
+import { useRouter } from "next/navigation";
 
 interface Props {
   projectsData: Array<ProjectData>;
@@ -16,21 +17,23 @@ interface Props {
 const ProjectSection: FC<Props> = ({ projectsData }) => {
   const [locale, setLocale] = useState<Locale | "">("");
   const [projectCardHover, setprojectCardHover] = useState("");
-
+  const navigator = useRouter();
   const handleCardHover = (e: MouseEvent<HTMLDivElement>) => {
     setprojectCardHover(e.currentTarget.id);
   };
   const handleCardLeave = () => {
     setprojectCardHover("");
   };
-
+  const handleCardClick = (index: number) => {
+    navigator.replace(`/${locale}/projects/${index + 1}`);
+  };
   useEffect(() => {
     setLocale(processLocale(window.navigator.language) ?? fallbackLocale);
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen font-medium px-8">
+    <div className="min-h-screen font-medium px-6">
       <main>
         <div className="mt-10 mx-auto max-w-2xl lg:max-w-7xl ">
           <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-6">
@@ -38,6 +41,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               <motion.div
                 key={data.id}
                 id={data.title1}
+                onClick={() => handleCardClick(index)}
                 onMouseEnter={handleCardHover}
                 onMouseLeave={handleCardLeave}
                 className="relative p-8 lg:p-10 border border-white/10 overflow-hidden flex flex-col aspect-square rounded-2xl"

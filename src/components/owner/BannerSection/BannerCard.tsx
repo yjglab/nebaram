@@ -23,15 +23,15 @@ const cardSvgVariants = {
 
 const BannerCard = () => {
   return (
-    <div className="scale-[0.65]  md:scale-[0.85] lg:scale-[1] w-full h-full absolute top-10 flex items-center justify-center">
+    <div className="w-full h-full mt-20 flex items-center justify-center">
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
-        className="w-full absolute flex items-center justify-center"
+        className="w-full z-10 flex items-center justify-center relative"
       >
         <motion.div
-          className=" w-[412px] h-[584px] flex items-center justify-center relative transform origin-[10%_60%]"
+          className="z-20 w-[78%] h-[78%] sm:w-[450px] sm:[450px] md:w-[590px] md:h-[590px] flex aspect-square items-center justify-center relative "
           variants={{
             offscreen: {
               opacity: 0,
@@ -46,34 +46,29 @@ const BannerCard = () => {
           }}
         >
           <Image
-            src="/images/owner/banner-section/card.jpg"
+            src="/images/owner/banner-section/owner.jpg"
             objectFit="cover"
-            className="shadow shadow-white/20 rounded-3xl"
+            className=" shadow shadow-white/20 rounded-3xl "
             alt="owner.jpg"
             fill
           />
         </motion.div>
+        <motion.svg
+          className="scale-50 sm:scale-[0.75] md:scale-100 w-[590px] h-[590px]  absolute"
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.rect
+            x="3"
+            y="3"
+            rx="24"
+            stroke="#818cf8"
+            className="stroke-[5]  w-[580px] h-[580px] "
+            variants={cardSvgVariants}
+            custom={5}
+          />
+        </motion.svg>
       </motion.div>
-
-      <motion.svg
-        width="414"
-        height="584"
-        className="flex items-center justify-center"
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.rect
-          width="400"
-          height="572"
-          x="4"
-          y="5"
-          rx="24"
-          stroke="#818cf8"
-          className="stroke-[4] md:stroke-[5]"
-          variants={cardSvgVariants}
-          custom={5}
-        />
-      </motion.svg>
     </div>
   );
 };

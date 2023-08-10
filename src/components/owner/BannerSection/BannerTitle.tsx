@@ -13,13 +13,13 @@ const BannerTitle: FC<Props> = ({ bannerOn }) => {
   const t = useTranslations("owner");
 
   return (
-    <>
+    <div className="z-20 flex mt-32 md:mt-40 flex-col w-full items-center">
       <div
         className={classNames(
           bannerOn
-            ? "top-32 scale-[0.55] md:scale-[0.6] gap-0 md:gap-2 sm:gap-4"
-            : "top-[46%] scale-[1] md:scale-[2] gap-4",
-          "absolute flex-col z-10 duration-1000 flex "
+            ? "top-0 scale-[0.55] md:scale-[0.6] gap-0 md:gap-2 sm:gap-4"
+            : "top-[35vh] scale-[1] md:scale-[2] gap-4",
+          "flex-col relative z-10 duration-1000 flex "
         )}
       >
         <AnimatedTitle align="center" size="sm">
@@ -28,7 +28,7 @@ const BannerTitle: FC<Props> = ({ bannerOn }) => {
       </div>
 
       <motion.div
-        className="text-4xl sm:text-6xl lg:text-7xl font-semibold absolute top-[164px] sm:top-[185px]"
+        className="text-3xl sm:text-5xl lg:text-7xl font-semibold mt-0 md:mt-5 "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
@@ -40,7 +40,7 @@ const BannerTitle: FC<Props> = ({ bannerOn }) => {
       >
         {t("BannerSection.title2")}
       </motion.div>
-    </>
+    </div>
   );
 };
 

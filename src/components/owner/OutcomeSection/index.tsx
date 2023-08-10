@@ -83,7 +83,7 @@ const OutcomeSection: FC = () => {
   }, [backgroundInView, backgroundOpacity, setBackgroundOpacity]);
 
   return (
-    <div className="mt-24 h-[120vh] mx-auto relative ">
+    <div className="mt-0 md:mt-24 h-[120vh] mx-auto relative ">
       <div ref={backgroundRef} className="w-full h-full absolute">
         <ShadowBoxTop className="bg-black w-full h-36 z-10 absolute -top-36 shadow-black"></ShadowBoxTop>
         <div className="absolute w-full h-full opacity-50">

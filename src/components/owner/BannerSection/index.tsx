@@ -21,17 +21,19 @@ const BannerSection: FC = () => {
   }, bannerOnDelay);
 
   return (
-    <div className="z-20 w-full h-screen flex items-center relative justify-center">
-      <BannerTitle bannerOn={bannerOn} />
-      <BannerCard />
-      <ScrollIndicator className="absolute bottom-14 mx-auto">
-        <ChevronDownIcon
-          className={classNames(
-            bannerOn ? "opacity-100" : "opacity-0",
-            "w-14 text-white duration-300"
-          )}
-        />
-      </ScrollIndicator>
+    <div className="z-20  w-full min-h-screen ">
+      <div className="flex flex-col w-full h-full justify-center relative">
+        <BannerTitle bannerOn={bannerOn} />
+        <BannerCard />
+        <ScrollIndicator className="z-20 mt-16 md:mt-32 mx-auto">
+          <ChevronDownIcon
+            className={classNames(
+              bannerOn ? "opacity-100" : "opacity-0",
+              "w-14 text-white duration-300"
+            )}
+          />
+        </ScrollIndicator>
+      </div>
     </div>
   );
 };

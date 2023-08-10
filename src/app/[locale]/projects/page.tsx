@@ -25,7 +25,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 1,
       category: t("ProjectSection.project1.category"),
-      src: "/images/projects/project-section/bloobolt_thumb.png",
+      src: "/images/projects/project-section/nebaram_thumb.jpg",
       title1: t("ProjectSection.project1.title1"),
       title2: t("ProjectSection.project1.title2"),
       description1: t("ProjectSection.project1.description1"),

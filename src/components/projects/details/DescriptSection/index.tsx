@@ -87,8 +87,13 @@ const DescriptSection = () => {
       <div className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12">
         {t("ProjectSection.projectDescriptionLabel")}
       </div>
-
-      <div className="flex flex-col md:flex-row">
+      <motion.div
+        className="flex flex-col md:flex-row"
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", duration: 0.5, delay: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
           {projectData.outline.label}
         </div>
@@ -98,9 +103,15 @@ const DescriptSection = () => {
           </div>
           <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col md:flex-row">
+      <motion.div
+        className="flex flex-col md:flex-row"
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", duration: 0.5, delay: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
           {projectData.implements.label}
         </div>
@@ -118,9 +129,15 @@ const DescriptSection = () => {
           )}
           <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col md:flex-row">
+      <motion.div
+        className="flex flex-col md:flex-row"
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", duration: 0.5, delay: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
           {projectData.issues.label}
         </div>
@@ -130,9 +147,15 @@ const DescriptSection = () => {
           </div>
           <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col md:flex-row">
+      <motion.div
+        className="flex flex-col md:flex-row"
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "tween", duration: 0.5, delay: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+      >
         <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
           {projectData.skills.label}
         </div>
@@ -150,7 +173,7 @@ const DescriptSection = () => {
           )}
           <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
