@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { bannerOnDelay } from ".";
+import { useCallback } from "react";
 
 const cardSvgVariants = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -48,7 +49,7 @@ const BannerCard = () => {
           <Image
             src="/images/owner/banner-section/owner.jpg"
             objectFit="cover"
-            className=" shadow shadow-white/20 rounded-3xl "
+            className="shadow-2xl hover:shadow-indigo-500 shadow-indigo-900/90 duration-500 rounded-3xl "
             alt="owner.jpg"
             fill
           />

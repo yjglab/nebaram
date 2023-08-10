@@ -11,7 +11,9 @@ const ObjectiveSection: FC = () => {
   const t = useTranslations("owner");
   const images = [
     "/images/owner/objective-section/objective-01.jpg",
-    "/images/owner/objective-section/image-01.jpg",
+    "/images/owner/objective-section/objective-02.jpg",
+    "/images/owner/objective-section/objective-03.jpg",
+    "/images/owner/objective-section/objective-04.jpg",
   ];
   return (
     <div className="overflow-x-hidden mt-36 mb-56 md:mb-0 pt-12 md:py-24  sm:py-36 flex flex-col items-center">

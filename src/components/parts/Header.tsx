@@ -155,7 +155,7 @@ const Header: FC = () => {
 
       {/* 모바일 + PC */}
       <header className="relative duration-200">
-        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 xl:px-0">
+        <nav aria-label="Top" className="mx-auto max-w-6xl px-4 xl:px-0">
           <div className="relative">
             <div className="h-14 duration-200 flex w-full items-center justify-between relative">
               <div className="flex">

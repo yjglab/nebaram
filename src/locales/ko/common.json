@@ -8,7 +8,7 @@
   "Footer": {
     "copyright": "© 2023 Jaekyeong Yuk, All rights reserved.",
     "companyName": "nebaram",
-    "description": "여러분의 새 바람을 실현합니다",
+    "description": "사람들의 새 바람을 실현합니다",
     "presidentNameLabel": "대표자명",
     "presidentName": "육재경",
     "email": "yjgdesign@gmail.com",
@@ -52,9 +52,9 @@
       }
     },
     "company": {
-      "name": "회사",
+      "name": "브랜드",
       "content1": {
-        "name": "회사 소개",
+        "name": "브랜드 소개",
         "link": "/"
       },
       "content2": {

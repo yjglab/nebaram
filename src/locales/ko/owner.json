@@ -98,7 +98,7 @@
     "skill1Description2": "<span>사용하는 기술</span>TypeScript, JavaScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR, Socket.io-client",
 
     "skill2": "Back-End",
-    "skill2Title1": "안정적인 웹 서버와",
+    "skill2Title1": "안전한 웹 서버와",
     "skill2Title2": "DB를 만들 수 있어요",
     "skill2Description1": "<span></span>데이터를 요청할 API서버와 데이터베이스를 구축할 수 있고, 소켓을 이용해 실시간 데이터 전송 기능을 만들 수 있어요. AWS와 프록시 웹 서버 Nginx를 이용해 안정적인 웹 사이트를 배포할 수 있어요.",
     "skill2Description2": "<span>사용하는 기술</span>Node.js, Express.js, Sequelize.js, Socket.io, AWS EC2+S3+ Lambda, MySQL, MongoDB, Python, Selenium",
@@ -116,16 +116,20 @@
     "skill4Description2": "<span></span>"
   },
 
-  "questionSection": {
+  "QuestionSection": {
     "sectionTitle": "이런 점이 궁금해요",
     "questions": [
       {
         "title": "같이 작업하게 될 경우 어떤 장점이 있나요?",
-        "description": ""
+        "description": "다양한 역할을 경험해봤기에 각 포지션 직무자들의 역할이 무엇인지를 평소에도 잘 이해하고 있어요. 프론트 작업을 원하시면 프론트 개발자로, 퍼블리싱 작업을 원하시면 때로는 퍼블리셔로 맞춤형 의사소통이 가능해요. 더하여, 사용자의 입장에서 제가 담당한 기능 개발, 화면 퍼블리싱에 관해서는 어떠한 오류 상황도 없을 것을 자신해요."
       },
       {
         "title": "같이 작업하게 될 경우 어떤 단점이 있나요?",
-        "description": "이건 파트너의 성향에 따라 다를 수 있는데 저는 작업할 때 지나치게 미세한 부분들을 신경쓰느라 작업 순서가 간혹 바뀌는 경우가 있어요. 예를 들면, 백엔드 파트를 하다가 "
+        "description": "작업할 때 지나치게 미세한 부분, 자잘한 오류들을 검토하느라 작업의 우선 순위가 간혹 바뀌는 경우가 있어요. 큰 단위의 작업을 해야하는 상황에서 작은 단위 작업의 기능적, 디자인적 측면에서 작은 오류라도 발견되면 꼭 해결하고 넘어가야하는 완벽주의 타입이라 이건 파트너의 성향에 따라 장점이 될 수도, 단점이 될 수도 있어요."
+      },
+      {
+        "title": "디자인도 직접 하시나요? 디자이너와의 협업 도구로 어떤걸 쓰시나요?",
+        "description": "물론입니다. 하지만 한정된 시간안에서 개발 단계에 더 많은 시간을 투자해야 하기에 자체적으로 디자인, 퍼블리싱 UI 시스템을 만들어놓고 효율적으로 사용하고 있어요. 협업 도구로는 피그마를 선호하지만 디자이너께서 원하시는 도구가 있으시다면 무엇이든 환영해요."
       }
     ]
   }

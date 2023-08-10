@@ -89,7 +89,7 @@ const DescriptSection = () => {
       </div>
       <motion.div
         className="flex flex-col md:flex-row"
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -107,7 +107,7 @@ const DescriptSection = () => {
 
       <motion.div
         className="flex flex-col md:flex-row"
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -133,7 +133,7 @@ const DescriptSection = () => {
 
       <motion.div
         className="flex flex-col md:flex-row"
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -151,7 +151,7 @@ const DescriptSection = () => {
 
       <motion.div
         className="flex flex-col md:flex-row"
-        initial={{ opacity: 0, x: 30 }}
+        initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}

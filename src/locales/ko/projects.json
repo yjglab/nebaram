@@ -29,8 +29,8 @@
       "description2": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
 
       "details": {
-        "githubLinkLabel": "주요 기능 소개 GitHub",
-        "github": "https://github.com/yjglab/BlooBolt/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C",
+        "githubLinkLabel": "프로젝트 위키 GitHub",
+        "github": "https://github.com/yjglab/BlooBolt/wiki",
         "productionLinkLabel": "프로덕션 페이지",
         "production": "https://bloobolt.com",
 
@@ -195,8 +195,8 @@
       "description2": "TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
 
       "details": {
-        "githubLinkLabel": "주요 기능 소개 GitHub",
-        "github": "https://github.com/yjglab/BlooWays/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C",
+        "githubLinkLabel": "프로젝트 위키 GitHub",
+        "github": "https://github.com/yjglab/BlooWays/wiki",
         "productionLinkLabel": "프로덕션 페이지",
         "production": "https://blooways.online",
 
@@ -301,7 +301,7 @@
       "description2": "JavaScript, Pug, SCSS, Express.js, MongoDB",
 
       "details": {
-        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "githubLinkLabel": "프로젝트 위키 GitHub",
         "github": "https://github.com/yjglab/MuG",
         "productionLinkLabel": "프로덕션 페이지",
         "production": "https://mug-lab.fly.dev",
@@ -399,7 +399,7 @@
       "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
 
       "details": {
-        "githubLinkLabel": "주요 기능 소개 GitHub",
+        "githubLinkLabel": "프로젝트 위키 GitHub",
         "github": "https://github.com/yjglab/tira-santorini",
         "productionLinkLabel": "프로덕션 페이지",
         "production": "https://tira-santorini.fly.dev/",

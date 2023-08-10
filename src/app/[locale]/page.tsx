@@ -18,6 +18,9 @@ const MainPage: NextPage = () => {
     navigator.replace(`/${locale}/owner`);
   }, [navigator, window.navigator.language]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <BannerSection />

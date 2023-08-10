@@ -2,7 +2,6 @@ import classNames from "classnames";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
 import { motion } from "framer-motion";
-import AnimatedTitle from "@components/parts/AnimatedTitle";
 
 interface Props {
   selectedCategory: string;
@@ -15,7 +14,7 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
     t("HeaderSection.category3"),
   ];
   return (
-    <header className="mt-24 md:mt-32 px-8 mx-auto max-w-2xl lg:max-w-7xl ">
+    <header className="mt-24 md:mt-32 mx-auto max-w-2xl lg:max-w-6xl px-6 ">
       <div className="flex flex-col gap-2 text-sm lg:text-lg md:gap-0 relative justify-between">
         <div className="flex gap-1.5">
           <motion.div

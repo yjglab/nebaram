@@ -31,6 +31,7 @@ export const ScrollIndicatorKeyframe = keyframes`
     opacity: 0;
   }
 `;
+
 export const BannerLogoKeyframe = keyframes`
   0% {
     opacity: 0;

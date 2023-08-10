@@ -21,7 +21,7 @@ const HeaderSection: FC = () => {
     },
   };
   return (
-    <header className="mt-16 mx-auto lg:max-w-7xl ">
+    <header className="mt-16 mx-auto lg:max-w-6xl">
       <div className="flex px-6 xl:px-4 gap-2 text-sm lg:text-lg md:gap-0 relative justify-between items-center">
         <motion.div
           className=""

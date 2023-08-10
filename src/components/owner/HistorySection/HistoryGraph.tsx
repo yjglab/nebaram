@@ -126,7 +126,7 @@ const HistoryGraph = () => {
                 delay: index * 0.02,
               }}
               viewport={{ once: true, amount: 0.5 }}
-              className="w-[20%]"
+              className="w-[28%] md:w-[20%]"
             >
               <div className="w-full h-[100px] flex justify-center">
                 <span className="font-semibold text-lg md:text-2xl">
