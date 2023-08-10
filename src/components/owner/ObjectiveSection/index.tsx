@@ -9,9 +9,12 @@ import Slider from "../../parts/Slider";
 
 const ObjectiveSection: FC = () => {
   const t = useTranslations("owner");
-  const images = ["/images/owner/outcome-section/image-01.jpg"];
+  const images = [
+    "/images/owner/objective-section/objective-01.jpg",
+    "/images/owner/objective-section/image-01.jpg",
+  ];
   return (
-    <div className="overflow-x-hidden mt-36 py-24 min-h-screen sm:py-36 flex flex-col items-center">
+    <div className="overflow-x-hidden mt-36 mb-56 md:mb-0 pt-12 md:py-24  sm:py-36 flex flex-col items-center">
       <div className="z-20 text-center w-full flex flex-col items-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}
@@ -25,17 +28,17 @@ const ObjectiveSection: FC = () => {
           viewport={{ once: true, amount: 0.5 }}
         />
         <motion.div
-          className="px-4 relative mt-8 gap-4 flex flex-col 2xl:gap-0.5"
+          className="px-4 relative mt-4 md:mt-8 gap-4 flex flex-col 2xl:gap-0.5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <div className="mx-auto mt-6 break-keep text-2xl md:text-3xl">
+          <div className="mx-auto mt-6 break-keep text-xl sm:text-2xl md:text-3xl">
             <div className="font-semibold">
               {t("ObjectiveSection.description1")}
             </div>
           </div>
-          <div className="mx-auto break-keep text-2xl md:text-3xl">
+          <div className="mx-auto break-keep text-xl sm:text-2xl md:text-3xl">
             <div className="mt-2 font-semibold">
               {t("ObjectiveSection.description2")}
             </div>
@@ -46,9 +49,9 @@ const ObjectiveSection: FC = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0 }}
-        className="w-full mt-24 mb-4 text-amber-500 font-semibold text-center"
+        className="w-full mt-6 md:mt-24 mb-4 text-amber-500 font-semibold text-center"
       >
-        {t("ObjectiveSection.sliderTitle")}
+        {/* {t("ObjectiveSection.sliderTitle")} */}
       </motion.div>
       <motion.div
         className="aspect-video w-[80%] lg:w-[900px] xl:w-[1000px] relative flex items-center"

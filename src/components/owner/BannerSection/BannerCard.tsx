@@ -12,7 +12,7 @@ const cardSvgVariants = {
         pathLength: {
           delay: bannerOnDelay * 0.001,
           type: "spring",
-          duration: 1.5,
+          duration: 1.2,
           bounce: 0,
         },
         opacity: { delay: bannerOnDelay * 0.001, duration: 0.01 },

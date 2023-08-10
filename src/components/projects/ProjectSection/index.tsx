@@ -24,9 +24,9 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
   const handleCardLeave = () => {
     setprojectCardHover("");
   };
-  const handleCardClick = (index: number) => {
-    navigator.replace(`/${locale}/projects/${index + 1}`);
-  };
+  // const handleCardClick = (index: number) => {
+  //   navigator.replace(`/${locale}/projects/${index + 1}`);
+  // };
   useEffect(() => {
     setLocale(processLocale(window.navigator.language) ?? fallbackLocale);
     window.scrollTo(0, 0);
@@ -41,7 +41,6 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               <motion.div
                 key={data.id}
                 id={data.title1}
-                onClick={() => handleCardClick(index)}
                 onMouseEnter={handleCardHover}
                 onMouseLeave={handleCardLeave}
                 className="relative p-8 lg:p-10 border border-white/10 overflow-hidden flex flex-col aspect-square rounded-2xl"

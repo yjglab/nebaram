@@ -100,13 +100,13 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
         />
       </AnimatePresence>
       <button
-        className="p-[1px] rounded-full bg-black/20 absolute left-0 z-20 ml-2 sm:-ml-16 w-9 sm:w-12 h-9 sm:h-12 duration-100 text-white hover:scale-[1.2] hover:text-indigo-400"
+        className="p-[1px] -translate-y-2 rounded-full bg-black/20 absolute left-0 z-20 ml-2 sm:-ml-16 w-9 sm:w-12 h-9 sm:h-12 duration-100 text-white hover:scale-[1.2] hover:text-indigo-400"
         onClick={() => paginate(-1)}
       >
         <ChevronLeftIcon />
       </button>
       <button
-        className="p-[1px] rounded-full bg-black/20 absolute right-0 z-20 mr-2 sm:-mr-16 w-9 sm:w-12 h-9 sm:h-12 duration-100 text-white hover:scale-[1.2] hover:text-indigo-400"
+        className="p-[1px] -translate-y-2 rounded-full bg-black/20 absolute right-0 z-20 mr-2 sm:-mr-16 w-9 sm:w-12 h-9 sm:h-12 duration-100 text-white hover:scale-[1.2] hover:text-indigo-400"
         onClick={() => paginate(1)}
       >
         <ChevronRightIcon />

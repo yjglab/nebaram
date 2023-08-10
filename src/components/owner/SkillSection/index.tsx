@@ -90,7 +90,7 @@ const SkillSection: FC = () => {
   };
 
   return (
-    <div className="mt-52 min-h-screen py-24 sm:py-32 flex flex-col items-center">
+    <div className=" my-24 sm:my-32 w-full h-full flex flex-col items-center">
       <div className="text-center w-full">
         <div className="gap-2 md:gap-4 flex flex-col">
           <AnimatedTitle size="lg" align="center">
