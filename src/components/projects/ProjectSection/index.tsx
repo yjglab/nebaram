@@ -4,7 +4,6 @@ import React, { FC, MouseEvent, useEffect, useState } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Locale, fallbackLocale, processLocale } from "@locales";

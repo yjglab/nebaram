@@ -1,7 +1,7 @@
 "use client";
 
 import { NextPage } from "next";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { useTranslations } from "next-intl";
 import HeaderSection from "@components/projects/HeaderSection";
 import ProjectSection from "@components/projects/ProjectSection";
@@ -52,7 +52,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 4,
       category: t("ProjectSection.project4.category"),
-      src: "/images/projects/project-section/mug_thumb.jpg",
+      src: "/images/projects/project-section/mug_thumb.png",
       title1: t("ProjectSection.project4.title1"),
       title2: t("ProjectSection.project4.title2"),
       description1: t("ProjectSection.project4.description1"),
