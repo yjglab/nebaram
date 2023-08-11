@@ -8,13 +8,13 @@
     "header2": "그래서 지금까지 꾸준히 달려왔어요",
     "src": "/images/outcome-section/outcome-s-1.jpeg",
     "title1": "누적 작업일",
-    "value1": "{days}일+",
+    "value1": "{days}",
     "title2": "누적 강의 수강생",
-    "value2": "{attends}명+",
+    "value2": "{attends}",
     "title3": "작업한 프로젝트 <span>웹/공학/디자인</span>",
-    "value3": "{services}개",
+    "value3": "{services}",
     "title4": "대회 수상 <span>코딩경진대회 대상</span>",
-    "value4": "{awards}회"
+    "value4": "{awards}"
   },
   "ObjectiveSection": {
     "title": "개발자로서의 목표",

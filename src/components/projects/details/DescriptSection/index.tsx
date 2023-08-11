@@ -15,7 +15,7 @@ const DescriptSection = () => {
           <span className="py-0.5 font-semibold mb-2.5">{children}</span>
         ),
         div: (children) => (
-          <div className="break-all leading-8 font-light">{children}</div>
+          <div className="break-all leading-8 font-light mb-3">{children}</div>
         ),
       }),
     },
@@ -37,7 +37,9 @@ const DescriptSection = () => {
               <span className="py-0.5 font-semibold mb-2.5">{children}</span>
             ),
             div: (children) => (
-              <div className="break-all leading-8 font-light">{children}</div>
+              <div className="break-all leading-8 font-light mb-3">
+                {children}
+              </div>
             ),
           }
         ),
@@ -50,7 +52,17 @@ const DescriptSection = () => {
           <span className="py-0.5 font-semibold mb-2.5">{children}</span>
         ),
         div: (children) => (
-          <div className="break-all leading-8 font-light">{children}</div>
+          <div className="break-all leading-8 font-light mb-3">{children}</div>
+        ),
+        a: (children) => (
+          <a
+            href={t(`ProjectSection.project${projectId}.details.issuesLink`)}
+            className="text-base text-amber-500 hover:text-amber-600 duration-200"
+            rel="referrer"
+            target="_blank"
+          >
+            {children}
+          </a>
         ),
       }),
     },
@@ -72,7 +84,9 @@ const DescriptSection = () => {
               <span className="py-0.5 font-semibold mb-2.5">{children}</span>
             ),
             div: (children) => (
-              <div className="break-all leading-8 font-light">{children}</div>
+              <div className="break-all leading-8 font-light mb-3">
+                {children}
+              </div>
             ),
           }
         ),
@@ -98,10 +112,10 @@ const DescriptSection = () => {
           {projectData.outline.label}
         </div>
         <div className="w-full">
-          <div className="flex flex-col mb-6 md:mb-10 text-base md:text-lg">
+          <div className="flex flex-col mb-3 md:mb-3 text-base md:text-lg">
             {projectData.outline.data}
           </div>
-          <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
+          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
         </div>
       </motion.div>
 
@@ -121,13 +135,13 @@ const DescriptSection = () => {
               data.content && (
                 <div
                   key={data.id}
-                  className="flex flex-col  mb-6 md:mb-10 text-base md:text-lg"
+                  className="flex flex-col mb-3 md:mb-6 text-base md:text-lg"
                 >
                   {data.content}
                 </div>
               )
           )}
-          <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
+          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
         </div>
       </motion.div>
 
@@ -142,10 +156,10 @@ const DescriptSection = () => {
           {projectData.issues.label}
         </div>
         <div className="w-full">
-          <div className="flex flex-col  mb-6 md:mb-10 text-base md:text-lg">
+          <div className="flex flex-col mb-3 md:mb-3 text-base md:text-lg">
             {projectData.issues.data}
           </div>
-          <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
+          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
         </div>
       </motion.div>
 
@@ -165,13 +179,13 @@ const DescriptSection = () => {
               data.content && (
                 <div
                   key={data.id}
-                  className="flex flex-col  mb-6 md:mb-10 text-base md:text-lg"
+                  className="flex flex-col mb-3 md:mb-6 text-base md:text-lg"
                 >
                   {data.content}
                 </div>
               )
           )}
-          <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
+          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
         </div>
       </motion.div>
     </div>

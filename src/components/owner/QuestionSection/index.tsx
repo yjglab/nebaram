@@ -29,7 +29,7 @@ const QuestionSection = () => {
   ];
 
   return (
-    <div className="px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-6xl">
+    <div className="overflow-x-hidden px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-6xl">
       <div className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12">
         {t("QuestionSection.sectionTitle")}
       </div>

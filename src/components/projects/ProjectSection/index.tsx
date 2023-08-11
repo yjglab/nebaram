@@ -65,7 +65,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
                   projectCardHover === data.title1
                     ? "bottom-4 opacity-0"
                     : "bottom-0 opacity-100",
-                  "text-sm lg:text-lg z-20 relative font-semibold leading-6 duration-200"
+                  "text-sm lg:text-lg z-20 relative font-medium leading-6 duration-200"
                 )}
               >
                 {data.category}
