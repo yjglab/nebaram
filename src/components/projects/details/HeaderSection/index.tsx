@@ -30,7 +30,7 @@ const HeaderSection: FC = () => {
       <div className="flex px-6 xl:px-4 gap-2 text-sm lg:text-lg md:gap-0 relative justify-between items-center">
         <div
           onClick={handleNavigateBack}
-          className="flex items-center relative cursor-pointer right-2 hover:bg-white/20 rounded-xl pl-1 pr-3 py-0.5 duration-200"
+          className="flex items-center relative cursor-pointer right-2 hover:bg-white/20 rounded-lg pl-1 pr-3 py-0.5 duration-200"
         >
           <ChevronLeftIcon className="w-6 mr-1" />
           <motion.div

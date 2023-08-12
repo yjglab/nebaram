@@ -95,7 +95,7 @@ const DescriptSection = () => {
   };
 
   return (
-    <div className="px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-7xl">
+    <div className="overflow-x-hidden px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-7xl">
       <div className="w-full h-[1.5px] mb-8 md:mb-10 bg-white/30" />
 
       <div className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12">

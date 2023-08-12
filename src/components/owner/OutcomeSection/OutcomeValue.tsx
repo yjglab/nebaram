@@ -9,8 +9,9 @@ import { FC, useEffect, useRef } from "react";
 
 interface Props {
   value: number;
+  unit: string;
 }
-const OutcomeValue: FC<Props> = ({ value }) => {
+const OutcomeValue: FC<Props> = ({ value, unit }) => {
   const count = useMotionValue(0);
   const roundedValue = useTransform(count, Math.round);
   const valueRef = useRef(null);
@@ -29,12 +30,10 @@ const OutcomeValue: FC<Props> = ({ value }) => {
   }, [valueInView]);
 
   return (
-    <motion.h1
-      ref={valueRef}
-      className="text-5xl lg:text-7xl mt-3 tracking-wide font-bold "
-    >
-      {roundedValue}
-    </motion.h1>
+    <div className="flex gap-2 text-5xl lg:text-7xl mt-3 tracking-wide font-bold ">
+      <motion.h1 ref={valueRef}>{roundedValue}</motion.h1>
+      <span>{unit}</span>
+    </div>
   );
 };
 

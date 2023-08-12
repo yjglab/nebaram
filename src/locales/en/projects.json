@@ -1,1 +1,521 @@
-{}
+{
+  "HeaderSection": {
+    "category1": "All Projects",
+    "category2": "Development",
+    "category3": "Design"
+  },
+  "ProjectSection": {
+    "sectionTitle": "Explore Projects",
+    "sectionDescription": "Browse through all the projects",
+    "projectDescriptionLabel": "Project Description",
+    "projectSkillsLabel": "Skills",
+    "projectDetailLabel": "Go to Details Page",
+    "project1": {
+      "category": "Front-end Development",
+      "title1": "Nebaram",
+      "title2": "Personal Brand for Introducing Me",
+      "description1": "Nebaram is a personal brand that represents me as a web developer with four core competencies. Through Nebaram, I aim to showcase what kind of developer I am, the projects I've worked on, and my strengths.",
+      "description2": "TypeScript, React.js, Next.js, Next-intl, TailwindCSS, Emotion, Vercel",
+
+      "details": {
+        "githubLinkLabel": "Project Wiki GitHub",
+        "github": "https://github.com/yjglab/nebaram",
+        "productionLinkLabel": "Production Page",
+        "production": "https://nebaram.vercel.app",
+        "header": "The First Leap to Realize New Ideas",
+        "headerDescription": "A personal brand created to introduce a web developer with four core competencies",
+        "outlineLabel": "Overview",
+        "outline": "<span>Background</span><div>Nebaram is a personal brand website that I developed to renew my existing personal portfolio site. With a newly planned design, I added animation effects and changed the page rendering approach to the server side. During the UI planning phase, I designed the interface following Apple's Human Interface Guidelines. The intention is to provide intuitive and consistent experiences for users visiting my page, and to accommodate future considerations for releasing services under my brand name.</div><div>The reason for transitioning from plain React to Next.js is solely for server-side rendering. I have plans to continuously expand this website. If complex animations and data bundles continue to be added to a single-page web relying on CSR, I believe it could impact user experience. Therefore, I decided to change the rendering approach alongside this decision.</div>",
+        "implementsLabel": "Features",
+        "implementsCount": "1",
+        "implements": [
+          "<span>Common</span><div>Scroll/Mouse Animations, Motion Sliders, Multilingual Routing and Translation, Server-Side Rendering, Responsive Web Design</div>"
+        ],
+        "issuesLabel": "Issues",
+        "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/Relevant-Issues-List",
+        "issues": "<span>Applying different styles to specific strings in JSON data</span><div>Applying specific styles to keywords, headers, and other emphasized text proved to be challenging with the widely used multilingual functionality library, i18n-next. This includes strings written like '{<h1>Header</h1>Remaining text}'. I switched to the latest library, next-intl, and applied methods that support tag translation to resolve this issue.</div>",
+        "skillsLabel": "Skills",
+        "skillsCount": "2",
+        "skills": [
+          "<span>Front-end</span><div>TypeScript, React, Next.js, Next-intl, TailwindCSS, Emotion</div>",
+          "<span>Deploy</span><div>Vercel</div>"
+        ],
+        "slidesCount": "6",
+        "slides": [
+          {
+            "scope": "Developer Introduction",
+            "src": "https://user-images.githubusercontent.com/70316567/260242438-b84eb738-49f5-49c4-ad02-bc1dfced6149.gif",
+            "title": "Scroll Animations",
+            "description": "Displays animated elements based on scrolling. Unique designs were applied for each section, and the slider was developed to allow smooth drag transitions for mobile devices."
+          },
+          {
+            "scope": "Developer Introduction",
+            "src": "https://user-images.githubusercontent.com/70316567/260242446-99e6b536-b492-4be1-996a-41d9d7c23b62.gif",
+            "title": "Scroll Animations",
+            "description": "Continuous elements smoothly appear by adjusting delays using the index values of each element."
+          },
+          {
+            "scope": "Project Introduction",
+            "src": "https://user-images.githubusercontent.com/70316567/260242451-9bcc22a8-0795-4c4b-8b3d-cf8e3e92e078.gif",
+            "title": "Project Page",
+            "description": "A page displaying the projects I have worked on so far. Hovering over an image reveals a brief description and technical information. Clicking takes you to a detailed page."
+          },
+          {
+            "scope": "Project Introduction",
+            "src": "https://user-images.githubusercontent.com/70316567/260242453-52c45f50-707f-42e7-8325-0f983bb0bd94.gif",
+            "title": "Project Page",
+            "description": "The detailed page features a large slider to provide an overview of the service without entering the actual page. Detailed descriptions are provided for each slide. The bottom of the page contains detailed information about the project, its technology, and implemented features."
+          },
+          {
+            "scope": "Multilingual Routing",
+            "src": "https://user-images.githubusercontent.com/70316567/260244089-97621348-7a7d-4a3d-bc1d-f91a0c1ae9df.gif",
+            "title": "Multilingual Routing Support",
+            "description": "Provides JSON translation files for different languages (currently: Korean/English). You can click the Language button at the top to switch to a multilingual page."
+          },
+          {
+            "scope": "Responsive Screen",
+            "src": "https://user-images.githubusercontent.com/70316567/260244200-afe50c82-d7cf-477b-b2fd-4187106b8939.gif",
+            "title": "Responsive Page Support",
+            "description": "The Nebaram web page is implemented as a responsive page that adapts to screens of any size."
+          }
+        ]
+      }
+    },
+    "project2": {
+      "category": "Full Stack Development",
+      "title1": "BlooBolt",
+      "title2": "Communication Community for Service Development Professionals",
+      "description1": "A communication community designed to solve the communication challenges among software developers, designers, and planners, understanding each other's roles in order to smoothly create services.",
+      "description2": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
+
+      "details": {
+        "githubLinkLabel": "Project Wiki GitHub",
+        "github": "https://github.com/yjglab/BlooBolt/wiki",
+        "productionLinkLabel": "Production Page",
+        "production": "https://bloobolt.com",
+
+        "header": "A Space for Smooth Communication",
+        "headerDescription": "A web service where technical communication challenges are reduced for professionals in service development, including planners, developers, and designers, enabling them to get to know each other better.",
+
+        "outlineLabel": "Overview",
+        "outline": "<span>Background</span><div>Based on the discomfort felt from multiple team projects during school, this project was planned. Differences in technical understanding among developer team members, designers, and planners led to conflicts. We wanted to create a space for professionals to ask questions about different positions or the same roles within the team, share the latest trend information, and interact.</div><div>It uses a postcard-style communication method where text, pictures, and comments can be recorded. It includes various features such as profile creation, following, and a member ranking system. Profiles of all members are assigned different colors and ranks based on their positions, and their current roles in their work. This distinguishes the service from others.</div>",
+        "implementsLabel": "Features",
+        "implementsCount": "3",
+        "implements": [
+          "<span>Users</span><div>Regular/Social member registration, email verification, login, password change/reset, profile avatar and content creation, user rank, traces (follows), user reporting, user suspension</div>",
+          "<span>Posts</span><div>Create/delete/modify posts, multiple image upload, image slider, image compression, post liking functionality, comment creation/modification/deletion, post search, hashtag search, infinite scrolling post loading, recommended post loading</div>",
+          "<span>Common</span><div>Server-side rendering, responsive web design</div>"
+        ],
+        "issuesLabel": "Issues",
+        "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/Issue-Tracker",
+        "issues": "<span>Data not loading multiple times while scrolling</span><div>An issue occurred where data loading requests were missing in event handlers with multiple branching due to the use of the existing scroll method. This was resolved by applying Intersection Observer and refactoring the code, removing multiple event request approaches to improve performance.</div><a>See Details</a>",
+        "skillsLabel": "Technologies",
+        "skillsCount": "4",
+        "skills": [
+          "<span>Front-end</span><div>TypeScript, React, Redux Toolkit, Next, Tailwind</div>",
+          "<span>Back-end</span><div>Express, Sequelize (MySQL)</div>",
+          "<span>Deploy</span><div>AWS (EC2+S3+Lambda)</div>",
+          "<span>Secure</span><div>Nginx + HTTPS</div>"
+        ],
+        "slidesCount": "21",
+        "slides": [
+          {
+            "scope": "Square",
+            "src": "https://user-images.githubusercontent.com/70316567/244946346-3dfd6ee7-5051-45f9-8596-f566d2f669e4.gif",
+            "title": "Infinite Scrolling",
+            "description": "Enhancing user experience and distributing accumulated post data due to service characteristics. Load initial 12 posts. Scroll down to load 12 more posts at a time."
+          },
+          {
+            "scope": "Square",
+            "src": "https://user-images.githubusercontent.com/70316567/244888544-af3068a5-a581-4014-b604-d9e831ec79da.gif",
+            "title": "Post Exploration",
+            "description": "Load all posts containing the desired keyword through search. Click on hashtags to load all posts with that hashtag. Blinded posts are excluded from search."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244884930-5057c3d5-7459-42d5-b169-276a8baf12d9.gif",
+            "title": "Post Upload",
+            "description": "Topic is the title of the post. You can upload a post with an empty topic, which will be labeled as 'No Topic'. You can write text content in the post. You can add hashtags to the post content, and clicking on them loads posts with the attached hashtag."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244886246-3d82eddb-7fe4-4441-8346-b17354806997.gif",
+            "title": "Attach Images",
+            "description": "You can upload up to 6 images per post (10MB limit per image). Images are stored in S3 through resizing for optimization during post data loading. Displayed images are loaded as compressed files. Clicking on an image displays a carousel and loads the original file."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244889083-4712e227-2df8-4c07-80ac-d8f38d94f480.gif",
+            "title": "Upload Comments",
+            "description": "You can input comments. Editing and deleting comments are possible."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244945589-f42bc7df-7c2a-4f79-9106-48a2d7d1bbef.gif",
+            "title": "Load Recommended Posts",
+            "description": "Display the top 3 posts with the most prods for each square at the top of the page. Display 1 random post from the question category for each square at the top of the page. Recommended and question posts are constantly displayed even when scrolling."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244886780-d4440b31-ca53-485a-9912-6e3e1a0dd12d.gif",
+            "title": "Prods",
+            "description": "Prods include like, empathy, and other functions. Self-prodding on one's own post is prohibited."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244887113-75878f17-53e0-4659-8d91-8d2fe4b9735c.gif",
+            "title": "Trace",
+            "description": "Trace is a feature similar to following. When you request to trace a user, you appear in their tracing list on their profile. Also, if someone traces you, they appear in your tracer list."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244887561-963b11ac-1d20-4181-bfb7-9ef65873b9cc.gif",
+            "title": "Post Deletion and Blinding (No Comments)",
+            "description": "There are some limitations to the post deletion feature for users who have written comments to help or give opinions. If there are no comments, pressing delete prompts a confirmation procedure and completely deletes the post upon confirmation."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244887659-6d0ecae8-d0bb-4fd7-b89b-f5ed60140086.gif",
+            "title": "Post Deletion and Blinding (With Comments)",
+            "description": "If there are comments, the post is not completely deleted but rather blinded. A blinded post is marked as a post deleted by the author and can be viewed by others at any time. Blinded posts prohibit prods, comments, and edits. The author can restore their own blinded posts, restoring prods and comments, but edits are prohibited."
+          },
+          {
+            "scope": "Post",
+            "src": "https://user-images.githubusercontent.com/70316567/244888222-6c2e8eb5-ffd6-44da-ad61-8e5e0efc71f7.gif",
+            "title": "User Report",
+            "description": "Post reporting is a report about the author. Upon report request, the report content, post information, and reporter information are saved. If a user receives 7 accumulated reports, all of their posts are immediately blinded. If a user receives 14 accumulated reports, their service usage, excluding login, is restricted. A user who has reported another user once cannot report them again."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/244889548-238d3104-af3c-4de1-82bc-2639540840ea.gif",
+            "title": "Edit Profile",
+            "description": "The profile is a page where you can showcase yourself. The profile includes user avatar image, user activity history, and public information. In cases where it's not your own page, only the profile banner and activity history are displayed, and additional information appears on your own profile page. Shared information is displayed on the profile banner and can be seen when others visit your profile. User avatars can be changed to images below 10MB. User activity history includes posts uploaded by the user and tracing list. The role in public information cannot be changed."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/244890733-13eb26a5-8861-4760-a65d-c139094e9508.jpg",
+            "title": "Change Password",
+            "description": "Passwords can be changed on the personal information page."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/224644661-05c576c6-4491-49d7-8a44-d50de45e9b6f.png",
+            "title": "User Role",
+            "description": "The color of the avatar ring displayed at the top of each post is different based on the role selected during registration. (Front-end: yellow, Back-end: green, Design: red, Planning: blue). Roles in profiles can be edited to specify detailed job roles. This is a mechanism to easily identify which role's user uploaded the post."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/224645126-917bbc5e-a645-4df8-b721-25573c0cf653.png",
+            "title": "Ranking System",
+            "description": "Ranks from 6 to 1 exist, and the required Bloo Points to raise ranks represent the user's engagement. Rank 9 signifies an administrator. The initial rank is 0, and writing one post increases the rank to 6. Posting or commenting gives 10 points, receiving prods or trace requests gives 100 points. Deleting posts, comments, cancelling prods, and disconnecting traces revoke received points. Points are not given for commenting on one's own posts."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/244854139-86656d46-73e6-41ce-a62c-e4ce04c079e1.gif",
+            "title": "Registration and Login (General Account Registration)",
+            "description": "Registration is only possible through email authentication. General account registration requires email, username, password, and user class information. Email authentication attempts to send a code to the provided email address, and upon matching the code, registration is approved. Upon completion, each member is assigned a user code. This code can be used for changing personal information or passwords."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/244883445-0e184246-37d4-43fb-a1e2-4200d0bf3b65.gif",
+            "title": "Registration and Login (Social Account Registration)",
+            "description": "Provides Google and Kakao connections, executing the selected login strategy. When signing up with a social account, additional input of username and user class information required by the service is necessary to use the service."
+          },
+          {
+            "scope": "User",
+            "src": "https://user-images.githubusercontent.com/70316567/244890211-7a9ca143-d7d2-41e4-9b43-808b590b37f5.gif",
+            "title": "Forgot Password",
+            "description": "For general account users who have forgotten their password, the support page (/support) can be used to issue a randomly generated temporary password code using the user code sent during registration."
+          },
+          {
+            "scope": "ETC",
+            "src": "https://user-images.githubusercontent.com/70316567/244891102-3ba5a1c0-840c-461c-a7ac-597fa1d24226.gif",
+            "title": "First User Guide",
+            "description": "Ranks from 6 to 1 exist, and the required Bloo Points to raise ranks represent the user's engagement. Rank 9 signifies an administrator. The initial rank is 0, and writing one post increases the rank to 6. Posting or commenting gives 10 points, receiving prods or trace requests gives 100 points. Deleting posts, comments, cancelling prods, and disconnecting traces revoke received points. Points are not given for commenting on one's own posts."
+          },
+          {
+            "scope": "ETC",
+            "src": "https://user-images.githubusercontent.com/70316567/244891090-5a9f3b9c-a4b8-489f-b0d1-67cbfe68f27c.gif",
+            "title": "Version Log Page",
+            "description": "Announces new features and changes in service versions."
+          },
+          {
+            "scope": "ETC",
+            "src": "https://user-images.githubusercontent.com/70316567/222087547-b7920a38-e99e-4802-850b-2e87307ab343.jpg",
+            "title": "Responsive Web Screen",
+            "description": "BlooBolt service operates as a 100% responsive web screen, displaying optimized screens on any size device."
+          }
+        ]
+      }
+    },
+    "project3": {
+      "category": "Full Stack Development",
+      "title1": "BlooWays",
+      "title2": "Real-time Chat Room and Messaging Service",
+      "description1": "A service where you can create spaces with people similar to you and have real-time conversations.",
+      "description2": "Technologies used: TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
+
+      "details": {
+        "githubLinkLabel": "Project Wiki on GitHub",
+        "github": "https://github.com/yjglab/BlooWays/wiki",
+        "productionLinkLabel": "Production Page",
+        "production": "https://blooways.online",
+
+        "header": "The Fastest Place to Meet People Like You",
+        "headerDescription": "Real-time data transfer service using socket communication",
+
+        "outlineLabel": "Overview",
+        "outline": "<span>Background</span><div>A service that allows real-time live messaging between 1:1 or multiple members using socket communication. BlooWays and Areas are concepts of larger and smaller conversation spaces respectively. Users can create multiple conversation spaces and invite desired members to communicate with those who share similar traits.</div>",
+        "implementsLabel": "Features",
+        "implementsCount": "3",
+        "implements": [
+          "<span>Common</span><div>Real-time data transfer, responsive web screen</div>",
+          "<span>Users</span><div>Regular/Social sign-up, login, username change</div>",
+          "<span>BlooWays & Areas(NSP)</span><div>Create BlooWays, create Areas, invite members, real-time message communication, indication of online users, post liking functionality, mention members, image transfer, indication of unread messages, infinite scrolling</div>"
+        ],
+        "issuesLabel": "Issues",
+        "issuesLink": "https://github.com/yjglab/BlooWays/wiki/%EA%B8%B0%EC%88%A0%EC%A0%81-%EC%96%B4%EB%A0%A4%EC%9B%80%EA%B3%BC-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EA%B3%BC%EC%A0%95",
+        "issues": "<span>Notification handling for unreceived messages</span><div>Situations were occurring where a user in Area A wasn't receiving notifications for messages sent in Area B. To resolve this, we stored the entry time and the last sent message time for each Area by the user. We then checked the number of messages with creation times greater than the sent time and sent this count to the client, which solved the issue.</div><a>View Details</a>",
+        "skillsLabel": "Skills",
+        "skillsCount": "4",
+        "skills": [
+          "<span>Front-end</span><div>TypeScript, React, React-Router, SWR, Tailwind, Styled-Components</div>",
+          "<span>Back-end</span><div>Express, Sequelize(MySQL), Socket.io</div>",
+          "<span>Deploy</span><div>AWS(EC2+S3)</div>",
+          "<span>Secure</span><div>Nginx + HTTPS</div>"
+        ],
+        "slidesCount": "11",
+        "slides": [
+          {
+            "scope": "Users",
+            "src": "https://user-images.githubusercontent.com/70316567/244482519-9eee11ed-68ec-430c-87b0-3df5c0b5e233.gif",
+            "title": "Member Registration and Login (Regular Account)",
+            "description": "You can manage member registration and login using regular or social accounts. Once a member joins, they are automatically added to the 'All BlooWays,' where all BlooWays members are present."
+          },
+          {
+            "scope": "Users",
+            "src": "https://user-images.githubusercontent.com/70316567/244483592-82f2c768-a8ae-4f13-bceb-8e5cf839f5d3.gif",
+            "title": "Member Registration and Login (Social Account)",
+            "description": "You can manage member registration and login using regular or social accounts. Once a member joins, they are automatically added to the 'All BlooWays,' where all BlooWays members are present."
+          },
+          {
+            "scope": "BlooWays",
+            "src": "https://user-images.githubusercontent.com/70316567/244487699-dad71027-af44-48bd-98ef-c30cf4f2fe69.gif",
+            "title": "Creating a New BlooWay",
+            "description": "BlooWay is the largest concept space where members can gather. A BlooWay consists of several smaller spaces called Areas. When invited to a BlooWay, members will see the invited BlooWay on their BlooWay list. You can create a BlooWay by entering the name, link, and description. The link is typically automatically matched with the BlooWay name, but users can also enter a custom link. For example, if you entered 'chocolate' as the link, the BlooWay's link will be (https://blooways.online/blooway/chocolate). The description represents what the BlooWay is about and is displayed next to the BlooWay name."
+          },
+          {
+            "scope": "BlooWays",
+            "src": "https://user-images.githubusercontent.com/70316567/244487734-d08a86ae-e22b-4f65-a071-0416a0ea120e.gif",
+            "title": "Inviting Members to a BlooWay",
+            "description": "You can register members to the BlooWay member list using their email address."
+          },
+          {
+            "scope": "Areas and Private Talks",
+            "src": "https://user-images.githubusercontent.com/70316567/244491591-ade96a68-8530-44db-9f57-6f29f23adf72.gif",
+            "title": "Creating and Inviting to a New Area",
+            "description": "An Area is a smaller concept space (Room) within a BlooWay. You can invite members to an Area, and even if they are in the same BlooWay, members not invited to an Area won't see it. Private Talk is a space for 1:1 conversations between members. The list of members for Private Talk is generated based on members belonging to the same BlooWay. You can create an Area and invite members using their email addresses."
+          },
+          {
+            "scope": "Areas and Private Talks",
+            "src": "https://user-images.githubusercontent.com/70316567/244768288-dd6edabe-0ac3-4f7f-bc31-6c69163c5949.gif",
+            "title": "Real-time Talk with All Members of an Area",
+            "description": "You can have real-time socket communication to talk with all members of a specific Area. The demonstration image is implemented using two browser windows for illustration purposes, so messages won't appear to be sent in the browser that isn't focused. This is a normal situation due to browser behavior and does not impact actual conversations."
+          },
+          {
+            "scope": "Areas and Private Talks",
+            "src": "https://user-images.githubusercontent.com/70316567/244769669-1ce25d5f-0eb1-4979-ae19-bbed3a629065.gif",
+            "title": "Mentioning Members",
+            "description": "You can mention members belonging to the same Area using the '@' symbol. When '@' is entered, the currently present members in the Area will be displayed, and a link will be generated to the private talk page with the mentioned member."
+          },
+          {
+            "scope": "Areas and Private Talks",
+            "src": "https://user-images.githubusercontent.com/70316567/244759560-68cc8b61-84dd-46d5-a029-9a758f0663c4.gif",
+            "title": "Sending Images",
+            "description": "You can send multiple images using the image button at the bottom of the talk input field or drag and drop image files for sending. Clicking an image displays a carousel for detailed viewing."
+          },
+          {
+            "scope": "Areas and Private Talks",
+            "src": "https://user-images.githubusercontent.com/70316567/244761028-de588b3a-234b-4e90-8b0f-cf46846ada98.gif",
+            "title": "Checking Unreceived Talks",
+            "description": "When you are not in the same Area, messages sent by other members are marked as unread talks. This also applies to Private Talk."
+          },
+          {
+            "scope": "Common",
+            "src": "https://user-images.githubusercontent.com/70316567/244943925-9ce4dc95-8e95-408d-ba52-d833c3d4d95d.gif",
+            "title": "Infinite Scrolling",
+            "description": "Infinite scrolling is applied for improved user experience and distributing large talk data. Initial 20 talks are loaded, and when scrolling up, 20 more talk data is added. A 'View More' button is generated when new talks are sent during scrolling."
+          },
+          {
+            "scope": "Common",
+            "src": "https://user-images.githubusercontent.com/70316567/244778313-0e9d4d2b-9f63-4ea1-b19a-69e232d5dcb8.gif",
+            "title": "Responsive Web Screen",
+            "description": "BlooWays service is fully responsive and optimized for display on devices of all sizes."
+          }
+        ]
+      }
+    },
+    "project4": {
+      "category": "Front-end Development",
+      "title1": "MUG",
+      "title2": "Interactive Web for Guiding World Exhibition Information",
+      "description1": "MUG is an interactive web service that allows users to easily access exhibition information data on a single page. The project focuses on implementing user interactions through scroll animations and sorting/filtering animations.",
+      "description2": "JavaScript, Pug, SCSS, Express.js, MongoDB",
+
+      "details": {
+        "githubLinkLabel": "Project Wiki on GitHub",
+        "github": "https://github.com/yjglab/MuG",
+        "productionLinkLabel": "Production Page",
+        "production": "https://mug-lab.fly.dev",
+
+        "header": "A Glimpse into Vast Art Exhibitions",
+        "headerDescription": "An interactive responsive web service that allows users to easily access exhibition information data on a single page.",
+
+        "outlineLabel": "Overview",
+        "outline": "<span>Background</span><div>In order to access exhibition information from various countries, one would have to visit each country's page individually. This is a very inconvenient situation for those who want to explore information from multiple countries. To address this, we gathered exhibition information from various countries and compiled them in one place using web scraping techniques. We also added animations to provide visual appeal and incorporated filtering features so that users can view the information they are interested in.</div><div>We collected exhibition data using Python Selenium within the Robot Exclusion Protocol and designed it in card format on the page. The project focused on user interaction, animations, and frontend development. When a user requests a page, the controller loads shuffled MongoDB data and sends it as objects. Pug renders the data received from the controller onto the page.</div>",
+
+        "implementsLabel": "Features",
+        "implementsCount": "1",
+        "implements": [
+          "<span>Common</span><div>Scroll animations, card sorting animations, exhibition name/location/country search filtering, museum/art gallery filtering, card click animations, responsive web screen</div>"
+        ],
+
+        "issuesLabel": "Issues",
+        "issuesLink": "https://github.com/yjglab/MuG/wiki/%EA%B5%AC%ED%98%84%EB%90%9C-%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C-%EC%9A%94%EC%86%8C",
+        "issues": "<span>Adjusting position when clicking on cards/opening and closing</span><div>When a card is clicked, it needs to gradually enlarge and center, and when closed, it should return to its original position. We had to implement the problem of calculating and subtracting the clicked card's coordinates (X, Y) relative to the user's browser viewport size to achieve this.</div><a>See more details</a>",
+
+        "skillsLabel": "Skills",
+        "skillsCount": "3",
+        "skills": [
+          "<span>Front-end</span><div>JavaScript, JQuery, Pug, SCSS</div>",
+          "<span>Back-end</span><div>Express, MongoDB, Python</div>",
+          "<span>Deploy</span><div>Flyio</div>"
+        ],
+
+        "slidesCount": "10",
+        "slides": [
+          {
+            "scope": "Intro Page",
+            "src": "https://user-images.githubusercontent.com/70316567/246902735-ad6c4f25-e2d1-4497-a794-b1a1e325da8c.gif",
+            "title": "Service Introduction",
+            "description": "The intro page provides a brief guide to using the service through videos and text. It features three-dimensional animation elements that change based on the user's mouse scrolling."
+          },
+          {
+            "scope": "Main Page",
+            "src": "https://user-images.githubusercontent.com/70316567/246903059-85c69c87-0429-4c05-9fd9-5495a1859097.gif",
+            "title": "Exhibition Slider",
+            "description": "At the top of the main page, five random exhibitions are shown in a slider. The exhibitions change periodically and can also be controlled by the user."
+          },
+          {
+            "scope": "Main Page",
+            "src": "https://user-images.githubusercontent.com/70316567/246903076-4f47a43f-9ac1-4982-8fd4-2f3d75a4fd0d.gif",
+            "title": "Exhibition Slider",
+            "description": "Clicking on an exhibition slide takes the user to the actual page of that exhibition."
+          },
+          {
+            "scope": "Main Page",
+            "src": "https://user-images.githubusercontent.com/70316567/246904605-908ca20c-4c32-44f9-be62-492cb43e206f.gif",
+            "title": "Main Card Hovering",
+            "description": "As you scroll down, exhibition cards appear, and when you hover over them, basic information about the exhibition is displayed in a tooltip. The cards show icons indicating the classification (museum exhibition / art gallery exhibition) and the exhibiting country."
+          },
+          {
+            "scope": "Main Page",
+            "src": "https://user-images.githubusercontent.com/70316567/246907465-60c5bfaa-ae5a-4865-aca3-3518273110da.gif",
+            "title": "Main Card Click",
+            "description": "Clicking on a card triggers a popup displaying detailed information about the exhibition."
+          },
+          {
+            "scope": "Main Page",
+            "src": "https://user-images.githubusercontent.com/70316567/246907447-7962a927-1e98-4cd5-bd57-abd07b0b2add.gif",
+            "title": "Main Card Click",
+            "description": "The detailed information of the card includes the exhibition's title, location, country and flag, and exhibition content text. It also provides a link to the respective exhibition page."
+          },
+          {
+            "scope": "Card Filtering",
+            "src": "https://user-images.githubusercontent.com/70316567/246910683-17b8733a-a708-4956-82ff-e6f35e2c933c.gif",
+            "title": "Filter by Category (Museum Exhibition / Art Gallery Exhibition)",
+            "description": ""
+          },
+          {
+            "scope": "Card Filtering",
+            "src": "https://user-images.githubusercontent.com/70316567/246910768-28269919-3850-45a1-930e-fbfff2aeac7c.gif",
+            "title": "Filter by Title",
+            "description": ""
+          },
+          {
+            "scope": "Card Filtering",
+            "src": "https://user-images.githubusercontent.com/70316567/246910780-49bfc411-765f-43ce-ab53-23a66297a262.gif",
+            "title": "Filter by Location",
+            "description": ""
+          },
+          {
+            "scope": "Card Filtering",
+            "src": "https://user-images.githubusercontent.com/70316567/246910795-d45def6c-a025-4c23-bff2-9cdbd1ad9554.gif",
+            "title": "Filter by Country",
+            "description": ""
+          }
+        ]
+      }
+    },
+
+    "project5": {
+      "category": "Full Stack Development",
+      "title1": "Tira Santorini",
+      "title2": "Introduction to a Cake Specialty Shop Set in a Greek Island Theme",
+      "description1": "This is a website designed as an online shopping mall with the backdrop of a Greek island. In addition to development, this project also involved creating packaging and mockups for actual products.",
+      "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
+
+      "details": {
+        "githubLinkLabel": "Project Wiki GitHub",
+        "github": "https://github.com/yjglab/tira-santorini",
+        "productionLinkLabel": "Production Page",
+        "production": "https://tira-santorini.fly.dev/",
+        "header": "Taste Greek Tiramisu at Home",
+        "headerDescription": "Introduction to a Cake Specialty Shop Set in a Greek Island Theme",
+        "outlineLabel": "Overview",
+        "outline": "<span>Background</span><div>TIRA is a dessert brand specializing in Tiramisu, set against the backdrop of six villages in Santorini, Greece. It offers a variety of Tiramisu packages that reflect the characteristics, colors, and forms of the Santorini villages, ensuring that the design of the package and the taste of the product best match each village.</div>",
+        "implementsLabel": "Features",
+        "implementsCount": "1",
+        "implements": [
+          "<span>Common</span><div>Implemented a smooth-scrolling brand introduction page using GSAP that responds smoothly to scrolling. Implemented product introduction, shopping cart, and price adjustment features. Implemented user registration, profile creation, and editing features.</div>"
+        ],
+        "issuesLabel": "Issues",
+        "issues": "<span>Implementation of Horizontal Scrolling and Screen Snapping</span><div>The intent is to provide a unique UX where the screen snaps smoothly horizontally instead of vertically as the user scrolls. Each section's elements were arranged horizontally, and the GSAP 'to' method was used to move the elements along the X-axis. ScrollTrigger's 'snap' and 'pin' properties were used to achieve smooth screen locking, resolving the issue.</div>",
+        "skillsLabel": "Skills",
+        "skillsCount": "3",
+        "skills": [
+          "<span>Front-end</span><div>JavaScript, JQuery, GSAP, Pug, SCSS</div>",
+          "<span>Back-end</span><div>Express, MongoDB</div>",
+          "<span>Deploy</span><div>Flyio</div>"
+        ],
+        "slidesCount": "4",
+        "slides": [
+          {
+            "scope": "Introduction Page",
+            "src": "https://user-images.githubusercontent.com/70316567/247320856-21132a08-6982-4291-b7e8-281f86e7b31d.gif",
+            "title": "Introduction Page Introduction",
+            "description": "Introducing the Tira store. Animation elements are revealed as the user scrolls."
+          },
+          {
+            "scope": "Story Page",
+            "src": "https://user-images.githubusercontent.com/70316567/247320819-d3e4e7dd-dd49-4ce8-9616-f38875fcdfcc.gif",
+            "title": "Story Page Introduction",
+            "description": "Introducing the story of the Tira brand. Animation elements are revealed as the user scrolls."
+          },
+          {
+            "scope": "Shop Page",
+            "src": "https://user-images.githubusercontent.com/70316567/247320897-aa7fda01-8601-4ec9-ba67-d385523b7167.gif",
+            "title": "Shop Page Introduction",
+            "description": "This page allows users to purchase Tira products. Users can select products and add them to their shopping cart."
+          },
+          {
+            "scope": "Shop Page",
+            "src": "https://user-images.githubusercontent.com/70316567/247320934-58ee70db-4fc0-4210-8e4d-cfe89a7b5691.gif",
+            "title": "Shop Page Introduction",
+            "description": "This page allows users to purchase Tira products. Users can select products and add them to their shopping cart."
+          }
+        ]
+      }
+    }
+  }
+}

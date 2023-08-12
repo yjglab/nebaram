@@ -7,9 +7,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const SkillSection: FC = () => {
   const t = useTranslations("owner");
+  const pathname = usePathname();
+
   const skillCard = [
     {
       id: 1,
@@ -90,7 +94,7 @@ const SkillSection: FC = () => {
   };
 
   return (
-    <div className=" my-44 sm:my-56 w-full h-full flex flex-col items-center">
+    <div className="mb-28 sm:mb-40 mt-56 w-full h-full flex flex-col items-center">
       <div className="text-center w-full">
         <div className="gap-2 md:gap-4 flex flex-col">
           <AnimatedTitle size="lg" align="center">
@@ -181,6 +185,23 @@ const SkillSection: FC = () => {
           </motion.div>
         ))}
       </div>
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ type: "tween", duration: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
+        className="w-full text-center mt-12 lg:mt-24 font-medium flex flex-col justify-center"
+      >
+        <span className="text-lg lg:text-xl">
+          {t("SkillSection.projectsLinkLabel")}
+        </span>
+        <Link
+          className="mt-4 text-base lg:text-lg w-40 mx-auto rounded-lg bg-indigo-400 hover:bg-indigo-500 duration-200 px-2.5 py-1.5"
+          href="projects"
+        >
+          {t("SkillSection.projectsLink")}
+        </Link>
+      </motion.div>
     </div>
   );
 };

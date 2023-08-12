@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { ScrollIndicatorKeyframe } from "@constants/animations";
@@ -16,9 +16,11 @@ const ScrollIndicator = styled.div`
 const BannerSection: FC = () => {
   const [bannerOn, setBannerOn] = useState(false);
 
-  setTimeout(() => {
-    setBannerOn(true);
-  }, bannerOnDelay);
+  useEffect(() => {
+    setTimeout(() => {
+      setBannerOn(true);
+    }, bannerOnDelay);
+  }, []);
 
   return (
     <div className="z-20  w-full min-h-screen ">

@@ -1,22 +1,22 @@
 "use client";
 
-import React, { FC, MouseEvent, useEffect, useState } from "react";
+import React, { FC, MouseEvent, useState } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Locale, fallbackLocale, processLocale } from "@locales";
 import { ProjectData } from "@app/[locale]/projects/page";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface Props {
   projectsData: Array<ProjectData>;
 }
 const ProjectSection: FC<Props> = ({ projectsData }) => {
-  const [locale, setLocale] = useState<Locale | "">("");
+  const t = useTranslations("projects");
   const [projectCardHover, setprojectCardHover] = useState("");
-  const navigator = useRouter();
+  const pathname = usePathname();
   const handleCardHover = (e: MouseEvent<HTMLDivElement>) => {
     setprojectCardHover(e.currentTarget.id);
   };
@@ -26,10 +26,6 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
   // const handleCardClick = (index: number) => {
   //   navigator.replace(`/${locale}/projects/${index + 1}`);
   // };
-  useEffect(() => {
-    setLocale(processLocale(window.navigator.language) ?? fallbackLocale);
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <div className="mb-20 font-medium px-6">
@@ -101,14 +97,16 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               >
                 <div>{data.description1}</div>
                 <div className="hidden xl:block">
-                  <p className="text-amber-500 mb-1 font-medium">사용된 기술</p>
+                  <p className="text-amber-500 mb-1 font-medium">
+                    {t("ProjectSection.projectSkillsLabel")}
+                  </p>
                   {data.description2}
                 </div>
                 <Link
-                  href={`/${locale}/projects/${index + 1}`}
+                  href={`${pathname}/${index + 1}`}
                   className="text-indigo-400"
                 >
-                  자세히 보기
+                  {t("ProjectSection.projectDetailLabel")}
                 </Link>
               </div>
               <Image

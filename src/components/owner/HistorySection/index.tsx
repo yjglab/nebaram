@@ -9,7 +9,7 @@ const HistorySection: FC = () => {
   const t = useTranslations("owner");
 
   return (
-    <div className="px-4 lg:px-[10%] xl:px-[18%] 2xl:px-[28%]  my-36 flex flex-col items-center">
+    <div className="overflow-hidden px-4 lg:px-[10%] xl:px-[18%] 2xl:px-[28%]  my-36 flex flex-col items-center">
       <div className="w-full h-full flex flex-col items-center ">
         <div className="text-center w-full ">
           <div className="flex flex-col items-center gap-2 md:gap-4">

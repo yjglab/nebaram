@@ -22,13 +22,14 @@ const OutcomeSection: FC = () => {
   const backgroundInView = useInView(backgroundRef);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0);
 
-  const outcomeLists = [
+  const outcomes = [
     {
       id: 1,
       title: t("OutcomeSection.title1"),
       value: t("OutcomeSection.value1", {
         days: dayjs().diff(dayjs("2020-07-08"), "day"),
       }),
+      unit: t("OutcomeSection.value1Unit"),
     },
     {
       id: 2,
@@ -36,6 +37,7 @@ const OutcomeSection: FC = () => {
       value: t("OutcomeSection.value2", {
         attends: "3000",
       }),
+      unit: t("OutcomeSection.value2Unit"),
     },
     {
       id: 3,
@@ -49,6 +51,7 @@ const OutcomeSection: FC = () => {
       value: t("OutcomeSection.value3", {
         services: 18,
       }),
+      unit: t("OutcomeSection.value3Unit"),
     },
     {
       id: 4,
@@ -62,6 +65,7 @@ const OutcomeSection: FC = () => {
       value: t("OutcomeSection.value4", {
         awards: 1,
       }),
+      unit: t("OutcomeSection.value4Unit"),
     },
   ];
 
@@ -105,7 +109,7 @@ const OutcomeSection: FC = () => {
             <AnimatedTitle>{t("OutcomeSection.header2")}</AnimatedTitle>
           </div>
           <dl className="flex flex-col sm:grid grid-cols-2 mt-20 gap-x-12 gap-y-8 sm:gap-y-12 ">
-            {outcomeLists.map((outcome, index) => (
+            {outcomes.map((outcome, index) => (
               <motion.div
                 key={outcome.id}
                 className="flex flex-col"
@@ -121,7 +125,10 @@ const OutcomeSection: FC = () => {
                 <p className="text-lg lg:text-xl font-bold leading-6 text-indigo-400">
                   {outcome.title}
                 </p>
-                <OutcomeValue value={parseInt(outcome.value)} />
+                <OutcomeValue
+                  value={parseInt(outcome.value)}
+                  unit={outcome.unit}
+                />
               </motion.div>
             ))}
           </dl>

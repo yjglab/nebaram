@@ -69,7 +69,7 @@ const SliderSection = () => {
         transition={{
           type: "tween",
           duration: 0.7,
-          delay: 0.7,
+          delay: 0.8,
         }}
         viewport={{ once: true, amount: 0.3 }}
       >

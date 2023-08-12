@@ -18,6 +18,7 @@ import { clogo } from "@constants/images";
 import Image from "next/image";
 import DropMenu from "@components/parts/DropMenu";
 import { useTranslations } from "next-intl";
+import { ArrowUpIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 
 const Header: FC = () => {
   const t = useTranslations("common");
@@ -42,7 +43,7 @@ const Header: FC = () => {
       { name: t("Header.projects"), href: "/projects" },
     ],
   };
-
+  const [topIndicatorOn, setTopIndicatorOn] = useState(false);
   const [open, setOpen] = useState(false);
   const onClose = useCallback(() => {
     setOpen(false);
@@ -55,7 +56,9 @@ const Header: FC = () => {
       router.replace(`/${processedLocale}/${rest.join("/")}`);
     }
   };
-
+  const handleTopIndicator = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   useEffect(() => {
     const [_, ...routes] = pathname.split("/");
     const isSupportedLocale = supportedLocales.includes(routes[0] as Locale);
@@ -71,6 +74,20 @@ const Header: FC = () => {
       if (!target.startsWith(pathname)) router.replace(target);
     }
   }, [pathname, router]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setTopIndicatorOn(true);
+      } else {
+        setTopIndicatorOn(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div
@@ -129,12 +146,13 @@ const Header: FC = () => {
                   <div className="w-full h-[1.2px] bg-white/30" />
 
                   {supportedLocalesMap.map((localeMap) => (
-                    <div key={localeMap.locale} className="flow-root">
+                    <div className="flow-root">
                       <button
+                        key={localeMap.locale}
                         onClick={() =>
                           handleLanguageChange(localeMap.locale as Locale)
                         }
-                        className={`-m-2 block p-2`}
+                        className="block p-2"
                       >
                         {localeMap.name}
                       </button>
@@ -154,6 +172,16 @@ const Header: FC = () => {
       </Transition.Root>
 
       {/* 모바일 + PC */}
+      {topIndicatorOn && (
+        <button
+          type="button"
+          onClick={handleTopIndicator}
+          className="hover:bg-indigo-500 duration-200 absolute w-11 h-11 md:w-12 md:h-12 bg-indigo-400 rounded-full translate-y-[90vh] right-[5vw] md:translate-y-[92vh] md:right-10 p-1 md:p-1.5"
+        >
+          <ChevronUpIcon className="relative bottom-0.5" />
+        </button>
+      )}
+
       <header className="relative duration-200">
         <nav aria-label="Top" className="mx-auto max-w-6xl px-4 xl:px-0">
           <div className="relative">

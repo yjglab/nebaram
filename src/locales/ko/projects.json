@@ -8,17 +8,79 @@
     "sectionTitle": "프로젝트 둘러보기",
     "sectionDescription": "진행한 모든 프로젝트를 둘러보세요",
     "projectDescriptionLabel": "서비스 설명",
-
+    "projectSkillsLabel": "사용된 기술",
+    "projectDetailLabel": "자세히 보기",
     "project1": {
       "category": "Front-end Development",
       "title1": "Nebaram",
-      "title2": "개발자 육재경을 소개하는 퍼스널 브랜드",
-      "description1": "네바람은 네 가지 중요 역량을 갖춘 저를 표현하는 의미로 만든 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 알리고 싶어 제작했어요.",
-      "description2": "TypeScript, React.js, Next.js, React-Query, TailwindCSS, Emotion, Firebase",
+      "title2": "개발자를 소개하는 퍼스널 브랜드",
+      "description1": "네바람은 웹 개발자로서 네 가지 역량을 갖춘 저를 표현하는 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 알리고 싶어 제작했어요.",
+      "description2": "TypeScript, React.js, Next.js, Next-intl, TailwindCSS, Emotion, Vercel",
 
       "details": {
+        "githubLinkLabel": "프로젝트 위키 GitHub",
+        "github": "https://github.com/yjglab/nebaram",
+        "productionLinkLabel": "프로덕션 페이지",
+        "production": "https://nebaram.vercel.app",
+
         "header": "새 바람을 실현할 첫 도약",
-        "headerDescription": "네 가지 중요 역량을 갖춘 개발자 육재경의 강점을 소개하고 목표하는 바와 이루기위한 과정을 보여주는 퍼스널 브랜드"
+        "headerDescription": "네 가지 주요 역량을 갖춘 웹 개발자를 소개하기 위해 개발한 퍼스널 브랜드",
+
+        "outlineLabel": "개요",
+        "outline": "<span>기획 의도</span><div>기존에 제작한 개인 포트폴리오 사이트를 리뉴얼한 퍼스널 브랜드 사이트입니다. 디자인을 새로 기획하면서 애니메이션 효과를 추가하고 페이지 렌더링 방식을 서버단으로 변경하면서 코드를 다시 작성해 제작했습니다. UI 기획단계에서는 Apple의 Human Interface Guideline을 반영하여 설계했습니다. 저의 페이지를 들어오는 사용자들에게 직관적이고 일관된 경험을 제공하고자 함이며 추후 저의 브랜드 명으로 제작된 서비스의 스토어 출시를 고려해 반영하게 되었습니다.</div><div>Plain React에서 NextJS로 변경하게 된 이유는 오직 서버사이드 렌더링을 위함입니다. 저는 앞으로 이 웹 사이트를 지속적으로 확장시킬 계획이 있습니다. CSR로 이루어지는 싱글페이지 웹에서 복잡한 애니메이션, 데이터 번들이 계속해서 추가된다면 사용자 경험에 영향이 갈 것이라 판단하여 렌더링 방식을 함께 변경하게 되었습니다.</div>",
+        "implementsLabel": "구현 기능",
+        "implementsCount": "1",
+        "implements": [
+          "<span>공통</span><div>스크롤/마우스 애니메이션, 모션 슬라이더, 다국어 라우팅 및 번역, 서버사이드 렌더링, 반응형 웹 스크린</div>"
+        ],
+        "issuesLabel": "이슈",
+        "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
+        "issues": "<span>특정 문자열에만 다른 스타일을 적용한 JSON 데이터</span><div>핵심 키워드, 헤더 등 강조하고 싶은 문장에만 특정 스타일을 넣는 방식은 가장 많이 사용되는 다국어 기능 라이브러리인 i18n-next에서는 불가능했습니다. 예를 들면 '{<h1>헤더</h1>나머지 텍스트}'로 쓰여있는 문자열 데이터들을 말합니다. 최신 라이브러리인 next-intl로 변경하였고 태그 번역을 지원하는 메서드를 적용하여 해결했습니다.</div>",
+        "skillsLabel": "기술",
+        "skillsCount": "2",
+        "skills": [
+          "<span>Front-end</span><div>TypeScript React Next.js Next-intl TailwindCSS Emotion</div>",
+          "<span>Deploy</span><div>Vercel</div>"
+        ],
+        "slidesCount": "6",
+        "slides": [
+          {
+            "scope": "개발자 소개",
+            "src": "https://user-images.githubusercontent.com/70316567/260242438-b84eb738-49f5-49c4-ad02-bc1dfced6149.gif",
+            "title": "스크롤 애니메이션",
+            "description": "스크롤에 따라 애니메이팅 된 요소들을 보여줍니다. 각 섹션별로 디자인의 차별점을 두었고 슬라이더는 모바일을 고려해 드래그 전환이 가능하도록 개발했습니다."
+          },
+          {
+            "scope": "개발자 소개",
+            "src": "https://user-images.githubusercontent.com/70316567/260242446-99e6b536-b492-4be1-996a-41d9d7c23b62.gif",
+            "title": "스크롤 애니메이션",
+            "description": "연속되는 요소들은 각 요소의 인덱스 값을 이용해 딜레이를 조절하여 부드럽게 등장하도록 개발했습니다."
+          },
+          {
+            "scope": "프로젝트 소개",
+            "src": "https://user-images.githubusercontent.com/70316567/260242451-9bcc22a8-0795-4c4b-8b3d-cf8e3e92e078.gif",
+            "title": "프로젝트 페이지",
+            "description": "현재까지 진행한 프로젝트들을 열거하여 보여주는 페이지입니다. 이미지 호버 시 간단한 설명과 기술 정보를 보여주고 클릭하면 상세 페이지로 이동할 수 있습니다."
+          },
+          {
+            "scope": "프로젝트 소개",
+            "src": "https://user-images.githubusercontent.com/70316567/260242453-52c45f50-707f-42e7-8325-0f983bb0bd94.gif",
+            "title": "프로젝트 페이지",
+            "description": "상세 페이지에는 실제 페이지를 들어가지 않고도 어떤 서비스인지 알아볼 수 있도록 큰 슬라이더를 넣었고 슬라이드 별로 상세한 설명을 기록했습니다. 페이지의 하단에는 프로젝트의 개요, 기술 정보, 구현 기능 등 자세한 정보를 배치했습니다."
+          },
+          {
+            "scope": "다국어 라우팅",
+            "src": "https://user-images.githubusercontent.com/70316567/260244089-97621348-7a7d-4a3d-bc1d-f91a0c1ae9df.gif",
+            "title": "다국어 라우팅 지원",
+            "description": "다른 언어의 JSON 번역파일을 제공합니다 (현재: 한국어/영어). 상단의 Language 버튼을 클릭해 다국어 페이지로 전환할 수 있습니다."
+          },
+          {
+            "scope": "반응형 스크린",
+            "src": "https://user-images.githubusercontent.com/70316567/260244200-afe50c82-d7cf-477b-b2fd-4187106b8939.gif",
+            "title": "반응형 페이지 지원",
+            "description": "네바람 웹 페이지는 어떤 크기의 화면도 상관없이 맞춤으로 동작하는 반응형 페이지로 구현되었습니다."
+          }
+        ]
       }
     },
     "project2": {

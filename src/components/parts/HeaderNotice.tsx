@@ -24,7 +24,8 @@ const HeaderNotice = () => {
           >
             <circle cx={1} cy={1} r={1} />
           </svg>
-          yukjaekyeong.web.app 링크가 nebaram.web.app 으로 이관되었어요!
+          yukjaekyeong.web.app 링크가 https://nebaram.vercel.app 으로
+          이관되었어요!
         </p>
         <a
           rel="noreferrer"

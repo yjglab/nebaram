@@ -9,12 +9,16 @@
     "src": "/images/outcome-section/outcome-s-1.jpeg",
     "title1": "누적 작업일",
     "value1": "{days}",
+    "value1Unit": "일+",
     "title2": "누적 강의 수강생",
     "value2": "{attends}",
+    "value2Unit": "명+",
     "title3": "작업한 프로젝트 <span>웹/공학/디자인</span>",
     "value3": "{services}",
+    "value3Unit": "개",
     "title4": "대회 수상 <span>코딩경진대회 대상</span>",
-    "value4": "{awards}"
+    "value4": "{awards}",
+    "value4Unit": "회"
   },
   "ObjectiveSection": {
     "title": "개발자로서의 목표",
@@ -92,7 +96,7 @@
     "description2": "덕분에 다른 직무자들과도 무리없이 소통할 수 있죠",
 
     "skill1": "Front-End",
-    "skill1Title1": "부드러우면서 독특한",
+    "skill1Title1": "부드러우면서 편리한",
     "skill1Title2": "화면 개발을 선호해요",
     "skill1Description1": "<span></span>데이터를 적합한 시점에 요청하고 불러와 여러가지 애니메이션 효과를 적용해 표현할 수 있어요. 라이브러리를 활용해 효율적으로 개발할 수 있지만 순수 자바스크립트로도 얼마든지 구현할 수 있답니다. 구현이 끝나면 사용자의 입장이 되어 기능들이 의도한대로 동작하는 지 지속적으로 확인하고 있어요.",
     "skill1Description2": "<span>사용하는 기술</span>TypeScript, JavaScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR, Socket.io-client",
@@ -113,7 +117,10 @@
     "skill4Title1": "디자이너와 원활한",
     "skill4Title2": "협업이 가능해요",
     "skill4Description1": "<span></span>저는 시각디자인도 복수전공했어요. 그래서 여러명의 디자이너들과 협업 작업을 진행해본 적이 많아요. 디자이너와 개발자, 두 포지션의 입장에서 프로젝트를 참여해봤기 때문에 소통에 어려움 없이 작업할 수 있어요.",
-    "skill4Description2": "<span></span>"
+    "skill4Description2": "<span></span>",
+
+    "projectsLinkLabel": "모든 프로젝트들을 둘러보세요",
+    "projectsLink": "프로젝트 페이지"
   },
 
   "QuestionSection": {
