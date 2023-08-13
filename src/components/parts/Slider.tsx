@@ -3,12 +3,10 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import {
-  ArrowPathIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   EllipsisHorizontalIcon,
 } from "@heroicons/react/20/solid";
-import classNames from "classnames";
 
 const variants = {
   enter: (direction: number) => {
@@ -72,6 +70,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
         )}
         <motion.img
           key={page}
+          alt={images[imageIndex]}
           className={`${
             imageLoading
               ? "border border-amber-500 md:border-2"
@@ -103,12 +102,16 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
         />
       </AnimatePresence>
       <button
+        type="button"
+        aria-label="prev slide"
         className="absolute left-0 z-20 ml-2 h-9 w-9 -translate-y-2 rounded-full bg-black/20 p-[1px] text-white duration-100 hover:scale-[1.2] hover:text-indigo-400 sm:-ml-16 sm:h-12 sm:w-12"
         onClick={() => paginate(-1)}
       >
         <ChevronLeftIcon />
       </button>
       <button
+        type="button"
+        aria-label="next slide"
         className="absolute right-0 z-20 mr-2 h-9 w-9 -translate-y-2 rounded-full bg-black/20 p-[1px] text-white duration-100 hover:scale-[1.2] hover:text-indigo-400 sm:-mr-16 sm:h-12 sm:w-12"
         onClick={() => paginate(1)}
       >

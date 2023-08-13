@@ -47,10 +47,10 @@ const BannerCard = () => {
           }}
         >
           <Image
-            src="/images/owner/banner-section/owner.jpg"
+            src="/images/owner/banner-section/owner.jpeg"
             objectFit="cover"
             className="rounded-3xl shadow-2xl shadow-indigo-900/90 duration-500 hover:shadow-indigo-500 "
-            alt="owner.jpg"
+            alt="banner-section/owner"
             fill
           />
         </motion.div>

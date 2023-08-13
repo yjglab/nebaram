@@ -93,11 +93,11 @@ const OutcomeSection: FC = () => {
         <ShadowBoxTop className="absolute -top-36 z-10 h-36 w-full bg-black shadow-black"></ShadowBoxTop>
         <div className="absolute h-full w-full opacity-50">
           <Image
-            src="/images/owner/outcome-section/image-01.jpg"
+            src="/images/owner/outcome-section/outcome-background.jpeg"
             layout="fill"
             objectFit="cover"
             style={{ opacity: backgroundOpacity }}
-            alt=""
+            alt="outcome-section/image-01"
           />
         </div>
         <ShadowBoxBottom className="absolute -bottom-36 h-36 w-full bg-black shadow-black"></ShadowBoxBottom>
@@ -108,7 +108,7 @@ const OutcomeSection: FC = () => {
             <AnimatedTitle>{t("OutcomeSection.header1")}</AnimatedTitle>
             <AnimatedTitle>{t("OutcomeSection.header2")}</AnimatedTitle>
           </div>
-          <dl className="mt-20 flex grid-cols-2 flex-col gap-x-12 gap-y-8 sm:grid sm:gap-y-12 ">
+          <div className="mt-20 flex grid-cols-2 flex-col gap-x-12 gap-y-8 sm:grid sm:gap-y-12 ">
             {outcomes.map((outcome, index) => (
               <motion.div
                 key={outcome.id}
@@ -131,7 +131,7 @@ const OutcomeSection: FC = () => {
                 />
               </motion.div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </div>

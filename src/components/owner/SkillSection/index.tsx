@@ -18,7 +18,7 @@ const SkillSection: FC = () => {
     {
       id: 1,
       skill: t("SkillSection.skill1"),
-      src: "/images/owner/skill-section/skill_01.jpeg",
+      src: "/images/owner/skill-section/skill_01.jpg",
       title1: t("SkillSection.skill1Title1"),
       title2: t("SkillSection.skill1Title2"),
       description1: t.rich("SkillSection.skill1Description1", {
@@ -180,7 +180,7 @@ const SkillSection: FC = () => {
               layout="fill"
               objectFit="cover"
               className="absolute opacity-60"
-              alt=""
+              alt="skill card"
             />
           </motion.div>
         ))}

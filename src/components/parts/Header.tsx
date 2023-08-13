@@ -123,6 +123,7 @@ const Header: FC = () => {
                 <div className="item-center flex justify-end  px-6 py-3">
                   <button
                     type="button"
+                    aria-label="close button"
                     className="relative top-1.5 -m-2 inline-flex items-center justify-center rounded-md p-2 "
                     onClick={() => setOpen(false)}
                   >
@@ -148,6 +149,7 @@ const Header: FC = () => {
                   {supportedLocalesMap.map((localeMap) => (
                     <div key={localeMap.name} className="flow-root">
                       <button
+                        aria-label="locale link button"
                         key={localeMap.locale}
                         onClick={() =>
                           handleLanguageChange(localeMap.locale as Locale)
@@ -175,6 +177,7 @@ const Header: FC = () => {
       {topIndicatorOn && (
         <button
           type="button"
+          aria-label="go to top button"
           onClick={handleTopIndicator}
           className="absolute right-[5vw] h-11 w-11 translate-y-[90vh] rounded-full bg-indigo-400 p-1 duration-200 hover:bg-indigo-500 md:right-10 md:h-12 md:w-12 md:translate-y-[92vh] md:p-1.5"
         >
@@ -189,7 +192,12 @@ const Header: FC = () => {
               <div className="flex">
                 <div className="ml-2 flex">
                   <Link className="flex items-center" href="/">
-                    <Image src={clogo} width={16} height={16} alt="clogo" />
+                    <Image
+                      src={clogo}
+                      width={16}
+                      height={16}
+                      alt="brand logo"
+                    />
                     <span
                       className={classNames(
                         poppins.className,
@@ -228,6 +236,7 @@ const Header: FC = () => {
                     <Menu.Item key={localeMap.name}>
                       {({ active }) => (
                         <button
+                          aria-label="change language"
                           onClick={() =>
                             handleLanguageChange(localeMap.locale as Locale)
                           }
@@ -246,6 +255,7 @@ const Header: FC = () => {
               {/* 모바일 메뉴 트리거 */}
               <button
                 type="button"
+                aria-label="open mobile menu"
                 className="absolute right-0  rounded-md p-2 md:hidden"
                 onClick={() => setOpen(true)}
               >

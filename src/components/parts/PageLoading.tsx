@@ -9,7 +9,7 @@ const PageLoading = () => {
         className="animate-spin"
         width={50}
         height={50}
-        alt="clogo"
+        alt="brand logo"
       />
     </div>
   );

@@ -19,7 +19,7 @@ const OutcomeValue: FC<Props> = ({ value, unit }) => {
 
   useEffect(() => {
     const valueCounter = animate(count, value, {
-      duration: 3,
+      duration: 2,
       ease: "easeOut",
     });
     valueCounter.pause();

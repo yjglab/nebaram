@@ -63,6 +63,12 @@ const LocaleLayout = async ({ children }: Props) => {
     <html lang={locale}>
       <Providers>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <link
+            rel="alternate"
+            href="https://nebaram.vercel.app"
+            hrefLang="x-default"
+          />
+          <link rel="canonical" href="https://nebaram.vercel.app" />
           <body className={Pretendard.className}>{children}</body>
         </NextIntlClientProvider>
       </Providers>

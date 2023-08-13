@@ -39,6 +39,7 @@ const HeaderNotice = () => {
       <div className="flex flex-1 justify-end">
         <button
           type="button"
+          aria-label="close notice"
           onClick={() => setShowNotice(false)}
           className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
         >

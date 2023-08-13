@@ -13,10 +13,10 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
   const messages = await getMessages(locale);
   const t = createTranslator({ locale, messages });
   return {
-    title: "프로젝트",
+    title: "프로젝트 둘러보기",
     description: "대표 개발자의 프로젝트를 소개합니다.",
     openGraph: {
-      title: "프로젝트",
+      title: "프로젝트 둘러보기",
       description: "대표 개발자의 프로젝트를 소개합니다.",
     },
   } as Metadata;

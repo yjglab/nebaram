@@ -114,7 +114,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
                 layout="fill"
                 objectFit="cover"
                 className="absolute opacity-60"
-                alt=""
+                alt={data.src}
               />
             </motion.div>
           ))}

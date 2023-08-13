@@ -25,7 +25,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 1,
       category: t("ProjectSection.project1.category"),
-      src: "/images/projects/project-section/nebaram_thumb.jpg",
+      src: "/images/projects/project-section/nebaram_thumb.jpeg",
       title1: t("ProjectSection.project1.title1"),
       title2: t("ProjectSection.project1.title2"),
       description1: t("ProjectSection.project1.description1"),
@@ -52,7 +52,7 @@ const ProjectsPage: NextPage = () => {
     {
       id: 4,
       category: t("ProjectSection.project4.category"),
-      src: "/images/projects/project-section/mug_thumb.png",
+      src: "/images/projects/project-section/mug_thumb.jpeg",
       title1: t("ProjectSection.project4.title1"),
       title2: t("ProjectSection.project4.title2"),
       description1: t("ProjectSection.project4.description1"),
