@@ -1,8 +1,5 @@
 "use client";
 
-import BannerSection from "@components/about/BannerSection";
-import TeamSection from "@components/about/TeamSection";
-import OutcomeSection from "@components/about/OutcomeSection";
 import {
   Locale,
   fallbackLocale,
@@ -12,8 +9,6 @@ import {
 import { NextPage } from "next";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
-import ObjectiveSection from "@components/about/ObjectiveSection";
-import HistorySection from "@components/about/HistorySection";
 
 const MainPage: NextPage = () => {
   const pathname = usePathname(); // 브라우저 경로
@@ -35,15 +30,7 @@ const MainPage: NextPage = () => {
     }
   }, [navigator, pathname]);
 
-  return (
-    <div className="sr-only flex flex-col items-stretch">
-      <BannerSection />
-      <OutcomeSection />
-      <ObjectiveSection />
-      <HistorySection />
-      <TeamSection />
-    </div>
-  );
+  return <div className="sr-only flex flex-col items-stretch"></div>;
 };
 
 export default MainPage;
