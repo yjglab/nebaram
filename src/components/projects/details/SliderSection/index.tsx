@@ -80,7 +80,7 @@ const SliderSection = () => {
         className="mt-14 min-h-[50px] w-[90%] px-2 text-sm sm:w-[80%] md:mt-3 lg:mt-6 lg:w-[900px] lg:px-4 lg:text-base xl:w-[1000px] "
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ type: "tween", duration: 0.5, delay: 1.6 }}
+        transition={{ type: "tween", duration: 0.5, delay: 0.5 }}
         viewport={{ once: true, amount: 0.5 }}
       >
         <div className="flex w-full items-center justify-between">

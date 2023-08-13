@@ -38,7 +38,7 @@ const Header: FC = () => {
   const navigation = {
     categories: [],
     pages: [
-      { name: t("Header.about"), href: "/" },
+      // { name: t("Header.about"), href: "/" },
       { name: t("Header.owner"), href: "/owner" },
       { name: t("Header.projects"), href: "/projects" },
     ],

@@ -16,7 +16,7 @@ const ObjectiveSection: FC = () => {
     "/images/owner/objective-section/objective-04.jpg",
   ];
   return (
-    <div className="mb-56 mt-36 flex flex-col items-center overflow-x-hidden  pt-12 sm:py-36 md:mb-0 md:py-24">
+    <div className="mb-0 mt-36 flex flex-col items-center overflow-x-hidden  pt-12 sm:py-36  md:py-24">
       <div className="z-20 flex w-full flex-col items-center text-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}
