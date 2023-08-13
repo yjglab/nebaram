@@ -92,7 +92,7 @@ const Header: FC = () => {
   return (
     <div
       id="navbar"
-      className="fixed top-0 z-50 w-full bg-black/30 backdrop-blur-md"
+      className="fixed top-0 z-50 w-full bg-black md:bg-black/50 backdrop-blur-md"
     >
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
@@ -119,7 +119,7 @@ const Header: FC = () => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white/[0.05] pb-12 shadow-2xl shadow-black backdrop-blur-xl">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-black/10 pb-12 shadow-2xl shadow-black backdrop-blur-xl">
                 <div className="item-center flex justify-end  px-6 py-3">
                   <button
                     type="button"

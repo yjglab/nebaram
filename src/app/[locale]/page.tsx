@@ -8,7 +8,7 @@ const MainPage: NextPage = () => {
   const navigator = useRouter();
 
   useEffect(() => {
-    navigator.back();
+    navigator.replace("/owner");
   }, [navigator]);
 
   useEffect(() => {

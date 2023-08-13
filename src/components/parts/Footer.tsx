@@ -125,7 +125,7 @@ const Footer: FC = () => {
               </Link>
             </div>
 
-            <div className="mt-4 flex max-w-xs flex-col gap-1 text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-4 flex max-w-xs flex-col gap-1 text-sm ">
               <p>{t("Footer.description")}</p>
               <p>
                 {t("Footer.presidentNameLabel")} | {t("Footer.presidentName")}
@@ -139,7 +139,7 @@ const Footer: FC = () => {
                   href="https://github.com/yjglab"
                   rel="noreferrer"
                   target="_blank"
-                  className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  className="transition hover:opacity-75 "
                 >
                   <span className="sr-only">GitHub</span>
 
@@ -163,9 +163,7 @@ const Footer: FC = () => {
           <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-4">
             {footerMenu.map((menu) => (
               <div key={menu.id}>
-                <p className="font-medium text-gray-900 dark:text-white">
-                  {menu.name}
-                </p>
+                <p className="font-medium">{menu.name}</p>
 
                 <ul className="mt-4 space-y-3 text-sm md:mt-6 md:space-y-4">
                   {menu.contents.map((content) => (
@@ -174,7 +172,7 @@ const Footer: FC = () => {
                         rel="noreferrer"
                         target="_blank"
                         href={content.link}
-                        className="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                        className="text-gray-400 transition hover:opacity-75"
                       >
                         {content.name}
                       </a>
@@ -186,9 +184,7 @@ const Footer: FC = () => {
           </div>
         </div>
 
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          {t("Footer.copyright")}
-        </p>
+        <p className="text-xs text-gray-400">{t("Footer.copyright")}</p>
       </div>
     </footer>
   );

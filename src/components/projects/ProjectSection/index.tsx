@@ -43,7 +43,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               transition={{
                 type: "tween",
                 duration: 0.7,
-                delay: index * 0.15,
+                delay: index * 0.08,
               }}
               viewport={{ once: true, amount: 0.3 }}
             >
