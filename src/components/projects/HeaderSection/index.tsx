@@ -14,11 +14,11 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
     t("HeaderSection.category3"),
   ];
   return (
-    <header className="mt-24 md:mt-32 mx-auto max-w-2xl lg:max-w-6xl px-6 ">
-      <div className="flex flex-col gap-2 text-sm lg:text-lg md:gap-0 relative justify-between">
+    <header className="mx-auto mt-24 max-w-2xl px-6 md:mt-32 lg:max-w-6xl ">
+      <div className="relative flex flex-col justify-between gap-2 text-sm md:gap-0 lg:text-lg">
         <div className="flex gap-1.5">
           <motion.div
-            className="md:text-5xl sm:text-4xl text-3xl font-semibold"
+            className="text-3xl font-semibold sm:text-4xl md:text-5xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ type: "tween", duration: 0.5, delay: 0 }}
@@ -28,7 +28,7 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
           </motion.div>
         </div>
         <motion.div
-          className="md:absolute text-gray-200 bottom-0 right-0"
+          className="bottom-0 right-0 text-gray-200 md:absolute"
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: "tween", duration: 0.5, delay: 0 }}
@@ -41,7 +41,7 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
         {/* 카테고리 추가하기 */}
       </div>
 
-      <div className="mt-12 sm:mt-24 md:mt-36 flex items-center gap-6">
+      <div className="mt-12 flex items-center gap-6 sm:mt-24 md:mt-36">
         {categories.map((category, index) => (
           <motion.div
             key={category}

@@ -29,8 +29,8 @@ const QuestionSection = () => {
   ];
 
   return (
-    <div className="overflow-x-hidden px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-6xl">
-      <div className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12">
+    <div className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-36 lg:max-w-6xl">
+      <div className="mb-8 text-2xl font-semibold md:mb-12 md:text-3xl">
         {t("QuestionSection.sectionTitle")}
       </div>
 
@@ -44,14 +44,14 @@ const QuestionSection = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <div className="w-full">
-            <div className="flex flex-col mb-6 md:mb-10 text-base md:text-lg">
-              <span className="py-0.5 font-semibold mb-2.5">{data.title}</span>
-              <div className="break-all leading-8 font-light">
+            <div className="mb-6 flex flex-col text-base md:mb-10 md:text-lg">
+              <span className="mb-2.5 py-0.5 font-semibold">{data.title}</span>
+              <div className="break-all font-light leading-8">
                 {data.description}
               </div>
             </div>
             {index < questionData.length - 1 && (
-              <div className="w-full h-[1.5px] mb-8 md:mb-12 mt-12 bg-white/30" />
+              <div className="mb-8 mt-12 h-[1.5px] w-full bg-white/30 md:mb-12" />
             )}
           </div>
         </motion.div>

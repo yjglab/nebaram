@@ -18,12 +18,12 @@ const DropMenu: FC<PropsWithChildren<Props>> = ({
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md  py-2 text-sm text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            <span className="text-white overflow-hidden text-ellipsis line-clamp-1">
+            <span className="line-clamp-1 overflow-hidden text-ellipsis text-white">
               {title}
             </span>
             {chevron && (
               <ChevronDownIcon
-                className="ml-0.5 -mr-1 h-5 w-5 text-white hover:text-white"
+                className="-mr-1 ml-0.5 h-5 w-5 text-white hover:text-white"
                 aria-hidden="true"
               />
             )}
@@ -39,9 +39,9 @@ const DropMenu: FC<PropsWithChildren<Props>> = ({
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items
-            className={`w-${width} mt-2 absolute origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
+            className={`w-${width} absolute mt-2 origin-top-right divide-y divide-slate-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}
           >
-            <div className="px-1 py-1 ">{children}</div>
+            <div className="p-1 ">{children}</div>
           </Menu.Items>
         </Transition>
       </Menu>

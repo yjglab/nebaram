@@ -29,10 +29,10 @@ const SliderSection = () => {
   const slideImages = slideData.map((data) => data.src);
 
   return (
-    <div className="overflow-x-hidden pt-14 md:pt-20 flex flex-col items-center">
-      <div className="w-full flex justify-center">
+    <div className="flex flex-col items-center overflow-x-hidden pt-14 md:pt-20">
+      <div className="flex w-full justify-center">
         <motion.div
-          className="mb-4 text-sm lg:text-base flex text-white py-1 px-2.5 rounded-lg bg-white/20"
+          className="mb-4 flex rounded-lg bg-white/20 px-2.5 py-1 text-sm text-white lg:text-base"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "tween", duration: 0.5, delay: 1.4 }}
@@ -42,28 +42,28 @@ const SliderSection = () => {
             href={t(`ProjectSection.project${projectId}.details.github`)}
             rel="referrer"
             target="_blank"
-            className="mr-2 hover:text-indigo-400 duration-200 flex items-center"
+            className="mr-2 flex items-center duration-200 hover:text-indigo-400"
           >
             {t(`ProjectSection.project${projectId}.details.githubLinkLabel`)}
-            <ArrowTopRightOnSquareIcon className="w-4 ml-1 stroke-2" />
+            <ArrowTopRightOnSquareIcon className="ml-1 w-4 stroke-2" />
           </a>
           |
           <a
             href={t(`ProjectSection.project${projectId}.details.production`)}
             rel="referrer"
             target="_blank"
-            className="ml-2 hover:text-indigo-400 duration-200 flex items-center"
+            className="ml-2 flex items-center duration-200 hover:text-indigo-400"
           >
             {t(
               `ProjectSection.project${projectId}.details.productionLinkLabel`
             )}
-            <ArrowTopRightOnSquareIcon className="w-4 ml-1 stroke-2" />
+            <ArrowTopRightOnSquareIcon className="ml-1 w-4 stroke-2" />
           </a>
         </motion.div>
       </div>
 
       <motion.div
-        className="aspect-video w-[90%] sm:w-[80%] lg:w-[900px] xl:w-[1000px] relative flex items-center"
+        className="relative flex aspect-video w-[90%] items-center sm:w-[80%] lg:w-[900px] xl:w-[1000px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
@@ -77,15 +77,15 @@ const SliderSection = () => {
       </motion.div>
 
       <motion.div
-        className="w-[90%] min-h-[50px] text-sm lg:text-base mt-14 md:mt-3 lg:mt-6 sm:w-[80%] lg:w-[900px] xl:w-[1000px] px-2 lg:px-4 "
+        className="mt-14 min-h-[50px] w-[90%] px-2 text-sm sm:w-[80%] md:mt-3 lg:mt-6 lg:w-[900px] lg:px-4 lg:text-base xl:w-[1000px] "
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ type: "tween", duration: 0.5, delay: 1.6 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="flex items-center justify-between w-full">
+        <div className="flex w-full items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="font-semibold py-1 px-2.5 bg-indigo-400 rounded-lg">
+            <div className="rounded-lg bg-indigo-400 px-2.5 py-1 font-semibold">
               {slideData[slideNumber].scope}
             </div>
             <div className="font-semibold">{slideData[slideNumber].title}</div>

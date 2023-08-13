@@ -14,7 +14,7 @@ const MainPage: NextPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <></>;
+  return <div className="min-h-screen w-full"></div>;
 };
 
 export default MainPage;

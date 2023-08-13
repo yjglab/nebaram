@@ -90,7 +90,7 @@ const HistoryGraph = () => {
           <span className="text-indigo-400 ">{children}</span>
         ),
         div: (children) => (
-          <span className="ml-2 text-gray-200 text-sm">{children}</span>
+          <span className="ml-2 text-sm text-gray-200">{children}</span>
         ),
       }),
     },
@@ -114,9 +114,9 @@ const HistoryGraph = () => {
 
   return (
     <>
-      <div className="w-full h-full mt-24 flex flex-col">
+      <div className="mt-24 flex h-full w-full flex-col">
         {historyData.map((data, index) => (
-          <div key={data.id} className="w-full h-full flex">
+          <div key={data.id} className="flex h-full w-full">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -128,8 +128,8 @@ const HistoryGraph = () => {
               viewport={{ once: true, amount: 0.5 }}
               className="w-[28%] md:w-[20%]"
             >
-              <div className="w-full h-[100px] flex justify-center">
-                <span className="font-semibold text-lg md:text-2xl">
+              <div className="flex h-[100px] w-full justify-center">
+                <span className="text-lg font-semibold md:text-2xl">
                   {data.year}
                 </span>
               </div>
@@ -139,7 +139,7 @@ const HistoryGraph = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: index * 0.02 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="bg-gray-500 h-[100px] w-[3px] relative top-2.5 flex justify-center"
+              className="relative top-2.5 flex h-[100px] w-[3px] justify-center bg-gray-500"
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -165,11 +165,11 @@ const HistoryGraph = () => {
               viewport={{ once: true, amount: 0.5 }}
               className="w-full"
             >
-              <div className="w-full h-[100px] flex flex-col pl-8">
-                <span className="text-gray-500 text-base xl:text-lg font-semibold">
+              <div className="flex h-[100px] w-full flex-col pl-8">
+                <span className="text-base font-semibold text-gray-500 xl:text-lg">
                   {data.month}
                 </span>
-                <div className="text-base md:text-lg xl:text-xl tracking-tight leading-6 break-all">
+                <div className="break-all text-base leading-6 tracking-tight md:text-lg xl:text-xl">
                   {data.content}
                 </div>
               </div>

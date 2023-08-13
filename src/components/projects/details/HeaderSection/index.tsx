@@ -25,13 +25,13 @@ const HeaderSection: FC = () => {
     navigator.back();
   };
   return (
-    <header className="mt-16 mx-auto lg:max-w-6xl">
-      <div className="flex px-6 xl:px-4 gap-2 text-sm lg:text-lg md:gap-0 relative justify-between items-center">
+    <header className="mx-auto mt-16 lg:max-w-6xl">
+      <div className="relative flex items-center justify-between gap-2 px-6 text-sm md:gap-0 lg:text-lg xl:px-4">
         <div
           onClick={handleNavigateBack}
-          className="flex items-center relative cursor-pointer right-2 hover:bg-white/20 rounded-lg pl-1 pr-3 py-0.5 duration-200"
+          className="relative right-2 flex cursor-pointer items-center rounded-lg py-0.5 pl-1 pr-3 duration-200 hover:bg-white/20"
         >
-          <ChevronLeftIcon className="w-6 mr-1" />
+          <ChevronLeftIcon className="mr-1 w-6" />
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -58,7 +58,7 @@ const HeaderSection: FC = () => {
           </AnimatedTitle>
         </div>
         <motion.div
-          className="text-sm sm:text-base lg:text-lg text-center mt-6 px-8"
+          className="mt-6 px-8 text-center text-sm sm:text-base lg:text-lg"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "tween", duration: 0.5, delay: 1.2 }}

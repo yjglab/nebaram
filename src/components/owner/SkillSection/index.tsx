@@ -23,12 +23,12 @@ const SkillSection: FC = () => {
       title2: t("SkillSection.skill1Title2"),
       description1: t.rich("SkillSection.skill1Description1", {
         span: (children) => (
-          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-indigo-400">{children}</p>
         ),
       }),
       description2: t.rich("SkillSection.skill1Description2", {
         span: (children) => (
-          <p className="text-amber-500 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-amber-500">{children}</p>
         ),
       }),
     },
@@ -40,12 +40,12 @@ const SkillSection: FC = () => {
       title2: t("SkillSection.skill2Title2"),
       description1: t.rich("SkillSection.skill2Description1", {
         span: (children) => (
-          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-indigo-400">{children}</p>
         ),
       }),
       description2: t.rich("SkillSection.skill2Description2", {
         span: (children) => (
-          <p className="text-amber-500 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-amber-500">{children}</p>
         ),
       }),
     },
@@ -57,12 +57,12 @@ const SkillSection: FC = () => {
       title2: t("SkillSection.skill3Title2"),
       description1: t.rich("SkillSection.skill3Description1", {
         span: (children) => (
-          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-indigo-400">{children}</p>
         ),
       }),
       description2: t.rich("SkillSection.skill3Description2", {
         span: (children) => (
-          <p className="text-amber-500 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-amber-500">{children}</p>
         ),
       }),
     },
@@ -74,12 +74,12 @@ const SkillSection: FC = () => {
       title2: t("SkillSection.skill4Title2"),
       description1: t.rich("SkillSection.skill4Description1", {
         span: (children) => (
-          <p className="text-indigo-400 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-indigo-400">{children}</p>
         ),
       }),
       description2: t.rich("SkillSection.skill4Description2", {
         span: (children) => (
-          <p className="text-amber-500 mb-1 font-medium">{children}</p>
+          <p className="mb-1 font-medium text-amber-500">{children}</p>
         ),
       }),
     },
@@ -94,9 +94,9 @@ const SkillSection: FC = () => {
   };
 
   return (
-    <div className="mb-28 sm:mb-40 mt-56 w-full h-full flex flex-col items-center">
-      <div className="text-center w-full">
-        <div className="gap-2 md:gap-4 flex flex-col">
+    <div className="mb-28 mt-56 flex h-full w-full flex-col items-center sm:mb-40">
+      <div className="w-full text-center">
+        <div className="flex flex-col gap-2 md:gap-4">
           <AnimatedTitle size="lg" align="center">
             {t("SkillSection.sectionTitle1")}
           </AnimatedTitle>
@@ -118,14 +118,14 @@ const SkillSection: FC = () => {
           </p>
         </motion.div>
       </div>
-      <div className="mt-16 md:mt-24 grid grid-cols-1 h-full sm:grid-cols-2 gap-6 lg:gap-10 overflow-hidden">
+      <div className="mt-16 grid h-full grid-cols-1 gap-6 overflow-hidden sm:grid-cols-2 md:mt-24 lg:gap-10">
         {skillCard.map((card, index) => (
           <motion.div
             key={card.id}
             id={card.skill}
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardLeave}
-            className="relative p-[10%] border border-white/10 overflow-hidden flex flex-col w-[300px] h-[400px] lg:w-[400px] lg:h-[500px] rounded-2xl"
+            className="relative flex h-[400px] w-[300px] flex-col overflow-hidden rounded-2xl border border-white/10 p-[10%] lg:h-[500px] lg:w-[400px]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{
@@ -135,7 +135,7 @@ const SkillSection: FC = () => {
             }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <ArrowLeftCircleIcon className="w-8 z-20 absolute bottom-10 right-10" />
+            <ArrowLeftCircleIcon className="absolute bottom-10 right-10 z-20 w-8" />
             <div
               className={classNames(
                 skillCardHover === card.skill ? "opacity-100" : "opacity-0",
@@ -190,13 +190,13 @@ const SkillSection: FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ type: "tween", duration: 0.5 }}
         viewport={{ once: true, amount: 0.5 }}
-        className="w-full text-center mt-12 lg:mt-24 font-medium flex flex-col justify-center"
+        className="mt-12 flex w-full flex-col justify-center text-center font-medium lg:mt-24"
       >
         <span className="text-lg lg:text-xl">
           {t("SkillSection.projectsLinkLabel")}
         </span>
         <Link
-          className="mt-4 text-base lg:text-lg w-40 mx-auto rounded-lg bg-indigo-400 hover:bg-indigo-500 duration-200 px-2.5 py-1.5"
+          className="mx-auto mt-4 w-40 rounded-lg bg-indigo-400 px-2.5 py-1.5 text-base duration-200 hover:bg-indigo-500 lg:text-lg"
           href="projects"
         >
           {t("SkillSection.projectsLink")}

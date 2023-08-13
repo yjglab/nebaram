@@ -24,15 +24,15 @@ const cardSvgVariants = {
 
 const BannerCard = () => {
   return (
-    <div className="w-full h-full mt-20 flex items-center justify-center">
+    <div className="mt-20 flex h-full w-full items-center justify-center">
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
-        className="w-full z-10 flex items-center justify-center relative"
+        className="relative z-10 flex w-full items-center justify-center"
       >
         <motion.div
-          className="z-20 w-[78%] h-[78%] sm:w-[450px] sm:[450px] md:w-[590px] md:h-[590px] flex aspect-square items-center justify-center relative "
+          className="sm:[450px] relative z-20 flex aspect-square h-[78%] w-[78%] items-center justify-center sm:w-[450px] md:h-[590px] md:w-[590px] "
           variants={{
             offscreen: {
               opacity: 0,
@@ -49,13 +49,13 @@ const BannerCard = () => {
           <Image
             src="/images/owner/banner-section/owner.jpg"
             objectFit="cover"
-            className="shadow-2xl hover:shadow-indigo-500 shadow-indigo-900/90 duration-500 rounded-3xl "
+            className="rounded-3xl shadow-2xl shadow-indigo-900/90 duration-500 hover:shadow-indigo-500 "
             alt="owner.jpg"
             fill
           />
         </motion.div>
         <motion.svg
-          className="scale-50 sm:scale-[0.75] md:scale-100 w-[590px] h-[590px]  absolute"
+          className="absolute h-[590px] w-[590px] scale-50 sm:scale-[0.75]  md:scale-100"
           initial="hidden"
           animate="visible"
         >
@@ -64,7 +64,7 @@ const BannerCard = () => {
             y="3"
             rx="24"
             stroke="#818cf8"
-            className="stroke-[5]  w-[580px] h-[580px] "
+            className="h-[580px]  w-[580px] stroke-[5] "
             variants={cardSvgVariants}
             custom={5}
           />

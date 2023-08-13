@@ -43,7 +43,7 @@ const OutcomeSection: FC = () => {
       id: 3,
       title: t.rich("OutcomeSection.title3", {
         span: (children) => (
-          <span className="ml-1 text-amber-500 font-medium text-sm">
+          <span className="ml-1 text-sm font-medium text-amber-500">
             {children}
           </span>
         ),
@@ -57,7 +57,7 @@ const OutcomeSection: FC = () => {
       id: 4,
       title: t.rich("OutcomeSection.title4", {
         span: (children) => (
-          <span className="ml-1 text-amber-500 font-medium text-sm">
+          <span className="ml-1 text-sm font-medium text-amber-500">
             {children}
           </span>
         ),
@@ -88,10 +88,10 @@ const OutcomeSection: FC = () => {
   }, [backgroundInView, backgroundOpacity, setBackgroundOpacity]);
 
   return (
-    <div className="mt-0 md:mt-24 h-[120vh] mx-auto relative ">
-      <div ref={backgroundRef} className="w-full h-full absolute">
-        <ShadowBoxTop className="bg-black w-full h-36 z-10 absolute -top-36 shadow-black"></ShadowBoxTop>
-        <div className="absolute w-full h-full opacity-50">
+    <div className="relative mx-auto mt-0 h-[120vh] md:mt-24 ">
+      <div ref={backgroundRef} className="absolute h-full w-full">
+        <ShadowBoxTop className="absolute -top-36 z-10 h-36 w-full bg-black shadow-black"></ShadowBoxTop>
+        <div className="absolute h-full w-full opacity-50">
           <Image
             src="/images/owner/outcome-section/image-01.jpg"
             layout="fill"
@@ -100,15 +100,15 @@ const OutcomeSection: FC = () => {
             alt=""
           />
         </div>
-        <ShadowBoxBottom className="bg-black w-full h-36 absolute -bottom-36 shadow-black"></ShadowBoxBottom>
+        <ShadowBoxBottom className="absolute -bottom-36 h-36 w-full bg-black shadow-black"></ShadowBoxBottom>
       </div>
-      <div className="w-full z-20 max-w-7xl px-8 lg:px-44 pb-32 pt-36 h-full lg:shrink-0">
+      <div className="z-20 h-full w-full max-w-7xl px-8 pb-32 pt-36 lg:shrink-0 lg:px-44">
         <div className="sticky top-[25%] mt-4">
-          <div className="gap-8 md:gap-4 flex flex-col">
+          <div className="flex flex-col gap-8 md:gap-4">
             <AnimatedTitle>{t("OutcomeSection.header1")}</AnimatedTitle>
             <AnimatedTitle>{t("OutcomeSection.header2")}</AnimatedTitle>
           </div>
-          <dl className="flex flex-col sm:grid grid-cols-2 mt-20 gap-x-12 gap-y-8 sm:gap-y-12 ">
+          <dl className="mt-20 flex grid-cols-2 flex-col gap-x-12 gap-y-8 sm:grid sm:gap-y-12 ">
             {outcomes.map((outcome, index) => (
               <motion.div
                 key={outcome.id}
@@ -122,7 +122,7 @@ const OutcomeSection: FC = () => {
                 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="text-lg lg:text-xl font-bold leading-6 text-indigo-400">
+                <p className="text-lg font-bold leading-6 text-indigo-400 lg:text-xl">
                   {outcome.title}
                 </p>
                 <OutcomeValue

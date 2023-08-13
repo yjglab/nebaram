@@ -28,8 +28,8 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
   // };
 
   return (
-    <div className="mb-20 font-medium px-6">
-      <div className="mt-10 mx-auto max-w-2xl lg:max-w-6xl ">
+    <div className="mb-20 px-6 font-medium">
+      <div className="mx-auto mt-10 max-w-2xl lg:max-w-6xl ">
         <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-6">
           {projectsData.map((data, index) => (
             <motion.div
@@ -37,7 +37,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               id={data.title1}
               onMouseEnter={handleCardHover}
               onMouseLeave={handleCardLeave}
-              className="relative p-8 lg:p-10 ring-2 ring-white/10 overflow-hidden flex flex-col aspect-square rounded-2xl"
+              className="relative flex aspect-square flex-col overflow-hidden rounded-2xl p-8 ring-2 ring-white/10 lg:p-10"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{
@@ -47,7 +47,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <ArrowLeftCircleIcon className="w-8 z-20 absolute bottom-10 right-10" />
+              <ArrowLeftCircleIcon className="absolute bottom-10 right-10 z-20 w-8" />
               <div
                 className={classNames(
                   projectCardHover === data.title1
@@ -97,7 +97,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               >
                 <div>{data.description1}</div>
                 <div className="hidden xl:block">
-                  <p className="text-amber-500 mb-1 font-medium">
+                  <p className="mb-1 font-medium text-amber-500">
                     {t("ProjectSection.projectSkillsLabel")}
                   </p>
                   {data.description2}

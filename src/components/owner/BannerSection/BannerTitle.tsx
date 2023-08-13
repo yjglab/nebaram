@@ -13,7 +13,7 @@ const BannerTitle: FC<Props> = ({ bannerOn }) => {
   const t = useTranslations("owner");
 
   return (
-    <div className="z-20 flex mt-32 md:mt-40 flex-col w-full items-center">
+    <div className="z-20 mt-32 flex w-full flex-col items-center md:mt-40">
       <div
         className={classNames(
           bannerOn
@@ -28,7 +28,7 @@ const BannerTitle: FC<Props> = ({ bannerOn }) => {
       </div>
 
       <motion.div
-        className="text-3xl sm:text-5xl lg:text-7xl font-semibold mt-0 md:mt-5 "
+        className="mt-0 text-3xl font-semibold sm:text-5xl md:mt-5 lg:text-7xl "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{

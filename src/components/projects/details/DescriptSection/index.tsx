@@ -12,10 +12,10 @@ const DescriptSection = () => {
       label: t(`ProjectSection.project${projectId}.details.outlineLabel`),
       data: t.rich(`ProjectSection.project${projectId}.details.outline`, {
         span: (children) => (
-          <span className="py-0.5 font-semibold mb-2.5">{children}</span>
+          <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
         ),
         div: (children) => (
-          <div className="break-all leading-8 font-light mb-3">{children}</div>
+          <div className="mb-3 break-all font-light leading-8">{children}</div>
         ),
       }),
     },
@@ -34,10 +34,10 @@ const DescriptSection = () => {
           `ProjectSection.project${projectId}.details.implements.${id}`,
           {
             span: (children) => (
-              <span className="py-0.5 font-semibold mb-2.5">{children}</span>
+              <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
             ),
             div: (children) => (
-              <div className="break-all leading-8 font-light mb-3">
+              <div className="mb-3 break-all font-light leading-8">
                 {children}
               </div>
             ),
@@ -49,15 +49,15 @@ const DescriptSection = () => {
       label: t(`ProjectSection.project${projectId}.details.issuesLabel`),
       data: t.rich(`ProjectSection.project${projectId}.details.issues`, {
         span: (children) => (
-          <span className="py-0.5 font-semibold mb-2.5">{children}</span>
+          <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
         ),
         div: (children) => (
-          <div className="break-all leading-8 font-light mb-3">{children}</div>
+          <div className="mb-3 break-all font-light leading-8">{children}</div>
         ),
         a: (children) => (
           <a
             href={t(`ProjectSection.project${projectId}.details.issuesLink`)}
-            className="text-base text-amber-500 hover:text-amber-600 duration-200"
+            className="text-base text-amber-500 duration-200 hover:text-amber-600"
             rel="referrer"
             target="_blank"
           >
@@ -81,10 +81,10 @@ const DescriptSection = () => {
           `ProjectSection.project${projectId}.details.skills.${id}`,
           {
             span: (children) => (
-              <span className="py-0.5 font-semibold mb-2.5">{children}</span>
+              <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
             ),
             div: (children) => (
-              <div className="break-all leading-8 font-light mb-3">
+              <div className="mb-3 break-all font-light leading-8">
                 {children}
               </div>
             ),
@@ -95,10 +95,10 @@ const DescriptSection = () => {
   };
 
   return (
-    <div className="overflow-x-hidden px-6 sm:px-8 mt-20 md:mt-36 text-lg mx-auto lg:max-w-7xl">
-      <div className="w-full h-[1.5px] mb-8 md:mb-10 bg-white/30" />
+    <div className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-36 lg:max-w-7xl">
+      <div className="mb-8 h-[1.5px] w-full bg-white/30 md:mb-10" />
 
-      <div className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12">
+      <div className="mb-8 text-2xl font-semibold md:mb-12 md:text-3xl">
         {t("ProjectSection.projectDescriptionLabel")}
       </div>
       <motion.div
@@ -108,14 +108,14 @@ const DescriptSection = () => {
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
+        <div className="mb-6 w-80 text-xl font-semibold md:mb-0 md:text-2xl">
           {projectData.outline.label}
         </div>
         <div className="w-full">
-          <div className="flex flex-col mb-3 md:mb-3 text-base md:text-lg">
+          <div className="mb-3 flex flex-col text-base md:mb-3 md:text-lg">
             {projectData.outline.data}
           </div>
-          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
+          <div className="mb-6 mt-10 h-[1.5px] w-full bg-white/30 md:mb-10" />
         </div>
       </motion.div>
 
@@ -126,7 +126,7 @@ const DescriptSection = () => {
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
+        <div className="mb-6 w-80 text-xl font-semibold md:mb-0 md:text-2xl">
           {projectData.implements.label}
         </div>
         <div className="w-full">
@@ -135,13 +135,13 @@ const DescriptSection = () => {
               data.content && (
                 <div
                   key={data.id}
-                  className="flex flex-col mb-3 md:mb-6 text-base md:text-lg"
+                  className="mb-3 flex flex-col text-base md:mb-6 md:text-lg"
                 >
                   {data.content}
                 </div>
               )
           )}
-          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
+          <div className="mb-6 mt-10 h-[1.5px] w-full bg-white/30 md:mb-10" />
         </div>
       </motion.div>
 
@@ -152,14 +152,14 @@ const DescriptSection = () => {
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
+        <div className="mb-6 w-80 text-xl font-semibold md:mb-0 md:text-2xl">
           {projectData.issues.label}
         </div>
         <div className="w-full">
-          <div className="flex flex-col mb-3 md:mb-3 text-base md:text-lg">
+          <div className="mb-3 flex flex-col text-base md:mb-3 md:text-lg">
             {projectData.issues.data}
           </div>
-          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
+          <div className="mb-6 mt-10 h-[1.5px] w-full bg-white/30 md:mb-10" />
         </div>
       </motion.div>
 
@@ -170,7 +170,7 @@ const DescriptSection = () => {
         transition={{ type: "tween", duration: 0.5, delay: 0 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="text-xl md:text-2xl font-semibold w-80 mb-6 md:mb-0">
+        <div className="mb-6 w-80 text-xl font-semibold md:mb-0 md:text-2xl">
           {projectData.skills.label}
         </div>
         <div className="w-full">
@@ -179,13 +179,13 @@ const DescriptSection = () => {
               data.content && (
                 <div
                   key={data.id}
-                  className="flex flex-col mb-3 md:mb-6 text-base md:text-lg"
+                  className="mb-3 flex flex-col text-base md:mb-6 md:text-lg"
                 >
                   {data.content}
                 </div>
               )
           )}
-          <div className="w-full h-[1.5px] mb-6 md:mb-10 mt-10 bg-white/30" />
+          <div className="mb-6 mt-10 h-[1.5px] w-full bg-white/30 md:mb-10" />
         </div>
       </motion.div>
     </div>

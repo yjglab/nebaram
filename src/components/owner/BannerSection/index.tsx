@@ -23,11 +23,11 @@ const BannerSection: FC = () => {
   }, []);
 
   return (
-    <div className="z-20  w-full min-h-screen ">
-      <div className="flex flex-col w-full h-full justify-center relative">
+    <div className="z-20  min-h-screen w-full ">
+      <div className="relative flex h-full w-full flex-col justify-center">
         <BannerTitle bannerOn={bannerOn} />
         <BannerCard />
-        <ScrollIndicator className="z-20 mt-16 md:mt-32 mx-auto">
+        <ScrollIndicator className="z-20 mx-auto mt-16 md:mt-32">
           <ChevronDownIcon
             className={classNames(
               bannerOn ? "opacity-100" : "opacity-0",

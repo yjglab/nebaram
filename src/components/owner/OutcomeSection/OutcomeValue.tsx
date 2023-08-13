@@ -27,10 +27,10 @@ const OutcomeValue: FC<Props> = ({ value, unit }) => {
       valueCounter.play();
     }
     return valueCounter.stop;
-  }, [valueInView]);
+  }, [valueInView, count, value]);
 
   return (
-    <div className="flex gap-2 text-5xl lg:text-7xl mt-3 tracking-wide font-bold ">
+    <div className="mt-3 flex gap-2 text-5xl font-bold tracking-wide lg:text-7xl ">
       <motion.h1 ref={valueRef}>{roundedValue}</motion.h1>
       <span>{unit}</span>
     </div>

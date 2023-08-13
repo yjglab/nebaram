@@ -16,13 +16,13 @@ const ObjectiveSection: FC = () => {
     "/images/owner/objective-section/objective-04.jpg",
   ];
   return (
-    <div className="overflow-x-hidden mt-36 mb-56 md:mb-0 pt-12 md:py-24  sm:py-36 flex flex-col items-center">
-      <div className="z-20 text-center w-full flex flex-col items-center">
+    <div className="mb-56 mt-36 flex flex-col items-center overflow-x-hidden  pt-12 sm:py-36 md:mb-0 md:py-24">
+      <div className="z-20 flex w-full flex-col items-center text-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}
         </AnimatedTitle>
         <motion.div
-          className="mt-2 h-0.5 grow bg-indigo-400 w-44 md:w-52"
+          className="mt-2 h-0.5 w-44 grow bg-indigo-400 md:w-52"
           aria-hidden="true"
           initial={{ opacity: 0, scaleX: 0, originX: 0 }}
           whileInView={{ opacity: 1, scaleX: 1, originX: 0 }}
@@ -30,7 +30,7 @@ const ObjectiveSection: FC = () => {
           viewport={{ once: true, amount: 0.5 }}
         />
         <motion.div
-          className="px-4 relative mt-4 md:mt-8 gap-4 flex flex-col 2xl:gap-0.5"
+          className="relative mt-4 flex flex-col gap-4 px-4 md:mt-8 2xl:gap-0.5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
@@ -51,12 +51,12 @@ const ObjectiveSection: FC = () => {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0 }}
-        className="w-full mt-6 md:mt-24 mb-4 text-amber-500 font-semibold text-center"
+        className="mb-4 mt-6 w-full text-center font-semibold text-amber-500 md:mt-24"
       >
         {/* {t("ObjectiveSection.sliderTitle")} */}
       </motion.div>
       <motion.div
-        className="aspect-video w-[80%] lg:w-[900px] xl:w-[1000px] relative flex items-center"
+        className="relative flex aspect-video w-[80%] items-center lg:w-[900px] xl:w-[1000px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{

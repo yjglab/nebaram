@@ -108,7 +108,7 @@ const Footer: FC = () => {
   ];
   return (
     <footer>
-      <div className="mx-auto mt-20 md:mt-32 max-w-screen-xl space-y-8 px-6 py-16 sm:px-6 lg:space-y-16 lg:px-8 lg:max-w-6xl">
+      <div className="mx-auto mt-20 max-w-screen-xl space-y-8 px-6 py-16 sm:px-6 md:mt-32 lg:max-w-6xl lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div>
@@ -125,7 +125,7 @@ const Footer: FC = () => {
               </Link>
             </div>
 
-            <div className="mt-4 gap-1 flex flex-col max-w-xs text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-4 flex max-w-xs flex-col gap-1 text-sm text-gray-500 dark:text-gray-400">
               <p>{t("Footer.description")}</p>
               <p>
                 {t("Footer.presidentNameLabel")} | {t("Footer.presidentName")}
@@ -167,7 +167,7 @@ const Footer: FC = () => {
                   {menu.name}
                 </p>
 
-                <ul className="mt-4 md:mt-6 space-y-3 md:space-y-4 text-sm">
+                <ul className="mt-4 space-y-3 text-sm md:mt-6 md:space-y-4">
                   {menu.contents.map((content) => (
                     <li key={content.id}>
                       <a

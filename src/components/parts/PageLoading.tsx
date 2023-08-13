@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PageLoading = () => {
   return (
-    <div className="z-50 w-screen h-screen fixed bg-black left-0 top-0 flex justify-center items-center">
+    <div className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center bg-black">
       <Image
         src={clogo}
         className="animate-spin"

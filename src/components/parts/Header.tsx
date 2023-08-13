@@ -92,7 +92,7 @@ const Header: FC = () => {
   return (
     <div
       id="navbar"
-      className="z-50 backdrop-blur-md bg-black/30 fixed top-0 w-full"
+      className="fixed top-0 z-50 w-full bg-black/30 backdrop-blur-md"
     >
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
@@ -119,11 +119,11 @@ const Header: FC = () => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="bg-white/[0.05] shadow-2xl shadow-black backdrop-blur-xl relative flex w-full max-w-xs flex-col overflow-y-auto pb-12">
-                <div className="flex px-6 py-3  item-center justify-end">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white/[0.05] pb-12 shadow-2xl shadow-black backdrop-blur-xl">
+                <div className="item-center flex justify-end  px-6 py-3">
                   <button
                     type="button"
-                    className="-m-2 top-1.5 relative inline-flex items-center justify-center rounded-md p-2 "
+                    className="relative top-1.5 -m-2 inline-flex items-center justify-center rounded-md p-2 "
                     onClick={() => setOpen(false)}
                   >
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
@@ -143,10 +143,10 @@ const Header: FC = () => {
                     </div>
                   ))}
 
-                  <div className="w-full h-[1.2px] bg-white/30" />
+                  <div className="h-[1.2px] w-full bg-white/30" />
 
                   {supportedLocalesMap.map((localeMap) => (
-                    <div className="flow-root">
+                    <div key={localeMap.name} className="flow-root">
                       <button
                         key={localeMap.locale}
                         onClick={() =>
@@ -160,7 +160,7 @@ const Header: FC = () => {
                   ))}
                 </div>
 
-                <div className="absolute bottom-5 mt-2 px-4 py-6 w-full">
+                <div className="absolute bottom-5 mt-2 w-full px-4 py-6">
                   <p className="mt-4 text-center text-xs leading-6 ">
                     {t("Footer.copyright")}
                   </p>
@@ -176,7 +176,7 @@ const Header: FC = () => {
         <button
           type="button"
           onClick={handleTopIndicator}
-          className="hover:bg-indigo-500 duration-200 absolute w-11 h-11 md:w-12 md:h-12 bg-indigo-400 rounded-full translate-y-[90vh] right-[5vw] md:translate-y-[92vh] md:right-10 p-1 md:p-1.5"
+          className="absolute right-[5vw] h-11 w-11 translate-y-[90vh] rounded-full bg-indigo-400 p-1 duration-200 hover:bg-indigo-500 md:right-10 md:h-12 md:w-12 md:translate-y-[92vh] md:p-1.5"
         >
           <ChevronUpIcon className="relative bottom-0.5" />
         </button>
@@ -185,9 +185,9 @@ const Header: FC = () => {
       <header className="relative duration-200">
         <nav aria-label="Top" className="mx-auto max-w-6xl px-4 xl:px-0">
           <div className="relative">
-            <div className="h-14 duration-200 flex w-full items-center justify-between relative">
+            <div className="relative flex h-14 w-full items-center justify-between duration-200">
               <div className="flex">
-                <div className="flex ml-2">
+                <div className="ml-2 flex">
                   <Link className="flex items-center" href="/">
                     <Image src={clogo} width={16} height={16} alt="clogo" />
                     <span
@@ -200,7 +200,7 @@ const Header: FC = () => {
                     </span>
                   </Link>
                 </div>
-                <Popover.Group className="hidden md:ml-8 md:flex items-center md:self-stretch">
+                <Popover.Group className="hidden items-center md:ml-8 md:flex md:self-stretch">
                   <div className="flex space-x-8">
                     {navigation.pages.map((page) => (
                       <Link
@@ -215,7 +215,7 @@ const Header: FC = () => {
                           {page.name}
                         </span>
                         {localizedPathname === page.href && (
-                          <div className="w-full mx-auto absolute bg-indigo-400 h-0.5 rounded-md -bottom-1"></div>
+                          <div className="absolute -bottom-1 mx-auto h-0.5 w-full rounded-md bg-indigo-400"></div>
                         )}
                       </Link>
                     ))}
@@ -233,7 +233,7 @@ const Header: FC = () => {
                           }
                           className={`${
                             active ? "bg-indigo-400" : "text-black"
-                          } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                          } group flex w-full items-center rounded-md p-2 text-sm`}
                         >
                           {localeMap.name}
                         </button>
@@ -246,11 +246,11 @@ const Header: FC = () => {
               {/* 모바일 메뉴 트리거 */}
               <button
                 type="button"
-                className="rounded-md p-2  md:hidden absolute right-0"
+                className="absolute right-0  rounded-md p-2 md:hidden"
                 onClick={() => setOpen(true)}
               >
                 <Bars3Icon
-                  className="h-6 w-6 text-white  stroke-2"
+                  className="h-6 w-6 stroke-2  text-white"
                   aria-hidden="true"
                 />
               </button>

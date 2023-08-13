@@ -9,9 +9,9 @@ const HistorySection: FC = () => {
   const t = useTranslations("owner");
 
   return (
-    <div className="overflow-hidden px-4 lg:px-[10%] xl:px-[18%] 2xl:px-[28%]  my-36 flex flex-col items-center">
-      <div className="w-full h-full flex flex-col items-center ">
-        <div className="text-center w-full ">
+    <div className="my-36 flex flex-col items-center overflow-hidden  px-4 lg:px-[10%] xl:px-[18%] 2xl:px-[28%]">
+      <div className="flex h-full w-full flex-col items-center ">
+        <div className="w-full text-center ">
           <div className="flex flex-col items-center gap-2 md:gap-4">
             <AnimatedTitle size="lg" align="center">
               {t("HistorySection.sectionTitle1")}
