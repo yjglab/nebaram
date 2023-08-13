@@ -30,10 +30,6 @@ const MainPage: NextPage = () => {
     }
   }, [navigator, pathname]);
 
-  useEffect(() => {
-    navigator.replace("/owner");
-  }, [navigator]);
-
   return <div className="sr-only flex flex-col items-stretch"></div>;
 };
 

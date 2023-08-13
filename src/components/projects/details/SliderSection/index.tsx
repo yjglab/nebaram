@@ -63,39 +63,33 @@ const SliderSection = () => {
       </div>
 
       <motion.div
-        className="relative flex aspect-video w-[90%] items-center sm:w-[80%] lg:w-[900px] xl:w-[1000px]"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{
-          type: "tween",
-          duration: 0.7,
-          delay: 0.8,
-        }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <Slider images={slideImages} setSlideNumber={setSlideNumber} />
-      </motion.div>
-
-      <motion.div
-        className="mt-14 min-h-[50px] w-[90%] px-2 text-sm sm:w-[80%] md:mt-3 lg:mt-6 lg:w-[900px] lg:px-4 lg:text-base xl:w-[1000px] "
+        className="flex flex-col items-center"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ type: "tween", duration: 0.5, delay: 0.5 }}
+        transition={{ type: "tween", duration: 0.5, delay: 1.6 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="flex w-full items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="rounded-lg bg-indigo-400 px-2.5 py-1 font-semibold">
-              {slideData[slideNumber].scope}
-            </div>
-            <div className="font-semibold">{slideData[slideNumber].title}</div>
-          </div>
-          <div>
-            {slideNumber + 1} / {slideImages.length}
-          </div>
+        <div className="relative flex aspect-video w-[90%] items-center sm:w-[80%] lg:w-[900px] xl:w-[1000px]">
+          <Slider images={slideImages} setSlideNumber={setSlideNumber} />
         </div>
-        <div className="mt-2.5 pl-1 font-light leading-6 md:leading-7">
-          {slideData[slideNumber].description}
+
+        <div className="mt-14 min-h-[50px] w-[90%] px-2 text-sm sm:w-[80%] md:mt-3 lg:mt-6 lg:w-[900px] lg:px-4 lg:text-base xl:w-[1000px] ">
+          <div className="flex w-full items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="rounded-lg bg-indigo-400 px-2.5 py-1 font-semibold">
+                {slideData[slideNumber].scope}
+              </div>
+              <div className="font-semibold">
+                {slideData[slideNumber].title}
+              </div>
+            </div>
+            <div>
+              {slideNumber + 1} / {slideImages.length}
+            </div>
+          </div>
+          <div className="mt-2.5 pl-1 font-light leading-6 md:leading-7">
+            {slideData[slideNumber].description}
+          </div>
         </div>
       </motion.div>
     </div>
