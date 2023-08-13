@@ -1,6 +1,5 @@
 "use client";
 
-import classNames from "classnames";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
 import { motion } from "framer-motion";

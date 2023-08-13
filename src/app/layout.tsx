@@ -5,6 +5,10 @@ import { NextIntlClientProvider, createTranslator } from "next-intl";
 import Providers from "./providers";
 import { Pretendard } from "@constants/constant";
 
+interface Props {
+  children: React.ReactNode;
+}
+
 export async function generateMetadata() {
   const locale = fallbackLocale; // now언어
   const messages = await getMessages(locale); // now언어 메시지 로드
@@ -51,9 +55,9 @@ export async function generateMetadata() {
   } as Metadata;
 }
 
-const LocaleLayout = async ({ children }: { children: React.ReactNode }) => {
+const LocaleLayout = async ({ children }: Props) => {
   const locale = fallbackLocale;
-  const messages = await getMessages(locale);
+  const messages: any = await getMessages(locale);
 
   return (
     <html lang={locale}>

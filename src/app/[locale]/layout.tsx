@@ -41,16 +41,14 @@ export async function generateMetadata({ params: { locale = "en" } }) {
   } as Metadata;
 }
 
-const LocaleLayout = async ({
-  children,
-  params: { locale },
-}: {
+interface Props {
   children: React.ReactNode;
   params: {
     locale: string;
   };
-}) => {
-  const messages = await getMessages(locale);
+}
+const LocaleLayout = async ({ children, params: { locale } }: Props) => {
+  const messages: any = await getMessages(locale);
 
   return (
     <html lang={locale}>
