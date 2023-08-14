@@ -1,9 +1,7 @@
-"use client";
-
 import { redirect } from "next/navigation";
 
 const RootPage = () => {
-  redirect("en");
+  redirect("/ko");
 };
 
 export default RootPage;

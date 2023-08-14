@@ -194,6 +194,7 @@ const Header: FC = () => {
                   <Link className="flex items-center" href="/">
                     <Image
                       src={clogo}
+                      priority
                       width={16}
                       height={16}
                       alt="brand logo"
