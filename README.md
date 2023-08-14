@@ -1,6 +1,7 @@
 # Nebaram 0.0.0 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
+![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/48292417-c3a5-4d2d-b820-d05e71bc0d27)
 
 ### 개요
 
@@ -104,5 +105,6 @@
 
 - [BFCache, 최적화 방법](https://web.dev/bfcache/)
 - [TS, Index Signature](https://dev.to/keento0809/index-signature-in-typescript-37g1)
+- [Cumulative Layout Shift](https://nextjs.org/learn/seo/web-performance/cls)
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/5bc77120-ce07-4052-9db3-460c082852b1)
