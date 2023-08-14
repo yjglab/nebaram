@@ -95,7 +95,7 @@ const OutcomeSection: FC = () => {
           <Image
             className="object-cover"
             sizes="(max-width: 1920px) 100vw"
-            src="/images/owner/outcome-section/outcome-background.jpeg"
+            src="/images/owner/outcome-section/outcome-background.webp"
             fill
             priority
             style={{ opacity: backgroundOpacity }}
