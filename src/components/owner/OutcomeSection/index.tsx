@@ -94,7 +94,7 @@ const OutcomeSection: FC = () => {
         <div className="absolute h-full w-full opacity-50">
           <Image
             className="object-cover"
-            sizes="(max-width: 1920px) 100vw"
+            sizes="1280px"
             src="/images/owner/outcome-section/outcome-background.webp"
             fill
             priority
