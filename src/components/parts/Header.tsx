@@ -193,9 +193,7 @@ const Header: FC = () => {
                 <div className="ml-2 flex">
                   <Link className="flex items-center" href="/">
                     <Image
-                      className="aspect-square"
                       src={clogo}
-                      priority
                       width={16}
                       height={16}
                       alt="brand logo"

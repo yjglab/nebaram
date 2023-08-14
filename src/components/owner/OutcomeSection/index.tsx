@@ -95,6 +95,7 @@ const OutcomeSection: FC = () => {
           <Image
             className="object-cover"
             fill
+            priority
             src="/images/owner/outcome-section/outcome-background.webp"
             style={{ opacity: backgroundOpacity }}
             alt="outcome-section/image-01"

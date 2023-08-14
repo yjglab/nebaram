@@ -113,14 +113,7 @@ const Footer: FC = () => {
           <div>
             <div>
               <Link className="flex items-center" href="/">
-                <Image
-                  priority
-                  className="aspect-square"
-                  src={clogo}
-                  alt="brand logo"
-                  width={16}
-                  height={16}
-                />
+                <Image src={clogo} alt="brand logo" width={16} height={16} />
                 <span
                   className={classNames(
                     poppins.className,

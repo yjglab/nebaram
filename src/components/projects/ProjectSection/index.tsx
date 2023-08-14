@@ -111,6 +111,8 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
               </div>
               <Image
                 src={data.src}
+                priority
+                sizes="(max-width: 400px)"
                 fill
                 className="absolute opacity-60 object-cover aspect-square"
                 alt={data.src}

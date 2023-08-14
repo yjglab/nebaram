@@ -178,6 +178,7 @@ const SkillSection: FC = () => {
             <Image
               src={card.src}
               fill
+              sizes="(max-width: 400px)"
               className="absolute opacity-60 object-cover aspect-square"
               alt="skill card"
             />
