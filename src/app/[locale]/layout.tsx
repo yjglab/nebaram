@@ -1,13 +1,16 @@
-import { getMessages } from "@locales/index";
+import { Locale, getMessages } from "@locales/index";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { NextIntlClientProvider, createTranslator } from "next-intl";
+import {
+  AbstractIntlMessages,
+  NextIntlClientProvider,
+  createTranslator,
+} from "next-intl";
 import classNames from "classnames";
 import Header from "@components/parts/Header";
 import Footer from "@components/parts/Footer";
-import Head from "next/head";
 
-export const Pretendard = localFont({
+const Pretendard = localFont({
   src: "../../../public/fonts/PretendardVariable.woff2",
 });
 export async function generateMetadata({ params: { locale = "en" } }) {
@@ -49,7 +52,7 @@ interface Props {
   };
 }
 const LocaleLayout = async ({ children, params: { locale } }: Props) => {
-  const messages: any = await getMessages(locale);
+  const messages: IntlMessages = await getMessages(locale);
 
   return (
     <html lang={locale}>

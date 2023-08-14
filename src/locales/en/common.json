@@ -81,11 +81,5 @@
         "link": "/"
       }
     }
-  },
-  "404": {
-    "title": "Unknown Path",
-    "description": "The page has been deleted or the path is incorrect",
-    "toHome": "",
-    "toContact": "Contact Us"
   }
 }

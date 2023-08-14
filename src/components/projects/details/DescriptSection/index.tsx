@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const DescriptSection = () => {
   const t = useTranslations("projects");
-  const { id: projectId } = useParams();
+  const { id: projectId } = useParams() as { id: string };
   const projectData = {
     outline: {
       label: t(`ProjectSection.project${projectId}.details.outlineLabel`),

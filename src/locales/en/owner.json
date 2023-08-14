@@ -6,16 +6,15 @@
   "OutcomeSection": {
     "header1": "Striving to create services that will be remembered by people for a long time",
     "header2": "So I've been consistently working hard until now",
-    "src": "/images/outcome-section/outcome-s-1.jpeg",
     "title1": "Accumulated Work Days",
     "value1": "{days}",
-    "value1Unit": "",
+    "value1Unit": "+",
     "title2": "Accumulated Course Attendees",
     "value2": "{attends}",
-    "value2Unit": "",
+    "value2Unit": "+",
     "title3": "Projects Worked On <span>Web / Engineering / Design</span>",
     "value3": "{services}",
-    "value3Unit": "",
+    "value3Unit": "+",
     "title4": "Awards Won <span>Coding Competition Winner</span>",
     "value4": "{awards}",
     "value4Unit": ""
@@ -24,10 +23,7 @@
     "title": "Goals as a Developer",
     "description1": "I started developing because I wanted to solve the discomfort I felt in school on my own.",
     "description2": "I want to create services that are easy for everyone to use and make life more convenient.",
-    "sliderTitle": "Representative Projects",
-    "src1": "/images/objective-section/objectives-m-1.jpeg",
-    "src2": "/images/objective-section/objectives-m-1.jpeg",
-    "src3": "/images/objective-section/objectives-m-1.jpeg"
+    "sliderTitle": "Representative Projects"
   },
   "HistorySection": {
     "sectionTitle1": "I am still",

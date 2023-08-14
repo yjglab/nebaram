@@ -6,7 +6,6 @@
   "OutcomeSection": {
     "header1": "사람들에게 오래 기억될 수 있는 서비스를 만들려고 합니다",
     "header2": "그래서 지금까지 꾸준히 달려왔어요",
-    "src": "/images/outcome-section/outcome-s-1.jpeg",
     "title1": "누적 작업일",
     "value1": "{days}",
     "value1Unit": "일+",
@@ -24,10 +23,7 @@
     "title": "개발자로서의 목표",
     "description1": "학교에서 느낀 불편함을 스스로 해결해보고자 개발을 시작하게 되었어요",
     "description2": "모든 사람들이 쉽게 다룰 수 있으면서 삶이 더욱 편리해질 수 있는 서비스를 만들고자 해요",
-    "sliderTitle": "대표 프로젝트",
-    "src1": "/images/objective-section/objectives-m-1.jpeg",
-    "src2": "/images/objective-section/objectives-m-1.jpeg",
-    "src3": "/images/objective-section/objectives-m-1.jpeg"
+    "sliderTitle": "대표 프로젝트"
   },
   "HistorySection": {
     "sectionTitle1": "저는 오늘도",
@@ -116,8 +112,8 @@
     "skill4": "Skill Communication",
     "skill4Title1": "디자이너와 원활한",
     "skill4Title2": "협업이 가능해요",
-    "skill4Description1": "<span></span>저는 시각디자인도 복수전공했어요. 그래서 여러명의 디자이너들과 협업 작업을 진행해본 적이 많아요. 디자이너와 개발자, 두 포지션의 입장에서 프로젝트를 참여해봤기 때문에 소통에 어려움 없이 작업할 수 있어요.",
-    "skill4Description2": "<span></span>",
+    "skill4Description1": "저는 시각디자인도 복수전공했어요. 그래서 여러명의 디자이너들과 협업 작업을 진행해본 적이 많아요. 디자이너와 개발자, 두 포지션의 입장에서 프로젝트를 참여해봤기 때문에 소통에 어려움 없이 작업할 수 있어요.",
+    "skill4Description2": "",
 
     "projectsLinkLabel": "진행한 프로젝트들을 둘러보세요",
     "projectsLink": "프로젝트 페이지"

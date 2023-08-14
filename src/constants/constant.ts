@@ -7,6 +7,3 @@ export const poppins = Poppins({
   subsets: ["latin"],
   preload: true,
 });
-export const Pretendard = localFont({
-  src: "../../public/fonts/PretendardVariable.woff2",
-});
