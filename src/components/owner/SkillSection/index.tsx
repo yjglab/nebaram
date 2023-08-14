@@ -179,7 +179,7 @@ const SkillSection: FC = () => {
               src={card.src}
               fill
               sizes="(max-width: 768px) 100vw"
-              className="absolute opacity-60 object-cover"
+              className="absolute opacity-60 object-cover aspect-square"
               alt="skill card"
             />
           </motion.div>

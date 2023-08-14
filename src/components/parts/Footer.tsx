@@ -115,6 +115,7 @@ const Footer: FC = () => {
               <Link className="flex items-center" href="/">
                 <Image
                   priority
+                  className="aspect-square"
                   src={clogo}
                   alt="brand logo"
                   width={16}

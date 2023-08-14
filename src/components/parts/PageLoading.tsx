@@ -7,7 +7,7 @@ const PageLoading = () => {
       <Image
         src={clogo}
         priority
-        className="animate-spin"
+        className="animate-spin aspect-square"
         width={50}
         height={50}
         alt="brand logo"

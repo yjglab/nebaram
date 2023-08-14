@@ -114,7 +114,7 @@ const ProjectSection: FC<Props> = ({ projectsData }) => {
                 fill
                 priority={false}
                 sizes="500px"
-                className="absolute opacity-60 object-cover"
+                className="absolute opacity-60 object-cover aspect-square"
                 alt={data.src}
               />
             </motion.div>
