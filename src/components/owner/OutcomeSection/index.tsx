@@ -93,9 +93,11 @@ const OutcomeSection: FC = () => {
         <ShadowBoxTop className="absolute -top-36 z-10 h-36 w-full bg-black shadow-black"></ShadowBoxTop>
         <div className="absolute h-full w-full opacity-50">
           <Image
+            className="object-cover"
+            sizes="(max-width: 1920px) 100vw"
             src="/images/owner/outcome-section/outcome-background.jpeg"
-            layout="fill"
-            objectFit="cover"
+            fill
+            priority
             style={{ opacity: backgroundOpacity }}
             alt="outcome-section/image-01"
           />
