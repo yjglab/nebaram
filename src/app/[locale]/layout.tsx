@@ -29,7 +29,7 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [
         {
-          url: "",
+          url: "/images/common/icon.png",
           alt: "logo",
           width: 1000,
           height: 1000,

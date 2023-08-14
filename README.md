@@ -95,8 +95,13 @@
 - 핵심 키워드, 헤더 등 강조하고 싶은 문장에만 특정 스타일을 넣는 방식은 가장 많이 사용되는 다국어 기능 라이브러리인 i18n-next에서는 불가능함 (Ex. "\<h1\>헤더\</h1\>나머지 텍스트")
 - 최신 라이브러리인 next-intl로 변경, 태그 번역을 지원하는 메서드를 적용하여 해결
 
-Version Release
+### Version Release
 
 - [Nebaram 0.0.0](https://github.com/yjglab/nebaram/releases/tag/0.0.0 "Release 0.0.0")
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/5bc77120-ce07-4052-9db3-460c082852b1)
+
+### 성능 최적화 레퍼런스 참고
+
+- [BFCache, 최적화 방법](https://web.dev/bfcache/)
+- []()
