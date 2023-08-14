@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import Providers from "./providers";
 import { Pretendard } from "@constants/constant";
-import Head from "next/head";
 
 interface Props {
   children: React.ReactNode;
@@ -62,13 +61,6 @@ const LocaleLayout = async ({ children }: Props) => {
 
   return (
     <html lang={locale}>
-      <Head>
-        <link
-          rel="canonical"
-          href="https://nebaram.vercel.app/owner"
-          key="canonical"
-        />
-      </Head>
       <Providers>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <body className={Pretendard.className}>{children}</body>

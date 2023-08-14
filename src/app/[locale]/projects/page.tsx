@@ -1,7 +1,7 @@
 "use client";
 
 import { NextPage } from "next";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import HeaderSection from "@components/projects/HeaderSection";
 import ProjectSection from "@components/projects/ProjectSection";
@@ -68,6 +68,10 @@ const ProjectsPage: NextPage = () => {
       description2: t("ProjectSection.project5.description2"),
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
