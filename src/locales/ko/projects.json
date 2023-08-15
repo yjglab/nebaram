@@ -32,11 +32,11 @@
         "implementsLabel": "구현 기능",
         "implementsCount": "1",
         "implements": [
-          "<span>공통</span><div>스크롤/마우스 애니메이션, 모션 슬라이더, 다국어 라우팅 및 번역, 서버사이드 렌더링, 반응형 웹 스크린</div>"
+          "<span>공통</span><div>스크롤/마우스 애니메이션, 모션 슬라이더, 다국어 라우팅 및 번역, 서버사이드 렌더링, 반응형 웹 스크린, PWA</div>"
         ],
         "issuesLabel": "이슈",
         "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
-        "issues": "<span>JSON 데이터 중 특정 부분에만 스타일 적용</span><div>핵심 키워드, 헤더 등 강조하고 싶은 문장에만 특정 스타일을 넣는 방식이 적용되지 않았습니다. 예를 들면 '{<h1>헤더</h1>나머지 텍스트}'로 쓰여있는 문자열 데이터들을 말합니다. 코드의 효율성을 위해 반드시 필요한 부분이라, 최신 라이브러리인 next-intl로 변경하였고 태그 번역을 지원하는 메서드를 적용하여 해결했습니다.</div>",
+        "issues": "<span>SEO와 성능 개선 작업</span><div>다국어웹 이므로 표준 사이트(canonical)와 대안 사이트(alternate)를 명시했으나 라이트하우스에서 감지하지 못했습니다. 중복된 레이아웃 코드로 인한 문제로 확인되었고, 해당 부분 제거 후 다국어 폴더에만 link를 명시하여 해결했습니다. 이 외에도 이미지 압축 및 포맷(Webp) 변경, PWA 적용을 통해 사용자 경험을 향상했습니다.</div>",
         "skillsLabel": "기술",
         "skillsCount": "2",
         "skills": [

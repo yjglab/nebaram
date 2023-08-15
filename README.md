@@ -1,7 +1,7 @@
 # Nebaram 0.0.0 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
-![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/48292417-c3a5-4d2d-b820-d05e71bc0d27)
+![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/00e65a76-a3f8-4a3c-b584-addf5d7a5c98)
 
 ### 개요
 

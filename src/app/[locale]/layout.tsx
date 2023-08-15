@@ -33,10 +33,10 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [
         {
-          url: "/images/common/icon.png",
+          url: "/manifest/icon-192x192.png",
           alt: "logo",
-          width: 1000,
-          height: 1000,
+          width: 192,
+          height: 192,
         },
       ],
     },
