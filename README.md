@@ -106,5 +106,6 @@
 - [BFCache, 최적화 방법](https://web.dev/bfcache/)
 - [TS, Index Signature](https://dev.to/keento0809/index-signature-in-typescript-37g1)
 - [Cumulative Layout Shift](https://nextjs.org/learn/seo/web-performance/cls)
+- [manifest 작성 리스트](https://365kim.tistory.com/169)
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/5bc77120-ce07-4052-9db3-460c082852b1)

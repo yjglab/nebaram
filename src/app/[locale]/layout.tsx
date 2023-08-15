@@ -68,6 +68,7 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
           hrefLang="ko"
           href="https://nebaram.vercel.app/ko/"
         />
+        <link rel="manifest" href="/manifest/manifest.json" />
         <body className={classNames(Pretendard.className)}>
           <Header />
           {children}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { bannerOnDelay } from ".";
-import { useCallback } from "react";
 
 const cardSvgVariants = {
   hidden: { pathLength: 0, opacity: 0 },
@@ -13,7 +12,7 @@ const cardSvgVariants = {
         pathLength: {
           delay: bannerOnDelay * 0.001,
           type: "spring",
-          duration: 1.2,
+          duration: 1.4,
           bounce: 0,
         },
         opacity: { delay: bannerOnDelay * 0.001, duration: 0.01 },
@@ -32,7 +31,7 @@ const BannerCard = () => {
         className="relative z-10 flex w-full items-center justify-center"
       >
         <motion.div
-          className="sm:[450px] relative z-20 flex aspect-square h-[78%] w-[78%] items-center justify-center sm:w-[450px] md:h-[590px] md:w-[590px] "
+          className="sm:[450px] relative z-20 flex aspect-square h-[78%] w-[78%] items-center justify-center sm:w-[450px] md:h-[520px] md:w-[520px] "
           variants={{
             offscreen: {
               opacity: 0,
@@ -54,7 +53,7 @@ const BannerCard = () => {
           />
         </motion.div>
         <motion.svg
-          className="absolute h-[590px] w-[590px] scale-50 sm:scale-[0.75]  md:scale-100"
+          className="absolute h-[520px] w-[520px] scale-50 sm:scale-[0.75]  md:scale-100"
           initial="hidden"
           animate="visible"
         >
@@ -63,7 +62,7 @@ const BannerCard = () => {
             y="3"
             rx="24"
             stroke="#818cf8"
-            className="h-[580px]  w-[580px] stroke-[5] "
+            className="h-[510px]  w-[510px] stroke-[5] "
             variants={cardSvgVariants}
             custom={5}
           />
