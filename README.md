@@ -1,22 +1,23 @@
 # Nebaram 0.0.0 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
-![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/00e65a76-a3f8-4a3c-b584-addf5d7a5c98)
+![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/d7357bdd-7514-4e00-920c-4df263a450dd)
 
 ### 개요
 
-- 네바람은 웹 개발자로서 네 가지 역량을 갖춘 저를 표현하는 퍼스널 브랜드입니다. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 알리고 싶어 제작되었습니다. [https://nebaram.vercel.app](https://nebaram.vercel.app "nebaram")
+- 네바람은 웹 개발자로서 네 가지 역량을 갖춘 저를 표현하는 퍼스널 브랜드입니다. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는지를 알리고 싶어 제작되었습니다. [https://nebaram.vercel.app](https://nebaram.vercel.app "nebaram")
 - 이 프로젝트는 기존 개인 포트폴리오 사이트를 NextJS로 이전하며 리뉴얼한 사이트입니다. 이전 사이트를 보시려면 [여기](https://yukjaekyeong.web.app)를 방문해주세요.
-- Nebaram Introduction(Root) 페이지는 현재 제작중입니다. 개발자 페이지(/owner)와 프로젝트 페이지(/projects)만 열람할 수 있습니다.
+- Nebaram Introduction(Root) 페이지는 현재 제작 중입니다. 개발자 페이지(/owner)와 프로젝트 페이지(/projects)만 열람할 수 있습니다.
 
 <br />
 
 ### 구현부 요약
 
 - 기존의 개인 포트폴리오 웹 페이지를 Next@13 으로 이주하여 디자인과 코드 리뉴얼
-- 사용자 뷰포트의 스크롤에 따라 적용되는 애니메이션 효과 구현
-- 다국어 메타 데이터와 라우팅, JSON 번역 파일을 제공하여 다국어 SEO 향상
-- Apple HIG(Human Interface Guideline)를 반영한 반응형 웹 퍼블리싱
+- SEO 개선 작업을 통해 초기 사이트 대비 성능 47% 향상 (LightHouse 기준, 68 -> 100)
+- 메타 데이터와 라우팅, JSON 번역 파일 제공하여 다국어 지원 기능 구현
+- 사용자 Viewport의 스크롤에 따라 적용되는 애니메이션 효과 적용
+- Apple HIG(Human Interface Guideline) 반영한 반응형 웹 퍼블리싱
 
 <br />
 
@@ -91,6 +92,12 @@
 
 ### 이슈
 
+> SEO와 성능 개선 작업
+
+- 다국어 웹이므로 표준 사이트(canonical)와 대안 사이트(alternate)를 명시했으나 감지하지 못함
+- 중복된 레이아웃 코드로 인한 문제, 해당 부분 제거 후 다국어 폴더에만 link를 명시하여 해결
+- 이미지 압축 및 포맷(Webp) 변경, PWA 적용을 통해 사용자 경험 향상
+
 > JSON 데이터 중 특정 부분에만 스타일 적용
 
 - 로드된 JSON 데이터 중 핵심 키워드, 헤더 등 특정 부분에만 스타일을 넣는 방식이 적용되지 않음-
@@ -99,7 +106,7 @@
 
 ### Version Release
 
-- [Nebaram 0.0.0]()
+- [Nebaram 0.0.0](https://github.com/yjglab/nebaram/releases/tag/nabaram-0.0.0)
 
 ### 레퍼런스 참고
 
