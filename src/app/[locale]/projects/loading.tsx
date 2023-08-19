@@ -1,7 +1,7 @@
-import PageLoading from "@components/parts/PageLoading";
+import LoadingScreen from "@components/parts/LoadingScreen";
 
 const Loading = () => {
-  return <PageLoading />;
+  return <LoadingScreen />;
 };
 
 export default Loading;

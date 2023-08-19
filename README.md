@@ -106,7 +106,8 @@
 
 ### Version Release
 
-- [Nebaram 0.0.0](https://github.com/yjglab/nebaram/releases/tag/nabaram-0.0.0)
+- [0.0.1](https://github.com/yjglab/nebaram/releases/tag/0.0.1)
+- [0.0.0](https://github.com/yjglab/nebaram/releases/tag/0.0.0)
 
 ### 레퍼런스 참고
 

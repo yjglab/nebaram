@@ -1,11 +1,7 @@
-import { Locale, getMessages } from "@locales/index";
+import { getMessages } from "@locales/index";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import {
-  AbstractIntlMessages,
-  NextIntlClientProvider,
-  createTranslator,
-} from "next-intl";
+import { NextIntlClientProvider, createTranslator } from "next-intl";
 import classNames from "classnames";
 import Header from "@components/parts/Header";
 import Footer from "@components/parts/Footer";

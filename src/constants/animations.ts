@@ -49,3 +49,50 @@ export const BannerLogoKeyframe = keyframes`
     transform: translateY(0%) scale(0.7);
   }
 `;
+
+export const SplashLogoKeyframe = keyframes`
+0% {
+  opacity: 0;
+  transform: translateX(-14px) scale(0);
+}
+20% {
+  opacity: 0;
+  transform: translateX(-14px) scale(0);
+}
+28% {
+  opacity: 1;
+  transform: translateX(-14px) scale(1.2);
+}
+38% {
+  opacity: 1;
+  transform: translateX(-14px) scale(1);
+}
+60%{
+  transform: translateX(-14px) rotate(0);
+}
+100% {
+  transform: translateX(-103px) rotate(-360deg);
+}
+`;
+
+export const SplashLogoNameKeyframe = keyframes`
+0% {
+  opacity: 0;
+}
+79% {
+  opacity: 0;
+  transform: translateX(40px)
+}
+100% {
+  opacity: 1;
+  transform: translateX(0px)
+}
+`;
+
+export const SplashContainerKeyframe = keyframes`
+from {
+  opacity: 1;
+} to {
+  opacity: 0;
+}
+`;
