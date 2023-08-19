@@ -1,73 +1,68 @@
 "use client";
 
 import { NextPage } from "next";
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import HeaderSection from "@components/projects/HeaderSection";
-import ProjectSection from "@components/projects/ProjectSection";
+import ProjectSection, {
+  ProjectData,
+} from "@components/projects/ProjectSection";
 
-export interface ProjectData {
-  id: number;
-  category: string;
-  src: string;
-  title1: string;
-  title2: string;
-  description1: string;
-  description2: string;
+interface ProjectsData {
+  [key: string]: Array<ProjectData>;
 }
-
 const ProjectsPage: NextPage = () => {
   const t = useTranslations("projects");
-  const [selectedCategory, setSelectedCategory] = useState(
-    t("HeaderSection.category2")
+  const [category, setCategory] = useState<"all" | "development" | "design">(
+    "development"
   );
-  const projectsData = [
-    {
-      id: 1,
-      category: t("ProjectSection.project1.category"),
-      src: "/images/projects/project-section/nebaram_thumb.jpeg",
-      title1: t("ProjectSection.project1.title1"),
-      title2: t("ProjectSection.project1.title2"),
-      description1: t("ProjectSection.project1.description1"),
-      description2: t("ProjectSection.project1.description2"),
-    },
-    {
-      id: 2,
-      category: t("ProjectSection.project2.category"),
-      src: "/images/projects/project-section/bloobolt_thumb.jpg",
-      title1: t("ProjectSection.project2.title1"),
-      title2: t("ProjectSection.project2.title2"),
-      description1: t("ProjectSection.project2.description1"),
-      description2: t("ProjectSection.project2.description2"),
-    },
-    {
-      id: 3,
-      category: t("ProjectSection.project3.category"),
-      src: "/images/projects/project-section/blooways_thumb.jpg",
-      title1: t("ProjectSection.project3.title1"),
-      title2: t("ProjectSection.project3.title2"),
-      description1: t("ProjectSection.project3.description1"),
-      description2: t("ProjectSection.project3.description2"),
-    },
-    {
-      id: 4,
-      category: t("ProjectSection.project4.category"),
-      src: "/images/projects/project-section/mug_thumb.jpeg",
-      title1: t("ProjectSection.project4.title1"),
-      title2: t("ProjectSection.project4.title2"),
-      description1: t("ProjectSection.project4.description1"),
-      description2: t("ProjectSection.project4.description2"),
-    },
-    {
-      id: 5,
-      category: t("ProjectSection.project5.category"),
-      src: "/images/projects/project-section/tira_thumb.jpg",
-      title1: t("ProjectSection.project5.title1"),
-      title2: t("ProjectSection.project5.title2"),
-      description1: t("ProjectSection.project5.description1"),
-      description2: t("ProjectSection.project5.description2"),
-    },
-  ];
+  const projectsData: ProjectsData = {
+    development: Array.from(
+      {
+        length: parseInt(t(`ProjectSection.projectsDevelopmentCount`)),
+      },
+      (_, i) => i
+    ).map((id) => ({
+      id: id,
+      content: {
+        category: "development",
+        projectCategory: t(
+          `ProjectSection.projectsDevelopment.${id}.projectCategory`
+        ),
+        date: t(`ProjectSection.projectsDevelopment.${id}.date`),
+        src: t(`ProjectSection.projectsDevelopment.${id}.thumbnailSrc`),
+        title1: t(`ProjectSection.projectsDevelopment.${id}.title1`),
+        title2: t(`ProjectSection.projectsDevelopment.${id}.title2`),
+        description1: t(
+          `ProjectSection.projectsDevelopment.${id}.description1`
+        ),
+        description2: t(
+          `ProjectSection.projectsDevelopment.${id}.description2`
+        ),
+      },
+    })),
+    design: Array.from(
+      {
+        length: parseInt(t(`ProjectSection.projectsDesignCount`)),
+      },
+      (_, i) => i
+    ).map((id) => ({
+      id: id,
+      content: {
+        category: "design",
+        projectCategory: t(
+          `ProjectSection.projectsDesign.${id}.projectCategory`
+        ),
+        date: t(`ProjectSection.projectsDesign.${id}.date`),
+        src: t(`ProjectSection.projectsDesign.${id}.thumbnailSrc`),
+        title1: t(`ProjectSection.projectsDesign.${id}.title1`),
+        title2: t(`ProjectSection.projectsDesign.${id}.title2`),
+        description1: t(`ProjectSection.projectsDesign.${id}.description1`),
+        description2: t(`ProjectSection.projectsDesign.${id}.description2`),
+        link: t(`ProjectSection.projectsDesign.${id}.link`),
+      },
+    })),
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -75,8 +70,8 @@ const ProjectsPage: NextPage = () => {
 
   return (
     <>
-      <HeaderSection selectedCategory={selectedCategory} />
-      <ProjectSection projectsData={projectsData} />
+      <HeaderSection category={category} setCategory={setCategory} />
+      <ProjectSection projectsData={projectsData} category={category} />
     </>
   );
 };

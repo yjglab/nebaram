@@ -7,31 +7,53 @@ import { motion } from "framer-motion";
 const DescriptSection = () => {
   const t = useTranslations("projects");
   const { id: projectId } = useParams() as { id: string };
+
   const projectData = {
     outline: {
-      label: t(`ProjectSection.project${projectId}.details.outlineLabel`),
-      data: t.rich(`ProjectSection.project${projectId}.details.outline`, {
-        span: (children) => (
-          <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
-        ),
-        div: (children) => (
-          <div className="mb-3 break-all font-light leading-8">{children}</div>
-        ),
-      }),
+      label: t(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.outlineLabel`
+      ),
+      data: t.rich(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.outline`,
+        {
+          span: (children) => (
+            <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
+          ),
+          div: (children) => (
+            <div className="mb-3 break-all font-light leading-8">
+              {children}
+            </div>
+          ),
+        }
+      ),
     },
     implements: {
-      label: t(`ProjectSection.project${projectId}.details.implementsLabel`),
+      label: t(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.implementsLabel`
+      ),
       data: Array.from(
         {
           length: parseInt(
-            t(`ProjectSection.project${projectId}.details.implementsCount`)
+            t(
+              `ProjectSection.projectsDevelopment.${
+                parseInt(projectId) - 1
+              }.details.implementsCount`
+            )
           ),
         },
         (_, i) => i
       ).map((id) => ({
         id: id,
         content: t.rich(
-          `ProjectSection.project${projectId}.details.implements.${id}`,
+          `ProjectSection.projectsDevelopment.${
+            parseInt(projectId) - 1
+          }.details.implements.${id}`,
           {
             span: (children) => (
               <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
@@ -46,39 +68,64 @@ const DescriptSection = () => {
       })),
     },
     issues: {
-      label: t(`ProjectSection.project${projectId}.details.issuesLabel`),
-      data: t.rich(`ProjectSection.project${projectId}.details.issues`, {
-        span: (children) => (
-          <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
-        ),
-        div: (children) => (
-          <div className="mb-3 break-all font-light leading-8">{children}</div>
-        ),
-        a: (children) => (
-          <a
-            href={t(`ProjectSection.project${projectId}.details.issuesLink`)}
-            className="text-base text-amber-500 duration-200 hover:text-amber-600"
-            rel="referrer"
-            target="_blank"
-          >
-            {children}
-          </a>
-        ),
-      }),
+      label: t(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.issuesLabel`
+      ),
+      data: t.rich(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.issues`,
+        {
+          span: (children) => (
+            <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
+          ),
+          div: (children) => (
+            <div className="mb-3 break-all font-light leading-8">
+              {children}
+            </div>
+          ),
+          a: (children) => (
+            <a
+              href={t(
+                `ProjectSection.projectsDevelopment.${
+                  parseInt(projectId) - 1
+                }.details.issuesLink`
+              )}
+              className="text-base text-amber-500 duration-200 hover:text-amber-600"
+              rel="referrer"
+              target="_blank"
+            >
+              {children}
+            </a>
+          ),
+        }
+      ),
     },
     skills: {
-      label: t(`ProjectSection.project${projectId}.details.skillsLabel`),
+      label: t(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.skillsLabel`
+      ),
       data: Array.from(
         {
           length: parseInt(
-            t(`ProjectSection.project${projectId}.details.skillsCount`)
+            t(
+              `ProjectSection.projectsDevelopment.${
+                parseInt(projectId) - 1
+              }.details.skillsCount`
+            )
           ),
         },
         (_, i) => i
       ).map((id) => ({
         id: id,
         content: t.rich(
-          `ProjectSection.project${projectId}.details.skills.${id}`,
+          `ProjectSection.projectsDevelopment.${
+            parseInt(projectId) - 1
+          }.details.skills.${id}`,
           {
             span: (children) => (
               <span className="mb-2.5 py-0.5 font-semibold">{children}</span>

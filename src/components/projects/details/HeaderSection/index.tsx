@@ -9,14 +9,24 @@ import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 const HeaderSection: FC = () => {
   const t = useTranslations("projects");
-  const { id: projectId } = useParams();
+  const { id: projectId } = useParams() as { id: string };
   const projectData = {
-    title1: t(`ProjectSection.project${projectId}.title1`),
-    title2: t(`ProjectSection.project${projectId}.title2`),
+    title1: t(
+      `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}.title1`
+    ),
+    title2: t(
+      `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}.title2`
+    ),
     details: {
-      header: t(`ProjectSection.project${projectId}.details.header`),
+      header: t(
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.header`
+      ),
       headerDescription: t(
-        `ProjectSection.project${projectId}.details.headerDescription`
+        `ProjectSection.projectsDevelopment.${
+          parseInt(projectId) - 1
+        }.details.headerDescription`
       ),
     },
   };

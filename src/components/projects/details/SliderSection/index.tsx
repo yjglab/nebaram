@@ -9,21 +9,39 @@ import { useState } from "react";
 
 const SliderSection = () => {
   const t = useTranslations("projects");
-  const { id: projectId } = useParams();
+  const { id: projectId } = useParams() as { id: string };
   const [slideNumber, setSlideNumber] = useState(0);
   const slideData = Array.from(
     {
       length: parseInt(
-        t(`ProjectSection.project${projectId}.details.slidesCount`)
+        t(
+          `ProjectSection.projectsDevelopment.${
+            parseInt(projectId) - 1
+          }.details.slidesCount`
+        )
       ),
     },
     (_, i) => i
   ).map((id) => ({
-    scope: t(`ProjectSection.project${projectId}.details.slides.${id}.scope`),
-    src: t(`ProjectSection.project${projectId}.details.slides.${id}.src`),
-    title: t(`ProjectSection.project${projectId}.details.slides.${id}.title`),
+    scope: t(
+      `ProjectSection.projectsDevelopment.${
+        parseInt(projectId) - 1
+      }.details.slides.${id}.scope`
+    ),
+    src: t(
+      `ProjectSection.projectsDevelopment.${
+        parseInt(projectId) - 1
+      }.details.slides.${id}.src`
+    ),
+    title: t(
+      `ProjectSection.projectsDevelopment.${
+        parseInt(projectId) - 1
+      }.details.slides.${id}.title`
+    ),
     description: t(
-      `ProjectSection.project${projectId}.details.slides.${id}.description`
+      `ProjectSection.projectsDevelopment.${
+        parseInt(projectId) - 1
+      }.details.slides.${id}.description`
     ),
   }));
   const slideImages = slideData.map((data) => data.src);
@@ -39,23 +57,37 @@ const SliderSection = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <a
-            href={t(`ProjectSection.project${projectId}.details.github`)}
+            href={t(
+              `ProjectSection.projectsDevelopment.${
+                parseInt(projectId) - 1
+              }.details.github`
+            )}
             rel="referrer"
             target="_blank"
             className="mr-2 flex items-center duration-200 hover:text-indigo-400"
           >
-            {t(`ProjectSection.project${projectId}.details.githubLinkLabel`)}
+            {t(
+              `ProjectSection.projectsDevelopment.${
+                parseInt(projectId) - 1
+              }.details.githubLinkLabel`
+            )}
             <ArrowTopRightOnSquareIcon className="ml-1 w-4 stroke-2" />
           </a>
           |
           <a
-            href={t(`ProjectSection.project${projectId}.details.production`)}
+            href={t(
+              `ProjectSection.projectsDevelopment.${
+                parseInt(projectId) - 1
+              }.details.production`
+            )}
             rel="referrer"
             target="_blank"
             className="ml-2 flex items-center duration-200 hover:text-indigo-400"
           >
             {t(
-              `ProjectSection.project${projectId}.details.productionLinkLabel`
+              `ProjectSection.projectsDevelopment.${
+                parseInt(projectId) - 1
+              }.details.productionLinkLabel`
             )}
             <ArrowTopRightOnSquareIcon className="ml-1 w-4 stroke-2" />
           </a>

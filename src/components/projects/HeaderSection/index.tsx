@@ -1,18 +1,23 @@
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { motion } from "framer-motion";
 
+type Category = "all" | "development" | "design";
 interface Props {
-  selectedCategory: string;
+  category: string;
+  setCategory: (category: Category) => void;
 }
-const HeaderSection: FC<Props> = ({ selectedCategory }) => {
+const HeaderSection: FC<Props> = ({ category, setCategory }) => {
   const t = useTranslations("projects");
   const categories = [
-    t("HeaderSection.category1"),
-    t("HeaderSection.category2"),
-    t("HeaderSection.category3"),
+    [t("HeaderSection.category1"), "all"],
+    [t("HeaderSection.category2"), "development"],
+    [t("HeaderSection.category3"), "design"],
   ];
+  const handleChangeCategory = (selectedCategory: Category) => {
+    setCategory(selectedCategory);
+  };
   return (
     <header className="mx-auto mt-24 max-w-2xl px-6 md:mt-32 lg:max-w-6xl ">
       <div className="relative flex flex-col justify-between gap-2 text-sm md:gap-0 lg:text-lg">
@@ -34,19 +39,20 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
           transition={{ type: "tween", duration: 0.5, delay: 0 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          {" "}
           {t("ProjectSection.sectionDescription")}
         </motion.div>
-
-        {/* 카테고리 추가하기 */}
       </div>
 
       <div className="mt-12 flex items-center gap-6 sm:mt-24 md:mt-36">
-        {categories.map((category, index) => (
+        {categories.map((ct, index) => (
           <motion.div
-            key={category}
+            key={ct[1]}
+            onClick={() => handleChangeCategory(ct[1] as Category)}
             className={classNames(
-              selectedCategory === category && "text-amber-500"
+              category === ct[1]
+                ? "border-b-indigo-400"
+                : "border-b-transparent",
+              "hover:border-b-gray-400 hover:text-gray-400 border-b-2 cursor-pointer duration-200"
             )}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -57,7 +63,7 @@ const HeaderSection: FC<Props> = ({ selectedCategory }) => {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            {category}
+            {ct[0]}
           </motion.div>
         ))}
       </div>

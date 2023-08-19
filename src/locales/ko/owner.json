@@ -106,8 +106,8 @@
     "skill3": "Design / Publishing",
     "skill3Title1": "사용자 중심의 일관된",
     "skill3Title2": "인터페이스를 추구해요",
-    "skill3Description1": "<span></span>개발 시작 전, 디자인 툴로 미리 화면을 그린 후 퍼블리싱 작업을 진행해요. 저는 큰 화면에서 작은 화면, 작은 화면에서 큰 화면으로든 상관없이 어떤 크기의 화면부터 진행해도 완벽한 반응형 퍼블리싱이 가능해요. 요즘은 Apple HIG를 읽어보고 있어서 앞으로의 프로젝트에서 적용해보려고 해요. 지금 보고계신 이 사이트가 HIG를 준수한 첫 작업이에요.",
-    "skill3Description2": "<span>사용하는 기술</span>TailwindCSS, Emotion, SCSS, JSX, Adobe Illustrator, PhotoShop, InDesign, Premiere Pro",
+    "skill3Description1": "<span></span>개발 시작 전, 디자인 툴로 미리 화면을 그린 후 퍼블리싱 작업을 진행해요. 저는 큰 화면에서 작은 화면, 작은 화면에서 큰 화면으로든 상관없이 어떤 크기의 화면부터 진행해도 완벽한 반응형 퍼블리싱이 가능해요. 요즘은 Apple HIG를 읽어보고 있어서 앞으로의 프로젝트에서 적용해보려고 해요. 지금 보고 계신 이 사이트가 HIG를 반영한 첫 결과물이에요.",
+    "skill3Description2": "<span>사용하는 기술</span>TailwindCSS, Emotion, Styled-Components, SCSS, Adobe Illustrator, PhotoShop, InDesign, Premiere Pro",
 
     "skill4": "Skill Communication",
     "skill4Title1": "디자이너와 원활한",
