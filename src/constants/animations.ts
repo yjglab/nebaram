@@ -53,24 +53,30 @@ export const BannerLogoKeyframe = keyframes`
 export const SplashLogoKeyframe = keyframes`
 0% {
   opacity: 0;
+  -webkit-transform: translateX(-14px) scale(0);
   transform: translateX(-14px) scale(0);
 }
 20% {
   opacity: 0;
+  -webkit-transform: translateX(-14px) scale(0);
   transform: translateX(-14px) scale(0);
 }
 28% {
   opacity: 1;
+  -webkit-transform: translateX(-14px) scale(1.2);
   transform: translateX(-14px) scale(1.2);
 }
 38% {
   opacity: 1;
+  -webkit-transform: translateX(-14px) scale(1);
   transform: translateX(-14px) scale(1);
 }
 60%{
+  -webkit-transform: translateX(-14px) rotate(0);
   transform: translateX(-14px) rotate(0);
 }
 100% {
+  -webkit-transform: translateX(-103px) rotate(-360deg);
   transform: translateX(-103px) rotate(-360deg);
 }
 `;
@@ -81,10 +87,12 @@ export const SplashLogoNameKeyframe = keyframes`
 }
 79% {
   opacity: 0;
-  transform: translateX(40px)
+  -webkit-transform: translateX(40px);
+  transform: translateX(40px);
 }
 100% {
   opacity: 1;
+  -webkit-transform: translateX(0px);
   transform: translateX(0px)
 }
 `;

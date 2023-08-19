@@ -1,7 +1,7 @@
 "use client";
 
 import { NextPage } from "next";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import {
   Locale,
