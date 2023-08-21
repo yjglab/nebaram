@@ -19,9 +19,6 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       default: t("metadata.title"),
     },
     description: t("metadata.description"),
-    verification: {
-      google: "GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils",
-    },
     openGraph: {
       // sns platform share data
       title: t("metadata.title"),
@@ -40,7 +37,6 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       ],
     },
     icons: "/images/common/icon.png",
-    scripts: [{}],
   } as Metadata;
 }
 
@@ -56,18 +52,6 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <link
-          rel="canonical"
-          hrefLang="en-US"
-          href="https://nebaram.vercel.app/en/"
-          key="canonical"
-        />
-        <link
-          rel="alternate"
-          hrefLang="ko"
-          href="https://nebaram.vercel.app/ko/"
-        />
-        <link rel="manifest" href="/manifest/manifest.json" />
         <body className={classNames(Pretendard.className)}>
           <Header />
           {children}

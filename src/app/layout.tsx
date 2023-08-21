@@ -17,9 +17,18 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       default: t("metadata.title"),
     },
     description: t("metadata.description"),
+    viewport: "width=device-width, initial-scale=1.0",
     verification: {
       google: "GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils",
     },
+    alternates: {
+      canonical: "https://nebaram.web.app",
+      languages: {
+        ko: "/ko",
+        en: "/en",
+      },
+    },
+    manifest: "/manifest/manifest.json",
     openGraph: {
       // sns platform share data
       title: t("metadata.title"),
@@ -38,7 +47,6 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       ],
     },
     icons: "/images/common/icon.png",
-    scripts: [{}],
   } as Metadata;
 }
 
