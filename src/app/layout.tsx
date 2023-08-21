@@ -21,13 +21,6 @@ export async function generateMetadata({ params: { locale = "en" } }) {
     verification: {
       google: "GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils",
     },
-    alternates: {
-      canonical: "https://nebaram.web.app",
-      languages: {
-        ko: "/ko",
-        en: "/en",
-      },
-    },
     manifest: "/manifest/manifest.json",
     openGraph: {
       // sns platform share data
