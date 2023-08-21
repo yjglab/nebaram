@@ -36,7 +36,7 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       url: "https://nebaram.vercel.app",
       siteName: t("metadata.title"),
       type: "website",
-      locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
+      locale: "ko_KR",
       images: [
         {
           url: "/manifest/icon-192x192.png",
