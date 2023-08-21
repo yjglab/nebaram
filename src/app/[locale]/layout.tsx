@@ -53,6 +53,10 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
+        <meta
+          name="google-site-verification"
+          content="GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils"
+        />
         <link
           rel="canonical"
           hrefLang="en-US"
