@@ -19,6 +19,9 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       default: t("metadata.title"),
     },
     description: t("metadata.description"),
+    verification: {
+      google: "GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils",
+    },
     openGraph: {
       // sns platform share data
       title: t("metadata.title"),
@@ -53,10 +56,6 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
   return (
     <html lang={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <meta
-          name="google-site-verification"
-          content="GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils"
-        />
         <link
           rel="canonical"
           hrefLang="en-US"
