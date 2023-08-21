@@ -2,13 +2,15 @@
 
 import AnimatedTitle from "@components/parts/AnimatedTitle";
 import { useTranslations } from "next-intl";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { motion } from "framer-motion";
 
 import Slider from "../../parts/Slider";
 
 const ObjectiveSection: FC = () => {
   const t = useTranslations("owner");
+  const [slideNumber, setSlideNumber] = useState(0);
+
   const images = [
     "/images/owner/objective-section/objective-01.jpg",
     "/images/owner/objective-section/objective-02.jpg",
@@ -66,7 +68,7 @@ const ObjectiveSection: FC = () => {
         }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <Slider images={images} />
+        <Slider images={images} setSlideNumber={setSlideNumber} />
       </motion.div>
     </div>
   );
