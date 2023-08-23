@@ -32,17 +32,17 @@ const ObjectiveSection: FC = () => {
           viewport={{ once: true, amount: 0.5 }}
         />
         <motion.div
-          className="relative mt-4 flex flex-col gap-4 px-4 md:mt-8 2xl:gap-0.5"
+          className="relative mt-4 flex flex-col gap-4 px-10 md:mt-8 2xl:gap-0.5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <div className="mx-auto mt-6 break-keep text-xl sm:text-2xl md:text-3xl">
+          <div className="mx-auto mt-6 break-keep text-md sm:text-2xl md:text-3xl">
             <div className="font-semibold">
               {t("ObjectiveSection.description1")}
             </div>
           </div>
-          <div className="mx-auto break-keep text-xl sm:text-2xl md:text-3xl">
+          <div className="mx-auto break-keep text-md sm:text-2xl md:text-3xl">
             <div className="mt-2 font-semibold">
               {t("ObjectiveSection.description2")}
             </div>

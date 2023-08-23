@@ -179,7 +179,7 @@ const Header: FC = () => {
           type="button"
           aria-label="go to top button"
           onClick={handleTopIndicator}
-          className="absolute right-[5vw] h-11 w-11 translate-y-[90vh] rounded-full bg-indigo-400 p-1 duration-200 hover:bg-indigo-500 md:right-10 md:h-12 md:w-12 md:translate-y-[92vh] md:p-1.5"
+          className="absolute right-[6vw] h-11 w-11 translate-y-[86vh] rounded-full bg-indigo-400 p-1 duration-200 hover:bg-indigo-500 md:right-10 md:h-12 md:w-12 md:translate-y-[92vh] md:p-1.5"
         >
           <ChevronUpIcon className="relative bottom-0.5" />
         </button>

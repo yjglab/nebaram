@@ -105,7 +105,7 @@ const SliderSection = () => {
           <Slider images={slideImages} setSlideNumber={setSlideNumber} />
         </div>
 
-        <div className="mt-14 min-h-[50px] w-[90%] px-2 text-sm sm:w-[80%] md:mt-3 lg:mt-6 lg:w-[900px] lg:px-4 lg:text-base xl:w-[1000px] ">
+        <div className="mt-14 min-h-[100px] w-[90%] px-2 text-sm sm:w-[80%] md:mt-3 lg:mt-6 lg:w-[900px] lg:px-4 lg:text-base xl:w-[1000px] ">
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-indigo-400 px-2.5 py-1 font-semibold">

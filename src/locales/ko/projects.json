@@ -75,7 +75,7 @@
           "headerDescription": "네 가지 주요 역량을 갖춘 웹 개발자를 소개하기 위해 개발한 퍼스널 브랜드",
 
           "outlineLabel": "개요",
-          "outline": "<span>기획 의도</span><div>기존에 제작한 개인 포트폴리오 사이트를 리뉴얼한 퍼스널 브랜드 사이트입니다. 디자인을 새로 기획하면서 애니메이션 효과를 추가하고 페이지 렌더링 방식을 서버단으로 변경하면서 코드를 다시 작성해 제작했습니다. UI 기획단계에서는 Apple의 Human Interface Guideline을 반영하여 설계했습니다. 저의 페이지를 들어오는 사용자들에게 직관적이고 일관된 경험을 제공하고자 함이며 추후 저의 브랜드 명으로 제작된 서비스의 스토어 출시를 고려해 반영하게 되었습니다.</div><div>Plain React에서 NextJS로 변경하게 된 이유는 오직 서버사이드 렌더링을 위함입니다. 저는 앞으로 이 웹 사이트를 지속적으로 확장시킬 계획이 있습니다. CSR로 이루어지는 싱글페이지 웹에서 복잡한 애니메이션, 데이터 번들이 계속해서 추가된다면 사용자 경험에 영향이 갈 것이라 판단하여 렌더링 방식을 함께 변경하게 되었습니다.</div>",
+          "outline": "<span>기획 의도</span><div>기존에 제작한 개인 포트폴리오 사이트를 리뉴얼한 퍼스널 브랜드 사이트입니다. 디자인을 새로 기획하면서 애니메이션 효과를 추가하고 페이지 렌더링 방식을 서버단으로 변경하면서 코드를 다시 작성해 제작했습니다. UI 기획단계에서는 Apple의 Human Interface Guideline을 반영하여 설계했습니다. 저의 페이지를 들어오는 사용자들에게 직관적이고 일관된 경험을 제공하고자 함이며 추후 저의 브랜드 명으로 제작된 서비스의 스토어 출시를 고려해 반영하게 되었습니다.</div><div>Plain React에서 NextJS로 변경하게 된 이유는 오직 서버사이드 렌더링을 위함입니다. 네바람 웹은 앞으로 거대해질 것입니다. CSR로 이루어지는 싱글페이지 웹에서 복잡한 애니메이션, 데이터 번들이 계속해서 추가된다면 사용자 경험에 영향이 갈 것이라 판단하여 렌더링 방식을 함께 변경하게 되었습니다.</div>",
           "implementsLabel": "구현 기능",
           "implementsCount": "1",
           "implements": [
@@ -83,11 +83,11 @@
           ],
           "issuesLabel": "이슈",
           "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
-          "issues": "<span>SEO와 성능 개선 작업</span><div>다국어웹 이므로 표준 사이트(canonical)와 대안 사이트(alternate)를 명시했으나 라이트하우스에서 감지하지 못했습니다. 중복된 레이아웃 코드로 인한 문제로 확인되었고, 해당 부분 제거 후 다국어 폴더에만 link를 명시하여 해결했습니다. 이 외에도 이미지 압축 및 포맷(Webp) 변경, PWA 적용을 통해 사용자 경험을 향상했습니다.</div>",
+          "issues": "<span>SEO와 성능 개선 작업</span><div>다국어 웹 이므로 표준 사이트(canonical)와 대안 사이트(alternate)를 명시했으나 라이트하우스에서 감지하지 못했습니다. 중복된 레이아웃 코드로 인한 문제로 확인되었고, 해당 부분 제거 후 다국어 폴더에만 link를 명시하여 해결했습니다. 이 외에도 이미지 압축 및 포맷(Webp) 변경, PWA 적용을 통해 사용자 경험을 향상했습니다.</div>",
           "skillsLabel": "기술",
           "skillsCount": "2",
           "skills": [
-            "<span>Front-end</span><div>TypeScript React Next.js Next-intl TailwindCSS Emotion</div>",
+            "<span>Front-end</span><div>TypeScript React Next.js Next-intl(i18n Support) TailwindCSS Emotion</div>",
             "<span>Deploy</span><div>Vercel</div>"
           ],
           "slidesCount": "6",

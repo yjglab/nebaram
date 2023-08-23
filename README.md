@@ -1,4 +1,4 @@
-# Nebaram 0.0.0 새 바람을 실현할 첫 도약
+# Nebaram V0.3 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
 ![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/d7357bdd-7514-4e00-920c-4df263a450dd)
@@ -106,8 +106,7 @@
 
 ### Version Release
 
-- [0.0.1](https://github.com/yjglab/nebaram/releases/tag/0.0.1)
-- [0.0.0](https://github.com/yjglab/nebaram/releases/tag/0.0.0)
+- [latest 0](https://github.com/yjglab/nebaram/releases/tag/0.3)
 
 ### 레퍼런스 참고
 
@@ -115,5 +114,6 @@
 - [TS, Index Signature](https://dev.to/keento0809/index-signature-in-typescript-37g1)
 - [Cumulative Layout Shift](https://nextjs.org/learn/seo/web-performance/cls)
 - [manifest 작성 리스트](https://365kim.tistory.com/169)
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/components)
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/5bc77120-ce07-4052-9db3-460c082852b1)

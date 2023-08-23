@@ -74,11 +74,11 @@
       "name": "문의",
       "content1": {
         "name": "서비스 문의",
-        "link": "/"
+        "link": "mailto:yjgdesign@gmail.com"
       },
       "content2": {
         "name": "광고 문의",
-        "link": "/"
+        "link": "mailto:yjgdesign@gmail.com"
       }
     }
   }

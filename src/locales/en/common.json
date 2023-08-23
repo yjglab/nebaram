@@ -74,11 +74,11 @@
       "name": "Contact",
       "content1": {
         "name": "Service Inquiries",
-        "link": "/"
+        "link": "mailto:yjgdesign@gmail.com"
       },
       "content2": {
         "name": "Advertising Inquiries",
-        "link": "/"
+        "link": "mailto:yjgdesign@gmail.com"
       }
     }
   }

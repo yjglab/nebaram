@@ -142,7 +142,7 @@ const DescriptSection = () => {
   };
 
   return (
-    <div className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-36 lg:max-w-7xl">
+    <div className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-24 lg:max-w-7xl">
       <div className="mb-8 h-[1.5px] w-full bg-white/30 md:mb-10" />
 
       <div className="mb-8 text-2xl font-semibold md:mb-12 md:text-3xl">

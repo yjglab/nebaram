@@ -59,7 +59,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
     <div>
       <AnimatePresence initial={false} custom={direction}>
         {imageLoading && (
-          <div className="absolute left-1/2 z-20 flex -translate-x-[50%] -translate-y-6 flex-col items-center">
+          <div className="absolute left-1/2 z-20 flex -translate-x-[50%] -translate-y-8 flex-col items-center">
             <div className="mb-4 text-sm font-semibold text-white md:text-base">
               이미지를 불러오고 있습니다
             </div>
@@ -84,7 +84,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { type: "spring", stiffness: 400, damping: 50 },
             opacity: { duration: 0.2 },
           }}
           drag="x"
@@ -104,7 +104,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
       <button
         type="button"
         aria-label="prev slide"
-        className="absolute left-0 z-20 ml-2 h-9 w-9 -translate-y-2 rounded-full bg-black/20 p-[1px] text-white duration-100 hover:scale-[1.2] hover:text-indigo-400 sm:-ml-16 sm:h-12 sm:w-12"
+        className="absolute left-0 z-20 ml-2 h-8 w-8 md:h-9 md:w-9 -translate-y-4 rounded-full bg-black/20 p-[1px] text-white duration-100 hover:scale-[1.2] hover:text-indigo-400 sm:-ml-16 sm:h-12 sm:w-12"
         onClick={() => paginate(-1)}
       >
         <ChevronLeftIcon />
@@ -112,7 +112,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
       <button
         type="button"
         aria-label="next slide"
-        className="absolute right-0 z-20 mr-2 h-9 w-9 -translate-y-2 rounded-full bg-black/20 p-[1px] text-white duration-100 hover:scale-[1.2] hover:text-indigo-400 sm:-mr-16 sm:h-12 sm:w-12"
+        className="absolute right-0 z-20 mr-2 h-8 w-8 md:h-9 md:w-9 -translate-y-4 rounded-full bg-black/20 p-[1px] text-white duration-100 hover:scale-[1.2] hover:text-indigo-400 sm:-mr-16 sm:h-12 sm:w-12"
         onClick={() => paginate(1)}
       >
         <ChevronRightIcon />

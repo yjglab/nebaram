@@ -128,7 +128,12 @@ const HistoryGraph = () => {
               viewport={{ once: true, amount: 0.5 }}
               className="w-[28%] md:w-[20%]"
             >
-              <div className="flex h-[100px] w-full justify-center">
+              <div
+                className={classNames(
+                  data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+                  "flex w-full justify-center"
+                )}
+              >
                 <span className="text-lg font-semibold md:text-2xl">
                   {data.year}
                 </span>
@@ -139,7 +144,10 @@ const HistoryGraph = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: index * 0.02 }}
               viewport={{ once: true, amount: 0.5 }}
-              className="relative top-2.5 flex h-[100px] w-[3px] justify-center bg-gray-500"
+              className={classNames(
+                data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+                "relative top-2.5 flex w-[3px] justify-center bg-gray-500"
+              )}
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -165,7 +173,12 @@ const HistoryGraph = () => {
               viewport={{ once: true, amount: 0.5 }}
               className="w-full"
             >
-              <div className="flex h-[100px] w-full flex-col pl-8">
+              <div
+                className={classNames(
+                  data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+                  "flex w-full flex-col pl-8"
+                )}
+              >
                 <span className="text-base font-semibold text-gray-500 xl:text-lg">
                   {data.month}
                 </span>
