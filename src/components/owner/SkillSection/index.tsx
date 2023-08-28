@@ -164,7 +164,7 @@ const SkillSection: FC = () => {
               <h1>{card.title2}</h1>
             </hgroup>
 
-            <article
+            <div
               className={classNames(
                 skillCardHover === card.skill
                   ? "bottom-6  opacity-100"
@@ -172,9 +172,9 @@ const SkillSection: FC = () => {
                 "text-sm xl:text-base 2xl:text-lg z-20 relative duration-300 flex flex-col gap-4"
               )}
             >
-              <p>{card.description1}</p>
-              <p>{card.description2}</p>
-            </article>
+              <div>{card.description1}</div>
+              <div>{card.description2}</div>
+            </div>
             <Image
               src={card.src}
               fill
