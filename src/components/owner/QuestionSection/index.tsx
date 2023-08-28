@@ -29,13 +29,13 @@ const QuestionSection = () => {
   ];
 
   return (
-    <div className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-36 lg:max-w-6xl">
-      <div className="mb-8 text-2xl font-semibold md:mb-12 md:text-3xl">
+    <section className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-36 lg:max-w-6xl">
+      <header className="mb-8 text-2xl font-semibold md:mb-12 md:text-3xl">
         {t("QuestionSection.sectionTitle")}
-      </div>
+      </header>
 
       {questionData.map((data, index) => (
-        <motion.div
+        <motion.article
           key={data.id}
           className="flex flex-col md:flex-row"
           initial={{ opacity: 0, x: 60 }}
@@ -45,18 +45,18 @@ const QuestionSection = () => {
         >
           <div className="w-full">
             <div className="mb-6 flex flex-col text-base md:mb-10 md:text-lg">
-              <span className="mb-2.5 py-0.5 font-semibold">{data.title}</span>
-              <div className="break-all font-light leading-8">
+              <h1 className="mb-2.5 py-0.5 font-semibold">{data.title}</h1>
+              <p className="break-all font-light leading-8">
                 {data.description}
-              </div>
+              </p>
             </div>
             {index < questionData.length - 1 && (
               <div className="mb-8 mt-12 h-[1.5px] w-full bg-white/30 md:mb-12" />
             )}
           </div>
-        </motion.div>
+        </motion.article>
       ))}
-    </div>
+    </section>
   );
 };
 export default QuestionSection;

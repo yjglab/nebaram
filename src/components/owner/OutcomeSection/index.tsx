@@ -88,10 +88,10 @@ const OutcomeSection: FC = () => {
   }, [backgroundInView, backgroundOpacity, setBackgroundOpacity]);
 
   return (
-    <div className="relative mx-auto mt-0 h-[120vh] md:mt-24 ">
-      <div ref={backgroundRef} className="absolute h-full w-full">
+    <section className="relative mx-auto mt-0 h-[120vh] md:mt-24 ">
+      <figure ref={backgroundRef} className="absolute h-full w-full">
         <ShadowBoxTop className="absolute -top-36 z-10 h-36 w-full bg-black shadow-black"></ShadowBoxTop>
-        <div className="absolute h-full w-full opacity-50">
+        <div className="absolute h-full w-full opacity-75">
           <Image
             className="object-cover"
             fill
@@ -102,13 +102,14 @@ const OutcomeSection: FC = () => {
           />
         </div>
         <ShadowBoxBottom className="absolute -bottom-36 h-36 w-full bg-black shadow-black"></ShadowBoxBottom>
-      </div>
-      <div className="z-20 h-full w-full max-w-7xl px-8 pb-32 pt-36 lg:shrink-0 lg:px-44">
+        <figcaption className="sr-only">Outcome Background Image</figcaption>
+      </figure>
+      <article className="z-20 h-full w-full max-w-7xl px-8 pb-32 pt-36 lg:shrink-0 lg:px-44">
         <div className="sticky top-[25%] mt-4">
-          <div className="flex flex-col gap-8 md:gap-4">
+          <hgroup className="flex flex-col gap-8 md:gap-4">
             <AnimatedTitle>{t("OutcomeSection.header1")}</AnimatedTitle>
             <AnimatedTitle>{t("OutcomeSection.header2")}</AnimatedTitle>
-          </div>
+          </hgroup>
           <div className="mt-20 flex grid-cols-2 flex-col gap-x-12 gap-y-8 sm:grid sm:gap-y-12 ">
             {outcomes.map((outcome, index) => (
               <motion.div
@@ -134,8 +135,8 @@ const OutcomeSection: FC = () => {
             ))}
           </div>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 

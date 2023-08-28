@@ -27,7 +27,7 @@ const SplashLogoName = styled.div`
 
 const SplashScreen = () => {
   return (
-    <div className="z-[100] top-0 left-0 w-screen h-screen bg-black overflow-hidden fixed">
+    <section className="z-[100] top-0 left-0 w-screen h-screen bg-black overflow-hidden fixed">
       <SplashContainer className="w-full h-full relative left-5 flex justify-center items-center">
         <SplashLogoName
           className={classNames(
@@ -41,7 +41,7 @@ const SplashScreen = () => {
           <Image src={clogo} alt="brand logo" width={32} height={32} />
         </SplashLogo>
       </SplashContainer>
-    </div>
+    </section>
   );
 };
 export default SplashScreen;

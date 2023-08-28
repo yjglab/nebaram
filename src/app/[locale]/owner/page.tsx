@@ -15,14 +15,14 @@ const OwnerPage: NextPage = () => {
   }, []);
 
   return (
-    <>
+    <main>
       <BannerSection />
       <OutcomeSection />
       <ObjectiveSection />
       <HistorySection />
       <SkillSection />
       <QuestionSection />
-    </>
+    </main>
   );
 };
 

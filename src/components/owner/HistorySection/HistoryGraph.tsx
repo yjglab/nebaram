@@ -113,10 +113,41 @@ const HistoryGraph = () => {
   ];
 
   return (
-    <>
-      <div className="mt-24 flex h-full w-full flex-col">
-        {historyData.map((data, index) => (
-          <div key={data.id} className="flex h-full w-full">
+    <figure className="mt-24 flex h-full w-full flex-col">
+      {historyData.map((data, index) => (
+        <div key={data.id} className="flex h-full w-full">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              type: "tween",
+              duration: 0.7,
+              delay: index * 0.02,
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="w-[28%] md:w-[20%]"
+          >
+            <div
+              className={classNames(
+                data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+                "flex w-full justify-center"
+              )}
+            >
+              <time className="text-lg font-semibold md:text-2xl">
+                {data.year}
+              </time>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: index * 0.02 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className={classNames(
+              data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+              "relative top-2.5 flex w-[3px] justify-center bg-gray-500"
+            )}
+          >
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -126,71 +157,39 @@ const HistoryGraph = () => {
                 delay: index * 0.02,
               }}
               viewport={{ once: true, amount: 0.5 }}
-              className="w-[28%] md:w-[20%]"
-            >
-              <div
-                className={classNames(
-                  data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
-                  "flex w-full justify-center"
-                )}
-              >
-                <span className="text-lg font-semibold md:text-2xl">
-                  {data.year}
-                </span>
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.02 }}
-              viewport={{ once: true, amount: 0.5 }}
+              className={classNames(
+                data.year
+                  ? "ring-amber-500 w-2.5 h-2.5"
+                  : "ring-gray-500 w-1.5 h-1.5",
+                "ring-4 bg-black rounded-full absolute"
+              )}
+            ></motion.div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ type: "tween", duration: 0.5, delay: index * 0.02 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="w-full"
+          >
+            <div
               className={classNames(
                 data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
-                "relative top-2.5 flex w-[3px] justify-center bg-gray-500"
+                "flex w-full flex-col pl-8"
               )}
             >
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  type: "tween",
-                  duration: 0.7,
-                  delay: index * 0.02,
-                }}
-                viewport={{ once: true, amount: 0.5 }}
-                className={classNames(
-                  data.year
-                    ? "ring-amber-500 w-2.5 h-2.5"
-                    : "ring-gray-500 w-1.5 h-1.5",
-                  "ring-4 bg-black rounded-full absolute"
-                )}
-              ></motion.div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ type: "tween", duration: 0.5, delay: index * 0.02 }}
-              viewport={{ once: true, amount: 0.5 }}
-              className="w-full"
-            >
-              <div
-                className={classNames(
-                  data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
-                  "flex w-full flex-col pl-8"
-                )}
-              >
-                <span className="text-base font-semibold text-gray-500 xl:text-lg">
-                  {data.month}
-                </span>
-                <div className="break-all text-base leading-6 tracking-tight md:text-lg xl:text-xl">
-                  {data.content}
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        ))}
-      </div>
-    </>
+              <time className="text-base font-semibold text-gray-500 xl:text-lg">
+                {data.month}
+              </time>
+              <p className="break-all text-base leading-6 tracking-tight md:text-lg xl:text-xl">
+                {data.content}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      ))}
+      <figcaption className="sr-only">History Graph</figcaption>
+    </figure>
   );
 };
 

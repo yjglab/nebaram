@@ -94,33 +94,33 @@ const SkillSection: FC = () => {
   };
 
   return (
-    <div className="mb-28 mt-56 flex h-full w-full flex-col items-center sm:mb-40">
+    <section className="mb-28 mt-56 flex h-full w-full flex-col items-center sm:mb-40">
       <div className="w-full text-center">
-        <div className="flex flex-col gap-2 md:gap-4">
+        <header className="flex flex-col gap-2 md:gap-4">
           <AnimatedTitle size="lg" align="center">
             {t("SkillSection.sectionTitle1")}
           </AnimatedTitle>
           <AnimatedTitle size="lg" align="center">
             {t("SkillSection.sectionTitle2")}
           </AnimatedTitle>
-        </div>
-        <motion.div
+        </header>
+        <motion.hgroup
           className="relative mt-8"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mx-auto mt-6 break-keep text-sm md:max-w-[80%] md:text-lg">
+          <h2 className="mx-auto mt-6 break-keep text-sm md:max-w-[80%] md:text-lg">
             {t("SkillSection.description1")}
-          </p>
-          <p className="mx-auto mt-0.5 break-keep text-sm md:max-w-[80%] md:text-lg">
+          </h2>
+          <h2 className="mx-auto mt-0.5 break-keep text-sm md:max-w-[80%] md:text-lg">
             {t("SkillSection.description2")}
-          </p>
-        </motion.div>
+          </h2>
+        </motion.hgroup>
       </div>
       <div className="mt-16 grid h-full grid-cols-1 gap-6 overflow-hidden sm:grid-cols-2 md:mt-24 lg:gap-10">
         {skillCard.map((card, index) => (
-          <motion.div
+          <motion.article
             key={card.id}
             id={card.skill}
             onMouseEnter={handleCardHover}
@@ -152,7 +152,7 @@ const SkillSection: FC = () => {
             >
               {card.skill}
             </div>
-            <div
+            <hgroup
               className={classNames(
                 skillCardHover === card.skill
                   ? "bottom-10 text-base leading-0 gap-0 xl:text-lg 2xl:text-xl text-indigo-400 "
@@ -160,11 +160,11 @@ const SkillSection: FC = () => {
                 "z-20 flex flex-col relative duration-300 font-semibold  mt-4 tracking-tight"
               )}
             >
-              <p>{card.title1}</p>
-              <p>{card.title2}</p>
-            </div>
+              <h1>{card.title1}</h1>
+              <h1>{card.title2}</h1>
+            </hgroup>
 
-            <div
+            <article
               className={classNames(
                 skillCardHover === card.skill
                   ? "bottom-6  opacity-100"
@@ -172,9 +172,9 @@ const SkillSection: FC = () => {
                 "text-sm xl:text-base 2xl:text-lg z-20 relative duration-300 flex flex-col gap-4"
               )}
             >
-              <div>{card.description1}</div>
-              <div>{card.description2}</div>
-            </div>
+              <p>{card.description1}</p>
+              <p>{card.description2}</p>
+            </article>
             <Image
               src={card.src}
               fill
@@ -182,7 +182,7 @@ const SkillSection: FC = () => {
               className="absolute brightness-75 opacity-60 object-cover aspect-square"
               alt="skill card"
             />
-          </motion.div>
+          </motion.article>
         ))}
       </div>
       <motion.div
@@ -202,7 +202,7 @@ const SkillSection: FC = () => {
           {t("SkillSection.projectsLink")}
         </Link>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

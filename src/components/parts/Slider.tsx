@@ -56,7 +56,7 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
   ); // slide 번호 조정 (0, 1, 2..)
 
   return (
-    <div>
+    <figure>
       <AnimatePresence initial={false} custom={direction}>
         {imageLoading && (
           <div className="absolute left-1/2 z-20 flex -translate-x-[50%] -translate-y-8 flex-col items-center">
@@ -117,7 +117,8 @@ const Slider: React.FC<Props> = ({ images, setSlideNumber }) => {
       >
         <ChevronRightIcon />
       </button>
-    </div>
+      <figcaption className="sr-only">Images Slider</figcaption>
+    </figure>
   );
 };
 

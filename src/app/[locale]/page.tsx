@@ -40,7 +40,7 @@ const MainPage: NextPage = () => {
   return (
     <>
       <SplashScreen />
-      <div className="min-h-screen w-full"></div>
+      <main className="min-h-screen w-full"></main>
     </>
   );
 };

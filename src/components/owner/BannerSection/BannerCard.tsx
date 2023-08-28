@@ -23,7 +23,7 @@ const cardSvgVariants = {
 
 const BannerCard = () => {
   return (
-    <div className="mt-20 flex h-full w-full items-center justify-center">
+    <figure className="mt-20 flex h-full w-full items-center justify-center">
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
@@ -68,7 +68,7 @@ const BannerCard = () => {
           />
         </motion.svg>
       </motion.div>
-    </div>
+    </figure>
   );
 };
 

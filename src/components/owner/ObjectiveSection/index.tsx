@@ -18,8 +18,8 @@ const ObjectiveSection: FC = () => {
     "/images/owner/objective-section/objective-04.jpg",
   ];
   return (
-    <div className="mb-0 mt-36 flex flex-col items-center overflow-x-hidden  pt-12 sm:py-36  md:py-24">
-      <div className="z-20 flex w-full flex-col items-center text-center">
+    <section className="mb-0 mt-36 flex flex-col items-center overflow-x-hidden  pt-12 sm:py-36  md:py-24">
+      <article className="z-20 flex w-full flex-col items-center text-center">
         <AnimatedTitle size="xs" align="center">
           {t("ObjectiveSection.title")}
         </AnimatedTitle>
@@ -31,34 +31,23 @@ const ObjectiveSection: FC = () => {
           transition={{ duration: 1.5, delay: 1 }}
           viewport={{ once: true, amount: 0.5 }}
         />
-        <motion.div
+        <motion.hgroup
           className="relative mt-4 flex flex-col gap-4 px-10 md:mt-8 2xl:gap-0.5"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <div className="mx-auto mt-6 break-keep text-md sm:text-2xl md:text-3xl">
-            <div className="font-semibold">
-              {t("ObjectiveSection.description1")}
-            </div>
-          </div>
-          <div className="mx-auto break-keep text-md sm:text-2xl md:text-3xl">
-            <div className="mt-2 font-semibold">
-              {t("ObjectiveSection.description2")}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0 }}
-        className="mb-4 mt-6 w-full text-center font-semibold text-amber-500 md:mt-24"
-      >
-        {/* {t("ObjectiveSection.sliderTitle")} */}
-      </motion.div>
-      <motion.div
-        className="relative flex aspect-video w-[80%] items-center lg:w-[900px] xl:w-[1000px]"
+          <h1 className="mx-auto mt-6 break-keep text-md sm:text-2xl md:text-3xl font-semibold">
+            {t("ObjectiveSection.description1")}
+          </h1>
+          <h1 className="mx-auto break-keep text-md sm:text-2xl md:text-3xl mt-2 font-semibold">
+            {t("ObjectiveSection.description2")}
+          </h1>
+        </motion.hgroup>
+      </article>
+
+      <motion.figure
+        className="mt-14 mb-10 relative flex aspect-video w-[80%] items-center lg:w-[900px] xl:w-[1000px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{
@@ -69,8 +58,8 @@ const ObjectiveSection: FC = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <Slider images={images} setSlideNumber={setSlideNumber} />
-      </motion.div>
-    </div>
+      </motion.figure>
+    </section>
   );
 };
 

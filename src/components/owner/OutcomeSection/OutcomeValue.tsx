@@ -31,7 +31,7 @@ const OutcomeValue: FC<Props> = ({ value, unit }) => {
 
   return (
     <div className="mt-3 flex gap-2 text-5xl font-bold tracking-wide lg:text-7xl ">
-      <motion.h1 ref={valueRef}>{roundedValue}</motion.h1>
+      <motion.div ref={valueRef}>{roundedValue}</motion.div>
       <span>{unit}</span>
     </div>
   );
