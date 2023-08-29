@@ -90,10 +90,7 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <div
-      id="navbar"
-      className="fixed top-0 z-50 w-full bg-black md:bg-black/50 backdrop-blur-md"
-    >
+    <nav className="fixed top-0 z-50 w-full bg-black md:bg-black/50 backdrop-blur-md">
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative md:hidden" onClose={setOpen}>
@@ -185,8 +182,8 @@ const Header: FC = () => {
         </button>
       )}
 
-      <header className="relative duration-200">
-        <nav aria-label="Top" className="mx-auto max-w-6xl px-4 xl:px-0">
+      <div className="relative duration-200">
+        <div aria-label="Top" className="mx-auto max-w-6xl px-4 xl:px-0">
           <div className="relative">
             <div className="relative flex h-14 w-full items-center justify-between duration-200">
               <div className="flex">
@@ -266,11 +263,9 @@ const Header: FC = () => {
               </button>
             </div>
           </div>
-        </nav>
-      </header>
-
-      {/* <HeaderNotice /> */}
-    </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

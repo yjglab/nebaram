@@ -27,7 +27,7 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
   };
 
   return (
-    <motion.div
+    <motion.article
       id={data.title1}
       onMouseEnter={handleCardHover}
       onMouseLeave={handleCardLeave}
@@ -42,12 +42,13 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <ArrowLeftCircleIcon className="absolute bottom-10 right-10 z-20 w-8" />
-      <div
+      <figure
         className={classNames(
           projectCardHover === data.title1 ? "opacity-100" : "opacity-0",
           "top-0 duration-300 z-20 backdrop-blur-md w-full h-full absolute left-0 bg-black/40"
         )}
       />
+      <figcaption className="sr-only">image darker</figcaption>
       <div
         className={classNames(
           projectCardHover === data.title1
@@ -57,11 +58,11 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
         )}
       >
         <span>{data.projectCategory}</span>
-        <span className="font-light text-[14px] text-white/80">
+        <time className="font-light text-[14px] text-white/80">
           {data.date}
-        </span>
+        </time>
       </div>
-      <div
+      <hgroup
         className={classNames(
           projectCardHover === data.title1
             ? "bottom-10 text-xl gap-0"
@@ -69,8 +70,8 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
           "text-xl lg:text-3xl z-20 flex flex-col relative duration-300 font-semibold leading-8 lg:mt-4 tracking-tight"
         )}
       >
-        <p>{data.title1}</p>
-        <p
+        <h1>{data.title1}</h1>
+        <h2
           className={classNames(
             projectCardHover === data.title1
               ? "text-gray-300 text-sm"
@@ -79,8 +80,8 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
           )}
         >
           {data.title2}
-        </p>
-      </div>
+        </h2>
+      </hgroup>
 
       <div
         className={classNames(
@@ -90,7 +91,7 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
           "z-20 relative duration-300 text-sm flex flex-col gap-4"
         )}
       >
-        <div>{data.description1}</div>
+        {data.description1}
         <div className="hidden xl:block">
           <p className="mb-1 font-medium text-indigo-400">
             {t("ProjectSection.projectSkillsLabel")}
@@ -121,7 +122,7 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
         className="absolute opacity-60 object-cover aspect-square"
         alt={data.src}
       />
-    </motion.div>
+    </motion.article>
   );
 };
 

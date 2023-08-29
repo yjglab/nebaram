@@ -47,7 +47,7 @@ const SliderSection = () => {
   const slideImages = slideData.map((data) => data.src);
 
   return (
-    <div className="flex flex-col items-center overflow-x-hidden pt-14 md:pt-20">
+    <section className="flex flex-col items-center overflow-x-hidden pt-14 md:pt-20">
       <div className="flex w-full justify-center">
         <motion.div
           className="mb-4 flex rounded-lg bg-white/20 px-2.5 py-1 text-sm text-white lg:text-base"
@@ -124,7 +124,7 @@ const SliderSection = () => {
           </div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 export default SliderSection;

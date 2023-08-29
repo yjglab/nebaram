@@ -5,11 +5,11 @@ import { NextPage } from "next";
 
 const ProjectDetailPage: NextPage = () => {
   return (
-    <>
+    <main>
       <HeaderSection />
       <SliderSection />
       <DescriptSection />
-    </>
+    </main>
   );
 };
 

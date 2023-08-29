@@ -69,10 +69,10 @@ const ProjectsPage: NextPage = () => {
   }, []);
 
   return (
-    <>
+    <main>
       <HeaderSection category={category} setCategory={setCategory} />
       <ProjectSection projectsData={projectsData} category={category} />
-    </>
+    </main>
   );
 };
 
