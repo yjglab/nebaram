@@ -9,11 +9,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { ProjectContent } from ".";
+import { ProjectSectionCategory } from "@app/[locale]/projects/page";
 
 interface Props {
   data: ProjectContent;
   index: number;
-  category: "development" | "design";
+  category: ProjectSectionCategory;
 }
 const ProjectCard: FC<Props> = ({ data, index, category }) => {
   const t = useTranslations("projects");
@@ -65,7 +66,7 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
       <hgroup
         className={classNames(
           projectCardHover === data.title1
-            ? "bottom-10 text-xl gap-0"
+            ? "bottom-8 lg:bottom-14 text-xl gap-0"
             : "bottom-0 gap-0 lg:gap-2",
           "text-xl lg:text-3xl z-20 flex flex-col relative duration-300 font-semibold leading-8 lg:mt-4 tracking-tight"
         )}
@@ -86,7 +87,7 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
       <div
         className={classNames(
           projectCardHover === data.title1
-            ? "bottom-6  opacity-100"
+            ? "bottom-4 lg:bottom-10  opacity-100"
             : "-bottom-4 opacity-0",
           "z-20 relative duration-300 text-sm flex flex-col gap-4"
         )}
@@ -98,12 +99,11 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
           </p>
           {data.description2}
         </div>
-        {category === "development" && (
+        {category === "development" ? (
           <Link href={`${pathname}/${index + 1}`} className="text-amber-500">
             {t("ProjectSection.projectDetailLabel")}
           </Link>
-        )}
-        {category === "design" && (
+        ) : (
           <a
             href={data.link}
             rel="noreferrer"

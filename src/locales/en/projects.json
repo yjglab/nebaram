@@ -2,7 +2,8 @@
   "HeaderSection": {
     "category1": "All Projects",
     "category2": "Development",
-    "category3": "Design"
+    "category3": "Design",
+    "category4": "Ongoing"
   },
   "ProjectSection": {
     "sectionTitle": "Explore Projects",
@@ -13,6 +14,7 @@
 
     "projectsDesignCount": "4",
     "projectsDevelopmentCount": "5",
+    "projectsOngoingCount": "1",
     "projectsDesign": [
       {
         "projectCategory": "Web Motion Poster",
@@ -573,6 +575,18 @@
             }
           ]
         }
+      }
+    ],
+    "projectsOngoing": [
+      {
+        "projectCategory": "Full Stack Development",
+        "date": "2023.09",
+        "thumbnailSrc": "/images/projects/project-section/hulter.jpeg",
+        "title1": "Hulter",
+        "title2": "Get Reviews for Your Own Development Project at Hulter!",
+        "description1": "Wondering how your project will be perceived by people? Is it a good idea to operate it as a real service? Hulter allows you to publicly showcase your project to receive reviews and evaluations from others.",
+        "description2": "TypeScript, React.js, Next.js, React-query, TailwindCSS, Emotion, Express, MySQL, Vercel (client), FireBase (server)",
+        "link": "#"
       }
     ]
   }

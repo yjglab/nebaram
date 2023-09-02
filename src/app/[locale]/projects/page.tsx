@@ -11,11 +11,15 @@ import ProjectSection, {
 interface ProjectsData {
   [key: string]: Array<ProjectData>;
 }
+export type ProjectSectionCategory =
+  | "all"
+  | "development"
+  | "design"
+  | "ongoing";
 const ProjectsPage: NextPage = () => {
   const t = useTranslations("projects");
-  const [category, setCategory] = useState<"all" | "development" | "design">(
-    "development"
-  );
+  const [category, setCategory] =
+    useState<ProjectSectionCategory>("development");
   const projectsData: ProjectsData = {
     development: Array.from(
       {
@@ -60,6 +64,27 @@ const ProjectsPage: NextPage = () => {
         description1: t(`ProjectSection.projectsDesign.${id}.description1`),
         description2: t(`ProjectSection.projectsDesign.${id}.description2`),
         link: t(`ProjectSection.projectsDesign.${id}.link`),
+      },
+    })),
+    ongoing: Array.from(
+      {
+        length: parseInt(t(`ProjectSection.projectsOngoingCount`)),
+      },
+      (_, i) => i
+    ).map((id) => ({
+      id: id,
+      content: {
+        category: "design",
+        projectCategory: t(
+          `ProjectSection.projectsOngoing.${id}.projectCategory`
+        ),
+        date: t(`ProjectSection.projectsOngoing.${id}.date`),
+        src: t(`ProjectSection.projectsOngoing.${id}.thumbnailSrc`),
+        title1: t(`ProjectSection.projectsOngoing.${id}.title1`),
+        title2: t(`ProjectSection.projectsOngoing.${id}.title2`),
+        description1: t(`ProjectSection.projectsOngoing.${id}.description1`),
+        description2: t(`ProjectSection.projectsOngoing.${id}.description2`),
+        link: t(`ProjectSection.projectsOngoing.${id}.link`),
       },
     })),
   };

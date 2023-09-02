@@ -2,7 +2,8 @@
   "HeaderSection": {
     "category1": "모든 프로젝트",
     "category2": "개발",
-    "category3": "디자인"
+    "category3": "디자인",
+    "category4": "제작중"
   },
   "ProjectSection": {
     "sectionTitle": "프로젝트 둘러보기",
@@ -13,6 +14,7 @@
 
     "projectsDesignCount": "4",
     "projectsDevelopmentCount": "5",
+    "projectsOngoingCount": "1",
     "projectsDesign": [
       {
         "projectCategory": "Web Motion Poster",
@@ -572,6 +574,18 @@
             }
           ]
         }
+      }
+    ],
+    "projectsOngoing": [
+      {
+        "projectCategory": "Full Stack Development",
+        "date": "2023.09",
+        "thumbnailSrc": "/images/projects/project-section/hulter.jpeg",
+        "title1": "Hulter",
+        "title2": "내가 만든 개발 프로젝트, 훌터에서 리뷰받아보자!",
+        "description1": "이 프로젝트가 사람들에게 어떻게 보여질까? 실서비스로 운영해도 괜찮은 아이디어일까? 등 이러한 궁금증을 해결할 수 있도록 자신의 프로젝트를 사람들에게 공개하여 리뷰와 평가를 받을 수 있는 서비스에요.",
+        "description2": "TypeScript, React.js, Next.js, React-query, TailwindCSS, Emotion, Express, MySQL, Vercel(client), FireBase(server)",
+        "link": "#"
       }
     ]
   }

@@ -2,6 +2,8 @@ import classNames from "classnames";
 import { useTranslations } from "next-intl";
 import { FC, useEffect } from "react";
 import { motion } from "framer-motion";
+import { BeakerIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { BoltIcon } from "@heroicons/react/20/solid";
 
 type Category = "all" | "development" | "design";
 interface Props {
@@ -14,6 +16,7 @@ const HeaderSection: FC<Props> = ({ category, setCategory }) => {
     [t("HeaderSection.category1"), "all"],
     [t("HeaderSection.category2"), "development"],
     [t("HeaderSection.category3"), "design"],
+    [t("HeaderSection.category4"), "ongoing"],
   ];
   const handleChangeCategory = (selectedCategory: Category) => {
     setCategory(selectedCategory);
@@ -52,6 +55,7 @@ const HeaderSection: FC<Props> = ({ category, setCategory }) => {
               category === ct[1]
                 ? "border-b-indigo-400"
                 : "border-b-transparent",
+              category === ct[1] && ct[1] === "ongoing" && "border-b-amber-500",
               "hover:border-b-gray-400 hover:text-gray-400 border-b-2 cursor-pointer duration-200"
             )}
             initial={{ opacity: 0 }}
@@ -63,6 +67,9 @@ const HeaderSection: FC<Props> = ({ category, setCategory }) => {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
+            {ct[1] === "ongoing" && (
+              <Cog6ToothIcon className="w-5 relative bottom-0.5 right-0.5 inline-block animate-spin" />
+            )}
             {ct[0]}
           </motion.div>
         ))}

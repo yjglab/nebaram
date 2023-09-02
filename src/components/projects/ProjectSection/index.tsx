@@ -2,9 +2,10 @@
 
 import React, { FC } from "react";
 import ProjectCard from "./ProjectCard";
+import { ProjectSectionCategory } from "@app/[locale]/projects/page";
 
 export interface ProjectContent {
-  category: "development" | "design";
+  category: ProjectSectionCategory;
   projectCategory: string;
   date: string;
   src: string;
@@ -23,10 +24,14 @@ interface Props {
   projectsData: {
     [key: string]: Array<ProjectData>;
   };
-  category: "development" | "design" | "all";
+  category: ProjectSectionCategory;
 }
 const ProjectSection: FC<Props> = ({ projectsData, category }) => {
-  const allProjectsData = [...projectsData.development, ...projectsData.design];
+  const allProjectsData = [
+    ...projectsData.ongoing,
+    ...projectsData.development,
+    ...projectsData.design,
+  ];
 
   return (
     <section className="mb-20 px-6 font-medium">
@@ -52,6 +57,15 @@ const ProjectSection: FC<Props> = ({ projectsData, category }) => {
             ))}
           {category === "design" &&
             projectsData.design.map((data, index) => (
+              <ProjectCard
+                key={data.id}
+                data={data.content}
+                index={index}
+                category={category}
+              />
+            ))}
+          {category === "ongoing" &&
+            projectsData.ongoing.map((data, index) => (
               <ProjectCard
                 key={data.id}
                 data={data.content}

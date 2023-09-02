@@ -5,6 +5,7 @@ import { NextIntlClientProvider, createTranslator } from "next-intl";
 import classNames from "classnames";
 import Header from "@components/parts/Header";
 import Footer from "@components/parts/Footer";
+import Providers from "@app/providers";
 
 const Pretendard = localFont({
   src: "../../../public/fonts/PretendardVariable.woff2",
@@ -51,24 +52,26 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
 
   return (
     <html lang={locale}>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-        <link
-          rel="canonical"
-          hrefLang="en-US"
-          href="https://nebaram.vercel.app/en/"
-          key="canonical"
-        />
-        <link
-          rel="alternate"
-          hrefLang="ko"
-          href="https://nebaram.vercel.app/ko/"
-        />
-        <body className={classNames(Pretendard.className)}>
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </NextIntlClientProvider>
+      <Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <link
+            rel="canonical"
+            hrefLang="en-US"
+            href="https://nebaram.vercel.app/en/"
+            key="canonical"
+          />
+          <link
+            rel="alternate"
+            hrefLang="ko"
+            href="https://nebaram.vercel.app/ko/"
+          />
+          <body className={classNames(Pretendard.className)}>
+            <Header />
+            {children}
+            <Footer />
+          </body>
+        </NextIntlClientProvider>
+      </Providers>
     </html>
   );
 };
