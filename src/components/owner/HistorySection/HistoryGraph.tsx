@@ -4,117 +4,26 @@ import classNames from "classnames";
 
 const HistoryGraph = () => {
   const t = useTranslations("owner");
-  const historyData = [
+  const histories = Array.from(
     {
-      id: 1,
-      year: t("HistorySection.content1.year"),
-      month: t("HistorySection.content1.month"),
-      content: t.rich("HistorySection.content1.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
+      length: parseInt(t(`HistorySection.contentsCount`)),
     },
-    {
-      id: 2,
-      year: t("HistorySection.content2.year"),
-      month: t("HistorySection.content2.month"),
-      content: t.rich("HistorySection.content2.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 3,
-      year: t("HistorySection.content3.year"),
-      month: t("HistorySection.content3.month"),
-      content: t.rich("HistorySection.content3.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 4,
-      year: t("HistorySection.content4.year"),
-      month: t("HistorySection.content4.month"),
-      content: t.rich("HistorySection.content4.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 5,
-      year: t("HistorySection.content5.year"),
-      month: t("HistorySection.content5.month"),
-      content: t.rich("HistorySection.content5.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 6,
-      year: t("HistorySection.content6.year"),
-      month: t("HistorySection.content6.month"),
-      content: t.rich("HistorySection.content6.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 7,
-      year: t("HistorySection.content7.year"),
-      month: t("HistorySection.content7.month"),
-      content: t.rich("HistorySection.content7.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 8,
-      year: t("HistorySection.content8.year"),
-      month: t("HistorySection.content8.month"),
-      content: t("HistorySection.content8.content"),
-    },
-    {
-      id: 9,
-      year: t("HistorySection.content9.year"),
-      month: t("HistorySection.content9.month"),
-      content: t.rich("HistorySection.content9.content", {
-        span: (children) => (
-          <span className="text-indigo-400 ">{children}</span>
-        ),
-        div: (children) => (
-          <span className="ml-2 text-sm text-gray-200">{children}</span>
-        ),
-      }),
-    },
-    {
-      id: 10,
-      year: t("HistorySection.content10.year"),
-      month: t("HistorySection.content10.month"),
-      content: t.rich("HistorySection.content10.content", {
-        span: (children) => <span className="text-sm ">{children}</span>,
-      }),
-    },
-    {
-      id: 11,
-      year: t("HistorySection.content11.year"),
-      month: t("HistorySection.content11.month"),
-      content: t.rich("HistorySection.content11.content", {
-        span: (children) => <span className="text-sm ">{children}</span>,
-      }),
-    },
-  ];
+    (_, i) => i
+  ).map((id) => ({
+    id: id,
+    year: t(`HistorySection.contents.${id}.year`),
+    month: t(`HistorySection.contents.${id}.month`),
+    content: t.rich(`HistorySection.contents.${id}.content`, {
+      span: (children) => <span className="text-indigo-400 ">{children}</span>,
+      div: (children) => (
+        <div className="text-sm text-gray-200">{children}</div>
+      ),
+    }),
+  }));
 
   return (
-    <figure className="mt-24 flex h-full w-full flex-col">
-      {historyData.map((data, index) => (
+    <figure className="mt-24 flex h-full w-full flex-col relative md:left-[5%]">
+      {histories.map((data, index) => (
         <div key={data.id} className="flex h-full w-full">
           <motion.div
             initial={{ opacity: 0 }}
@@ -129,7 +38,7 @@ const HistoryGraph = () => {
           >
             <div
               className={classNames(
-                data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+                data.month === "2021.07" ? "h-[130px]" : "h-[90px]",
                 "flex w-full justify-center"
               )}
             >
@@ -144,7 +53,7 @@ const HistoryGraph = () => {
             transition={{ duration: 0.8, delay: index * 0.02 }}
             viewport={{ once: true, amount: 0.5 }}
             className={classNames(
-              data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+              data.month === "2021.07" ? "h-[130px]" : "h-[90px]",
               "relative top-2.5 flex w-[3px] justify-center bg-gray-500"
             )}
           >
@@ -165,6 +74,7 @@ const HistoryGraph = () => {
               )}
             ></motion.div>
           </motion.div>
+          {/* content */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -174,7 +84,7 @@ const HistoryGraph = () => {
           >
             <div
               className={classNames(
-                data.month === "2021.07" ? "h-[130px]" : "h-[100px]",
+                data.month === "2021.07" ? "h-[130px]" : "h-[90px]",
                 "flex w-full flex-col pl-8"
               )}
             >
