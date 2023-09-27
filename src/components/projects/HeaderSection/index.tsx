@@ -12,7 +12,7 @@ interface Props {
 }
 const HeaderSection: FC<Props> = ({ category, setCategory }) => {
   const t = useTranslations("projects");
-  const categories = [
+  const headerCategories = [
     [t("HeaderSection.category1"), "all"],
     [t("HeaderSection.category2"), "development"],
     [t("HeaderSection.category3"), "design"],
@@ -47,15 +47,16 @@ const HeaderSection: FC<Props> = ({ category, setCategory }) => {
       </header>
 
       <div className="mt-12 flex items-center gap-6 sm:mt-24 md:mt-36">
-        {categories.map((ct, index) => (
+        {headerCategories.map((headerCategory, index) => (
           <motion.div
-            key={ct[1]}
-            onClick={() => handleChangeCategory(ct[1] as Category)}
+            key={headerCategory[1]}
+            onClick={() => handleChangeCategory(headerCategory[1] as Category)}
             className={classNames(
-              category === ct[1]
+              category === headerCategory[1] && headerCategory[1] === "ongoing"
+                ? "border-b-amber-500"
+                : category === headerCategory[1]
                 ? "border-b-indigo-400"
                 : "border-b-transparent",
-              category === ct[1] && ct[1] === "ongoing" && "border-b-amber-500",
               "hover:border-b-gray-400 hover:text-gray-400 border-b-2 cursor-pointer duration-200"
             )}
             initial={{ opacity: 0 }}
@@ -67,10 +68,10 @@ const HeaderSection: FC<Props> = ({ category, setCategory }) => {
             }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            {ct[1] === "ongoing" && (
+            {headerCategory[1] === "ongoing" && (
               <Cog6ToothIcon className="w-5 relative bottom-0.5 right-0.5 inline-block animate-spin" />
             )}
-            {ct[0]}
+            {headerCategory[0]}
           </motion.div>
         ))}
       </div>

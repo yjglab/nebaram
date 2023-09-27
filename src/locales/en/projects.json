@@ -585,7 +585,7 @@
         "title1": "Hoolter",
         "title2": "Get Reviews for Your Own Development Project at Hoolter!",
         "description1": "Wondering how your project will be perceived by people? Is it a good idea to operate it as a real service? Hulter allows you to publicly showcase your project to receive reviews and evaluations from others.",
-        "description2": "TypeScript, React.js, Next.js, React-query, TailwindCSS, Emotion, Express, MySQL, Vercel (client), FireBase (server)",
+        "description2": "TypeScript, React.js, Next.js, React-query, TailwindCSS, Emotion, Nest.js, PostgreSQL, Prisma, Vercel(client), FireBase(server)",
         "link": "https://github.com/yjglab/Hoolter"
       }
     ]

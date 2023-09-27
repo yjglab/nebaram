@@ -35,7 +35,7 @@ const OutcomeSection: FC = () => {
       id: 2,
       title: t("OutcomeSection.title2"),
       value: t("OutcomeSection.value2", {
-        attends: "3000",
+        attends: "3200",
       }),
       unit: t("OutcomeSection.value2Unit"),
     },

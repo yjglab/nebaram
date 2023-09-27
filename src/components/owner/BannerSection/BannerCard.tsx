@@ -47,7 +47,7 @@ const BannerCard = () => {
         >
           <Image
             fill
-            src="/images/owner/banner-section/owner.jpeg"
+            src="/images/owner/banner-section/owner.jpg"
             className="rounded-3xl object-cover shadow-2xl shadow-indigo-900/90 duration-500 hover:shadow-indigo-500 aspect-square"
             alt="banner-section/owner"
           />

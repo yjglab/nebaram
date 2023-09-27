@@ -91,9 +91,9 @@ const HistoryGraph = () => {
               <time className="text-base font-semibold text-gray-500 xl:text-lg">
                 {data.month}
               </time>
-              <p className="break-all text-base leading-6 tracking-tight md:text-lg xl:text-xl">
+              <div className="break-all text-base leading-6 tracking-tight md:text-lg xl:text-xl">
                 {data.content}
-              </p>
+              </div>
             </div>
           </motion.div>
         </div>
