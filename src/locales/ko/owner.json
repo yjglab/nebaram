@@ -33,7 +33,7 @@
       {
         "year": "2023",
         "month": "2023.09",
-        "content": "PCCP JavaScript 코딩전문역량인증, (주)그랩"
+        "content": "프로그래머스 코딩전문역량인증 (PCCP JavaScript), (주)그렙"
       },
       {
         "year": "",
@@ -78,7 +78,7 @@
       {
         "year": "",
         "month": "2021.07",
-        "content": "파이썬 선형대수 모듈 학습법 강의 제작 <span>누적 수강생 3000명+, 평점 4.9/5.0</span><div>*유명 강의 플랫폼으로부터 강의 섭외 (인프런 / 프로그래머스)</div>"
+        "content": "파이썬 선형대수 모듈 학습법 강의 제작 <span>누적 수강생 3200명+, 평점 4.9/5.0</span><div>*유명 강의 플랫폼으로부터 강의 섭외 (인프런 / 프로그래머스)</div>"
       },
       {
         "year": "2020",
@@ -88,14 +88,14 @@
       {
         "year": "",
         "month": "2020.05",
-        "content": "디자인 프로젝트 제작 활동 <span>Typographic, Editorial / Interior Design, 3D Graphic, Branding</span>"
+        "content": "디자인 프로젝트 제작 활동: Typographic, Editorial / Interior Design, 3D Graphic, Branding"
       }
     ]
   },
 
   "SkillSection": {
-    "sectionTitle1": "제가 가진 강점과",
-    "sectionTitle2": "기술적 역량을 소개합니다",
+    "sectionTitle1": "강점과 기술적 역량을",
+    "sectionTitle2": "소개합니다",
     "description1": "개발부터 디자인, 퍼블리싱, 배포를 스스로 해본 경험이 있어요",
     "description2": "덕분에 다른 직무자들과도 무리없이 소통이 가능해요",
 
@@ -103,25 +103,25 @@
     "skill1Title1": "부드러우면서 편리한",
     "skill1Title2": "화면 개발을 선호해요",
     "skill1Description1": "<span></span>데이터를 적합한 시점에 요청하고 불러와 여러가지 애니메이션 효과를 적용해 표현할 수 있어요. 라이브러리를 활용해 효율적으로 개발할 수 있지만 순수 자바스크립트로도 얼마든지 구현할 수 있답니다. 구현이 끝나면 사용자의 입장이 되어 기능들이 의도한대로 동작하는 지 지속적으로 확인하고 있어요.",
-    "skill1Description2": "<span>사용하는 기술</span>TypeScript, JavaScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR, Socket.io-client",
+    "skill1Description2": "<span>사용하는 기술</span>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR",
 
     "skill2": "Back-End",
     "skill2Title1": "안전한 웹 서버와",
     "skill2Title2": "DB를 만들 수 있어요",
     "skill2Description1": "<span></span>데이터를 요청할 API서버와 데이터베이스를 구축할 수 있고, 소켓을 이용해 실시간 데이터 전송 기능을 만들 수 있어요. AWS와 프록시 웹 서버 Nginx를 이용해 안정적인 웹 사이트를 배포할 수 있어요.",
-    "skill2Description2": "<span>사용하는 기술</span>Node.js, Express.js, Sequelize.js, Socket.io, AWS EC2+S3+ Lambda, MySQL, MongoDB, Python, Selenium",
+    "skill2Description2": "<span>사용하는 기술</span>Node.js, Nest.js, Express.js, Prisma, Sequelize, Socket.io, Puppeteer, AWS EC2+S3+Lambda, MySQL, PostgreSQL, MongoDB, Python",
 
     "skill3": "Design / Publishing",
     "skill3Title1": "사용자 중심의 일관된",
     "skill3Title2": "인터페이스를 추구해요",
     "skill3Description1": "<span></span>개발 시작 전, 디자인 툴로 미리 화면을 그린 후 퍼블리싱 작업을 진행해요. 저는 큰 화면에서 작은 화면, 작은 화면에서 큰 화면으로든 순서에 상관없이 정확한 반응형 퍼블리싱이 가능해요. 요즘은 Apple HIG를 읽어보고 있는데 괜찮은 내용이 많아서 앞으로의 프로젝트에도 적용해보려고 해요. 지금 보고 계신 이 사이트가 HIG를 반영한 첫 결과물이에요.",
-    "skill3Description2": "<span>사용하는 기술</span>TailwindCSS, Emotion, Styled-Components, SCSS, Adobe Illustrator, PhotoShop, InDesign, Premiere Pro",
+    "skill3Description2": "<span>사용하는 기술</span>TailwindCSS, Emotion, Framer-motion, Styled-Components, SCSS, Illustrator, PhotoShop, InDesign",
 
     "skill4": "Skill Communication",
     "skill4Title1": "디자이너와 원활한",
     "skill4Title2": "협업이 가능해요",
     "skill4Description1": "저는 시각디자인도 복수전공했어요. 그래서 여러명의 디자이너들과 협업 작업을 진행해본 적이 많아요. 디자이너와 개발자, 두 포지션의 입장에서 프로젝트를 참여해봤기 때문에 소통에 어려움 없이 작업할 수 있어요.",
-    "skill4Description2": "",
+    "skill4Description2": "<span>사용하는 기술</span>Figma",
 
     "projectsLinkLabel": "진행한 프로젝트들을 둘러보세요",
     "projectsLink": "프로젝트 페이지"
@@ -136,7 +136,7 @@
       },
       {
         "title": "같이 작업하게 될 경우 어떤 단점이 있나요?",
-        "description": "작업할 때 지나치게 미세한 부분, 자잘한 오류들을 검토하느라 작업의 우선 순위가 간혹 바뀌는 경우가 있어요. 큰 단위의 작업을 해야하는 상황에서 작은 단위 작업의 기능적, 디자인적 측면에서 작은 오류라도 발견되면 꼭 해결하고 넘어가야하는 완벽주의 타입이라 이건 파트너의 성향에 따라 장점이 될 수도, 단점이 될 수도 있어요."
+        "description": "작업할 때 지나치게 미세한 부분, 자잘한 오류들을 검토하느라 작업의 우선 순위가 간혹 바뀌는 경우가 있어요. 큰 단위의 작업을 해야하는 상황에서 작은 단위 작업의 기능적, 디자인적 측면에서 작은 오류라도 발견되면 꼭 해결하고 넘어가야하는 완벽주의 타입이라 파트너의 성향에 따라 장점이 될 수도, 단점이 될 수도 있어요."
       },
       {
         "title": "디자인도 직접 하시나요? 디자이너와의 협업 도구로 어떤걸 쓰시나요?",

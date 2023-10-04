@@ -33,7 +33,7 @@
       {
         "year": "2023",
         "month": "September 2023",
-        "content": "PCCP JavaScript Coding Proficiency Certification, GRAB Co., Ltd."
+        "content": "PCCP JavaScript Coding Proficiency Certification, GREB Co., Ltd."
       },
       {
         "year": "",
@@ -78,7 +78,7 @@
       {
         "year": "",
         "month": "July 2021",
-        "content": "Python Linear Algebra Module Learning Course Production <span>Over 3,000 students, Rating 4.9/5.0</span><div>*Invited as an instructor by major online learning platforms (Inflearn / Programmers)</div>"
+        "content": "Python Linear Algebra Module Learning Course Production <span>Over 3,200 students, Rating 4.9/5.0</span><div>*Invited as an instructor by major online learning platforms (Inflearn / Programmers)</div>"
       },
       {
         "year": "2020",
@@ -88,7 +88,7 @@
       {
         "year": "",
         "month": "May 2020",
-        "content": "Design Project Production Activities <span>Typographic, Editorial / Interior Design, 3D Graphic, Branding</span>"
+        "content": "Design Project Production Activities: Typographic, Editorial / Interior Design, 3D Graphic, Branding"
       }
     ]
   },
@@ -103,25 +103,25 @@
     "skill1Title1": "Prefer creating",
     "skill1Title2": "Smooth and Unique UI",
     "skill1Description1": "I can request and fetch data at the appropriate times, applying various animation effects for presentation. I can efficiently develop using libraries, but I'm also capable of implementing everything with pure JavaScript. After implementation, I continuously check that the features work as intended from the user's perspective.",
-    "skill1Description2": "<span>Using Skills</span>TypeScript, JavaScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR, Socket.io-client",
+    "skill1Description2": "<span>Skills</span>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR",
 
     "skill2": "Back-End",
     "skill2Title1": "Create secure",
     "skill2Title2": "Web Server & DB",
     "skill2Description1": "I can build API servers for data requests and set up databases, and I can create real-time data transmission functionality using sockets. I'm experienced in deploying stable websites using AWS and proxy web servers like Nginx.",
-    "skill2Description2": "<span>Using Skills</span>Node.js, Express.js, Sequelize.js, Socket.io, AWS EC2+S3+ Lambda, MySQL, MongoDB, Python, Selenium",
+    "skill2Description2": "<span>Skills</span>Node.js, Nest.js, Express.js, Prisma, Sequelize, Socket.io, Puppeteer, AWS EC2+S3+Lambda, MySQL, PostgreSQL, MongoDB, Python",
 
     "skill3": "Design / Publishing",
     "skill3Title1": "Pursue consistent",
     "skill3Title2": "User-centered interfaces",
     "skill3Description1": "Before development, I use design tools to sketch out screens and then proceed with publishing work. I'm adept at creating perfectly responsive publishing, starting from large screens or small screens. Currently, I'm reading the Apple Human Interface Guidelines (HIG) and plan to implement it in future projects. This site you're viewing right now is my first project adhering to the HIG.",
-    "skill3Description2": "<span>Using Skills</span>TailwindCSS, Emotion, SCSS, JSX, Adobe Illustrator, Photoshop, InDesign, Premiere Pro",
+    "skill3Description2": "<span>Skills</span>TailwindCSS, Emotion, Framer-motion, Styled-Components, SCSS, Illustrator, PhotoShop, InDesign",
 
     "skill4": "Skill Communication",
     "skill4Title1": "Collaborate effectively",
     "skill4Title2": "With Designers",
     "skill4Description1": "I also have a background in visual design, having dual majored in it. This experience allows me to understand the roles of different position holders in projects. Whether it's front-end work or publishing work, I can tailor my communication to match your needs. Moreover, I am confident that the features and screen publishing I handle will be error-free from a user perspective.",
-    "skill4Description2": "",
+    "skill4Description2": "<span>Skills</span>Figma",
 
     "projectsLinkLabel": "Explore My Projects",
     "projectsLink": "Projects Page"
