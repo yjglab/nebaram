@@ -9,7 +9,7 @@ import Slider from "../../parts/Slider";
 
 const ObjectiveSection: FC = () => {
   const t = useTranslations("owner");
-  const [slideNumber, setSlideNumber] = useState(0);
+  const [, setSlideNumber] = useState(0);
 
   const images = [
     "/images/owner/objective-section/objective-01.jpg",

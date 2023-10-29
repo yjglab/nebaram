@@ -63,7 +63,7 @@ const OutcomeSection: FC = () => {
         ),
       }),
       value: t("OutcomeSection.value4", {
-        awards: 1,
+        awards: 3,
       }),
       unit: t("OutcomeSection.value4Unit"),
     },
@@ -124,7 +124,7 @@ const OutcomeSection: FC = () => {
                 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <p className="text-lg font-bold leading-6 text-indigo-400 lg:text-xl">
+                <p className="text-lg font-bold leading-6 text-indigo-300 lg:text-xl">
                   {outcome.title}
                 </p>
                 <OutcomeValue
