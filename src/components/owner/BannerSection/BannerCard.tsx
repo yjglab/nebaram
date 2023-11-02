@@ -53,7 +53,7 @@ const BannerCard = () => {
           />
         </motion.div>
         <motion.svg
-          className="absolute h-[520px] w-[520px] scale-50 sm:scale-[0.75]  md:scale-100"
+          className="absolute h-[520px] w-[520px] scale-50 sm:scale-[0.75] md:scale-100"
           initial="hidden"
           animate="visible"
         >
@@ -62,7 +62,7 @@ const BannerCard = () => {
             y="3"
             rx="24"
             stroke="#818cf8"
-            className="h-[510px]  w-[510px] stroke-[5] "
+            className="h-[510px] w-[510px] stroke-[5] "
             variants={cardSvgVariants}
             custom={5}
           />

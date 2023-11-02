@@ -7,6 +7,7 @@ import { ScrollIndicatorKeyframe } from "@constants/animations";
 import classNames from "classnames";
 import BannerCard from "./BannerCard";
 import BannerTitle from "./BannerTitle";
+import BannerVideo from "./BannerVideo";
 
 export const bannerOnDelay = 1300;
 const ScrollIndicator = styled.div`
@@ -24,6 +25,7 @@ const BannerSection: FC = () => {
 
   return (
     <section className="z-20 min-h-screen w-full flex-col relative flex h-full justify-center">
+      <BannerVideo />
       <BannerTitle bannerOn={bannerOn} />
       <BannerCard />
       <ScrollIndicator className="z-20 mx-auto mt-16 md:mt-32">
