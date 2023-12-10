@@ -19,7 +19,7 @@ export async function generateMetadata({ params: { locale = "en" } }) {
     description: t("metadata.description"),
     viewport: "width=device-width, initial-scale=1.0",
     verification: {
-      google: "GGll82-lmBw6qvsAu-yNTYUWaFOTfMLdy3NzyF89ils",
+      google: "FKAEe8KI4Q28hSvJ1Fk5eCUWPna4HSuP5T1_ndBOt7E",
     },
     manifest: "/manifest/manifest.json",
     openGraph: {
