@@ -96,7 +96,7 @@
           "slides": [
             {
               "scope": "Developer Introduction",
-              "src": "https://user-images.githubusercontent.com/70316567/260242438-b84eb738-49f5-49c4-ad02-bc1dfced6149.gif",
+              "src": "https://github.com/yjglab/nebaram/assets/70316567/398dd7db-ce6a-48f3-9110-6ea406cfcf89",
               "title": "Scroll Animation",
               "description": "Shows animated elements according to the scroll. Differentiated designs were made for each section, and the slider was developed to allow drag transitions, considering mobile devices."
             },
@@ -120,13 +120,13 @@
             },
             {
               "scope": "Multilingual Routing",
-              "src": "https://user-images.githubusercontent.com/70316567/260244089-97621348-7a7d-4a3d-bc1d-f91a0c1ae9df.gif",
+              "src": "https://github.com/yjglab/nebaram/assets/70316567/398e4b93-2d96-44bd-a761-bd0eb2629fcc",
               "title": "Multilingual Routing Support",
               "description": "Provides translated JSON files in different languages (currently: Korean/English). You can click the Language button at the top to switch to the multilingual page."
             },
             {
               "scope": "Responsive Screen",
-              "src": "https://user-images.githubusercontent.com/70316567/260244200-afe50c82-d7cf-477b-b2fd-4187106b8939.gif",
+              "src": "https://github.com/yjglab/nebaram/assets/70316567/4120b1f7-53f5-4f2b-a0b1-29796b2cd351",
               "title": "Responsive Page Support",
               "description": "The Nebaram web page is implemented as a responsive page that works tailored to any screen size."
             }
@@ -138,7 +138,7 @@
         "date": "2023.03",
         "thumbnailSrc": "/images/projects/project-section/bloobolt_thumb.jpg",
         "title1": "BlooBolt",
-        "title2": "Communication Community for Service Development Professionals",
+        "title2": "Communication Community for Service Development Professionals (Terminated)",
         "description1": "A communication community designed to solve the communication challenges among software developers, designers, and planners, understanding each other's roles in order to smoothly create services.",
         "description2": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
 
@@ -586,7 +586,7 @@
         "title2": "The place where I can most accurately verify my work.",
         "description1": "Introduce is a service that allows you to disclose your projects and works to developers, designers, and the public to receive opinions and evaluations.",
         "description2": "TypeScript, React.js, Next.js, React-query(server), Redux-Toolkit(client), TailwindCSS, Emotion, Nest.js, PostgreSQL, Redis, Prisma, Vercel(client), FireBase(server) ",
-        "link": "https://github.com/yjglab/Introduce"
+        "link": "hhttps://github.com/yjglab/introduce.official"
       }
     ]
   }

@@ -18,6 +18,14 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
     openGraph: {
       title: "대표 개발자",
       description: "반응형 웹 서비스 개발자, 육재경입니다.",
+      images: [
+        {
+          url: "/manifest/opengraph.jpg",
+          alt: "thumbnail",
+          width: 800,
+          height: 400,
+        },
+      ],
     },
   } as Metadata;
 }

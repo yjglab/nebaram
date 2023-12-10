@@ -18,6 +18,14 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
     openGraph: {
       title: "프로젝트 둘러보기",
       description: "대표 개발자의 프로젝트를 소개합니다.",
+      images: [
+        {
+          url: "/manifest/opengraph.jpg",
+          alt: "thumbnail",
+          width: 800,
+          height: 400,
+        },
+      ],
     },
   } as Metadata;
 }

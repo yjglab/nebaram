@@ -32,10 +32,10 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       locale: "ko_KR",
       images: [
         {
-          url: "/manifest/icon-192x192.png",
-          alt: "logo",
-          width: 192,
-          height: 192,
+          url: "/manifest/opengraph.jpg",
+          alt: "thumbnail",
+          width: 800,
+          height: 400,
         },
       ],
     },

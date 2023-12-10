@@ -13,7 +13,6 @@ const Pretendard = localFont({
 export async function generateMetadata({ params: { locale = "en" } }) {
   const messages = await getMessages(locale); // now언어 메시지 로드
   const t = createTranslator({ locale, messages }); // text 번역
-
   return {
     title: {
       template: `%s | ${t("metadata.title")}`,
@@ -24,16 +23,16 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       // sns platform share data
       title: t("metadata.title"),
       description: t("metadata.description"),
-      url: "https://nebaram.vercel.app",
+      url: `https://nebaram.vercel.app/${locale}`,
       siteName: t("metadata.title"),
       type: "website",
       locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [
         {
-          url: "/manifest/icon-192x192.png",
-          alt: "logo",
-          width: 192,
-          height: 192,
+          url: "/manifest/opengraph.jpg",
+          alt: "thumbnail",
+          width: 800,
+          height: 400,
         },
       ],
     },
