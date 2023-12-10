@@ -37,34 +37,9 @@ const Footer: FC = () => {
         },
       ],
     },
+
     {
       id: 2,
-      name: t("Footer.squares.name"),
-      contents: [
-        {
-          id: 1,
-          name: t("Footer.squares.content1.name"),
-          link: t("Footer.squares.content1.link"),
-        },
-        {
-          id: 2,
-          name: t("Footer.squares.content2.name"),
-          link: t("Footer.squares.content2.link"),
-        },
-        {
-          id: 3,
-          name: t("Footer.squares.content3.name"),
-          link: t("Footer.squares.content3.link"),
-        },
-        {
-          id: 4,
-          name: t("Footer.squares.content4.name"),
-          link: t("Footer.squares.content4.link"),
-        },
-      ],
-    },
-    {
-      id: 3,
       name: t("Footer.company.name"),
       contents: [
         {
@@ -90,7 +65,7 @@ const Footer: FC = () => {
       ],
     },
     {
-      id: 4,
+      id: 3,
       name: t("Footer.contact.name"),
       contents: [
         {
