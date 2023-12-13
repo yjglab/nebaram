@@ -1,4 +1,4 @@
-# Nebaram V0.3 새 바람을 실현할 첫 도약
+# Nebaram V0.4 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
 ![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/d7357bdd-7514-4e00-920c-4df263a450dd)
@@ -7,17 +7,16 @@
 
 - 네바람은 웹 개발자로서 네 가지 역량을 갖춘 저를 표현하는 퍼스널 브랜드입니다. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는지를 알리고 싶어 제작되었습니다. [https://nebaram.vercel.app](https://nebaram.vercel.app "nebaram")
 - 이 프로젝트는 기존 개인 포트폴리오 사이트를 NextJS로 이전하며 리뉴얼한 사이트입니다. 이전 사이트를 보시려면 [여기](https://yukjaekyeong.web.app)를 방문해주세요.
-- Nebaram Introduction(Root) 페이지는 현재 제작 중입니다. 개발자 페이지(/owner)와 프로젝트 페이지(/projects)만 열람할 수 있습니다.
 
 <br />
 
 ### 구현부 요약
 
 - 기존의 개인 포트폴리오 웹 페이지를 Next@13 으로 이주하여 디자인과 코드 리뉴얼
-- SEO 개선 작업을 통해 초기 사이트 대비 성능 47% 향상 (LightHouse 기준, 68 -> 100)
-- 메타 데이터와 라우팅, JSON 번역 파일 제공하여 다국어 지원 기능 구현
+- 초기 렌더링, SEO 개선 작업을 통해 페이지 성능 42% 향상 (LightHouse 기준, 67 -> 96)
+- 메타 데이터와 라우팅, JSON 번역 파일 제공하여 다국어 기능 구현
 - 사용자 Viewport의 스크롤에 따라 적용되는 애니메이션 효과 적용
-- Apple HIG(Human Interface Guideline) 반영한 반응형 웹 퍼블리싱
+- Apple HIG(Human Interface Guideline) 반영한 반응형 웹 퍼블리싱, PWA 적용
 
 <br />
 
@@ -42,7 +41,7 @@
 
 스크롤에 따라 애니메이팅 된 요소들을 보여줍니다. 각 섹션별로 디자인의 차별점을 두었고 슬라이더는 모바일을 고려해 드래그 전환이 가능하도록 개발했습니다.
 
-![owner-1](https://github.com/yjglab/nebaram/assets/70316567/b84eb738-49f5-49c4-ad02-bc1dfced6149)
+![owner-1](https://github.com/yjglab/nebaram/assets/70316567/398dd7db-ce6a-48f3-9110-6ea406cfcf89)
 
 <br />
 
@@ -76,7 +75,7 @@
 
 - 다른 언어의 JSON 번역파일을 제공합니다 (현재: 한국어/영어). 상단의 Language 버튼을 클릭해 다국어 페이지로 전환할 수 있습니다.
 
-![intl-1](https://github.com/yjglab/nebaram/assets/70316567/97621348-7a7d-4a3d-bc1d-f91a0c1ae9df)
+![intl-1](https://github.com/yjglab/nebaram/assets/70316567/398e4b93-2d96-44bd-a761-bd0eb2629fcc)
 
 <br />
 
@@ -86,7 +85,7 @@
 
 - 네바람 웹 페이지는 어떤 크기의 화면도 상관없이 맞춤으로 동작하는 반응형 페이지로 구현되었습니다.
 
-![responsive](https://github.com/yjglab/nebaram/assets/70316567/afe50c82-d7cf-477b-b2fd-4187106b8939)
+![responsive](https://github.com/yjglab/nebaram/assets/70316567/4120b1f7-53f5-4f2b-a0b1-29796b2cd351)
 
 <br />
 
@@ -94,9 +93,11 @@
 
 > SEO와 성능 개선 작업
 
-- 다국어 웹이므로 표준 사이트(canonical)와 대안 사이트(alternate)를 명시했으나 감지하지 못함
-- 중복된 레이아웃 코드로 인한 문제, 해당 부분 제거 후 다국어 폴더에만 link를 명시하여 해결
-- 이미지 압축 및 포맷(Webp) 변경, PWA 적용을 통해 사용자 경험 향상
+초기 제작했던 페이지는 초기 렌더링(FCP)이 2.5초, 레이아웃 불안정(CLS) 지수가 0.6이었고 검색엔진 최적화(SEO) 지수가 68로 매우 낮아 노출 빈도에 취약한 상태였습니다. 성능을 올리기 위한 5개 성능 지표를 분석 후 개선 방법을 정리하여 적용했고, 사용 경험이 좋은 UI/UX를 제공하고자 대표 웹 사이트 3곳을 분석했습니다.
+
+성능 측면에서 이미지 크기를 모두 30KB 이내로 2배 이상 압축하였고 크기와 비율을 고정해 레이아웃 변동 가능성을 차단했습니다. 또한 이미지 설명과 사이트맵, 페이지별 메타데이터를 추가했으며 GIF와 같은 큰 이미지에 대한 로딩 상황 피드백을 제공했습니다. 렌더링 측면에서 레이아웃을 서버 사이드에서 프리렌더링하도록 변경하여 페이지가 로드되는 시간을 단축했습니다. 사용 경험 측면에서 통일된 폰트와 구분된 크기, 한정된 색상 적용으로 일관된 시각 경험을 제공하여 혼란을 최소화했고 트랜지션을 활용해 사용자의 움직임에 따른 즉각적 피드백을 만들었습니다.
+
+그 결과 5개 성능 지표의 평균 지수가 67에서 96으로 향상했고 FCP와 CLS, SEO를 각각 0.6초, 0.005, 100으로 개선할 수 있었습니다.
 
 > JSON 데이터 중 특정 부분에만 스타일 적용
 
@@ -106,7 +107,7 @@
 
 ### Version Release
 
-- [latest 0](https://github.com/yjglab/nebaram/releases/tag/0.3)
+- [latest 0](https://github.com/yjglab/nebaram/releases/tag/0.4)
 
 ### 레퍼런스 참고
 
