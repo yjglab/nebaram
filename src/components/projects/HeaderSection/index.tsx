@@ -1,9 +1,8 @@
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
-import { BeakerIcon, Cog6ToothIcon } from "@heroicons/react/24/outline";
-import { BoltIcon } from "@heroicons/react/20/solid";
+import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 
 type Category = "all" | "development" | "design";
 interface Props {

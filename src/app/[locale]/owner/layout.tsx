@@ -13,11 +13,11 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
   const messages = await getMessages(locale);
   const t = createTranslator({ locale, messages });
   return {
-    title: "대표 개발자",
-    description: "반응형 웹 서비스 개발자, 육재경입니다.",
+    title: t("metadata.owner.title"),
+    description: t("metadata.owner.description"),
     openGraph: {
-      title: "대표 개발자",
-      description: "반응형 웹 서비스 개발자, 육재경입니다.",
+      title: t("metadata.owner.title"),
+      description: t("metadata.owner.description"),
       images: [
         {
           url: "/manifest/opengraph.jpg",

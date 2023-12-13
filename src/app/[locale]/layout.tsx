@@ -15,16 +15,16 @@ export async function generateMetadata({ params: { locale = "en" } }) {
   const t = createTranslator({ locale, messages }); // text 번역
   return {
     title: {
-      template: `%s | ${t("metadata.title")}`,
-      default: t("metadata.title"),
+      template: `%s | ${t("metadata.app.title")}`,
+      default: t("metadata.app.title"),
     },
-    description: t("metadata.description"),
+    description: t("metadata.app.description"),
     openGraph: {
       // sns platform share data
-      title: t("metadata.title"),
-      description: t("metadata.description"),
+      title: t("metadata.app.title"),
+      description: t("metadata.app.description"),
       url: `https://nebaram.vercel.app/${locale}`,
-      siteName: t("metadata.title"),
+      siteName: t("metadata.app.title"),
       type: "website",
       locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [

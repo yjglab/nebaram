@@ -1,4 +1,14 @@
 {
-  "title": "nebaram",
-  "description": "Realizing Your New Aspirations."
+  "app": {
+    "title": "Nebaram",
+    "description": "Realizing Your New Aspirations."
+  },
+  "owner": {
+    "title": "Lead Developer",
+    "description": "Introduction of the Lead Developer Jaekyeong Yuk"
+  },
+  "projects": {
+    "title": "Explore Projects",
+    "description": "Introducing projects by the lead developer."
+  }
 }
