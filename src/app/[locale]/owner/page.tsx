@@ -8,7 +8,6 @@ import SkillSection from "./_components/_SkillSection";
 import QuestionSection from "./_components/_QuestionSection";
 
 interface Props {
-  children: React.ReactNode;
   params: {
     locale: string;
   };
