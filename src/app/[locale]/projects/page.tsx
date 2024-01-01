@@ -1,104 +1,39 @@
-"use client";
+import { Metadata, NextPage } from "next";
+import React from "react";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import ProjectsClientPage from "./page.client";
 
-import { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
-import HeaderSection from "@components/projects/HeaderSection";
-import ProjectSection, {
-  ProjectData,
-} from "@components/projects/ProjectSection";
-
-interface ProjectsData {
-  [key: string]: Array<ProjectData>;
-}
-export type ProjectSectionCategory =
-  | "all"
-  | "development"
-  | "design"
-  | "ongoing";
-const ProjectsPage: NextPage = () => {
-  const t = useTranslations("projects");
-  const [category, setCategory] =
-    useState<ProjectSectionCategory>("development");
-  const projectsData: ProjectsData = {
-    development: Array.from(
-      {
-        length: parseInt(t(`ProjectSection.projectsDevelopmentCount`)),
-      },
-      (_, i) => i
-    ).map((id) => ({
-      id: id,
-      content: {
-        category: "development",
-        projectCategory: t(
-          `ProjectSection.projectsDevelopment.${id}.projectCategory`
-        ),
-        date: t(`ProjectSection.projectsDevelopment.${id}.date`),
-        src: t(`ProjectSection.projectsDevelopment.${id}.thumbnailSrc`),
-        title1: t(`ProjectSection.projectsDevelopment.${id}.title1`),
-        title2: t(`ProjectSection.projectsDevelopment.${id}.title2`),
-        description1: t(
-          `ProjectSection.projectsDevelopment.${id}.description1`
-        ),
-        description2: t(
-          `ProjectSection.projectsDevelopment.${id}.description2`
-        ),
-      },
-    })),
-    design: Array.from(
-      {
-        length: parseInt(t(`ProjectSection.projectsDesignCount`)),
-      },
-      (_, i) => i
-    ).map((id) => ({
-      id: id,
-      content: {
-        category: "design",
-        projectCategory: t(
-          `ProjectSection.projectsDesign.${id}.projectCategory`
-        ),
-        date: t(`ProjectSection.projectsDesign.${id}.date`),
-        src: t(`ProjectSection.projectsDesign.${id}.thumbnailSrc`),
-        title1: t(`ProjectSection.projectsDesign.${id}.title1`),
-        title2: t(`ProjectSection.projectsDesign.${id}.title2`),
-        description1: t(`ProjectSection.projectsDesign.${id}.description1`),
-        description2: t(`ProjectSection.projectsDesign.${id}.description2`),
-        link: t(`ProjectSection.projectsDesign.${id}.link`),
-      },
-    })),
-    ongoing: Array.from(
-      {
-        length: parseInt(t(`ProjectSection.projectsOngoingCount`)),
-      },
-      (_, i) => i
-    ).map((id) => ({
-      id: id,
-      content: {
-        category: "design",
-        projectCategory: t(
-          `ProjectSection.projectsOngoing.${id}.projectCategory`
-        ),
-        date: t(`ProjectSection.projectsOngoing.${id}.date`),
-        src: t(`ProjectSection.projectsOngoing.${id}.thumbnailSrc`),
-        title1: t(`ProjectSection.projectsOngoing.${id}.title1`),
-        title2: t(`ProjectSection.projectsOngoing.${id}.title2`),
-        description1: t(`ProjectSection.projectsOngoing.${id}.description1`),
-        description2: t(`ProjectSection.projectsOngoing.${id}.description2`),
-        link: t(`ProjectSection.projectsOngoing.${id}.link`),
-      },
-    })),
+interface Props {
+  children: React.ReactNode;
+  params: {
+    locale: string;
   };
+}
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+export async function generateMetadata({ params: { locale = "en" } }: Props) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations("metadata");
 
-  return (
-    <main>
-      <HeaderSection category={category} setCategory={setCategory} />
-      <ProjectSection projectsData={projectsData} category={category} />
-    </main>
-  );
+  return {
+    title: t("projects.title"),
+    description: t("projects.description"),
+    openGraph: {
+      title: t("projects.title"),
+      description: t("projects.description"),
+      images: [
+        {
+          url: "/manifest/opengraph.jpg",
+          alt: "thumbnail",
+          width: 800,
+          height: 400,
+        },
+      ],
+    },
+  } as Metadata;
+}
+
+const ProjectsPage: NextPage = () => {
+  return <ProjectsClientPage />;
 };
 
 export default ProjectsPage;

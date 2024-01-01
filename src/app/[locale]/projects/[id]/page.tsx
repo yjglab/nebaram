@@ -1,9 +1,8 @@
-import DescriptSection from "@components/projects/details/DescriptSection";
-import HeaderSection from "@components/projects/details/HeaderSection";
-import SliderSection from "@components/projects/details/SliderSection";
-import { NextPage } from "next";
+import HeaderSection from "./_components/_HeaderSection";
+import SliderSection from "./_components/_SliderSection";
+import DescriptSection from "./_components/_DescriptSection";
 
-const ProjectDetailPage: NextPage = () => {
+const ProjectDetailPage = () => {
   return (
     <main>
       <HeaderSection />

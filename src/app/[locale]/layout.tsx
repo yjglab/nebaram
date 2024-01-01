@@ -1,30 +1,46 @@
-import { getMessages } from "@locales/index";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import { NextIntlClientProvider, createTranslator } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import classNames from "classnames";
-import Header from "@components/parts/Header";
-import Footer from "@components/parts/Footer";
-import Providers from "@app/providers";
+import QueryProvider from "@app/(providers)/QueryProvider";
+import {
+  HydrationBoundary,
+  QueryClient,
+  dehydrate,
+} from "@tanstack/react-query";
+import { locales } from "@/config";
+import { getMessages, getTranslations } from "next-intl/server";
+import Header from "@app/_common/Header";
+import Footer from "@app/_common/Footer";
 
 const Pretendard = localFont({
   src: "../../../public/fonts/PretendardVariable.woff2",
 });
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export async function generateMetadata({ params: { locale = "en" } }) {
-  const messages = await getMessages(locale); // now언어 메시지 로드
-  const t = createTranslator({ locale, messages }); // text 번역
+  const t = await getTranslations({ locale, namespace: "metadata" });
   return {
+    metadataBase: new URL(`https://nebaram.vercel.app/${locale}`),
     title: {
-      template: `%s | ${t("metadata.app.title")}`,
-      default: t("metadata.app.title"),
+      template: `%s | ${t("app.title")}`,
+      default: t("app.title"),
     },
-    description: t("metadata.app.description"),
+    description: t("app.description"),
     openGraph: {
       // sns platform share data
-      title: t("metadata.app.title"),
-      description: t("metadata.app.description"),
+      title: t("app.title"),
+      description: t("app.description"),
       url: `https://nebaram.vercel.app/${locale}`,
-      siteName: t("metadata.app.title"),
+      siteName: t("app.title"),
       type: "website",
       locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [
@@ -47,30 +63,34 @@ interface Props {
   };
 }
 const LocaleLayout = async ({ children, params: { locale } }: Props) => {
-  const messages: IntlMessages = await getMessages(locale);
+  const messages: IntlMessages = await getMessages({ locale });
+  const queryClient = new QueryClient();
+  const dehydratedState = dehydrate(queryClient);
 
   return (
     <html lang={locale}>
-      <Providers>
+      <link
+        rel="canonical"
+        hrefLang="en-US"
+        href="https://nebaram.vercel.app/en/"
+        key="canonical"
+      />
+      <link
+        rel="alternate"
+        hrefLang="ko"
+        href="https://nebaram.vercel.app/ko/"
+      />
+      <body className={classNames(Pretendard.className)}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <link
-            rel="canonical"
-            hrefLang="en-US"
-            href="https://nebaram.vercel.app/en/"
-            key="canonical"
-          />
-          <link
-            rel="alternate"
-            hrefLang="ko"
-            href="https://nebaram.vercel.app/ko/"
-          />
-          <body className={classNames(Pretendard.className)}>
-            <Header />
-            {children}
-            <Footer />
-          </body>
+          <QueryProvider>
+            <HydrationBoundary state={dehydratedState}>
+              <Header />
+              {children}
+              <Footer />
+            </HydrationBoundary>
+          </QueryProvider>
         </NextIntlClientProvider>
-      </Providers>
+      </body>
     </html>
   );
 };

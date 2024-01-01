@@ -1,19 +1,41 @@
-"use client";
+import { Metadata, NextPage } from "next";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import BannerSection from "./_components/_BannerSection";
+import OutcomeSection from "./_components/_OutcomeSection";
+import ObjectiveSection from "./_components/_ObjectiveSection";
+import HistorySection from "./_components/_HistorySection";
+import SkillSection from "./_components/_SkillSection";
+import QuestionSection from "./_components/_QuestionSection";
 
-import BannerSection from "@components/owner/BannerSection";
-import HistorySection from "@components/owner/HistorySection";
-import ObjectiveSection from "@components/owner/ObjectiveSection";
-import OutcomeSection from "@components/owner/OutcomeSection";
-import QuestionSection from "@components/owner/QuestionSection";
-import SkillSection from "@components/owner/SkillSection";
-import { NextPage } from "next";
-import { useEffect } from "react";
+interface Props {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+}
+
+export async function generateMetadata({ params: { locale = "en" } }: Props) {
+  unstable_setRequestLocale(locale);
+  const t = await getTranslations("metadata");
+  return {
+    title: t("owner.title"),
+    description: t("owner.description"),
+    openGraph: {
+      title: t("owner.title"),
+      description: t("owner.description"),
+      images: [
+        {
+          url: "/manifest/opengraph.jpg",
+          alt: "thumbnail",
+          width: 800,
+          height: 400,
+        },
+      ],
+    },
+  } as Metadata;
+}
 
 const OwnerPage: NextPage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main>
       <BannerSection />
