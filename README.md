@@ -1,4 +1,4 @@
-# Nebaram V0.4 새 바람을 실현할 첫 도약
+# Nebaram V0.5 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
 ![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/d7357bdd-7514-4e00-920c-4df263a450dd)
@@ -107,7 +107,7 @@
 
 ### Version Release
 
-- [latest 0](https://github.com/yjglab/nebaram/releases/tag/0.4)
+- [latest](https://github.com/yjglab/nebaram/releases/tag/0.5)
 
 ### 레퍼런스 참고
 
