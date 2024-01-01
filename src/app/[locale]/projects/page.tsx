@@ -4,7 +4,6 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import ProjectsClientPage from "./page.client";
 
 interface Props {
-  children: React.ReactNode;
   params: {
     locale: string;
   };
