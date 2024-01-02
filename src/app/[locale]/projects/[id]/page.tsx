@@ -1,6 +1,6 @@
-import HeaderSection from "./_components/_HeaderSection";
-import SliderSection from "./_components/_SliderSection";
-import DescriptSection from "./_components/_DescriptSection";
+import HeaderSection from "./_components/HeaderSection";
+import SliderSection from "./_components/SliderSection";
+import DescriptSection from "./_components/DescriptSection";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
 

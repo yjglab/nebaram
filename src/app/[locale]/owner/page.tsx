@@ -1,11 +1,11 @@
 import { Metadata, NextPage } from "next";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import BannerSection from "./_components/_BannerSection";
-import OutcomeSection from "./_components/_OutcomeSection";
-import ObjectiveSection from "./_components/_ObjectiveSection";
-import HistorySection from "./_components/_HistorySection";
-import SkillSection from "./_components/_SkillSection";
-import QuestionSection from "./_components/_QuestionSection";
+import BannerSection from "./_components/BannerSection";
+import OutcomeSection from "./_components/OutcomeSection";
+import ObjectiveSection from "./_components/ObjectiveSection";
+import HistorySection from "./_components/HistorySection";
+import SkillSection from "./_components/SkillSection";
+import QuestionSection from "./_components/QuestionSection";
 
 interface Props {
   params: {

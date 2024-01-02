@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import ProjectSection, { ProjectData } from "./_components/_ProjectSection";
+import ProjectSection, { ProjectData } from "./_components/ProjectSection";
 import { useState } from "react";
-import HeaderSection from "./_components/_HeaderSection";
+import HeaderSection from "./_components/HeaderSection";
 
 interface ProjectsData {
   [key: string]: Array<ProjectData>;

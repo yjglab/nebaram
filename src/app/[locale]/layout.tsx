@@ -21,11 +21,6 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
 export async function generateMetadata({ params: { locale = "en" } }) {
   const t = await getTranslations({ locale, namespace: "metadata" });
   return {
@@ -41,7 +36,6 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       description: t("app.description"),
       url: `https://nebaram.vercel.app/${locale}`,
       siteName: t("app.title"),
-      type: "website",
       locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
       images: [
         {
