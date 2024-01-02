@@ -33,7 +33,7 @@ const SplashScreen = () => {
   const locale = useLocale();
   useEffect(() => {
     setTimeout(() => {
-      router.replace(`/${locale}/owner`);
+      router.replace(`/${locale}/owner`, { scroll: false });
     }, 2600);
   }, []);
 
