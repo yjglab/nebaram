@@ -4,6 +4,7 @@ import { FC, Fragment, PropsWithChildren, useState } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
 import { useRouter } from "next/navigation";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 interface Props {
   children: React.ReactNode;
@@ -44,7 +45,7 @@ const OverlayContainer: FC<PropsWithChildren<Props>> = ({ children }) => {
             >
               <Dialog.Panel
                 style={{ maxHeight: "90vh" }}
-                className="mt-14 w-full max-w-6xl"
+                className="mt-10 w-full max-w-6xl"
               >
                 <div className="relative flex flex-col rounded-xl ">
                   <div
@@ -54,7 +55,12 @@ const OverlayContainer: FC<PropsWithChildren<Props>> = ({ children }) => {
                     {children}
                   </div>
                 </div>
-
+                <button
+                  onClick={onClose}
+                  className="mx-auto p-1.5 bg-white/20 hover:scale-110 transition-all flex justify-center items-center hover:bg-white/40 rounded-full stroke-2"
+                >
+                  <XMarkIcon className="w-7 h-7" />
+                </button>
                 <div className="mt-40 sr-only" />
               </Dialog.Panel>
             </Transition.Child>
