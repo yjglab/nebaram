@@ -56,12 +56,12 @@ export async function generateMetadata({ params: { locale = "en" } }) {
 
 interface Props {
   children: React.ReactNode;
-  modal: React.ReactNode;
+  // modal: React.ReactNode;
   params: {
     locale: string;
   };
 }
-const LocaleLayout = async ({ children, modal, params: { locale } }: Props) => {
+const LocaleLayout = async ({ children, params: { locale } }: Props) => {
   unstable_setRequestLocale(locale);
 
   const messages: IntlMessages = await getMessages({ locale });
@@ -87,7 +87,7 @@ const LocaleLayout = async ({ children, modal, params: { locale } }: Props) => {
             <NextIntlClientProvider locale={locale} messages={messages}>
               <Header />
               {children}
-              {modal}
+              {/* {modal} */}
               <Footer />
             </NextIntlClientProvider>
           </HydrationBoundary>
