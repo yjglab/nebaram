@@ -101,7 +101,7 @@ const SliderSection = () => {
         transition={{ type: "tween", duration: 0.5, delay: 1.6 }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="relative flex aspect-video w-[90%] items-center sm:w-[80%] lg:w-[900px] xl:w-[1000px]">
+        <div className="relative flex aspect-video w-[90%] items-center sm:w-[80%] lg:w-full">
           <Slider images={slideImages} setSlideNumber={setSlideNumber} />
         </div>
 

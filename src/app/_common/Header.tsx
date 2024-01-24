@@ -13,7 +13,6 @@ import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import DropMenu from "./DropMenu";
 import { Locale } from "@/messages";
 import IntlLink from "./IntlLink";
-import Link from "next/link";
 
 const supportedLocalesMap = [
   { locale: "ko", name: "한국어" },
@@ -24,7 +23,6 @@ const Header: FC = () => {
   const t = useTranslations("common");
   const router = useRouter();
   const pathname = usePathname();
-  const locale = useLocale();
 
   const [topIndicatorOn, setTopIndicatorOn] = useState(false);
   const [open, setOpen] = useState(false);
@@ -57,7 +55,7 @@ const Header: FC = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-black md:bg-black/50 backdrop-blur-md">
+    <nav className="fixed top-0 z-50 sm:pr-[15px] w-screen bg-black md:bg-black/50 backdrop-blur-md">
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative md:hidden" onClose={setOpen}>

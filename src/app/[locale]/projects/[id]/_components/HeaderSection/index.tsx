@@ -35,7 +35,7 @@ const HeaderSection: FC = () => {
     navigator.back();
   };
   return (
-    <section className="mx-auto mt-16 lg:max-w-6xl">
+    <section className="mx-auto mt-1 lg:max-w-6xl">
       <hgroup className="relative flex items-center justify-between gap-2 px-6 text-sm md:gap-0 lg:text-lg xl:px-4">
         <div
           onClick={handleNavigateBack}

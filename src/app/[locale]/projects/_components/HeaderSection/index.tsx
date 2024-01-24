@@ -21,7 +21,7 @@ const HeaderSection: FC<Props> = ({ category, setCategory }) => {
     setCategory(selectedCategory);
   };
   return (
-    <section className="mx-auto mt-24 max-w-2xl px-6 md:mt-32 lg:max-w-6xl ">
+    <section className="mx-auto max-w-2xl px-6 mt-24 md:mt-32 lg:max-w-6xl ">
       <header className="relative flex flex-col justify-between gap-2 text-sm md:gap-0 lg:text-lg">
         <div className="flex gap-1.5">
           <motion.div

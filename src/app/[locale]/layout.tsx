@@ -52,11 +52,12 @@ export async function generateMetadata({ params: { locale = "en" } }) {
 
 interface Props {
   children: React.ReactNode;
+  modal: React.ReactNode;
   params: {
     locale: string;
   };
 }
-const LocaleLayout = async ({ children, params: { locale } }: Props) => {
+const LocaleLayout = async ({ children, modal, params: { locale } }: Props) => {
   const messages: IntlMessages = await getMessages({ locale });
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
@@ -74,12 +75,13 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
         hrefLang="ko"
         href="https://nebaram.vercel.app/ko/"
       />
-      <body className={classNames(Pretendard.className)}>
+      <body className={classNames(Pretendard.className, "min-h-screen w-full")}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <QueryProvider>
             <HydrationBoundary state={dehydratedState}>
               <Header />
               {children}
+              {modal}
               <Footer />
             </HydrationBoundary>
           </QueryProvider>

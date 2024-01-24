@@ -100,7 +100,11 @@ const ProjectCard: FC<Props> = ({ data, index, category }) => {
           {data.description2}
         </div>
         {category === "development" ? (
-          <Link href={`${pathname}/${index + 1}`} className="text-amber-500">
+          <Link
+            href={`${pathname}/${index + 1}`}
+            scroll={false}
+            className="text-amber-500"
+          >
             {t("ProjectSection.projectDetailLabel")}
           </Link>
         ) : (
