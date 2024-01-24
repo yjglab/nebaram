@@ -7,6 +7,7 @@ interface Props {
 
 const MainPage = ({ params: { locale } }: Props) => {
   unstable_setRequestLocale(locale);
+
   return (
     <>
       <SplashScreen />

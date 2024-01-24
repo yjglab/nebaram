@@ -118,3 +118,13 @@
 - [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/components)
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/5bc77120-ce07-4052-9db3-460c082852b1)
+
+### Critical Errors
+
+###### Next App Router + Next-intl의 인터셉트 라우팅이 배포 환경에서 동작하지 않음.
+
+- [관련 디스커션#521](https://github.com/amannn/next-intl/issues/521)
+- [관련 디스커션#255](https://github.com/amannn/next-intl/issues/255)
+- next@14.0.4-canary.34 + next-intl@3.4.1 만이 인터셉트되지만 병렬 페이징이 되지 않음.
+- [...rest]를 제거하면 개발모드에서만 정상적으로 동작.
+- (https://github.com/amannn/next-intl/issues/642#issuecomment-1816537858)

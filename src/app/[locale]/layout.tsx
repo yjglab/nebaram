@@ -9,7 +9,11 @@ import {
   dehydrate,
 } from "@tanstack/react-query";
 import { locales } from "@/config";
-import { getMessages, getTranslations } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  unstable_setRequestLocale,
+} from "next-intl/server";
 import Header from "@app/_common/Header";
 import Footer from "@app/_common/Footer";
 
@@ -58,6 +62,8 @@ interface Props {
   };
 }
 const LocaleLayout = async ({ children, modal, params: { locale } }: Props) => {
+  unstable_setRequestLocale(locale);
+
   const messages: IntlMessages = await getMessages({ locale });
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
@@ -76,16 +82,16 @@ const LocaleLayout = async ({ children, modal, params: { locale } }: Props) => {
         href="https://nebaram.vercel.app/ko/"
       />
       <body className={classNames(Pretendard.className, "min-h-screen w-full")}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <QueryProvider>
-            <HydrationBoundary state={dehydratedState}>
+        <QueryProvider>
+          <HydrationBoundary state={dehydratedState}>
+            <NextIntlClientProvider locale={locale} messages={messages}>
               <Header />
               {children}
               {modal}
               <Footer />
-            </HydrationBoundary>
-          </QueryProvider>
-        </NextIntlClientProvider>
+            </NextIntlClientProvider>
+          </HydrationBoundary>
+        </QueryProvider>
       </body>
     </html>
   );

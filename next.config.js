@@ -9,7 +9,9 @@ const withPWA = require("next-pwa")({
 });
 
 /** @type {import('next').NextConfig} */
+// @ts-ignore
 const config = {
+  // @ts-ignore
   ...withPWA(),
 };
 
