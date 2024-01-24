@@ -34,7 +34,7 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
 
 const ProjectDetailPage = () => {
   return (
-    <main>
+    <main className="mt-16">
       <HeaderSection />
       <SliderSection />
       <DescriptSection />

@@ -33,7 +33,7 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
   } as Metadata;
 }
 
-const ProjectDetailPage = () => {
+const ProjectDetailOverlayPage = () => {
   return (
     <OverlayContainer>
       <HeaderSection />
@@ -43,4 +43,4 @@ const ProjectDetailPage = () => {
   );
 };
 
-export default ProjectDetailPage;
+export default ProjectDetailOverlayPage;
