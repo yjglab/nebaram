@@ -91,19 +91,22 @@
 
 ### 이슈
 
-> SEO와 성능 개선 작업
+> Next App Router + Next-intl의 인터셉트 라우팅이 배포 환경에서 동작하지 않음. (24.01.24)
+
+- [관련 디스커션#521](https://github.com/amannn/next-intl/issues/521)
+- [관련 디스커션#255](https://github.com/amannn/next-intl/issues/255)
+- [관련 디스커션#642](https://github.com/amannn/next-intl/issues/642#issuecomment-1816537858)
+- next@14.0.4-canary.34 + next-intl@3.4.1로 빌드파일에서 인터셉트 되는 것 확인. 병렬 페이징은 되지 않음.
+- 빌드파일 실행환경과 배포환경이 다름 (01.24)
+- [...rest]를 제거하면 개발모드에서만 정상 동작.
+
+> SEO와 성능 개선 작업 (23.10.11)
 
 초기 제작했던 페이지는 초기 렌더링(FCP)이 2.5초, 레이아웃 불안정(CLS) 지수가 0.6이었고 검색엔진 최적화(SEO) 지수가 68로 매우 낮아 노출 빈도에 취약한 상태였습니다. 성능을 올리기 위한 5개 성능 지표를 분석 후 개선 방법을 정리하여 적용했고, 사용 경험이 좋은 UI/UX를 제공하고자 대표 웹 사이트 3곳을 분석했습니다.
 
 성능 측면에서 이미지 크기를 모두 30KB 이내로 2배 이상 압축하였고 크기와 비율을 고정해 레이아웃 변동 가능성을 차단했습니다. 또한 이미지 설명과 사이트맵, 페이지별 메타데이터를 추가했으며 GIF와 같은 큰 이미지에 대한 로딩 상황 피드백을 제공했습니다. 렌더링 측면에서 레이아웃을 서버 사이드에서 프리렌더링하도록 변경하여 페이지가 로드되는 시간을 단축했습니다. 사용 경험 측면에서 통일된 폰트와 구분된 크기, 한정된 색상 적용으로 일관된 시각 경험을 제공하여 혼란을 최소화했고 트랜지션을 활용해 사용자의 움직임에 따른 즉각적 피드백을 만들었습니다.
 
 그 결과 5개 성능 지표의 평균 지수가 67에서 96으로 향상했고 FCP와 CLS, SEO를 각각 0.6초, 0.005, 100으로 개선할 수 있었습니다.
-
-> JSON 데이터 중 특정 부분에만 스타일 적용
-
-- 로드된 JSON 데이터 중 핵심 키워드, 헤더 등 특정 부분에만 스타일을 넣는 방식이 적용되지 않음-
-- Ex. "\<h1\>헤더\</h1\>나머지 텍스트"
-- 최신 라이브러리인 next-intl로 변경, 태그 번역을 지원하는 메서드를 적용하여 해결
 
 ### Version Release
 
@@ -118,13 +121,3 @@
 - [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/components)
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/5bc77120-ce07-4052-9db3-460c082852b1)
-
-### Critical Errors
-
-###### Next App Router + Next-intl의 인터셉트 라우팅이 배포 환경에서 동작하지 않음.
-
-- [관련 디스커션#521](https://github.com/amannn/next-intl/issues/521)
-- [관련 디스커션#255](https://github.com/amannn/next-intl/issues/255)
-- next@14.0.4-canary.34 + next-intl@3.4.1 만이 인터셉트되지만 병렬 페이징이 되지 않음.
-- [...rest]를 제거하면 개발모드에서만 정상적으로 동작.
-- (https://github.com/amannn/next-intl/issues/642#issuecomment-1816537858)

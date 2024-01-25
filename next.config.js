@@ -1,18 +1,11 @@
-// @ts-check
-
-const withNextIntl = require("next-intl/plugin")();
-const withPWA = require("next-pwa")({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === "development",
-});
-
 /** @type {import('next').NextConfig} */
-// @ts-ignore
-const config = {
-  // @ts-ignore
-  ...withPWA(),
+const nextConfig = {
+  reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
+  swcMinify: true,
+  // experimental: {
+  //   // Required: for next 13
+  //   appDir: true
+  // }
 };
 
-module.exports = withNextIntl(config);
+module.exports = nextConfig;
