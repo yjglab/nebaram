@@ -1,11 +1,12 @@
 import { clogo } from "@constants/images";
 import classNames from "classnames";
 import Image from "next/image";
+import { FC } from "react";
 
 interface Props {
   isOverlay?: boolean; // 오버레이 컨테이너에 대한 로더인지 여부
 }
-const LoadingScreen = ({ isOverlay = false }) => {
+const LoadingContainer: FC<Props> = ({ isOverlay = false }) => {
   return (
     <div
       className={classNames(
@@ -24,4 +25,4 @@ const LoadingScreen = ({ isOverlay = false }) => {
   );
 };
 
-export default LoadingScreen;
+export default LoadingContainer;

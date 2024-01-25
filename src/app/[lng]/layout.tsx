@@ -6,12 +6,12 @@ import {
   QueryClient,
   dehydrate,
 } from "@tanstack/react-query";
-import Header from "@app/_common/Header";
-import Footer from "@app/_common/Footer";
 import { fallbackLanguage, languages } from "@app/i18n/settings";
 import { dir } from "i18next";
 import { useTranslation } from "@app/i18n";
 import { Pretendard } from "@constants/fonts";
+import Navigation from "@app/_common/layouts/Navigation";
+import Footer from "@app/_common/layouts/Footer";
 
 export function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -59,6 +59,7 @@ interface Props {
   };
 }
 const LngRootLayout = async ({ children, params: { lng } }: Props) => {
+  const { t, i18n } = await useTranslation(lng, "common");
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
 
@@ -78,10 +79,10 @@ const LngRootLayout = async ({ children, params: { lng } }: Props) => {
       <body className={classNames(Pretendard.className, "min-h-screen w-full")}>
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
-            <Header />
+            <Navigation i18n={i18n} lng={lng} />
             {children}
             {/* {modal} */}
-            <Footer />
+            <Footer i18n={i18n} lng={lng} />
           </HydrationBoundary>
         </QueryProvider>
       </body>

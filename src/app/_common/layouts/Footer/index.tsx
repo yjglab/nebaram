@@ -1,82 +1,85 @@
-"use client";
-
-import { poppins } from "@constants/constant";
+import { poppins } from "@constants/fonts";
 import { clogo } from "@constants/images";
 import classNames from "classnames";
-import { useTranslations } from "next-intl";
+import { i18n } from "i18next";
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 
-const Footer: FC = () => {
-  const t = useTranslations("common");
+interface Props {
+  i18n: i18n;
+  lng: string;
+}
+const Footer: FC<Props> = ({ i18n, lng }) => {
+  const t = i18n.getFixedT(lng, "Footer");
+
   const footerMenu = [
     {
       id: 1,
-      name: t("Footer.services.name"),
+      name: t("services.name"),
       contents: [
         {
           id: 1,
-          name: t("Footer.services.content1.name"),
-          link: t("Footer.services.content1.link"),
+          name: t("services.content1.name"),
+          link: t("services.content1.link"),
         },
         {
           id: 2,
-          name: t("Footer.services.content2.name"),
-          link: t("Footer.services.content2.link"),
+          name: t("services.content2.name"),
+          link: t("services.content2.link"),
         },
         {
           id: 3,
-          name: t("Footer.services.content3.name"),
-          link: t("Footer.services.content3.link"),
+          name: t("services.content3.name"),
+          link: t("services.content3.link"),
         },
         {
           id: 4,
-          name: t("Footer.services.content4.name"),
-          link: t("Footer.services.content4.link"),
+          name: t("services.content4.name"),
+          link: t("services.content4.link"),
         },
       ],
     },
 
     {
       id: 2,
-      name: t("Footer.company.name"),
+      name: t("company.name"),
       contents: [
         {
           id: 1,
-          name: t("Footer.company.content1.name"),
-          link: t("Footer.company.content1.link"),
+          name: t("company.content1.name"),
+          link: t("company.content1.link"),
         },
         {
           id: 2,
-          name: t("Footer.company.content2.name"),
-          link: t("Footer.company.content2.link"),
+          name: t("company.content2.name"),
+          link: t("company.content2.link"),
         },
         {
           id: 3,
-          name: t("Footer.company.content3.name"),
-          link: t("Footer.company.content3.link"),
+          name: t("company.content3.name"),
+          link: t("company.content3.link"),
         },
         {
           id: 4,
-          name: t("Footer.company.content4.name"),
-          link: t("Footer.company.content4.link"),
+          name: t("company.content4.name"),
+          link: t("company.content4.link"),
         },
       ],
     },
     {
       id: 3,
-      name: t("Footer.contact.name"),
+      name: t("contact.name"),
       contents: [
         {
           id: 1,
-          name: t("Footer.contact.content1.name"),
-          link: t("Footer.contact.content1.link"),
+          name: t("contact.content1.name"),
+          link: t("contact.content1.link"),
         },
         {
           id: 2,
-          name: t("Footer.contact.content2.name"),
-          link: t("Footer.contact.content2.link"),
+          name: t("contact.content2.name"),
+          link: t("contact.content2.link"),
         },
       ],
     },
@@ -93,16 +96,16 @@ const Footer: FC = () => {
                 "ml-1.5 font-[500] text-lg"
               )}
             >
-              {t("Footer.companyName")}
+              {t("companyName")}
             </span>
           </Link>
 
           <hgroup className="mt-4 flex max-w-xs flex-col gap-1 text-sm ">
-            <h1>{t("Footer.description")}</h1>
+            <h1>{t("description")}</h1>
             <h2>
-              {t("Footer.presidentNameLabel")} | {t("Footer.presidentName")}
+              {t("presidentNameLabel")} | {t("presidentName")}
             </h2>
-            <h2> {t("Footer.email")}</h2>
+            <h2> {t("email")}</h2>
           </hgroup>
 
           <ul className="mt-8 flex gap-6">
@@ -155,7 +158,7 @@ const Footer: FC = () => {
         </div>
       </div>
 
-      <p className="text-xs text-gray-400">{t("Footer.copyright")}</p>
+      <p className="text-xs text-gray-400">{t("copyright")}</p>
     </footer>
   );
 };

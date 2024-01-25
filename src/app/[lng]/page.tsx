@@ -1,4 +1,4 @@
-import SplashScreen from "@app/_common/SplashScreen";
+import SplashScreenContainer from "@app/_common/containers/SplashScreenContainer";
 
 interface Props {
   params: { lng: string };
@@ -7,7 +7,7 @@ interface Props {
 export default async function MainPage({ params: { lng } }: Props) {
   return (
     <>
-      <SplashScreen />
+      <SplashScreenContainer lng={lng} />
       <main className="min-h-screen w-full"></main>
     </>
   );

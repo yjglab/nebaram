@@ -2,43 +2,30 @@
 
 import { Dialog, Menu, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { usePathname, useRouter } from "next/navigation";
-import { FC, Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
+import { FC, Fragment, useEffect, useState } from "react";
 import classNames from "classnames";
-import { poppins } from "@constants/constant";
 import { clogo } from "@constants/images";
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
-import DropMenu from "./DropMenu";
-import { Locale } from "@/messages";
-import IntlLink from "./IntlLink";
+import { languages } from "@app/i18n/settings";
+import Link from "next/link";
+import { poppins } from "@constants/fonts";
+import DropMenu from "@app/_common/parts/DropMenu";
+import { i18n } from "i18next";
 
-const supportedLocalesMap = [
-  { locale: "ko", name: "한국어" },
-  { locale: "en", name: "English" },
-];
-
-const Header: FC = () => {
-  const t = useTranslations("common");
-  const router = useRouter();
-  const pathname = usePathname();
-
+interface Props {
+  i18n: i18n;
+  lng: string;
+}
+const Navigation: FC<Props> = ({ i18n, lng }) => {
+  const [_, locale, ...rest] = usePathname().split("/");
   const [topIndicatorOn, setTopIndicatorOn] = useState(false);
   const [open, setOpen] = useState(false);
-  const onClose = useCallback(() => {
+  const onClose = () => {
     setOpen(false);
-  }, []);
-
-  const handleLanguageChange = (targetLocale: Locale) => {
-    const [_, locale, ...rest] = pathname.split("/");
-    if (locale !== targetLocale) {
-      router.replace(`/${targetLocale}/${rest.join("/")}`);
-    }
   };
-  const handleTopIndicator = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const t = i18n.getFixedT(lng, "Navigation");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,27 +82,29 @@ const Header: FC = () => {
                 {/* Links */}
                 <div className="space-y-5 px-4 py-6">
                   <div onClick={onClose} className="flow-root">
-                    <IntlLink href="/owner">{t("Header.owner")}</IntlLink>
+                    <Link href="/owner">{t("Header.owner")}</Link>
                   </div>
                   <div onClick={onClose} className="flow-root">
-                    <IntlLink href="/projects">{t("Header.projects")}</IntlLink>
+                    <Link href="/projects">{t("Header.projects")}</Link>
                   </div>
                   <div className="h-[1.2px] w-full bg-white/30" />
 
-                  {supportedLocalesMap.map((localeMap) => (
-                    <div key={localeMap.name} className="flow-root">
-                      <button
-                        aria-label="locale link button"
-                        key={localeMap.locale}
-                        onClick={() =>
-                          handleLanguageChange(localeMap.locale as Locale)
-                        }
-                        className="block p-2"
-                      >
-                        {localeMap.name}
-                      </button>
-                    </div>
-                  ))}
+                  {languages
+                    .filter((l) => lng !== l)
+                    .map((l, index) => {
+                      return (
+                        <div key={l} className="flow-root">
+                          <button
+                            className="block p-2"
+                            type="button"
+                            aria-label="Language switch button"
+                          >
+                            {index > 0 && " 또는 "}
+                            <Link href={`/${l}${rest.join("/")}`}>{l}</Link>
+                          </button>
+                        </div>
+                      );
+                    })}
                 </div>
 
                 <div className="absolute bottom-5 mt-2 w-full px-4 py-6">
@@ -134,7 +123,9 @@ const Header: FC = () => {
         <button
           type="button"
           aria-label="go to top button"
-          onClick={handleTopIndicator}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className="absolute right-[6vw] h-11 w-11 translate-y-[86vh] rounded-full bg-indigo-400 p-1 duration-200 hover:bg-indigo-500 md:right-10 md:h-12 md:w-12 md:translate-y-[92vh] md:p-1.5"
         >
           <ChevronUpIcon className="relative bottom-0.5" />
@@ -147,7 +138,7 @@ const Header: FC = () => {
             <div className="relative flex h-14 w-full items-center justify-between duration-200">
               <div className="flex">
                 <div className="ml-2 flex">
-                  <IntlLink className="flex items-center" href="/">
+                  <Link className="flex items-center" href="/">
                     <Image
                       src={clogo}
                       width={16}
@@ -162,34 +153,37 @@ const Header: FC = () => {
                     >
                       {t("Header.companyName")}
                     </span>
-                  </IntlLink>
+                  </Link>
                 </div>
                 <Popover.Group className="hidden items-center md:ml-8 md:flex md:self-stretch">
                   <div className="flex space-x-8">
-                    <IntlLink href="/owner">{t("Header.owner")}</IntlLink>
-                    <IntlLink href="/projects">{t("Header.projects")}</IntlLink>
+                    <Link href="/owner">{t("Header.owner")}</Link>
+                    <Link href="/projects">{t("Header.projects")}</Link>
                   </div>
                 </Popover.Group>
               </div>
               <div className="hidden md:block">
                 <DropMenu title="Language" chevron={true} width={24}>
-                  {supportedLocalesMap.map((localeMap) => (
-                    <Menu.Item key={localeMap.name}>
-                      {({ active }) => (
-                        <button
-                          aria-label="change language"
-                          onClick={() =>
-                            handleLanguageChange(localeMap.locale as Locale)
-                          }
-                          className={`${
-                            active ? "bg-indigo-400" : "text-black"
-                          } group flex w-full items-center rounded-md p-2 text-sm`}
-                        >
-                          {localeMap.name}
-                        </button>
-                      )}
-                    </Menu.Item>
-                  ))}
+                  {languages
+                    .filter((l) => lng !== l)
+                    .map((l, index) => {
+                      return (
+                        <Menu.Item key={l}>
+                          {({ active }) => (
+                            <button
+                              className={`${
+                                active ? "bg-indigo-400" : "text-black"
+                              } group flex w-full items-center rounded-md p-2 text-sm`}
+                              type="button"
+                              aria-label="Language switch button"
+                            >
+                              {index > 0 && " 또는 "}
+                              <Link href={`/${l}${rest.join("/")}`}>{l}</Link>
+                            </button>
+                          )}
+                        </Menu.Item>
+                      );
+                    })}
                 </DropMenu>
               </div>
 
@@ -213,4 +207,4 @@ const Header: FC = () => {
   );
 };
 
-export default Header;
+export default Navigation;

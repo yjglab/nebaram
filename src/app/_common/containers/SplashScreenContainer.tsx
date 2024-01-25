@@ -1,6 +1,3 @@
-"use client";
-
-import { poppins } from "@constants/constant";
 import { clogo } from "@constants/images";
 import classNames from "classnames";
 import Image from "next/image";
@@ -10,9 +7,10 @@ import {
   SplashLogoNameKeyframe,
 } from "@constants/animations";
 import styled from "@emotion/styled";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
+import { FC } from "react";
+import { fallbackLanguage, languages } from "@app/i18n/settings";
+import { useRouter } from "next/router";
+import { poppins } from "@constants/fonts";
 
 const SplashLogo = styled.div`
   width: 32px;
@@ -28,14 +26,16 @@ const SplashLogoName = styled.div`
   animation: ${SplashLogoNameKeyframe} 1.6s ease-out forwards;
 `;
 
-const SplashScreen = () => {
+interface Props {
+  lng: string;
+}
+
+const SplashScreenContainer: FC<Props> = async ({ lng }) => {
+  if (languages.indexOf(lng) < 0) lng = fallbackLanguage;
   const router = useRouter();
-  const locale = useLocale();
-  useEffect(() => {
-    setTimeout(() => {
-      router.replace(`/${locale}/owner`, { scroll: false });
-    }, 2600);
-  }, []);
+  setTimeout(() => {
+    router.replace(`/${lng}/owner`);
+  }, 2600);
 
   return (
     <section className="z-[100] top-0 left-0 w-screen h-screen bg-black overflow-hidden fixed">
@@ -55,4 +55,4 @@ const SplashScreen = () => {
     </section>
   );
 };
-export default SplashScreen;
+export default SplashScreenContainer;
