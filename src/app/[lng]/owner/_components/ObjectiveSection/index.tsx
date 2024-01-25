@@ -1,13 +1,16 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { FC, useState } from "react";
 import { motion } from "framer-motion";
-import AnimatedTitle from "@app/_common/AnimatedTitle";
-import Slider from "@app/_common/Slider";
+import { useTranslation } from "@app/i18n/client";
+import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
+import Slider from "@app/_common/parts/Slider";
 
-const ObjectiveSection: FC = () => {
-  const t = useTranslations("owner");
+interface Props {
+  lng: string;
+}
+const ObjectiveSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "owner");
   const [, setSlideNumber] = useState(0);
 
   const images = [
@@ -16,6 +19,7 @@ const ObjectiveSection: FC = () => {
     "/images/owner/objective-section/objective-03.jpg",
     "/images/owner/objective-section/objective-04.jpg",
   ];
+
   return (
     <section className="mb-0 mt-36 flex flex-col items-center overflow-x-hidden  pt-12 sm:py-36  md:py-24">
       <article className="z-20 flex w-full flex-col items-center text-center">

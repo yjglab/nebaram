@@ -1,21 +1,24 @@
-import { Metadata, NextPage } from "next";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { Metadata } from "next";
 import BannerSection from "./_components/BannerSection";
 import OutcomeSection from "./_components/OutcomeSection";
 import ObjectiveSection from "./_components/ObjectiveSection";
 import HistorySection from "./_components/HistorySection";
 import SkillSection from "./_components/SkillSection";
 import QuestionSection from "./_components/QuestionSection";
+import { fallbackLanguage, languages } from "@app/i18n/settings";
+import { useTranslation } from "@app/i18n";
+import { FC } from "react";
 
 interface Props {
   params: {
-    locale: string;
+    lng: string;
   };
 }
 
-export async function generateMetadata({ params: { locale = "en" } }: Props) {
-  unstable_setRequestLocale(locale);
-  const t = await getTranslations("metadata");
+export async function generateMetadata({ params: { lng } }: Props) {
+  if (languages.indexOf(lng) < 0) lng = fallbackLanguage;
+  const { t } = await useTranslation(lng, "metadata");
+
   return {
     title: t("owner.title"),
     description: t("owner.description"),
@@ -34,15 +37,15 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
   } as Metadata;
 }
 
-const OwnerPage: NextPage = () => {
+const OwnerPage: FC<Props> = ({ params: { lng } }) => {
   return (
     <main>
-      <BannerSection />
-      <OutcomeSection />
-      <ObjectiveSection />
-      <HistorySection />
-      <SkillSection />
-      <QuestionSection />
+      <BannerSection lng={lng} />
+      <OutcomeSection lng={lng} />
+      <ObjectiveSection lng={lng} />
+      <HistorySection lng={lng} />
+      <SkillSection lng={lng} />
+      <QuestionSection lng={lng} />
     </main>
   );
 };

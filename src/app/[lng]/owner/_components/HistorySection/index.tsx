@@ -1,12 +1,15 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { FC } from "react";
 import HistoryGraph from "./HistoryGraph";
-import AnimatedTitle from "@app/_common/AnimatedTitle";
+import { useTranslation } from "@app/i18n/client";
+import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
 
-const HistorySection: FC = () => {
-  const t = useTranslations("owner");
+interface Props {
+  lng: string;
+}
+const HistorySection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "owner");
 
   return (
     <section className="my-36 h-full w-full flex flex-col items-center overflow-hidden  px-4 lg:px-[10%] xl:px-[18%] 2xl:px-[28%]">
@@ -18,7 +21,7 @@ const HistorySection: FC = () => {
           {t("HistorySection.sectionTitle2")}
         </AnimatedTitle>
       </header>
-      <HistoryGraph />
+      <HistoryGraph lng={lng} />
     </section>
   );
 };

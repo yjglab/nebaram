@@ -14,7 +14,10 @@ const ScrollIndicator = styled.div`
   animation: ${ScrollIndicatorKeyframe} 2.5s ease-out infinite;
 `;
 
-const BannerSection: FC = () => {
+interface Props {
+  lng: string;
+}
+const BannerSection: FC<Props> = ({ lng }) => {
   const [bannerOn, setBannerOn] = useState(false);
 
   useEffect(() => {
@@ -26,7 +29,7 @@ const BannerSection: FC = () => {
   return (
     <section className="z-20 min-h-screen w-full flex-col relative flex h-full justify-center">
       <BannerVideo />
-      <BannerTitle bannerOn={bannerOn} />
+      <BannerTitle lng={lng} bannerOn={bannerOn} />
       <BannerCard />
       <ScrollIndicator className="z-20 mx-auto mt-16 md:mt-32">
         <ChevronDownIcon

@@ -1,16 +1,19 @@
+"use client";
+
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import { FC } from "react";
 import { bannerOnDelay } from ".";
-import { useTranslations } from "next-intl";
-import AnimatedTitle from "@app/_common/AnimatedTitle";
+import { useTranslation } from "@app/i18n/client";
+import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
 
 interface Props {
+  lng: string;
   bannerOn: boolean;
 }
 
-const BannerTitle: FC<Props> = ({ bannerOn }) => {
-  const t = useTranslations("owner");
+const BannerTitle: FC<Props> = ({ lng, bannerOn }) => {
+  const { t } = useTranslation(lng, "owner");
 
   return (
     <header className="z-20 mt-32 flex w-full flex-col items-center md:mt-40">

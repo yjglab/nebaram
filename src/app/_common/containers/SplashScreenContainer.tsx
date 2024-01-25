@@ -9,8 +9,8 @@ import {
 import styled from "@emotion/styled";
 import { FC } from "react";
 import { fallbackLanguage, languages } from "@app/i18n/settings";
-import { useRouter } from "next/router";
 import { poppins } from "@constants/fonts";
+import { useRouter } from "next/navigation";
 
 const SplashLogo = styled.div`
   width: 32px;

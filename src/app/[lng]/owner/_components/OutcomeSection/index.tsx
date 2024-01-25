@@ -1,13 +1,13 @@
 "use client";
 
-import { motion, useInView, useScroll } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { motion, useInView } from "framer-motion";
 import { FC, useEffect, useRef, useState } from "react";
 import styled from "@emotion/styled";
 import dayjs from "dayjs";
 import Image from "next/image";
 import OutcomeValue from "./OutcomeValue";
-import AnimatedTitle from "@app/_common/AnimatedTitle";
+import { useTranslation } from "@app/i18n/client";
+import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
 
 const ShadowBoxTop = styled.div`
   box-shadow: 0 30px 130px 90px black;
@@ -16,8 +16,11 @@ const ShadowBoxBottom = styled.div`
   box-shadow: 0 -30px 130px 90px black;
 `;
 
-const OutcomeSection: FC = () => {
-  const t = useTranslations("owner");
+interface Props {
+  lng: string;
+}
+const OutcomeSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "owner");
   const backgroundRef = useRef(null);
   const backgroundInView = useInView(backgroundRef);
   const [backgroundOpacity, setBackgroundOpacity] = useState(0);
@@ -41,13 +44,14 @@ const OutcomeSection: FC = () => {
     },
     {
       id: 3,
-      title: t.rich("OutcomeSection.title3", {
-        span: (children) => (
-          <span className="ml-1 text-sm font-medium text-amber-500">
-            {children}
-          </span>
-        ),
-      }),
+      // title: t.rich("OutcomeSection.title3", {
+      //   span: (children) => (
+      //     <span className="ml-1 text-sm font-medium text-amber-500">
+      //       {children}
+      //     </span>
+      //   ),
+      // }),
+      title: "rich 필요",
       value: t("OutcomeSection.value3", {
         services: 18,
       }),
@@ -55,13 +59,14 @@ const OutcomeSection: FC = () => {
     },
     {
       id: 4,
-      title: t.rich("OutcomeSection.title4", {
-        span: (children) => (
-          <span className="ml-1 text-sm font-medium text-amber-500">
-            {children}
-          </span>
-        ),
-      }),
+      // title: t.rich("OutcomeSection.title4", {
+      //   span: (children) => (
+      //     <span className="ml-1 text-sm font-medium text-amber-500">
+      //       {children}
+      //     </span>
+      //   ),
+      // }),
+      title: "rich 필요",
       value: t("OutcomeSection.value4", {
         awards: 3,
       }),

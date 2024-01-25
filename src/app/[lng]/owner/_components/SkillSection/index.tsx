@@ -1,17 +1,19 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { FC, MouseEvent, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import classNames from "classnames";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import AnimatedTitle from "@app/_common/AnimatedTitle";
+import { useTranslation } from "@app/i18n/client";
+import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
 
-const SkillSection: FC = () => {
-  const t = useTranslations("owner");
+interface Props {
+  lng: string;
+}
+const SkillSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "owner");
 
   const skillCard = [
     {
@@ -20,16 +22,18 @@ const SkillSection: FC = () => {
       src: "/images/owner/skill-section/skill_01.jpg",
       title1: t("SkillSection.skill1Title1"),
       title2: t("SkillSection.skill1Title2"),
-      description1: t.rich("SkillSection.skill1Description1", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-indigo-400">{children}</p>
-        ),
-      }),
-      description2: t.rich("SkillSection.skill1Description2", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-amber-500">{children}</p>
-        ),
-      }),
+      // description1: t.rich("SkillSection.skill1Description1", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
+      //   ),
+      // }),
+      // description2: t.rich("SkillSection.skill1Description2", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
+      //   ),
+      // }),
+      description1: "rich 필요",
+      description2: "rich 필요",
     },
     {
       id: 2,
@@ -37,16 +41,18 @@ const SkillSection: FC = () => {
       src: "/images/owner/skill-section/skill_02.jpeg",
       title1: t("SkillSection.skill2Title1"),
       title2: t("SkillSection.skill2Title2"),
-      description1: t.rich("SkillSection.skill2Description1", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-indigo-400">{children}</p>
-        ),
-      }),
-      description2: t.rich("SkillSection.skill2Description2", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-amber-500">{children}</p>
-        ),
-      }),
+      // description1: t.rich("SkillSection.skill2Description1", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
+      //   ),
+      // }),
+      // description2: t.rich("SkillSection.skill2Description2", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
+      //   ),
+      // }),
+      description1: "rich 필요",
+      description2: "rich 필요",
     },
     {
       id: 3,
@@ -54,16 +60,18 @@ const SkillSection: FC = () => {
       src: "/images/owner/skill-section/skill_03.jpeg",
       title1: t("SkillSection.skill3Title1"),
       title2: t("SkillSection.skill3Title2"),
-      description1: t.rich("SkillSection.skill3Description1", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-indigo-400">{children}</p>
-        ),
-      }),
-      description2: t.rich("SkillSection.skill3Description2", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-amber-500">{children}</p>
-        ),
-      }),
+      // description1: t.rich("SkillSection.skill3Description1", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
+      //   ),
+      // }),
+      // description2: t.rich("SkillSection.skill3Description2", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
+      //   ),
+      // }),
+      description1: "rich 필요",
+      description2: "rich 필요",
     },
     {
       id: 4,
@@ -71,16 +79,18 @@ const SkillSection: FC = () => {
       src: "/images/owner/skill-section/skill_04.jpeg",
       title1: t("SkillSection.skill4Title1"),
       title2: t("SkillSection.skill4Title2"),
-      description1: t.rich("SkillSection.skill4Description1", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-indigo-400">{children}</p>
-        ),
-      }),
-      description2: t.rich("SkillSection.skill4Description2", {
-        span: (children) => (
-          <p className="mb-1 font-medium text-amber-500">{children}</p>
-        ),
-      }),
+      // description1: t.rich("SkillSection.skill4Description1", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
+      //   ),
+      // }),
+      // description2: t.rich("SkillSection.skill4Description2", {
+      //   span: (children) => (
+      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
+      //   ),
+      // }),
+      description1: "rich 필요",
+      description2: "rich 필요",
     },
   ];
   const [skillCardHover, setSkillCardHover] = useState("");

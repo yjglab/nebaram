@@ -1,10 +1,15 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useTranslation } from "@app/i18n/client";
+import { FC } from "react";
 
-const QuestionSection = () => {
-  const t = useTranslations("owner");
+interface Props {
+  lng: string;
+}
+const QuestionSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "owner");
+
   const questionData = [
     {
       id: 0,

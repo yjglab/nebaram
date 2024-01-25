@@ -1,9 +1,13 @@
-import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import classNames from "classnames";
+import { useTranslation } from "@app/i18n/client";
+import { FC } from "react";
 
-const HistoryGraph = () => {
-  const t = useTranslations("owner");
+interface Props {
+  lng: string;
+}
+const HistoryGraph: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "owner");
   const histories = Array.from(
     {
       length: parseInt(t(`HistorySection.contentsCount`)),
@@ -13,12 +17,13 @@ const HistoryGraph = () => {
     id: id,
     year: t(`HistorySection.contents.${id}.year`),
     month: t(`HistorySection.contents.${id}.month`),
-    content: t.rich(`HistorySection.contents.${id}.content`, {
-      span: (children) => <span className="text-indigo-400 ">{children}</span>,
-      div: (children) => (
-        <div className="text-sm text-gray-200">{children}</div>
-      ),
-    }),
+    // content: t.rich(`HistorySection.contents.${id}.content`, {
+    //   span: (children) => <span className="text-indigo-400 ">{children}</span>,
+    //   div: (children) => (
+    //     <div className="text-sm text-gray-200">{children}</div>
+    //   ),
+    // }),
+    content: "rich 필요",
   }));
 
   return (

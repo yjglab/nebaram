@@ -1,7 +1,7 @@
-import LoadingScreen from "@app/_common/LoadingScreen";
+import LoadingContainer from "@app/_common/containers/LoadingContainer";
 
 const Loading = () => {
-  return <LoadingScreen />;
+  return <LoadingContainer />;
 };
 
 export default Loading;
