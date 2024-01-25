@@ -1,6 +1,4 @@
-import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
-import { NextIntlClientProvider } from "next-intl";
+import type { Metadata } from "next";
 import classNames from "classnames";
 import QueryProvider from "@app/(providers)/QueryProvider";
 import {
@@ -8,27 +6,26 @@ import {
   QueryClient,
   dehydrate,
 } from "@tanstack/react-query";
-import { locales } from "@/config";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
 import Header from "@app/_common/Header";
 import Footer from "@app/_common/Footer";
-
-const Pretendard = localFont({
-  src: "../../../public/fonts/PretendardVariable.woff2",
-});
+import { fallbackLanguage, languages } from "@app/i18n/settings";
+import { dir } from "i18next";
+import { useTranslation } from "@app/i18n";
+import { Pretendard } from "@constants/fonts";
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return languages.map((lng) => ({ lng }));
 }
 
-export async function generateMetadata({ params: { locale = "en" } }) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
+export async function generateMetadata({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
+  if (languages.indexOf(lng) < 0) lng = fallbackLanguage;
+  const { t } = await useTranslation(lng, "metadata");
   return {
-    metadataBase: new URL(`https://nebaram.vercel.app/${locale}`),
+    metadataBase: new URL(`https://nebaram.vercel.app/${lng}`),
     title: {
       template: `%s | ${t("app.title")}`,
       default: t("app.title"),
@@ -38,9 +35,9 @@ export async function generateMetadata({ params: { locale = "en" } }) {
       // sns platform share data
       title: t("app.title"),
       description: t("app.description"),
-      url: `https://nebaram.vercel.app/${locale}`,
+      url: `https://nebaram.vercel.app/${lng}`,
       siteName: t("app.title"),
-      locale: locale === "ko" ? "ko_KR" : locale === "en" ? "en_US" : "en_US",
+      locale: lng === "ko" ? "ko_KR" : lng === "en" ? "en_US" : "en_US",
       images: [
         {
           url: "/manifest/opengraph.jpg",
@@ -58,18 +55,15 @@ interface Props {
   children: React.ReactNode;
   // modal: React.ReactNode;
   params: {
-    locale: string;
+    lng: string;
   };
 }
-const LocaleLayout = async ({ children, params: { locale } }: Props) => {
-  unstable_setRequestLocale(locale);
-
-  const messages: IntlMessages = await getMessages({ locale });
+const LngRootLayout = async ({ children, params: { lng } }: Props) => {
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
 
   return (
-    <html lang={locale}>
+    <html lang={lng} dir={dir(lng)}>
       <link
         rel="canonical"
         hrefLang="en-US"
@@ -84,12 +78,10 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
       <body className={classNames(Pretendard.className, "min-h-screen w-full")}>
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
-            <NextIntlClientProvider locale={locale} messages={messages}>
-              <Header />
-              {children}
-              {/* {modal} */}
-              <Footer />
-            </NextIntlClientProvider>
+            <Header />
+            {children}
+            {/* {modal} */}
+            <Footer />
           </HydrationBoundary>
         </QueryProvider>
       </body>
@@ -97,4 +89,4 @@ const LocaleLayout = async ({ children, params: { locale } }: Props) => {
   );
 };
 
-export default LocaleLayout;
+export default LngRootLayout;
