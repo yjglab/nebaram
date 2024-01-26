@@ -6,83 +6,28 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
 
+interface FooterMenu {
+  name: string;
+  contents: { [key: string]: string }[];
+}
 interface Props {
   i18n: i18n;
   lng: string;
 }
 const Footer: FC<Props> = ({ i18n, lng }) => {
   const t = i18n.getFixedT(lng, "common");
-
-  const footerMenu = [
-    {
-      id: 1,
-      name: t("Footer.services.name"),
-      contents: [
-        {
-          id: 1,
-          name: t("Footer.services.content1.name"),
-          link: t("Footer.services.content1.link"),
-        },
-        {
-          id: 2,
-          name: t("Footer.services.content2.name"),
-          link: t("Footer.services.content2.link"),
-        },
-        {
-          id: 3,
-          name: t("Footer.services.content3.name"),
-          link: t("Footer.services.content3.link"),
-        },
-        {
-          id: 4,
-          name: t("Footer.services.content4.name"),
-          link: t("Footer.services.content4.link"),
-        },
-      ],
-    },
-    {
-      id: 2,
-      name: t("Footer.company.name"),
-      contents: [
-        {
-          id: 1,
-          name: t("Footer.company.content1.name"),
-          link: t("Footer.company.content1.link"),
-        },
-        {
-          id: 2,
-          name: t("Footer.company.content2.name"),
-          link: t("Footer.company.content2.link"),
-        },
-        {
-          id: 3,
-          name: t("Footer.company.content3.name"),
-          link: t("Footer.company.content3.link"),
-        },
-        {
-          id: 4,
-          name: t("Footer.company.content4.name"),
-          link: t("Footer.company.content4.link"),
-        },
-      ],
-    },
-    {
-      id: 3,
-      name: t("Footer.contact.name"),
-      contents: [
-        {
-          id: 1,
-          name: t("Footer.contact.content1.name"),
-          link: t("Footer.contact.content1.link"),
-        },
-        {
-          id: 2,
-          name: t("Footer.contact.content2.name"),
-          link: t("Footer.contact.content2.link"),
-        },
-      ],
-    },
+  const footerMenu: FooterMenu[] = [
+    t("Footer.services", {
+      returnObjects: true,
+    }),
+    t("Footer.company", {
+      returnObjects: true,
+    }),
+    t("Footer.contact", {
+      returnObjects: true,
+    }),
   ];
+
   return (
     <footer className="mx-auto mt-20 max-w-screen-xl space-y-8 px-6 py-16 sm:px-6 md:mt-32 lg:max-w-6xl lg:space-y-16 lg:px-8">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -141,11 +86,11 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
 
         <div className="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-4">
           {footerMenu.map((menu) => (
-            <div key={menu.id}>
+            <div key={menu.name}>
               <h1 className="font-medium">{menu.name}</h1>
               <ul className="mt-4 space-y-3 text-sm md:mt-6 md:space-y-4">
                 {menu.contents.map((content) => (
-                  <li key={content.id}>
+                  <li key={content.name}>
                     <a
                       rel="noreferrer"
                       target="_blank"

@@ -15,71 +15,58 @@
 
     "services": {
       "name": "서비스",
-      "content1": {
-        "name": "BlooBolt",
-        "link": "https://bloobolt.com"
-      },
-      "content2": {
-        "name": "BlooWays",
-        "link": "https://blooways.online"
-      },
-      "content3": {
-        "name": "Museum Union Gallery",
-        "link": "https://mug-lab.fly.dev"
-      },
-      "content4": {
-        "name": "TIRA",
-        "link": "https://tira-santorini.fly.dev"
-      }
-    },
-    "squares": {
-      "name": "스퀘어",
-      "content1": {
-        "name": "네바람 전략기획",
-        "link": "/"
-      },
-      "content2": {
-        "name": "네바람 디자인",
-        "link": "/"
-      },
-      "content3": {
-        "name": "네바람 프론트엔드",
-        "link": "/"
-      },
-      "content4": {
-        "name": "네바람 백엔드",
-        "link": "/"
-      }
+      "contents": [
+        {
+          "name": "BlooBolt",
+          "link": "https://bloobolt.com"
+        },
+        {
+          "name": "BlooWays",
+          "link": "https://blooways.online"
+        },
+        {
+          "name": "Museum Union Gallery",
+          "link": "https://mug-lab.fly.dev"
+        },
+        {
+          "name": "TIRA",
+          "link": "https://tira-santorini.fly.dev"
+        }
+      ]
     },
     "company": {
       "name": "브랜드",
-      "content1": {
-        "name": "브랜드 소개",
-        "link": "/"
-      },
-      "content2": {
-        "name": "대표 개발자",
-        "link": "/owner"
-      },
-      "content3": {
-        "name": "프로젝트",
-        "link": "/projects"
-      },
-      "content4": {
-        "name": "블로그",
-        "link": "https://yjg-lab.tistory.com"
-      }
+      "contents": [
+        {
+          "name": "브랜드 소개",
+          "link": "/"
+        },
+        {
+          "name": "대표 개발자",
+          "link": "/owner"
+        },
+        {
+          "name": "프로젝트",
+          "link": "/projects"
+        },
+        {
+          "name": "블로그",
+          "link": "https://yjg-lab.tistory.com"
+        }
+      ]
     },
     "contact": {
       "name": "문의",
-      "content1": {
-        "name": "서비스 문의",
-        "link": "mailto:yjgdesign@gmail.com"
-      },
-      "content2": {
-        "name": "광고 문의",
-        "link": "mailto:yjgdesign@gmail.com"
-      }
+      "contents": [
+        {
+          "name": "서비스 문의",
+          "link": "mailto:yjgdesign@gmail.com"
+        },
+        {
+          "name": "광고 문의",
+          "link": "mailto:yjgdesign@gmail.com"
+        }
+      ]
     }
   }
 }
