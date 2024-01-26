@@ -4,6 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 acceptLanguage.languages(languages);
 
+const PUBLIC_PATH = /\.(.*)$/;
+
 export const config = {
   // matcher: '/:lng*'
   matcher: ["/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)"],
@@ -17,6 +19,10 @@ export function middleware(req: NextRequest) {
     return NextResponse.next();
 
   let lng: string | undefined | null;
+  // public 파일 접근인 경우 리디렉션 하지 않음
+  if (PUBLIC_PATH.test(req.nextUrl.pathname)) {
+    return;
+  }
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value);
   if (!lng) {

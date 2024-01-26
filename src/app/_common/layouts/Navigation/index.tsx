@@ -16,28 +16,13 @@ interface Props {
   lng: string;
 }
 const Navigation: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "common");
   const [_, locale, ...rest] = usePathname().split("/");
-  const [topIndicatorOn, setTopIndicatorOn] = useState(false);
   const [open, setOpen] = useState(false);
 
   const onClose = () => {
     setOpen(false);
   };
-  const { t } = useTranslation(lng, "common");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 500) {
-        setTopIndicatorOn(true);
-      } else {
-        setTopIndicatorOn(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <nav className="fixed top-0 z-50 sm:pr-[15px] w-screen bg-black md:bg-black/50 backdrop-blur-md">
