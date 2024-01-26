@@ -6,6 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "@app/i18n/client";
 import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
+import { ProjectDevelopment } from "../../page";
 
 interface Props {
   lng: string;
@@ -13,27 +14,15 @@ interface Props {
 const HeaderSection: FC<Props> = ({ lng }) => {
   const { t } = useTranslation(lng, "projects");
   const { projectId } = useParams() as { projectId: string };
-  const projectData = {
-    title1: t(
-      `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}.title1`
-    ),
-    title2: t(
-      `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}.title2`
-    ),
-    details: {
-      header: t(
-        `ProjectSection.projectsDevelopment.${
-          parseInt(projectId) - 1
-        }.details.header`
-      ),
-      headerDescription: t(
-        `ProjectSection.projectsDevelopment.${
-          parseInt(projectId) - 1
-        }.details.headerDescription`
-      ),
-    },
-  };
   const navigator = useRouter();
+
+  const projectData: ProjectDevelopment = t(
+    `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}`,
+    {
+      returnObjects: true,
+    }
+  );
+
   const handleNavigateBack = () => {
     navigator.back();
   };
@@ -51,7 +40,7 @@ const HeaderSection: FC<Props> = ({ lng }) => {
             transition={{ type: "tween", duration: 0.5, delay: 0 }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            {projectData.title1}
+            {projectData.title[0]}
           </motion.h1>
         </div>
         <motion.h2
@@ -61,13 +50,13 @@ const HeaderSection: FC<Props> = ({ lng }) => {
           transition={{ type: "tween", duration: 0.5, delay: 0 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          {projectData.title2}
+          {projectData.title[1]}
         </motion.h2>
       </hgroup>
       <header className="mt-20 lg:mt-24">
         <h1 className="px-20">
           <AnimatedTitle align="center" size="xl">
-            {projectData.details.header}
+            {projectData.details.header.title}
           </AnimatedTitle>
         </h1>
         <motion.h2
@@ -77,7 +66,7 @@ const HeaderSection: FC<Props> = ({ lng }) => {
           transition={{ type: "tween", duration: 0.5, delay: 1.2 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          {projectData.details.headerDescription}
+          {projectData.details.header.description}
         </motion.h2>
       </header>
     </section>

@@ -32,6 +32,52 @@ export async function generateMetadata({
   } as Metadata;
 }
 
+export interface ProjectDevelopment {
+  projectCategory: string;
+  date: string;
+  thumbnailSrc: string;
+  title: string;
+  description: string;
+  skills: string;
+  details: {
+    github: {
+      label: string;
+      link: string;
+    };
+    production: {
+      label: string;
+      link: string;
+    };
+    header: {
+      title: string;
+      description: string;
+    };
+    outline: {
+      label: string;
+      description: string;
+    };
+    implements: {
+      label: string;
+      description: string[];
+    };
+    issues: {
+      label: string;
+      link: string;
+      description: string;
+    };
+    skills: {
+      label: string;
+      description: string[];
+    };
+    slides: {
+      scope: string;
+      src: string;
+      title: string;
+      description: string;
+    }[];
+  };
+}
+
 interface Props {
   params: {
     lng: string;

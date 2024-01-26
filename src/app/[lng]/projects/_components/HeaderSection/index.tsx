@@ -13,10 +13,10 @@ interface Props {
 const HeaderSection: FC<Props> = ({ lng, category, changeCategory }) => {
   const { t } = useTranslation(lng, "projects");
   const headerCategories = [
-    [t("HeaderSection.category1"), "all"],
-    [t("HeaderSection.category2"), "development"],
-    [t("HeaderSection.category3"), "design"],
-    [t("HeaderSection.category4"), "ongoing"],
+    [t("HeaderSection.categories.0"), "all"],
+    [t("HeaderSection.categories.1"), "development"],
+    [t("HeaderSection.categories.2"), "design"],
+    [t("HeaderSection.categories.3"), "ongoing"],
   ];
 
   return (

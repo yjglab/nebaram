@@ -1,9 +1,6 @@
 {
   "HeaderSection": {
-    "category1": "모든 프로젝트",
-    "category2": "개발",
-    "category3": "디자인",
-    "category4": "제작중"
+    "categories": ["모든 프로젝트", "개발", "디자인", "제작중"]
   },
   "ProjectSection": {
     "sectionTitle": "프로젝트 둘러보기",
@@ -12,9 +9,6 @@
     "projectSkillsLabel": "사용된 기술",
     "projectDetailLabel": "자세히 보기",
 
-    "projectsDesignCount": "4",
-    "projectsDevelopmentCount": "5",
-    "projectsOngoingCount": "1",
     "projectsDesign": [
       {
         "projectCategory": "Web Motion Poster",
@@ -62,37 +56,45 @@
         "projectCategory": "Front-end Development",
         "date": "2023.08",
         "thumbnailSrc": "/images/projects/project-section/nebaram_thumb.jpeg",
-        "title1": "Nebaram",
-        "title2": "개발자를 소개하는 퍼스널 브랜드",
-        "description1": "네바람은 웹 개발자로서 네 가지 역량을 갖춘 저를 표현하는 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 알리고 싶어 제작했어요.",
-        "description2": "TypeScript, React.js, Next.js, Next-intl, TailwindCSS, Emotion, Vercel",
+        "title": ["Nebaram", "개발자를 소개하는 퍼스널 브랜드"],
+        "description": "네바람은 웹 개발자로서 네 가지 역량을 갖춘 저를 표현하는 퍼스널 브랜드에요. 네바람을 통해서 저는 어떤 목표를 가진 개발자인지, 어떤 프로젝트를 진행했었고 어떤 강점들이 있는 지를 알리고 싶어 제작했어요.",
+        "skills": "TypeScript, React.js, Next.js, Next-intl, TailwindCSS, Emotion, Vercel",
 
         "details": {
-          "githubLinkLabel": "프로젝트 위키 GitHub",
-          "github": "https://github.com/yjglab/nebaram",
-          "productionLinkLabel": "프로덕션 페이지",
-          "production": "https://nebaram.vercel.app",
-
-          "header": "새 바람을 실현할 첫 도약",
-          "headerDescription": "네 가지 주요 역량을 갖춘 웹 개발자를 소개하기 위해 개발한 퍼스널 브랜드",
-
-          "outlineLabel": "개요",
-          "outline": "<span>기획 의도</span><div>기존에 제작한 개인 포트폴리오 사이트를 리뉴얼한 퍼스널 브랜드 사이트입니다. 디자인을 새로 기획하면서 애니메이션 효과를 추가하고 페이지 렌더링 방식을 서버단으로 변경하면서 코드를 다시 작성해 제작했습니다. UI 기획단계에서는 Apple의 Human Interface Guideline을 반영하여 설계했습니다. 저의 페이지를 들어오는 사용자들에게 직관적이고 일관된 경험을 제공하고자 함이며 추후 저의 브랜드 명으로 제작된 서비스의 스토어 출시를 고려해 반영하게 되었습니다.</div><div>Plain React에서 NextJS로 변경하게 된 이유는 오직 서버사이드 렌더링을 위함입니다. 네바람 웹은 앞으로 거대해질 것입니다. CSR로 이루어지는 싱글페이지 웹에서 복잡한 애니메이션, 데이터 번들이 계속해서 추가된다면 사용자 경험에 영향이 갈 것이라 판단하여 렌더링 방식을 함께 변경하게 되었습니다.</div>",
-          "implementsLabel": "구현 기능",
-          "implementsCount": "1",
-          "implements": [
-            "<span>공통</span><div>스크롤/마우스 애니메이션, 모션 슬라이더, 다국어 라우팅 및 번역, 서버사이드 렌더링, 반응형 웹 스크린, PWA</div>"
-          ],
-          "issuesLabel": "이슈",
-          "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
-          "issues": "<span>SEO와 성능 개선 작업</span><div>초기 제작했던 페이지는 초기 렌더링(FCP)이 2.5초, 레이아웃 불안정(CLS) 지수가 0.6이었고 검색엔진 최적화(SEO) 지수가 68로 매우 낮아 노출 빈도에 취약한 상태였습니다. 성능을 올리기 위한 5개 성능 지표를 분석 후 개선 방법을 정리하여 적용했고, 사용 경험이 좋은 UI/UX를 제공하고자 대표 웹 사이트 3곳을 분석했습니다. 성능 측면에서 이미지 크기를 모두 30KB 이내로 2배 이상 압축하였고 크기와 비율을 고정해 레이아웃 변동 가능성을 차단했습니다. 또한 이미지 설명과 사이트맵, 페이지별 메타데이터를 추가했으며 GIF와 같은 큰 이미지에 대한 로딩 상황 피드백을 제공했습니다. 렌더링 측면에서 레이아웃을 서버 사이드에서 프리렌더링하도록 변경하여 페이지가 로드되는 시간을 단축했습니다. 사용 경험 측면에서 통일된 폰트와 구분된 크기, 한정된 색상 적용으로 일관된 시각 경험을 제공하여 혼란을 최소화했고 트랜지션을 활용해 사용자의 움직임에 따른 즉각적 피드백을 만들었습니다. 그 결과 5개 성능 지표의 평균 지수가 67에서 96으로 향상했고 FCP와 CLS, SEO를 각각 0.6초, 0.005, 100으로 개선할 수 있었습니다.</div>",
-          "skillsLabel": "기술",
-          "skillsCount": "2",
-          "skills": [
-            "<span>Front-end</span><div>TypeScript React Next.js Next-intl(i18n Support) TailwindCSS Emotion</div>",
-            "<span>Deploy</span><div>Vercel</div>"
-          ],
-          "slidesCount": "6",
+          "github": {
+            "label": "프로젝트 위키 GitHub",
+            "link": "https://github.com/yjglab/nebaram"
+          },
+          "production": {
+            "label": "프로덕션 페이지",
+            "link": "https://nebaram.vercel.app"
+          },
+          "header": {
+            "title": "새 바람을 실현할 첫 도약",
+            "description": "네 가지 주요 역량을 갖춘 웹 개발자를 소개하기 위해 개발한 퍼스널 브랜드"
+          },
+          "outline": {
+            "label": "개요",
+            "description": "<0>기획 의도</0><1>기존에 제작한 개인 포트폴리오 사이트를 리뉴얼한 퍼스널 브랜드 사이트입니다. 디자인을 새로 기획하면서 애니메이션 효과를 추가하고 페이지 렌더링 방식을 서버단으로 변경하면서 코드를 다시 작성해 제작했습니다. UI 기획단계에서는 Apple의 Human Interface Guideline을 반영하여 설계했습니다. 저의 페이지를 들어오는 사용자들에게 직관적이고 일관된 경험을 제공하고자 함이며 추후 저의 브랜드 명으로 제작된 서비스의 스토어 출시를 고려해 반영하게 되었습니다.</1><2>Plain React에서 NextJS로 변경하게 된 이유는 오직 서버사이드 렌더링을 위함입니다. 네바람 웹은 앞으로 거대해질 것입니다. CSR로 이루어지는 싱글페이지 웹에서 복잡한 애니메이션, 데이터 번들이 계속해서 추가된다면 사용자 경험에 영향이 갈 것이라 판단하여 렌더링 방식을 함께 변경하게 되었습니다.</2>"
+          },
+          "implements": {
+            "label": "구현 기능",
+            "description": [
+              "<0>공통</0><1>스크롤/마우스 애니메이션, 모션 슬라이더, 다국어 라우팅 및 번역, 서버사이드 렌더링, 반응형 웹 스크린, PWA</1>"
+            ]
+          },
+          "issues": {
+            "label": "이슈",
+            "link": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
+            "description": "<0>SEO와 성능 개선 작업</0><1>초기 제작했던 페이지는 초기 렌더링(FCP)이 2.5초, 레이아웃 불안정(CLS) 지수가 0.6이었고 검색엔진 최적화(SEO) 지수가 68로 매우 낮아 노출 빈도에 취약한 상태였습니다. 성능을 올리기 위한 5개 성능 지표를 분석 후 개선 방법을 정리하여 적용했고, 사용 경험이 좋은 UI/UX를 제공하고자 대표 웹 사이트 3곳을 분석했습니다. 성능 측면에서 이미지 크기를 모두 30KB 이내로 2배 이상 압축하였고 크기와 비율을 고정해 레이아웃 변동 가능성을 차단했습니다. 또한 이미지 설명과 사이트맵, 페이지별 메타데이터를 추가했으며 GIF와 같은 큰 이미지에 대한 로딩 상황 피드백을 제공했습니다. 렌더링 측면에서 레이아웃을 서버 사이드에서 프리렌더링하도록 변경하여 페이지가 로드되는 시간을 단축했습니다. 사용 경험 측면에서 통일된 폰트와 구분된 크기, 한정된 색상 적용으로 일관된 시각 경험을 제공하여 혼란을 최소화했고 트랜지션을 활용해 사용자의 움직임에 따른 즉각적 피드백을 만들었습니다. 그 결과 5개 성능 지표의 평균 지수가 67에서 96으로 향상했고 FCP와 CLS, SEO를 각각 0.6초, 0.005, 100으로 개선할 수 있었습니다.</1>"
+          },
+          "skills": {
+            "label": "기술",
+            "description": [
+              "<0>Front-end</0><1>TypeScript React Next.js Next-intl(i18n Support) TailwindCSS Emotion</1>",
+              "<0>Deploy</0><1>Vercel</1>"
+            ]
+          },
           "slides": [
             {
               "scope": "개발자 소개",
@@ -137,41 +139,52 @@
         "projectCategory": "Full Stack Development",
         "date": "2023.03",
         "thumbnailSrc": "/images/projects/project-section/bloobolt_thumb.jpg",
-        "title1": "BlooBolt",
-        "title2": "서비스 개발 직무자들의 소통 커뮤니티 (서비스 종료)",
-        "description1": "소프트웨어 개발자와 기획자, 디자인 직무자들이 소통의 어려움을 해결하고 서로의 포지션의 역할을 이해하여 서비스를 원만히 만들게하고자 기획한 소통 커뮤니티에요.",
-        "description2": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
+        "title": [
+          "BlooBolt",
+          "서비스 개발 직무자들의 소통 커뮤니티 (서비스 종료)"
+        ],
+        "description": "소프트웨어 개발자와 기획자, 디자인 직무자들이 소통의 어려움을 해결하고 서로의 포지션의 역할을 이해하여 서비스를 원만히 만들게하고자 기획한 소통 커뮤니티에요.",
+        "skills": "TypeScript, React.js, Next.js, Redux Toolkit, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3+Lambda",
 
         "details": {
-          "githubLinkLabel": "프로젝트 위키 GitHub",
-          "github": "https://github.com/yjglab/BlooBolt/wiki",
-          "productionLinkLabel": "프로덕션 페이지",
-          "production": "https://bloobolt.com",
-
-          "header": "원만한 소통을 위한 모두의 공간",
-          "headerDescription": "서비스 개발에 필요한 기획자, 개발자, 디자이너 실무자들이 모여 기술적 소통의 어려움을 줄이고 서로를 알아가는 웹 서비스",
-
-          "outlineLabel": "개요",
-          "outline": "<span>기획 의도</span><div>학교에서 여러 번의 팀 프로젝트를 해보며 느낀 소통의 불편함을 느끼고 기획했습니다. 개발자 팀원과 디자이너, 기획 조장들이 서로의 기술적 이해도에 차이가 컸고 갈등 상황이 발생하는 것을 보며 함께 팀을 만들 준비를 하거나 팀 안에 있는 직무자들이 서로 다른 포지션에 관해, 또는 같은 직무에 관해 모르는 것을 물어보고 최신 트렌드 정보를 공유할 수 있는 실무자들만의 공간을 만들고 싶었습니다.</div><div>포스트 카드로 소통하는 방식이며 텍스트와 사진, 코멘트를 기록할 수 있고 프로필 제작, 팔로우, 멤버 랭크 시스템 등 여러 가지 기능을 담았고 현재도 꾸준히 업데이트 중입니다. 모든 멤버의 프로필을 각각 포지션별로 다른 색상과 랭크, 실무에서의 현재 역할 정보를 부여해 이 멤버가 어떤 직무자인지, 주니어인지 시니어인지 등을 쉽게 알아볼 수 있다는 점이 다른 서비스와의 차별점입니다.</div>",
-          "implementsLabel": "구현 기능",
-          "implementsCount": "3",
-          "implements": [
-            "<span>사용자</span><div>일반/소셜 회원 가입, 가입 이메일 인증, 로그인, 비밀번호 변경/재발급, 프로필 아바타 및 내용 제작, 사용자 랭크, 트레이스(팔로우), 사용자 신고, 사용자 이용 정지</div>",
-            "<span>포스트</span><div>포스트 생성/삭제/수정/블라인드, 다중 이미지 업로드, 이미지 슬라이더, 이미지 압축, 포스트 공감 기능, 코멘트 생성/수정/삭제, 포스트 검색, 해시태그 검색, 무한 스크롤링 포스트 로드, 추천 포스트 로드</div>",
-            "<span>공통</span><div>서버사이드 렌더링, 반응형 웹 스크린</div>"
-          ],
-          "issuesLabel": "이슈",
-          "issuesLink": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
-          "issues": "<span>스크롤 시 데이터가 몇 차례 추가 로드되지 않는 현상</span><div>기존 scroll 메서드를 사용함에 따라 분기 처리가 많은 이벤트 핸들러에서 데이터 로드 요청이 누락되는 상황이 발생했습니다. Intersection Observer를 적용해 코드를 리팩토링 하고 여러번의 이벤트 요청 방식을 제거하여 성능을 함께 개선했습니다.</div><a>자세히 보기</a>",
-          "skillsLabel": "기술",
-          "skillsCount": "4",
-          "skills": [
-            "<span>Front-end</span><div>TypeScript, React, Redux Toolkit, Next, Tailwind</div>",
-            "<span>Back-end</span><div>Express, Sequelize(MySQL)</div>",
-            "<span>Deploy</span><div>AWS(EC2+S3+Lambda)</div>",
-            "<span>Secure</span><div>Nginx + HTTPS</div>"
-          ],
-          "slidesCount": "21",
+          "github": {
+            "label": "프로젝트 위키 GitHub",
+            "link": "https://github.com/yjglab/BlooBolt/wiki"
+          },
+          "production": {
+            "label": "프로덕션 페이지",
+            "link": "https://bloobolt.com"
+          },
+          "header": {
+            "title": "원만한 소통을 위한 모두의 공간",
+            "description": "서비스 개발에 필요한 기획자, 개발자, 디자이너 실무자들이 모여 기술적 소통의 어려움을 줄이고 서로를 알아가는 웹 서비스"
+          },
+          "outline": {
+            "label": "개요",
+            "description": "<0>기획 의도</0><1>학교에서 여러 번의 팀 프로젝트를 해보며 느낀 소통의 불편함을 느끼고 기획했습니다. 개발자 팀원과 디자이너, 기획 조장들이 서로의 기술적 이해도에 차이가 컸고 갈등 상황이 발생하는 것을 보며 함께 팀을 만들 준비를 하거나 팀 안에 있는 직무자들이 서로 다른 포지션에 관해, 또는 같은 직무에 관해 모르는 것을 물어보고 최신 트렌드 정보를 공유할 수 있는 실무자들만의 공간을 만들고 싶었습니다.</1><2>포스트 카드로 소통하는 방식이며 텍스트와 사진, 코멘트를 기록할 수 있고 프로필 제작, 팔로우, 멤버 랭크 시스템 등 여러 가지 기능을 담았고 현재도 꾸준히 업데이트 중입니다. 모든 멤버의 프로필을 각각 포지션별로 다른 색상과 랭크, 실무에서의 현재 역할 정보를 부여해 이 멤버가 어떤 직무자인지, 주니어인지 시니어인지 등을 쉽게 알아볼 수 있다는 점이 다른 서비스와의 차별점입니다.</2>"
+          },
+          "implements": {
+            "label": "구현 기능",
+            "description": [
+              "<0>사용자</0><1>일반/소셜 회원 가입, 가입 이메일 인증, 로그인, 비밀번호 변경/재발급, 프로필 아바타 및 내용 제작, 사용자 랭크, 트레이스(팔로우), 사용자 신고, 사용자 이용 정지</1>",
+              "<0>포스트</0><1>포스트 생성/삭제/수정/블라인드, 다중 이미지 업로드, 이미지 슬라이더, 이미지 압축, 포스트 공감 기능, 코멘트 생성/수정/삭제, 포스트 검색, 해시태그 검색, 무한 스크롤링 포스트 로드, 추천 포스트 로드</1>",
+              "<0>공통</0><1>서버사이드 렌더링, 반응형 웹 스크린</1>"
+            ]
+          },
+          "issues": {
+            "label": "이슈",
+            "link": "https://github.com/yjglab/BlooBolt/wiki/%EA%B8%B0%EC%88%A0-%EA%B4%80%EB%A0%A8-%EA%B8%B0%EB%A1%9D",
+            "description": "<0>스크롤 시 데이터가 몇 차례 추가 로드되지 않는 현상</0><1>기존 scroll 메서드를 사용함에 따라 분기 처리가 많은 이벤트 핸들러에서 데이터 로드 요청이 누락되는 상황이 발생했습니다. Intersection Observer를 적용해 코드를 리팩토링 하고 여러번의 이벤트 요청 방식을 제거하여 성능을 함께 개선했습니다.</1><2>자세히 보기</2>"
+          },
+          "skills": {
+            "label": "기술",
+            "description": [
+              "<0>Front-end</0><1>TypeScript, React, Redux Toolkit, Next, Tailwind</1>",
+              "<0>Back-end</0><1>Express, Sequelize(MySQL)</1>",
+              "<0>Deploy</0><1>AWS(EC2+S3+Lambda)</1>",
+              "<0>Secure</0><1>Nginx + HTTPS</1>"
+            ]
+          },
           "slides": [
             {
               "scope": "스퀘어",
@@ -306,41 +319,49 @@
         "projectCategory": "Full Stack Development",
         "date": "2023.06",
         "thumbnailSrc": "/images/projects/project-section/blooways_thumb.jpg",
-        "title1": "BlooWays",
-        "title2": "실시간 채팅룸 및 메시지 서비스",
-        "description1": "자신과 비슷한 사람들이 모인 공간을 직접 만들어 실시간으로 대화를 나눌 수 있는 서비스에요.",
-        "description2": "TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
+        "title": ["BlooWays", "실시간 채팅룸 및 메시지 서비스"],
+        "description": "자신과 비슷한 사람들이 모인 공간을 직접 만들어 실시간으로 대화를 나눌 수 있는 서비스에요.",
+        "skills": "TypeScript, React.js, SWR, TailwindCSS, Express.js, Sequelize.js, MySQL, Nginx, AWS EC2+S3",
 
         "details": {
-          "githubLinkLabel": "프로젝트 위키 GitHub",
-          "github": "https://github.com/yjglab/BlooWays/wiki",
-          "productionLinkLabel": "프로덕션 페이지",
-          "production": "https://blooways.online",
-
-          "header": "나와 비슷한 사람을 만나볼 가장 빠른 곳",
-          "headerDescription": "소켓 통신을 이용한 실시간 데이터 전송 서비스",
-
-          "outlineLabel": "개요",
-          "outline": "<span>기획 의도</span><div>소켓 통신을 활용하여 1대1 또는 다수의 멤버들과 실시간 라이브 메시지를 주고받을 수 있는 서비스입니다. 블루웨이와 에리어는 각각 크고 작은 개념의 대화 공간이며, 사용자는 여러 개의 대화 공간을 생성하고 원하는 멤버를 초대하여 자신과 유사한 성향을 가진 멤버들과 소통할 수 있습니다.</div>",
-          "implementsLabel": "구현 기능",
-          "implementsCount": "3",
-          "implements": [
-            "<span>공통</span><div>실시간 데이터 전송, 반응형 웹 스크린</div>",
-            "<span>사용자</span><div>일반/소셜 회원 가입, 로그인, 사용자명 변경</div>",
-            "<span>블루웨이 및 에리어(NSP)</span><div>블루웨이 생성, 에리어 생성, 멤버 초대하기, 실시간 메시지 통신, 접속중인 사용자 인디케이팅, 포스트 공감 기능, 멤버 언급하기, 이미지 전송, 미확인 메시지 인디케이팅, 인피니트 스크롤링</div>"
-          ],
-          "issuesLabel": "이슈",
-          "issuesLink": "https://github.com/yjglab/BlooWays/wiki/%EA%B8%B0%EC%88%A0%EC%A0%81-%EC%96%B4%EB%A0%A4%EC%9B%80%EA%B3%BC-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EA%B3%BC%EC%A0%95",
-          "issues": "<span>수신하지 않은 메시지에 대한 알림 처리</span><div>A에리어에 있는 사용자가 B에리어에서 전송된 메시지에 대한 수신 알림을 받지 못하는 상황이 발생했었습니다. 사용자가 각 에리어별로 입장한 시간, 마지막으로 메시지를 전송한 시간을 저장 후 API요청하였고 전송된 시간 보다 데이터 생성일이 더 큰 메시지들의 개수를 체크, 클라이언트로 전송하여 해결되었습니다.</div><a>자세히 보기</a>",
-          "skillsLabel": "기술",
-          "skillsCount": "4",
-          "skills": [
-            "<span>Front-end</span><div>TypeScript, React, React-Router, SWR, Tailwind, Styled-Components</div>",
-            "<span>Back-end</span><div>Express, Sequelize(MySQL), Socket.io</div>",
-            "<span>Deploy</span><div>AWS(EC2+S3)</div>",
-            "<span>Secure</span><div>Nginx + HTTPS</div>"
-          ],
-          "slidesCount": "11",
+          "github": {
+            "label": "프로젝트 위키 GitHub",
+            "link": "https://github.com/yjglab/BlooWays/wiki"
+          },
+          "production": {
+            "label": "프로덕션 페이지",
+            "link": "https://blooways.online"
+          },
+          "header": {
+            "title": "나와 비슷한 사람을 만나볼 가장 빠른 곳",
+            "description": "소켓 통신을 이용한 실시간 데이터 전송 서비스"
+          },
+          "outline": {
+            "label": "개요",
+            "description": "<0>기획 의도</0><1>소켓 통신을 활용하여 1대1 또는 다수의 멤버들과 실시간 라이브 메시지를 주고받을 수 있는 서비스입니다. 블루웨이와 에리어는 각각 크고 작은 개념의 대화 공간이며, 사용자는 여러 개의 대화 공간을 생성하고 원하는 멤버를 초대하여 자신과 유사한 성향을 가진 멤버들과 소통할 수 있습니다.</1>"
+          },
+          "implements": {
+            "label": "구현 기능",
+            "description": [
+              "<0>공통</0><1>실시간 데이터 전송, 반응형 웹 스크린</1>",
+              "<0>사용자</0><1>일반/소셜 회원 가입, 로그인, 사용자명 변경</1>",
+              "<0>블루웨이 및 에리어(NSP)</0><1>블루웨이 생성, 에리어 생성, 멤버 초대하기, 실시간 메시지 통신, 접속중인 사용자 인디케이팅, 포스트 공감 기능, 멤버 언급하기, 이미지 전송, 미확인 메시지 인디케이팅, 인피니트 스크롤링</1>"
+            ]
+          },
+          "issues": {
+            "label": "이슈",
+            "link": "https://github.com/yjglab/BlooWays/wiki/%EA%B8%B0%EC%88%A0%EC%A0%81-%EC%96%B4%EB%A0%A4%EC%9B%80%EA%B3%BC-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0-%EA%B3%BC%EC%A0%95",
+            "description": "<0>수신하지 않은 메시지에 대한 알림 처리</0><1>A에리어에 있는 사용자가 B에리어에서 전송된 메시지에 대한 수신 알림을 받지 못하는 상황이 발생했었습니다. 사용자가 각 에리어별로 입장한 시간, 마지막으로 메시지를 전송한 시간을 저장 후 API요청하였고 전송된 시간 보다 데이터 생성일이 더 큰 메시지들의 개수를 체크, 클라이언트로 전송하여 해결되었습니다.</1><2>자세히 보기</2>"
+          },
+          "skills": {
+            "label": "기술",
+            "description": [
+              "<0>Front-end</0><1>TypeScript, React, React-Router, SWR, Tailwind, Styled-Components</1>",
+              "<0>Back-end</0><1>Express, Sequelize(MySQL), Socket.io</1>",
+              "<0>Deploy</0><1>AWS(EC2+S3)</1>",
+              "<0>Secure</0><1>Nginx + HTTPS</1>"
+            ]
+          },
           "slides": [
             {
               "scope": "사용자",
@@ -415,38 +436,46 @@
         "projectCategory": "Front-end Development",
         "date": "2022.10",
         "thumbnailSrc": "/images/projects/project-section/mug_thumb.jpeg",
-        "title1": "MUG",
-        "title2": "세계 전시 정보를 안내하는 인터랙션 웹",
-        "description1": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 웹 서비스에요. 스크롤 애니메이션과 정렬 및 필터링 애니메이션을 이용한 사용자 인터랙션 구현에 집중한 프로젝트에요.",
-        "description2": "JavaScript, Pug, SCSS, Express.js, MongoDB",
+        "title": ["MUG", "세계 전시 정보를 안내하는 인터랙션 웹"],
+        "description": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 웹 서비스에요. 스크롤 애니메이션과 정렬 및 필터링 애니메이션을 이용한 사용자 인터랙션 구현에 집중한 프로젝트에요.",
+        "skills": "JavaScript, Pug, SCSS, Express.js, MongoDB",
 
         "details": {
-          "githubLinkLabel": "프로젝트 위키 GitHub",
-          "github": "https://github.com/yjglab/MuG",
-          "productionLinkLabel": "프로덕션 페이지",
-          "production": "https://mug-lab.fly.dev",
-
-          "header": "한눈에 바라보는 거대한 예술 전시관",
-          "headerDescription": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 반응형 웹 서비스",
-
-          "outlineLabel": "개요",
-          "outline": "<span>기획 의도</span><div>세계 각국의 전시물 정보를 확인하려면 일일이 각 나라의 페이지를 찾아 들어가야 합니다. 여러 국가의 정보를 확인하고 싶은 사람들에겐 굉장히 불편한 상황입니다. 이들을 위해 각 국가의 전시 정보들을 크롤링하여 한 곳에 모아왔습니다. 또한 애니메이션을 넣어 시각적인 재미 요소를 주었고 필터링 기능을 넣어 사용자가 보고 싶은 정보들만 추려볼 수 있도록 제작했습니다.</div><div>파이썬 Selenium을 이용해 Robot 배제 프로토콜 허용 범위안에서 전시 데이터를 모았으며 이 데이터를 카드 형식으로 디자인하여 페이지에 로드합니다. 사용자 인터랙션과 애니메이션 구현, 퍼블리싱에 집중한 프로젝트입니다. 컨트롤러에서 사용자가 페이지를 요청하면 셔플 된 MongoDB 데이터를 불러와서 객체로 전송해줍니다. Pug에서 전달받은 데이터를 페이지에 렌더링합니다.</div>",
-          "implementsLabel": "구현 기능",
-          "implementsCount": "1",
-          "implements": [
-            "<span>공통</span><div>스크롤 애니메이션, 카드 소팅 애니메이션, 전시명/전시관/전시국 검색 필터링, 박물관/미술관 필터링, 카드 클릭 애니메이션, 반응형 웹 스크린</div>"
-          ],
-          "issuesLabel": "이슈",
-          "issuesLink": "https://github.com/yjglab/MuG/wiki/%EA%B5%AC%ED%98%84%EB%90%9C-%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C-%EC%9A%94%EC%86%8C",
-          "issues": "<span>카드 클릭/닫기 클릭 시 위치 조정</span><div>카드 클릭 시 카드별 위치에서 천천히 확대되며 중앙 배치, 닫기 클릭 시 원위치로 조정해야 하는 문제를 구현해야 했습니다. 사용자 브라우저의 Viewport 크기를 계산하여, 클릭한 카드의 좌푯값(X, Y)을 감산하여 해결했습니다.</div><a>자세히 보기</a>",
-          "skillsLabel": "기술",
-          "skillsCount": "3",
-          "skills": [
-            "<span>Front-end</span><div>JavaScript, JQuery, Pug, SCSS</div>",
-            "<span>Back-end</span><div>Express, MongoDB, Python</div>",
-            "<span>Deploy</span><div>Flyio</div>"
-          ],
-          "slidesCount": "10",
+          "github": {
+            "label": "프로젝트 위키 GitHub",
+            "link": "https://github.com/yjglab/MuG"
+          },
+          "production": {
+            "label": "프로덕션 페이지",
+            "link": "https://mug-lab.fly.dev"
+          },
+          "header": {
+            "title": "한눈에 바라보는 거대한 예술 전시관",
+            "description": "전시 정보 데이터를 한 페이지에서 쉽게 확인할 수 있는 인터랙티브 반응형 웹 서비스"
+          },
+          "outline": {
+            "label": "개요",
+            "description": "<0>기획 의도</0><1>세계 각국의 전시물 정보를 확인하려면 일일이 각 나라의 페이지를 찾아 들어가야 합니다. 여러 국가의 정보를 확인하고 싶은 사람들에겐 굉장히 불편한 상황입니다. 이들을 위해 각 국가의 전시 정보들을 크롤링하여 한 곳에 모아왔습니다. 또한 애니메이션을 넣어 시각적인 재미 요소를 주었고 필터링 기능을 넣어 사용자가 보고 싶은 정보들만 추려볼 수 있도록 제작했습니다.</1><1>파이썬 Selenium을 이용해 Robot 배제 프로토콜 허용 범위안에서 전시 데이터를 모았으며 이 데이터를 카드 형식으로 디자인하여 페이지에 로드합니다. 사용자 인터랙션과 애니메이션 구현, 퍼블리싱에 집중한 프로젝트입니다. 컨트롤러에서 사용자가 페이지를 요청하면 셔플 된 MongoDB 데이터를 불러와서 객체로 전송해줍니다. Pug에서 전달받은 데이터를 페이지에 렌더링합니다.</1>"
+          },
+          "implements": {
+            "label": "구현 기능",
+            "description": [
+              "<0>공통</0><1>스크롤 애니메이션, 카드 소팅 애니메이션, 전시명/전시관/전시국 검색 필터링, 박물관/미술관 필터링, 카드 클릭 애니메이션, 반응형 웹 스크린</1>"
+            ]
+          },
+          "issues": {
+            "label": "이슈",
+            "link": "https://github.com/yjglab/MuG/wiki/%EA%B5%AC%ED%98%84%EB%90%9C-%EC%9D%B8%ED%84%B0%EB%9E%99%ED%8B%B0%EB%B8%8C-%EC%9A%94%EC%86%8C",
+            "description": "<0>카드 클릭/닫기 클릭 시 위치 조정</0><1>카드 클릭 시 카드별 위치에서 천천히 확대되며 중앙 배치, 닫기 클릭 시 원위치로 조정해야 하는 문제를 구현해야 했습니다. 사용자 브라우저의 Viewport 크기를 계산하여, 클릭한 카드의 좌푯값(X, Y)을 감산하여 해결했습니다.</1><2>자세히 보기</2>"
+          },
+          "skills": {
+            "label": "기술",
+            "description": [
+              "<0>Front-end</0><1>JavaScript, JQuery, Pug, SCSS</1>",
+              "<0>Back-end</0><1>Express, MongoDB, Python</1>",
+              "<0>Deploy</0><1>Flyio</1>"
+            ]
+          },
           "slides": [
             {
               "scope": "인트로 페이지",
@@ -516,37 +545,49 @@
         "projectCategory": "Full Stack Development",
         "date": "2021.11",
         "thumbnailSrc": "/images/projects/project-section/tira_thumb.jpg",
-        "title1": "Tira Santorini",
-        "title2": "그리스 섬을 배경으로 기획한 케이크 전문점 소개",
-        "description1": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
-        "description2": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
+        "title": [
+          "Tira Santorini",
+          "그리스 섬을 배경으로 기획한 케이크 전문점 소개"
+        ],
+        "description": "그리스의 한 섬을 디자인 배경으로 설정한 쇼핑몰 형태의 웹 사이트에요. 개발 뿐만 아니라 실제 제품의 패키징과 목업 제작도 함께 진행한 프로젝트에요.",
+        "skills": "JavaScript, GSAP, Pug, SCSS, Express.js, MongoDB",
 
         "details": {
-          "githubLinkLabel": "프로젝트 위키 GitHub",
-          "github": "https://github.com/yjglab/tira-santorini",
-          "productionLinkLabel": "프로덕션 페이지",
-          "production": "https://tira-santorini.fly.dev/",
-
-          "header": "집안에서 맛보는 그릭 티라미수",
-          "headerDescription": "그리스 섬을 배경으로 기획한 케이크 전문점 소개 사이트",
-
-          "outlineLabel": "개요",
-          "outline": "<span>기획 의도</span><div>TIRA는 그리스 산토리니에 존재하는 여섯 마을을 배경으로 한 티라미수 전문 디저트 브랜드입니다. 산토리니 마을들의 특징과 색상, 형태 등을 반영하여 패키지의 디자인과 제품의 맛이 각 마을과 가장 잘 부합하도록 선정된 다양한 티라미수 패키지를 제공합니다.</div>",
-          "implementsLabel": "구현 기능",
-          "implementsCount": "1",
-          "implements": [
-            "<span>공통</span><div>GSAP를 이용해 스크롤에 따라 부드럽게 반응하는 브랜드 소개 페이지 구현. 제품 소개와 장바구니, 가격 조정 기능 구현. 서비스 가입과 프로필 제작 및 수정 기능 구현</div>"
-          ],
-          "issuesLabel": "이슈",
-          "issues": "<span>가로 스크롤 구현과 화면 스냅 기능</span><div>사용자 스크롤 시 세로가 아닌 가로로 화면이 자연스럽게 스냅 되는 독특한 UX를 제공하기 위한 의도입니다. 각 섹션의 요소들을 가로로 배치 후 GSAP의 to 메서드를 이용해 요소가 X축으로 이동하도록 설정하였고, ScrollTrigger의 snap과 pin속성을 이용해 화면 고정 시 부드러운 동작을 구현하여 해결했습니다.</div>",
-          "skillsLabel": "기술",
-          "skillsCount": "3",
-          "skills": [
-            "<span>Front-end</span><div>JavaScript, JQuery, GSAP, Pug, SCSS</div>",
-            "<span>Back-end</span><div>Express, MongoDB</div>",
-            "<span>Deploy</span><div>Flyio</div>"
-          ],
-          "slidesCount": "4",
+          "github": {
+            "label": "프로젝트 위키 GitHub",
+            "link": "https://github.com/yjglab/tira-santorini"
+          },
+          "production": {
+            "label": "프로덕션 페이지",
+            "link": "https://tira-santorini.fly.dev/"
+          },
+          "header": {
+            "title": "집안에서 맛보는 그릭 티라미수",
+            "description": "그리스 섬을 배경으로 기획한 케이크 전문점 소개 사이트"
+          },
+          "outline": {
+            "label": "개요",
+            "description": "<0>기획 의도</0><1>TIRA는 그리스 산토리니에 존재하는 여섯 마을을 배경으로 한 티라미수 전문 디저트 브랜드입니다. 산토리니 마을들의 특징과 색상, 형태 등을 반영하여 패키지의 디자인과 제품의 맛이 각 마을과 가장 잘 부합하도록 선정된 다양한 티라미수 패키지를 제공합니다.</1>"
+          },
+          "implements": {
+            "label": "구현 기능",
+            "description": [
+              "<0>공통</0><1>GSAP를 이용해 스크롤에 따라 부드럽게 반응하는 브랜드 소개 페이지 구현. 제품 소개와 장바구니, 가격 조정 기능 구현. 서비스 가입과 프로필 제작 및 수정 기능 구현</1>"
+            ]
+          },
+          "issues": {
+            "label": "이슈",
+            "link": "",
+            "description": "<0>가로 스크롤 구현과 화면 스냅 기능</0><1>사용자 스크롤 시 세로가 아닌 가로로 화면이 자연스럽게 스냅 되는 독특한 UX를 제공하기 위한 의도입니다. 각 섹션의 요소들을 가로로 배치 후 GSAP의 to 메서드를 이용해 요소가 X축으로 이동하도록 설정하였고, ScrollTrigger의 snap과 pin속성을 이용해 화면 고정 시 부드러운 동작을 구현하여 해결했습니다.</1>"
+          },
+          "skills": {
+            "label": "기술",
+            "description": [
+              "<0>Front-end</0><1>JavaScript, JQuery, GSAP, Pug, SCSS</1>",
+              "<0>Back-end</0><1>Express, MongoDB</1>",
+              "<0>Deploy</0><1>Flyio</1>"
+            ]
+          },
           "slides": [
             {
               "scope": "인트로 페이지",
