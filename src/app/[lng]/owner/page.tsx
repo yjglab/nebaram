@@ -5,7 +5,7 @@ import ObjectiveSection from "./_components/ObjectiveSection";
 import HistorySection from "./_components/HistorySection";
 import SkillSection from "./_components/SkillSection";
 import QuestionSection from "./_components/QuestionSection";
-import { fallbackLanguage, languages } from "@app/i18n/settings";
+import { fallbackLng, languages } from "@app/i18n/settings";
 import { useTranslation } from "@app/i18n";
 import { FC } from "react";
 
@@ -16,7 +16,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params: { lng } }: Props) {
-  if (languages.indexOf(lng) < 0) lng = fallbackLanguage;
+  if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng, "metadata");
 
   return {
@@ -37,7 +37,7 @@ export async function generateMetadata({ params: { lng } }: Props) {
   } as Metadata;
 }
 
-const OwnerPage: FC<Props> = ({ params: { lng } }) => {
+const OwnerPage: FC<Props> = async ({ params: { lng } }) => {
   return (
     <main>
       <BannerSection lng={lng} />

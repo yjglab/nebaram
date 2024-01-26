@@ -21,12 +21,13 @@ export interface ProjectData {
 }
 
 interface Props {
+  lng: string;
   projectsData: {
     [key: string]: Array<ProjectData>;
   };
   category: ProjectSectionCategory;
 }
-const ProjectSection: FC<Props> = ({ projectsData, category }) => {
+const ProjectSection: FC<Props> = ({ lng, projectsData, category }) => {
   const allProjectsData = [
     ...projectsData.ongoing,
     ...projectsData.development,
@@ -41,6 +42,7 @@ const ProjectSection: FC<Props> = ({ projectsData, category }) => {
             allProjectsData.map((data, index) => (
               <ProjectCard
                 key={data.content.title1}
+                lng={lng}
                 data={data.content}
                 index={index}
                 category={data.content.category}
@@ -50,6 +52,7 @@ const ProjectSection: FC<Props> = ({ projectsData, category }) => {
             projectsData.development.map((data, index) => (
               <ProjectCard
                 key={data.id}
+                lng={lng}
                 data={data.content}
                 index={index}
                 category={category}
@@ -59,6 +62,7 @@ const ProjectSection: FC<Props> = ({ projectsData, category }) => {
             projectsData.design.map((data, index) => (
               <ProjectCard
                 key={data.id}
+                lng={lng}
                 data={data.content}
                 index={index}
                 category={category}
@@ -68,6 +72,7 @@ const ProjectSection: FC<Props> = ({ projectsData, category }) => {
             projectsData.ongoing.map((data, index) => (
               <ProjectCard
                 key={data.id}
+                lng={lng}
                 data={data.content}
                 index={index}
                 category={category}

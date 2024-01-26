@@ -1,3 +1,5 @@
+"use client";
+
 import { clogo } from "@constants/images";
 import classNames from "classnames";
 import Image from "next/image";
@@ -7,8 +9,8 @@ import {
   SplashLogoNameKeyframe,
 } from "@constants/animations";
 import styled from "@emotion/styled";
-import { FC } from "react";
-import { fallbackLanguage, languages } from "@app/i18n/settings";
+import { FC, useEffect } from "react";
+import { fallbackLng, languages } from "@app/i18n/settings";
 import { poppins } from "@constants/fonts";
 import { useRouter } from "next/navigation";
 
@@ -31,11 +33,13 @@ interface Props {
 }
 
 const SplashScreenContainer: FC<Props> = async ({ lng }) => {
-  if (languages.indexOf(lng) < 0) lng = fallbackLanguage;
   const router = useRouter();
-  setTimeout(() => {
-    router.replace(`/${lng}/owner`);
-  }, 2600);
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.replace(`/${lng}/owner`);
+    }, 2600);
+  }, []);
 
   return (
     <section className="z-[100] top-0 left-0 w-screen h-screen bg-black overflow-hidden fixed">

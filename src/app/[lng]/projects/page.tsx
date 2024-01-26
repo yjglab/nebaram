@@ -1,17 +1,17 @@
 import { Metadata, NextPage } from "next";
-import React from "react";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import React, { FC } from "react";
 import ProjectsClientPage from "./page.client";
+import { fallbackLng, languages } from "@app/i18n/settings";
+import { useTranslation } from "@app/i18n";
 
 interface Props {
   params: {
-    locale: string;
+    lng: string;
   };
 }
-
-export async function generateMetadata({ params: { locale = "en" } }: Props) {
-  unstable_setRequestLocale(locale);
-  const t = await getTranslations("metadata");
+export async function generateMetadata({ params: { lng } }: Props) {
+  if (languages.indexOf(lng) < 0) lng = fallbackLng;
+  const { t } = await useTranslation(lng, "metadata");
 
   return {
     title: t("projects.title"),
@@ -31,8 +31,8 @@ export async function generateMetadata({ params: { locale = "en" } }: Props) {
   } as Metadata;
 }
 
-const ProjectsPage: NextPage = () => {
-  return <ProjectsClientPage />;
+const ProjectsPage: FC<Props> = async ({ params: { lng } }) => {
+  return <ProjectsClientPage lng={lng} />;
 };
 
 export default ProjectsPage;

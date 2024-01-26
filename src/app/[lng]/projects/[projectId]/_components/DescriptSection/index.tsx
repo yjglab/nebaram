@@ -1,12 +1,16 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
+import { FC } from "react";
+import { useTranslation } from "@app/i18n/client";
 
-const DescriptSection = () => {
-  const t = useTranslations("projects");
-  const { id: projectId } = useParams() as { id: string };
+interface Props {
+  lng: string;
+}
+const DescriptSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "projects");
+  const { projectId } = useParams() as { projectId: string };
 
   const projectData = {
     outline: {
@@ -15,21 +19,22 @@ const DescriptSection = () => {
           parseInt(projectId) - 1
         }.details.outlineLabel`
       ),
-      data: t.rich(
-        `ProjectSection.projectsDevelopment.${
-          parseInt(projectId) - 1
-        }.details.outline`,
-        {
-          span: (children) => (
-            <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
-          ),
-          div: (children) => (
-            <div className="mb-3 break-all font-light leading-8">
-              {children}
-            </div>
-          ),
-        }
-      ),
+      // data: t.rich(
+      //   `ProjectSection.projectsDevelopment.${
+      //     parseInt(projectId) - 1
+      //   }.details.outline`,
+      //   {
+      //     span: (children) => (
+      //       <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
+      //     ),
+      //     div: (children) => (
+      //       <div className="mb-3 break-all font-light leading-8">
+      //         {children}
+      //       </div>
+      //     ),
+      //   }
+      // ),
+      data: "rich 필요",
     },
     implements: {
       label: t(
@@ -50,21 +55,22 @@ const DescriptSection = () => {
         (_, i) => i
       ).map((id) => ({
         id: id,
-        content: t.rich(
-          `ProjectSection.projectsDevelopment.${
-            parseInt(projectId) - 1
-          }.details.implements.${id}`,
-          {
-            span: (children) => (
-              <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
-            ),
-            div: (children) => (
-              <div className="mb-3 break-all font-light leading-8">
-                {children}
-              </div>
-            ),
-          }
-        ),
+        // content: t.rich(
+        //   `ProjectSection.projectsDevelopment.${
+        //     parseInt(projectId) - 1
+        //   }.details.implements.${id}`,
+        //   {
+        //     span: (children) => (
+        //       <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
+        //     ),
+        //     div: (children) => (
+        //       <div className="mb-3 break-all font-light leading-8">
+        //         {children}
+        //       </div>
+        //     ),
+        //   }
+        // ),
+        content: "rich 필요",
       })),
     },
     issues: {
@@ -73,35 +79,36 @@ const DescriptSection = () => {
           parseInt(projectId) - 1
         }.details.issuesLabel`
       ),
-      data: t.rich(
-        `ProjectSection.projectsDevelopment.${
-          parseInt(projectId) - 1
-        }.details.issues`,
-        {
-          span: (children) => (
-            <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
-          ),
-          div: (children) => (
-            <div className="mb-3 break-all font-light leading-8">
-              {children}
-            </div>
-          ),
-          a: (children) => (
-            <a
-              href={t(
-                `ProjectSection.projectsDevelopment.${
-                  parseInt(projectId) - 1
-                }.details.issuesLink`
-              )}
-              className="text-base text-amber-500 duration-200 hover:text-amber-600"
-              rel="referrer"
-              target="_blank"
-            >
-              {children}
-            </a>
-          ),
-        }
-      ),
+      // data: t.rich(
+      //   `ProjectSection.projectsDevelopment.${
+      //     parseInt(projectId) - 1
+      //   }.details.issues`,
+      //   {
+      //     span: (children) => (
+      //       <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
+      //     ),
+      //     div: (children) => (
+      //       <div className="mb-3 break-all font-light leading-8">
+      //         {children}
+      //       </div>
+      //     ),
+      //     a: (children) => (
+      //       <a
+      //         href={t(
+      //           `ProjectSection.projectsDevelopment.${
+      //             parseInt(projectId) - 1
+      //           }.details.issuesLink`
+      //         )}
+      //         className="text-base text-amber-500 duration-200 hover:text-amber-600"
+      //         rel="referrer"
+      //         target="_blank"
+      //       >
+      //         {children}
+      //       </a>
+      //     ),
+      //   }
+      // ),
+      data: "rich 필요",
     },
     skills: {
       label: t(
@@ -122,21 +129,22 @@ const DescriptSection = () => {
         (_, i) => i
       ).map((id) => ({
         id: id,
-        content: t.rich(
-          `ProjectSection.projectsDevelopment.${
-            parseInt(projectId) - 1
-          }.details.skills.${id}`,
-          {
-            span: (children) => (
-              <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
-            ),
-            div: (children) => (
-              <div className="mb-3 break-all font-light leading-8">
-                {children}
-              </div>
-            ),
-          }
-        ),
+        // content: t.rich(
+        //   `ProjectSection.projectsDevelopment.${
+        //     parseInt(projectId) - 1
+        //   }.details.skills.${id}`,
+        //   {
+        //     span: (children) => (
+        //       <span className="mb-2.5 py-0.5 font-semibold">{children}</span>
+        //     ),
+        //     div: (children) => (
+        //       <div className="mb-3 break-all font-light leading-8">
+        //         {children}
+        //       </div>
+        //     ),
+        //   }
+        // ),
+        content: "rich 필요",
       })),
     },
   };

@@ -1,16 +1,18 @@
 import classNames from "classnames";
-import { useTranslations } from "next-intl";
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "@app/i18n/client";
 
 type Category = "all" | "development" | "design";
 interface Props {
+  lng: string;
   category: string;
   setCategory: (category: Category) => void;
 }
-const HeaderSection: FC<Props> = ({ category, setCategory }) => {
-  const t = useTranslations("projects");
+const HeaderSection: FC<Props> = ({ lng, category, setCategory }) => {
+  const { t } = useTranslation(lng, "projects");
+
   const headerCategories = [
     [t("HeaderSection.category1"), "all"],
     [t("HeaderSection.category2"), "development"],

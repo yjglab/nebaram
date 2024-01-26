@@ -1,15 +1,18 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
-import { useState } from "react";
-import Slider from "@app/_common/Slider";
+import { FC, useState } from "react";
+import { useTranslation } from "@app/i18n/client";
+import Slider from "@app/_common/parts/Slider";
 
-const SliderSection = () => {
-  const t = useTranslations("projects");
-  const { id: projectId } = useParams() as { id: string };
+interface Props {
+  lng: string;
+}
+const SliderSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "projects");
+  const { projectId } = useParams() as { projectId: string };
   const [slideNumber, setSlideNumber] = useState(0);
   const slideData = Array.from(
     {

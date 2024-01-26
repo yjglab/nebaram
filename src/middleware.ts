@@ -1,6 +1,6 @@
-import { NextResponse, NextRequest } from "next/server";
+import { cookieName, fallbackLng, languages } from "@app/i18n/settings";
 import acceptLanguage from "accept-language";
-import { fallbackLanguage, languages, cookieName } from "./app/i18n/settings";
+import { NextRequest, NextResponse } from "next/server";
 
 acceptLanguage.languages(languages);
 
@@ -15,6 +15,7 @@ export function middleware(req: NextRequest) {
     req.nextUrl.pathname.indexOf("chrome") > -1
   )
     return NextResponse.next();
+
   let lng: string | undefined | null;
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value);
@@ -22,9 +23,8 @@ export function middleware(req: NextRequest) {
     lng = acceptLanguage.get(req.headers.get("Accept-Language"));
   }
   if (!lng) {
-    lng = fallbackLanguage;
+    lng = fallbackLng;
   }
-
   // 지원되지 않는 언어인 경우 기본언어로 리디렉션
   if (
     !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
@@ -34,7 +34,6 @@ export function middleware(req: NextRequest) {
       new URL(`/${lng}${req.nextUrl.pathname}`, req.url)
     );
   }
-
   // referer 헤더를 통한 언어감지가 되는 경우
   if (req.headers.has("referer")) {
     const refererUrl = new URL(req.headers.get("referer") || "");
@@ -42,9 +41,9 @@ export function middleware(req: NextRequest) {
       refererUrl.pathname.startsWith(`/${l}`)
     );
     const response = NextResponse.next();
+    // @ts-ignore
     if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
     return response;
   }
-
   return NextResponse.next();
 }

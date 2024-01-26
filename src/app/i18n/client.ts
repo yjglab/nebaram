@@ -48,13 +48,13 @@ export function useTranslation<
   const [cookies, setCookie] = useCookies([cookieName]); // 언어 설정 쿠키에 저장
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
-
+  console.log(lng, runsOnServerSide, i18n.resolvedLanguage);
   // 서버 사이드이고, 언어 코드가 제공되며, i18n의 현재 언어가 지정된 언어와 다를 경우에만 서버 측에서 언어를 변경
   if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
     i18n.changeLanguage(lng);
   } else {
     const [activeLanguage, setActiveLanguage] = useState(i18n.resolvedLanguage);
-
+    console.log(i18n.resolvedLanguage);
     useEffect(() => {
       if (activeLanguage === i18n.resolvedLanguage) return;
       setActiveLanguage(i18n.resolvedLanguage);

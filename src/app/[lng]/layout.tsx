@@ -1,3 +1,4 @@
+import "../globals.css";
 import type { Metadata } from "next";
 import classNames from "classnames";
 import QueryProvider from "@app/(providers)/QueryProvider";
@@ -6,12 +7,12 @@ import {
   QueryClient,
   dehydrate,
 } from "@tanstack/react-query";
-import { fallbackLanguage, languages } from "@app/i18n/settings";
+import { fallbackLng, languages } from "@app/i18n/settings";
 import { dir } from "i18next";
 import { useTranslation } from "@app/i18n";
-import { Pretendard } from "@constants/fonts";
 import Navigation from "@app/_common/layouts/Navigation";
 import Footer from "@app/_common/layouts/Footer";
+import { notoSans } from "@constants/fonts";
 
 export function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -22,7 +23,7 @@ export async function generateMetadata({
 }: {
   params: { lng: string };
 }) {
-  if (languages.indexOf(lng) < 0) lng = fallbackLanguage;
+  if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await useTranslation(lng, "metadata");
   return {
     metadataBase: new URL(`https://nebaram.vercel.app/${lng}`),
@@ -59,7 +60,6 @@ interface Props {
   };
 }
 const LngRootLayout = async ({ children, params: { lng } }: Props) => {
-  const { t, i18n } = await useTranslation(lng, "common");
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
 
@@ -76,13 +76,13 @@ const LngRootLayout = async ({ children, params: { lng } }: Props) => {
         hrefLang="ko"
         href="https://nebaram.vercel.app/ko/"
       />
-      <body className={classNames(Pretendard.className, "min-h-screen w-full")}>
+      <body className={classNames(notoSans.className, "min-h-screen w-full")}>
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
-            <Navigation i18n={i18n} lng={lng} />
+            <Navigation lng={lng} />
             {children}
             {/* {modal} */}
-            <Footer i18n={i18n} lng={lng} />
+            {/* <Footer i18n={i18n} lng={lng} /> */}
           </HydrationBoundary>
         </QueryProvider>
       </body>

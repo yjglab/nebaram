@@ -5,27 +5,25 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import { FC, Fragment, useEffect, useState } from "react";
 import classNames from "classnames";
-import { clogo } from "@constants/images";
-import Image from "next/image";
-import { ChevronUpIcon } from "@heroicons/react/20/solid";
 import { languages } from "@app/i18n/settings";
 import Link from "next/link";
 import { poppins } from "@constants/fonts";
 import DropMenu from "@app/_common/parts/DropMenu";
-import { i18n } from "i18next";
+import { useTranslation } from "@app/i18n/client";
+import Scroller from "./Scroller";
 
 interface Props {
-  i18n: i18n;
   lng: string;
 }
-const Navigation: FC<Props> = ({ i18n, lng }) => {
+const Navigation: FC<Props> = ({ lng }) => {
   const [_, locale, ...rest] = usePathname().split("/");
   const [topIndicatorOn, setTopIndicatorOn] = useState(false);
   const [open, setOpen] = useState(false);
+
   const onClose = () => {
     setOpen(false);
   };
-  const t = i18n.getFixedT(lng, "Navigation");
+  const { t } = useTranslation(lng, "common");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,6 +41,8 @@ const Navigation: FC<Props> = ({ i18n, lng }) => {
 
   return (
     <nav className="fixed top-0 z-50 sm:pr-[15px] w-screen bg-black md:bg-black/50 backdrop-blur-md">
+      <Scroller />
+
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative md:hidden" onClose={setOpen}>
@@ -82,10 +82,10 @@ const Navigation: FC<Props> = ({ i18n, lng }) => {
                 {/* Links */}
                 <div className="space-y-5 px-4 py-6">
                   <div onClick={onClose} className="flow-root">
-                    <Link href="/owner">{t("Header.owner")}</Link>
+                    <Link href="/owner">{t("Navigation.owner")}</Link>
                   </div>
                   <div onClick={onClose} className="flow-root">
-                    <Link href="/projects">{t("Header.projects")}</Link>
+                    <Link href="/projects">{t("Navigation.projects")}</Link>
                   </div>
                   <div className="h-[1.2px] w-full bg-white/30" />
 
@@ -119,19 +119,6 @@ const Navigation: FC<Props> = ({ i18n, lng }) => {
       </Transition.Root>
 
       {/* 모바일 + PC */}
-      {topIndicatorOn && (
-        <button
-          type="button"
-          aria-label="go to top button"
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className="absolute right-[6vw] h-11 w-11 translate-y-[86vh] rounded-full bg-indigo-400 p-1 duration-200 hover:bg-indigo-500 md:right-10 md:h-12 md:w-12 md:translate-y-[92vh] md:p-1.5"
-        >
-          <ChevronUpIcon className="relative bottom-0.5" />
-        </button>
-      )}
-
       <div className="relative duration-200">
         <div aria-label="Top" className="mx-auto max-w-6xl px-4 xl:px-0">
           <div className="relative">
@@ -139,8 +126,8 @@ const Navigation: FC<Props> = ({ i18n, lng }) => {
               <div className="flex">
                 <div className="ml-2 flex">
                   <Link className="flex items-center" href="/">
-                    <Image
-                      src={clogo}
+                    <img
+                      src="/images/common/clogo.png"
                       width={16}
                       height={16}
                       alt="brand logo"
@@ -151,14 +138,14 @@ const Navigation: FC<Props> = ({ i18n, lng }) => {
                         "ml-1.5 font-[500] text-lg"
                       )}
                     >
-                      {t("Header.companyName")}
+                      {t("Navigation.companyName")}
                     </span>
                   </Link>
                 </div>
                 <Popover.Group className="hidden items-center md:ml-8 md:flex md:self-stretch">
                   <div className="flex space-x-8">
-                    <Link href="/owner">{t("Header.owner")}</Link>
-                    <Link href="/projects">{t("Header.projects")}</Link>
+                    <Link href="/owner">{t("Navigation.owner")}</Link>
+                    <Link href="/projects">{t("Navigation.projects")}</Link>
                   </div>
                 </Popover.Group>
               </div>

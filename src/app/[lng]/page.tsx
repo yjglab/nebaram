@@ -7,8 +7,8 @@ interface Props {
 export default async function MainPage({ params: { lng } }: Props) {
   return (
     <>
-      <SplashScreenContainer lng={lng} />
-      <main className="min-h-screen w-full"></main>
+      {/* <SplashScreenContainer lng={lng} /> */}
+      <main className="min-h-screen w-full">Main</main>
     </>
   );
 }

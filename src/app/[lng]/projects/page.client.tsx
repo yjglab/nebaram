@@ -1,9 +1,9 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import ProjectSection, { ProjectData } from "./_components/ProjectSection";
-import { useState } from "react";
+import { FC, useState } from "react";
 import HeaderSection from "./_components/HeaderSection";
+import { useTranslation } from "@app/i18n/client";
 
 interface ProjectsData {
   [key: string]: Array<ProjectData>;
@@ -14,8 +14,11 @@ export type ProjectSectionCategory =
   | "design"
   | "ongoing";
 
-const ProjectsClientPage = () => {
-  const t = useTranslations("projects");
+interface Props {
+  lng: string;
+}
+const ProjectsClientPage: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "projects");
 
   const [category, setCategory] =
     useState<ProjectSectionCategory>("development");
@@ -90,8 +93,12 @@ const ProjectsClientPage = () => {
 
   return (
     <main>
-      <HeaderSection category={category} setCategory={setCategory} />
-      <ProjectSection projectsData={projectsData} category={category} />
+      <HeaderSection lng={lng} category={category} setCategory={setCategory} />
+      <ProjectSection
+        lng={lng}
+        projectsData={projectsData}
+        category={category}
+      />
     </main>
   );
 };

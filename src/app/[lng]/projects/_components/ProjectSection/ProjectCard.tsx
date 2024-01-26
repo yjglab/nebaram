@@ -7,17 +7,19 @@ import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations } from "next-intl";
 import { ProjectContent } from ".";
 import { ProjectSectionCategory } from "../../page.client";
+import { useTranslation } from "@app/i18n/client";
 
 interface Props {
+  lng: string;
   data: ProjectContent;
   index: number;
   category: ProjectSectionCategory;
 }
-const ProjectCard: FC<Props> = ({ data, index, category }) => {
-  const t = useTranslations("projects");
+const ProjectCard: FC<Props> = ({ lng, data, index, category }) => {
+  const { t } = useTranslation(lng, "projects");
+
   const [projectCardHover, setprojectCardHover] = useState("");
   const pathname = usePathname();
   const handleCardHover = (e: MouseEvent<HTMLDivElement>) => {

@@ -1,15 +1,18 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
-import AnimatedTitle from "@app/_common/AnimatedTitle";
+import { useTranslation } from "@app/i18n/client";
+import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
 
-const HeaderSection: FC = () => {
-  const t = useTranslations("projects");
-  const { id: projectId } = useParams() as { id: string };
+interface Props {
+  lng: string;
+}
+const HeaderSection: FC<Props> = ({ lng }) => {
+  const { t } = useTranslation(lng, "projects");
+  const { projectId } = useParams() as { projectId: string };
   const projectData = {
     title1: t(
       `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}.title1`

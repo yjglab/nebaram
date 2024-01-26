@@ -1,17 +1,17 @@
-export const fallbackLanguage = "en";
-export const languages = [fallbackLanguage, "ko"];
+export const fallbackLng = "en";
+export const languages = [fallbackLng, "ko"];
 export const defaultNS = "common";
 export const cookieName = "i18next";
 
 export function getOptions(
-  lng = fallbackLanguage,
+  lng = fallbackLng,
   ns: string | string[] = defaultNS
 ) {
   return {
     // debug: true,
     supportedLngs: languages,
     // preload: languages,
-    fallbackLanguage,
+    fallbackLng,
     lng,
     fallbackNS: defaultNS,
     defaultNS,
