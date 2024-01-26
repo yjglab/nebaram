@@ -2,34 +2,26 @@ import { motion } from "framer-motion";
 import classNames from "classnames";
 import { useTranslation } from "@app/i18n/client";
 import { FC } from "react";
+import { Trans } from "react-i18next";
 
+interface History {
+  year: string;
+  month: string;
+  content: string;
+}
 interface Props {
   lng: string;
 }
 const HistoryGraph: FC<Props> = ({ lng }) => {
   const { t } = useTranslation(lng, "owner");
-  const histories = Array.from(
-    {
-      length: parseInt(t(`HistorySection.contentsCount`)),
-    },
-    (_, i) => i
-  ).map((id) => ({
-    id: id,
-    year: t(`HistorySection.contents.${id}.year`),
-    month: t(`HistorySection.contents.${id}.month`),
-    // content: t.rich(`HistorySection.contents.${id}.content`, {
-    //   span: (children) => <span className="text-indigo-400 ">{children}</span>,
-    //   div: (children) => (
-    //     <div className="text-sm text-gray-200">{children}</div>
-    //   ),
-    // }),
-    content: "rich 필요",
-  }));
+  const histories: History[] = t("HistorySection.contents", {
+    returnObjects: true,
+  });
 
   return (
     <figure className="mt-24 flex h-full w-full flex-col relative md:left-[5%]">
-      {histories.map((data, index) => (
-        <div key={data.id} className="flex h-full w-full">
+      {histories.map((history, index) => (
+        <div key={history.content} className="flex h-full w-full">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -43,12 +35,12 @@ const HistoryGraph: FC<Props> = ({ lng }) => {
           >
             <div
               className={classNames(
-                data.month === "2021.07" ? "h-[130px]" : "h-[90px]",
+                history.month === "2021.07" ? "h-[130px]" : "h-[90px]",
                 "flex w-full justify-center"
               )}
             >
               <time className="text-lg font-semibold md:text-2xl">
-                {data.year}
+                {history.year}
               </time>
             </div>
           </motion.div>
@@ -58,7 +50,7 @@ const HistoryGraph: FC<Props> = ({ lng }) => {
             transition={{ duration: 0.8, delay: index * 0.02 }}
             viewport={{ once: true, amount: 0.5 }}
             className={classNames(
-              data.month === "2021.07" ? "h-[130px]" : "h-[90px]",
+              history.month === "2021.07" ? "h-[130px]" : "h-[90px]",
               "relative top-2.5 flex w-[3px] justify-center bg-gray-500"
             )}
           >
@@ -72,7 +64,7 @@ const HistoryGraph: FC<Props> = ({ lng }) => {
               }}
               viewport={{ once: true, amount: 0.5 }}
               className={classNames(
-                data.year
+                history.year
                   ? "ring-amber-500 w-2.5 h-2.5"
                   : "ring-gray-500 w-1.5 h-1.5",
                 "ring-4 bg-black rounded-full absolute"
@@ -89,15 +81,22 @@ const HistoryGraph: FC<Props> = ({ lng }) => {
           >
             <div
               className={classNames(
-                data.month === "2021.07" ? "h-[130px]" : "h-[90px]",
+                history.month === "2021.07" ? "h-[130px]" : "h-[90px]",
                 "flex w-full flex-col pl-8"
               )}
             >
               <time className="text-base font-semibold text-gray-500 xl:text-lg">
-                {data.month}
+                {history.month}
               </time>
               <div className="break-all text-base leading-6 tracking-tight md:text-lg xl:text-xl">
-                {data.content}
+                <Trans
+                  components={[
+                    <span className="text-indigo-400"></span>,
+                    <div className="text-sm text-gray-400"></div>,
+                  ]}
+                >
+                  {history.content}
+                </Trans>
               </div>
             </div>
           </motion.div>

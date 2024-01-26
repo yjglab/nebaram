@@ -15,10 +15,10 @@ const HistorySection: FC<Props> = ({ lng }) => {
     <section className="my-36 h-full w-full flex flex-col items-center overflow-hidden  px-4 lg:px-[10%] xl:px-[18%] 2xl:px-[28%]">
       <header className="w-full mt-14 flex flex-col items-center gap-2 md:gap-4">
         <AnimatedTitle size="lg" align="center">
-          {t("HistorySection.sectionTitle1")}
+          {t("HistorySection.sectionTitle.0")}
         </AnimatedTitle>
         <AnimatedTitle size="lg" align="center">
-          {t("HistorySection.sectionTitle2")}
+          {t("HistorySection.sectionTitle.1")}
         </AnimatedTitle>
       </header>
       <HistoryGraph lng={lng} />

@@ -4,34 +4,19 @@ import { motion } from "framer-motion";
 import { useTranslation } from "@app/i18n/client";
 import { FC } from "react";
 
+interface Question {
+  title: string;
+  description: string;
+}
 interface Props {
   lng: string;
 }
 const QuestionSection: FC<Props> = ({ lng }) => {
   const { t } = useTranslation(lng, "owner");
 
-  const questionData = [
-    {
-      id: 0,
-      title: t(`QuestionSection.questions.0.title`),
-      description: t(`QuestionSection.questions.0.description`),
-    },
-    {
-      id: 1,
-      title: t(`QuestionSection.questions.1.title`),
-      description: t(`QuestionSection.questions.1.description`),
-    },
-    {
-      id: 2,
-      title: t(`QuestionSection.questions.2.title`),
-      description: t(`QuestionSection.questions.2.description`),
-    },
-    {
-      id: 3,
-      title: t(`QuestionSection.questions.3.title`),
-      description: t(`QuestionSection.questions.3.description`),
-    },
-  ];
+  const questions: Question[] = t("QuestionSection.questions", {
+    returnObjects: true,
+  });
 
   return (
     <section className="mx-auto mt-20 overflow-x-hidden px-6 text-lg sm:px-8 md:mt-36 lg:max-w-6xl">
@@ -39,9 +24,9 @@ const QuestionSection: FC<Props> = ({ lng }) => {
         {t("QuestionSection.sectionTitle")}
       </header>
 
-      {questionData.map((data, index) => (
+      {questions.map((question, index) => (
         <motion.article
-          key={data.id}
+          key={question.title}
           className="flex flex-col md:flex-row"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -50,12 +35,12 @@ const QuestionSection: FC<Props> = ({ lng }) => {
         >
           <div className="w-full">
             <div className="mb-6 flex flex-col text-base md:mb-10 md:text-lg">
-              <h1 className="mb-2.5 py-0.5 font-semibold">{data.title}</h1>
-              <p className="break-all font-light leading-8">
-                {data.description}
+              <h1 className="mb-2.5 py-0.5 font-semibold">{question.title}</h1>
+              <p className="break-all font-normal text-white/80 leading-8">
+                {question.description}
               </p>
             </div>
-            {index < questionData.length - 1 && (
+            {index < questions.length - 1 && (
               <div className="mb-8 mt-12 h-[1.5px] w-full bg-white/30 md:mb-12" />
             )}
           </div>

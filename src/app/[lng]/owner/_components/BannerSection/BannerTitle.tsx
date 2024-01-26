@@ -26,7 +26,7 @@ const BannerTitle: FC<Props> = ({ lng, bannerOn }) => {
         )}
       >
         <AnimatedTitle align="center" size="sm">
-          {t("BannerSection.title1")}
+          {t("BannerSection.title.0")}
         </AnimatedTitle>
       </h1>
 
@@ -41,7 +41,7 @@ const BannerTitle: FC<Props> = ({ lng, bannerOn }) => {
         }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        {t("BannerSection.title2")}
+        {t("BannerSection.title.1")}
       </motion.h2>
     </header>
   );

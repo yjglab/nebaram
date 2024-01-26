@@ -41,10 +41,10 @@ const ObjectiveSection: FC<Props> = ({ lng }) => {
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           <h1 className="mx-auto mt-6 break-keep text-md sm:text-2xl md:text-3xl font-semibold">
-            {t("ObjectiveSection.description1")}
+            {t("ObjectiveSection.description.0")}
           </h1>
           <h1 className="mx-auto break-keep text-md sm:text-2xl md:text-3xl mt-2 font-semibold">
-            {t("ObjectiveSection.description2")}
+            {t("ObjectiveSection.description.1")}
           </h1>
         </motion.hgroup>
       </article>

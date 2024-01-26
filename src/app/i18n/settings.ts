@@ -1,5 +1,9 @@
 export const fallbackLng = "en";
 export const languages = [fallbackLng, "ko"];
+export const supportedLanguages = [
+  { locale: "🇺🇸 ENGLISH", value: "en" },
+  { locale: "🇰🇷 한국어", value: "ko" },
+];
 export const defaultNS = "common";
 export const cookieName = "i18next";
 

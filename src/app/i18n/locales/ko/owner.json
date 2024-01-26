@@ -1,34 +1,44 @@
 {
   "BannerSection": {
-    "title1": "어디서든 빠르게 변화하고 적응하는",
-    "title2": "반응형 개발자 육재경입니다"
+    "title": ["어디서든 빠르게 변화하고 적응하는", "반응형 개발자 육재경입니다"]
   },
   "OutcomeSection": {
-    "header1": "사람들에게 오래 기억될 수 있는 서비스를 만들려고 합니다",
-    "header2": "그래서 지금까지 꾸준히 달려왔어요",
-    "title1": "누적 작업일",
-    "value1": "{days}",
-    "value1Unit": "일+",
-    "title2": "누적 강의 수강생",
-    "value2": "{attends}",
-    "value2Unit": "명+",
-    "title3": "작업한 프로젝트 <span>웹/공학/디자인</span>",
-    "value3": "{services}",
-    "value3Unit": "개",
-    "title4": "수상/자격 인증 <span>ICT 코딩 경진대회 대상</span>",
-    "value4": "{awards}",
-    "value4Unit": "회"
+    "header": [
+      "사람들에게 오래 기억될 수 있는 서비스를 만들려고 합니다",
+      "그래서 지금까지 꾸준히 달려왔어요"
+    ],
+    "contents": [
+      {
+        "title": "누적 작업일",
+        "value": "{{days}}",
+        "valueUnit": "일+"
+      },
+      {
+        "title": "누적 강의 수강생",
+        "value": "{{attends}}",
+        "valueUnit": "명+"
+      },
+      {
+        "title": "작업한 프로젝트 <0>웹/공학/디자인</0>",
+        "value": "{{services}}",
+        "valueUnit": "개"
+      },
+      {
+        "title": "수상/자격 인증 <0>ICT 코딩 경진대회 대상</0>",
+        "value": "{{awards}}",
+        "valueUnit": "회"
+      }
+    ]
   },
   "ObjectiveSection": {
     "title": "개발자로서의 목표",
-    "description1": "학교에서 느낀 불편함을 스스로 해결해보고자 개발을 시작하게 되었어요",
-    "description2": "모든 사람들이 쉽게 다룰 수 있으면서 삶이 더욱 편리해질 수 있는 서비스를 만들고자 해요",
-    "sliderTitle": "대표 프로젝트"
+    "description": [
+      "학교에서 느낀 불편함을 스스로 해결해보고자 개발을 시작하게 되었어요",
+      "모든 사람들이 쉽게 다룰 수 있으면서 삶이 더욱 편리해질 수 있는 서비스를 만들고자 해요"
+    ]
   },
   "HistorySection": {
-    "sectionTitle1": "저는 오늘도",
-    "sectionTitle2": "빠르게 성장하고 있어요",
-    "contentsCount": "12",
+    "sectionTitle": ["저는 오늘도", "빠르게 성장하고 있어요"],
     "contents": [
       {
         "year": "2023",
@@ -38,27 +48,27 @@
       {
         "year": "",
         "month": "2023.08",
-        "content": "퍼스널 브랜드, <span>네바람 홈페이지</span> 배포"
+        "content": "퍼스널 브랜드, <0>네바람 홈페이지</0> 배포"
       },
       {
         "year": "",
         "month": "2023.06",
-        "content": "ICT 이노베이션 스퀘어 코딩 경진대회 <span>대상</span>"
+        "content": "ICT 이노베이션 스퀘어 코딩 경진대회 <0>대상</0>"
       },
       {
         "year": "",
         "month": "2023.05",
-        "content": "실시간 채팅룸 서비스, <span>BlooWays</span> 배포"
+        "content": "실시간 채팅룸 서비스, <0>BlooWays</0> 배포"
       },
       {
         "year": "",
         "month": "2023.02",
-        "content": "웹 서비스 직무 커뮤니티, <span>BlooBolt</span> 배포"
+        "content": "웹 서비스 직무 커뮤니티, <0>BlooBolt</0> 배포"
       },
       {
         "year": "2022",
         "month": "2022.10",
-        "content": "웹 전시 오브젝트 정보 디자인, <span>Museum Union Gallery</span> 배포"
+        "content": "웹 전시 오브젝트 정보 디자인, <0>Museum Union Gallery</0> 배포"
       },
       {
         "year": "",
@@ -68,7 +78,7 @@
       {
         "year": "2021",
         "month": "2021.11",
-        "content": "티라미수 케이크 쇼핑몰, <span>TIRA</span> 배포"
+        "content": "티라미수 케이크 쇼핑몰, <0>TIRA</0> 배포"
       },
       {
         "year": "",
@@ -78,12 +88,12 @@
       {
         "year": "",
         "month": "2021.07",
-        "content": "파이썬 선형대수 모듈 학습법 강의 제작 <span>누적 수강생 3200명+, 평점 4.9/5.0</span><div>*유명 강의 플랫폼으로부터 강의 섭외 (인프런 / 프로그래머스)</div>"
+        "content": "파이썬 선형대수 모듈 학습법 강의 제작 <0>누적 수강생 3200명+, 평점 4.9/5.0</0><1>*유명 강의 플랫폼으로부터 강의 섭외 (인프런 / 프로그래머스)</1>"
       },
       {
         "year": "2020",
         "month": "2020.07",
-        "content": "개인 기술 블로그 운영 <span>일평균 방문 수 700명, 주 2회 포스트 업로드</span>"
+        "content": "개인 기술 블로그 운영 <0>일평균 방문 수 700명, 주 2회 포스트 업로드</0>"
       },
       {
         "year": "",
@@ -94,35 +104,49 @@
   },
 
   "SkillSection": {
-    "sectionTitle1": "기술적 역량과 강점을",
-    "sectionTitle2": "소개합니다",
-    "description1": "개발부터 디자인, 퍼블리싱, 배포를 스스로 해본 경험이 있어요",
-    "description2": "덕분에 다른 직무자들과도 무리없이 소통이 가능해요",
-
-    "skill1": "Front-End",
-    "skill1Title1": "부드러우면서 편리한",
-    "skill1Title2": "화면 개발을 선호해요",
-    "skill1Description1": "<span></span>데이터를 적합한 시점에 요청하고 불러와 여러가지 애니메이션 효과를 적용해 표현할 수 있어요. 라이브러리를 활용해 효율적으로 개발할 수 있지만 순수 자바스크립트로도 얼마든지 구현할 수 있답니다. 구현이 끝나면 사용자의 입장이 되어 기능들이 의도한대로 동작하는 지 지속적으로 확인하고 있어요.",
-    "skill1Description2": "<span>사용하는 기술</span>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR",
-
-    "skill2": "Back-End",
-    "skill2Title1": "안전한 웹 서버와",
-    "skill2Title2": "DB를 만들 수 있어요",
-    "skill2Description1": "<span></span>데이터를 요청할 API서버와 데이터베이스를 구축할 수 있고, 소켓을 이용해 실시간 데이터 전송 기능을 만들 수 있어요. AWS와 프록시 웹 서버 Nginx를 이용해 안정적인 웹 사이트를 배포할 수 있어요.",
-    "skill2Description2": "<span>사용하는 기술</span>Node.js, Nest.js, Express.js, Prisma, Sequelize, Socket.io, Puppeteer, AWS EC2+S3+Lambda, MySQL, PostgreSQL, MongoDB, Python",
-
-    "skill3": "Design / Publishing",
-    "skill3Title1": "사용자 중심의 일관된",
-    "skill3Title2": "인터페이스를 추구해요",
-    "skill3Description1": "<span></span>개발 시작 전, 디자인 툴로 미리 화면을 그린 후 퍼블리싱 작업을 진행해요. 저는 큰 화면에서 작은 화면, 작은 화면에서 큰 화면으로든 순서에 상관없이 정확한 반응형 퍼블리싱이 가능해요. 요즘은 Apple HIG를 읽어보고 있는데 괜찮은 내용이 많아서 앞으로의 프로젝트에도 적용해보려고 해요. 지금 보고 계신 이 사이트가 HIG를 반영한 첫 결과물이에요.",
-    "skill3Description2": "<span>사용하는 기술</span>TailwindCSS, Emotion, Framer-motion, Styled-Components, SCSS, Illustrator, PhotoShop, InDesign",
-
-    "skill4": "Skill Communication",
-    "skill4Title1": "디자이너와 원활한",
-    "skill4Title2": "협업이 가능해요",
-    "skill4Description1": "저는 시각디자인도 복수전공했어요. 그래서 여러명의 디자이너들과 협업 작업을 진행해본 적이 많아요. 디자이너와 개발자, 두 포지션의 입장에서 프로젝트를 참여해봤기 때문에 소통에 어려움 없이 작업할 수 있어요.",
-    "skill4Description2": "<span>사용하는 기술</span>Figma",
-
+    "sectionTitle": ["기술적 역량과 강점을", "소개합니다"],
+    "description": [
+      "개발부터 디자인, 퍼블리싱, 배포를 스스로 해본 경험이 있어요",
+      "덕분에 다른 직무자들과도 무리없이 소통이 가능해요"
+    ],
+    "skills": [
+      {
+        "name": "Front-End",
+        "title": ["부드러우면서 편리한", "화면 개발을 선호해요"],
+        "description": [
+          "<0></0>데이터를 적합한 시점에 요청하고 불러와 여러가지 애니메이션 효과를 적용해 표현할 수 있어요. 라이브러리를 활용해 효율적으로 개발할 수 있지만 순수 자바스크립트로도 얼마든지 구현할 수 있답니다. 구현이 끝나면 사용자의 입장이 되어 기능들이 의도한대로 동작하는 지 지속적으로 확인하고 있어요.",
+          "<0>사용하는 기술</0>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR"
+        ],
+        "src": "/images/owner/skill-section/skill_01.jpg"
+      },
+      {
+        "name": "Back-End",
+        "title": ["안전한 웹 서버와", "DB를 만들 수 있어요"],
+        "description": [
+          "<0></0>데이터를 요청할 API서버와 데이터베이스를 구축할 수 있고, 소켓을 이용해 실시간 데이터 전송 기능을 만들 수 있어요. AWS와 프록시 웹 서버 Nginx를 이용해 안정적인 웹 사이트를 배포할 수 있어요.",
+          "<0>사용하는 기술</0>Node.js, Nest.js, Express.js, Prisma, Sequelize, Socket.io, Puppeteer, AWS EC2+S3+Lambda, MySQL, PostgreSQL, MongoDB, Python"
+        ],
+        "src": "/images/owner/skill-section/skill_02.jpeg"
+      },
+      {
+        "name": "Design / Publishing",
+        "title": ["사용자 중심의 일관된", "인터페이스를 추구해요"],
+        "description": [
+          "<0></0>개발 시작 전, 디자인 툴로 미리 와이어프레임을 그린 후 퍼블리싱 작업을 진행해요. 저는 큰 화면에서 작은 화면, 작은 화면에서 큰 화면으로든 순서에 상관없이 정확하고 유저친화적인 반응형 퍼블리싱이 가능해요.",
+          "<0>사용하는 기술</0>TailwindCSS, Emotion, Framer-motion, Styled-Components, SCSS, Illustrator, PhotoShop, InDesign"
+        ],
+        "src": "/images/owner/skill-section/skill_03.jpeg"
+      },
+      {
+        "name": "Skill Communication",
+        "title": ["디자이너와 원활한", "협업이 가능해요"],
+        "description": [
+          "저는 시각디자인도 복수전공했어요. 그래서 여러명의 디자이너들과 협업 작업을 진행해본 적이 많아요. 디자이너와 개발자, 두 포지션의 입장에서 프로젝트를 참여해봤기 때문에 소통에 어려움 없이 작업할 수 있어요.",
+          "<0>사용하는 기술</0>Figma"
+        ],
+        "src": "/images/owner/skill-section/skill_04.jpeg"
+      }
+    ],
     "projectsLinkLabel": "진행한 프로젝트들을 둘러보세요",
     "projectsLink": "프로젝트 페이지"
   },
@@ -144,7 +168,7 @@
       },
       {
         "title": "진행중이거나 제작 예정인 강의가 있나요?",
-        "description": "2년 전 데이터 관련 강의가 마지막으로 제작한 강의에요. 아쉽지만 현재는 출시 예정인 서비스에 몰두해야 하는 시기라 시도하지 못하고 있어요. 하지만 내년 정도, 조금 여유있을 때 멋진 서비스 클론 강의로 돌아올게요!"
+        "description": "2년 전 진행한 데이터 분석 및 시각화 강의가 마지막으로 제작한 강의에요. 아쉽지만 현재는 출시 예정인 서비스에 몰두해야 하는 시기라 시도하지 못하고 있어요. 하지만 내년 정도, 조금 여유있을 때 멋진 서비스 클론 강의로 돌아올게요!"
       }
     ]
   }

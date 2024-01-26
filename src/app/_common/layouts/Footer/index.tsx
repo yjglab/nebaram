@@ -40,7 +40,6 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
         },
       ],
     },
-
     {
       id: 2,
       name: t("Footer.company.name"),

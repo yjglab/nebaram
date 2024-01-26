@@ -8,98 +8,31 @@ import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useTranslation } from "@app/i18n/client";
 import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
+import { Trans } from "react-i18next";
 
+interface Skill {
+  name: string;
+  title: string;
+  description: string;
+  src: string;
+}
 interface Props {
   lng: string;
 }
 const SkillSection: FC<Props> = ({ lng }) => {
   const { t } = useTranslation(lng, "owner");
 
-  const skillCard = [
-    {
-      id: 1,
-      skill: t("SkillSection.skill1"),
-      src: "/images/owner/skill-section/skill_01.jpg",
-      title1: t("SkillSection.skill1Title1"),
-      title2: t("SkillSection.skill1Title2"),
-      // description1: t.rich("SkillSection.skill1Description1", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
-      //   ),
-      // }),
-      // description2: t.rich("SkillSection.skill1Description2", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
-      //   ),
-      // }),
-      description1: "rich 필요",
-      description2: "rich 필요",
-    },
-    {
-      id: 2,
-      skill: t("SkillSection.skill2"),
-      src: "/images/owner/skill-section/skill_02.jpeg",
-      title1: t("SkillSection.skill2Title1"),
-      title2: t("SkillSection.skill2Title2"),
-      // description1: t.rich("SkillSection.skill2Description1", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
-      //   ),
-      // }),
-      // description2: t.rich("SkillSection.skill2Description2", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
-      //   ),
-      // }),
-      description1: "rich 필요",
-      description2: "rich 필요",
-    },
-    {
-      id: 3,
-      skill: t("SkillSection.skill3"),
-      src: "/images/owner/skill-section/skill_03.jpeg",
-      title1: t("SkillSection.skill3Title1"),
-      title2: t("SkillSection.skill3Title2"),
-      // description1: t.rich("SkillSection.skill3Description1", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
-      //   ),
-      // }),
-      // description2: t.rich("SkillSection.skill3Description2", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
-      //   ),
-      // }),
-      description1: "rich 필요",
-      description2: "rich 필요",
-    },
-    {
-      id: 4,
-      skill: t("SkillSection.skill4"),
-      src: "/images/owner/skill-section/skill_04.jpeg",
-      title1: t("SkillSection.skill4Title1"),
-      title2: t("SkillSection.skill4Title2"),
-      // description1: t.rich("SkillSection.skill4Description1", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-indigo-400">{children}</p>
-      //   ),
-      // }),
-      // description2: t.rich("SkillSection.skill4Description2", {
-      //   span: (children) => (
-      //     <p className="mb-1 font-medium text-amber-500">{children}</p>
-      //   ),
-      // }),
-      description1: "rich 필요",
-      description2: "rich 필요",
-    },
-  ];
-  const [skillCardHover, setSkillCardHover] = useState("");
+  const skills: Skill[] = t("SkillSection.skills", {
+    returnObjects: true,
+  });
+
+  const [hoveredSkill, setHoveredSkill] = useState("");
   const handleCardHover = (e: MouseEvent<HTMLDivElement>) => {
-    setSkillCardHover(e.currentTarget.id);
+    setHoveredSkill(e.currentTarget.id);
   };
 
   const handleCardLeave = () => {
-    setSkillCardHover("");
+    setHoveredSkill("");
   };
 
   return (
@@ -107,10 +40,10 @@ const SkillSection: FC<Props> = ({ lng }) => {
       <div className="w-full text-center">
         <header className="flex flex-col gap-2 md:gap-4">
           <AnimatedTitle size="lg" align="center">
-            {t("SkillSection.sectionTitle1")}
+            {t("SkillSection.sectionTitle.0")}
           </AnimatedTitle>
           <AnimatedTitle size="lg" align="center">
-            {t("SkillSection.sectionTitle2")}
+            {t("SkillSection.sectionTitle.1")}
           </AnimatedTitle>
         </header>
         <motion.hgroup
@@ -120,18 +53,18 @@ const SkillSection: FC<Props> = ({ lng }) => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="mx-auto mt-6 break-keep text-sm md:max-w-[80%] md:text-lg">
-            {t("SkillSection.description1")}
+            {t("SkillSection.description.0")}
           </h2>
           <h2 className="mx-auto mt-0.5 break-keep text-sm md:max-w-[80%] md:text-lg">
-            {t("SkillSection.description2")}
+            {t("SkillSection.description.1")}
           </h2>
         </motion.hgroup>
       </div>
       <div className="mt-16 grid h-full grid-cols-1 gap-6 overflow-hidden sm:grid-cols-2 md:mt-24 lg:gap-10">
-        {skillCard.map((card, index) => (
+        {skills.map((skill, index) => (
           <motion.article
-            key={card.id}
-            id={card.skill}
+            key={skill.name}
+            id={skill.name}
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardLeave}
             className="relative flex h-[400px] w-[300px] flex-col overflow-hidden rounded-2xl border border-white/10 p-[10%] lg:h-[500px] lg:w-[400px]"
@@ -147,45 +80,53 @@ const SkillSection: FC<Props> = ({ lng }) => {
             <ArrowLeftCircleIcon className="absolute bottom-10 right-10 z-20 w-8" />
             <div
               className={classNames(
-                skillCardHover === card.skill ? "opacity-100" : "opacity-0",
+                hoveredSkill === skill.name ? "opacity-100" : "opacity-0",
                 "top-0 duration-200 z-20 backdrop-blur-md w-full h-full absolute left-0 bg-black/40"
               )}
             />
             <div
               className={classNames(
-                skillCardHover === card.skill
+                hoveredSkill === skill.name
                   ? "bottom-4 opacity-0"
                   : "bottom-0 opacity-100",
                 "z-20 text-base relative text-indigo-400 font-semibold leading-6 duration-100"
               )}
             >
-              {card.skill}
+              {skill.name}
             </div>
             <hgroup
               className={classNames(
-                skillCardHover === card.skill
+                hoveredSkill === skill.name
                   ? "bottom-10 text-base leading-0 gap-0 xl:text-lg 2xl:text-xl text-indigo-400 "
                   : "bottom-0 text-2xl md:3xl 2xl:text-3xl gap-0 lg:gap-1 xl:gap-2 leading-8",
                 "z-20 flex flex-col relative duration-300 font-semibold  mt-4 tracking-tight"
               )}
             >
-              <h1>{card.title1}</h1>
-              <h1>{card.title2}</h1>
+              <h1>{skill.title[0]}</h1>
+              <h1>{skill.title[1]}</h1>
             </hgroup>
 
             <div
               className={classNames(
-                skillCardHover === card.skill
+                hoveredSkill === skill.name
                   ? "bottom-6  opacity-100"
                   : "-bottom-4 opacity-0",
-                "text-sm xl:text-base 2xl:text-lg z-20 relative duration-300 flex flex-col gap-4"
+                "text-sm xl:text-base 2xl:text-lg z-20 relative duration-300 flex flex-col gap-3"
               )}
             >
-              <div>{card.description1}</div>
-              <div>{card.description2}</div>
+              <Trans
+                components={[<p className="font-medium text-indigo-400"></p>]}
+              >
+                {skill.description[0]}
+              </Trans>
+              <Trans
+                components={[<p className="font-medium text-amber-500"></p>]}
+              >
+                {skill.description[1]}
+              </Trans>
             </div>
             <Image
-              src={card.src}
+              src={skill.src}
               fill
               sizes="(max-width: 400px)"
               className="absolute brightness-75 opacity-60 object-cover aspect-square"
