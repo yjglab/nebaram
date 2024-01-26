@@ -11,6 +11,8 @@ import { poppins } from "@constants/fonts";
 import DropMenu from "@app/_common/parts/DropMenu";
 import { useTranslation } from "@app/i18n/client";
 import Scroller from "./Scroller";
+import Image from "next/image";
+import { nebaramLogoPublicUrl } from "@constants/url";
 
 interface Props {
   lng: string;
@@ -67,10 +69,14 @@ const Navigation: FC<Props> = ({ lng }) => {
                 {/* Links */}
                 <div className="space-y-5 px-4 py-6">
                   <div onClick={onClose} className="flow-root">
-                    <Link href="/owner">{t("Navigation.owner")}</Link>
+                    <Link href="/owner" scroll={false}>
+                      {t("Navigation.owner")}
+                    </Link>
                   </div>
                   <div onClick={onClose} className="flow-root">
-                    <Link href="/projects">{t("Navigation.projects")}</Link>
+                    <Link href="/projects" scroll={false}>
+                      {t("Navigation.projects")}
+                    </Link>
                   </div>
                   <div className="h-[1.2px] w-full bg-white/30" />
 
@@ -85,7 +91,7 @@ const Navigation: FC<Props> = ({ lng }) => {
                             aria-label="Language switch button"
                           >
                             {index > 0 && " 또는 "}
-                            <Link href={`/${l}${rest.join("/")}`}>{l}</Link>
+                            <Link href={`/${l}/${rest.join("/")}`}>{l}</Link>
                           </button>
                         </div>
                       );
@@ -110,9 +116,9 @@ const Navigation: FC<Props> = ({ lng }) => {
             <div className="relative flex h-14 w-full items-center justify-between duration-200">
               <div className="flex">
                 <div className="ml-2 flex">
-                  <Link className="flex items-center" href="/">
-                    <img
-                      src="/images/common/clogo.png"
+                  <Link className="flex items-center" href="/" scroll={false}>
+                    <Image
+                      src={nebaramLogoPublicUrl}
                       width={16}
                       height={16}
                       alt="brand logo"
@@ -129,8 +135,12 @@ const Navigation: FC<Props> = ({ lng }) => {
                 </div>
                 <Popover.Group className="hidden items-center md:ml-8 md:flex md:self-stretch">
                   <div className="flex space-x-8">
-                    <Link href="/owner">{t("Navigation.owner")}</Link>
-                    <Link href="/projects">{t("Navigation.projects")}</Link>
+                    <Link href={`/${lng}/owner`} scroll={false}>
+                      {t("Navigation.owner")}
+                    </Link>
+                    <Link href={`/${lng}/projects`} scroll={false}>
+                      {t("Navigation.projects")}
+                    </Link>
                   </div>
                 </Popover.Group>
               </div>
@@ -150,7 +160,7 @@ const Navigation: FC<Props> = ({ lng }) => {
                               aria-label="Language switch button"
                             >
                               {index > 0 && " 또는 "}
-                              <Link href={`/${l}${rest.join("/")}`}>{l}</Link>
+                              <Link href={`/${l}/${rest.join("/")}`}>{l}</Link>
                             </button>
                           )}
                         </Menu.Item>

@@ -1,7 +1,7 @@
 "use client";
 
 import ProjectSection, { ProjectData } from "./_components/ProjectSection";
-import { FC, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import HeaderSection from "./_components/HeaderSection";
 import { useTranslation } from "@app/i18n/client";
 
@@ -22,6 +22,11 @@ const ProjectsClientPage: FC<Props> = ({ lng }) => {
 
   const [category, setCategory] =
     useState<ProjectSectionCategory>("development");
+
+  const changeCategory = useCallback((category: ProjectSectionCategory) => {
+    setCategory(category);
+  }, []);
+
   const projectsData: ProjectsData = {
     development: Array.from(
       {
@@ -93,7 +98,11 @@ const ProjectsClientPage: FC<Props> = ({ lng }) => {
 
   return (
     <main>
-      <HeaderSection lng={lng} category={category} setCategory={setCategory} />
+      <HeaderSection
+        lng={lng}
+        category={category}
+        changeCategory={changeCategory}
+      />
       <ProjectSection
         lng={lng}
         projectsData={projectsData}

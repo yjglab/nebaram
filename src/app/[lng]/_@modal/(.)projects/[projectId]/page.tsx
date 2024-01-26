@@ -38,7 +38,7 @@ interface Props {
     lng: string;
   };
 }
-const ProjectDetailPage: FC<Props> = async ({ params: { lng } }) => {
+const ProjectDetailPage: FC<Props> = ({ params: { lng } }) => {
   return (
     <OverlayContainer>
       <HeaderSection lng={lng} />

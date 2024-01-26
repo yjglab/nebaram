@@ -1,5 +1,5 @@
 import { poppins } from "@constants/fonts";
-import { clogo } from "@constants/images";
+import { nebaramLogoPublicUrl } from "@constants/url";
 import classNames from "classnames";
 import { i18n } from "i18next";
 import Image from "next/image";
@@ -11,75 +11,75 @@ interface Props {
   lng: string;
 }
 const Footer: FC<Props> = ({ i18n, lng }) => {
-  const t = i18n.getFixedT(lng, "Footer");
+  const t = i18n.getFixedT(lng, "common");
 
   const footerMenu = [
     {
       id: 1,
-      name: t("services.name"),
+      name: t("Footer.services.name"),
       contents: [
         {
           id: 1,
-          name: t("services.content1.name"),
-          link: t("services.content1.link"),
+          name: t("Footer.services.content1.name"),
+          link: t("Footer.services.content1.link"),
         },
         {
           id: 2,
-          name: t("services.content2.name"),
-          link: t("services.content2.link"),
+          name: t("Footer.services.content2.name"),
+          link: t("Footer.services.content2.link"),
         },
         {
           id: 3,
-          name: t("services.content3.name"),
-          link: t("services.content3.link"),
+          name: t("Footer.services.content3.name"),
+          link: t("Footer.services.content3.link"),
         },
         {
           id: 4,
-          name: t("services.content4.name"),
-          link: t("services.content4.link"),
+          name: t("Footer.services.content4.name"),
+          link: t("Footer.services.content4.link"),
         },
       ],
     },
 
     {
       id: 2,
-      name: t("company.name"),
+      name: t("Footer.company.name"),
       contents: [
         {
           id: 1,
-          name: t("company.content1.name"),
-          link: t("company.content1.link"),
+          name: t("Footer.company.content1.name"),
+          link: t("Footer.company.content1.link"),
         },
         {
           id: 2,
-          name: t("company.content2.name"),
-          link: t("company.content2.link"),
+          name: t("Footer.company.content2.name"),
+          link: t("Footer.company.content2.link"),
         },
         {
           id: 3,
-          name: t("company.content3.name"),
-          link: t("company.content3.link"),
+          name: t("Footer.company.content3.name"),
+          link: t("Footer.company.content3.link"),
         },
         {
           id: 4,
-          name: t("company.content4.name"),
-          link: t("company.content4.link"),
+          name: t("Footer.company.content4.name"),
+          link: t("Footer.company.content4.link"),
         },
       ],
     },
     {
       id: 3,
-      name: t("contact.name"),
+      name: t("Footer.contact.name"),
       contents: [
         {
           id: 1,
-          name: t("contact.content1.name"),
-          link: t("contact.content1.link"),
+          name: t("Footer.contact.content1.name"),
+          link: t("Footer.contact.content1.link"),
         },
         {
           id: 2,
-          name: t("contact.content2.name"),
-          link: t("contact.content2.link"),
+          name: t("Footer.contact.content2.name"),
+          link: t("Footer.contact.content2.link"),
         },
       ],
     },
@@ -89,23 +89,28 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div>
           <Link className="flex items-center" href="/">
-            <Image src={clogo} alt="brand logo" width={16} height={16} />
+            <Image
+              src={nebaramLogoPublicUrl}
+              alt="brand logo"
+              width={16}
+              height={16}
+            />
             <span
               className={classNames(
                 poppins.className,
                 "ml-1.5 font-[500] text-lg"
               )}
             >
-              {t("companyName")}
+              {t("Footer.companyName")}
             </span>
           </Link>
 
           <hgroup className="mt-4 flex max-w-xs flex-col gap-1 text-sm ">
-            <h1>{t("description")}</h1>
+            <h1>{t("Footer.description")}</h1>
             <h2>
-              {t("presidentNameLabel")} | {t("presidentName")}
+              {t("Footer.presidentNameLabel")} | {t("Footer.presidentName")}
             </h2>
-            <h2> {t("email")}</h2>
+            <h2> {t("Footer.email")}</h2>
           </hgroup>
 
           <ul className="mt-8 flex gap-6">

@@ -7,7 +7,7 @@ interface Props {
 export default async function MainPage({ params: { lng } }: Props) {
   return (
     <>
-      {/* <SplashScreenContainer lng={lng} /> */}
+      <SplashScreenContainer targetPath={`/${lng}/owner`} />
       <main className="min-h-screen w-full">Main</main>
     </>
   );

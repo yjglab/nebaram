@@ -17,12 +17,12 @@ export function middleware(req: NextRequest) {
     req.nextUrl.pathname.indexOf("chrome") > -1
   )
     return NextResponse.next();
-
-  let lng: string | undefined | null;
   // public 파일 접근인 경우 리디렉션 하지 않음
   if (PUBLIC_PATH.test(req.nextUrl.pathname)) {
     return;
   }
+
+  let lng: string | undefined | null;
   if (req.cookies.has(cookieName))
     lng = acceptLanguage.get(req.cookies.get(cookieName)?.value);
   if (!lng) {

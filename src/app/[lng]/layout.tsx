@@ -13,6 +13,7 @@ import { useTranslation } from "@app/i18n";
 import Navigation from "@app/_common/layouts/Navigation";
 import Footer from "@app/_common/layouts/Footer";
 import { notoSans } from "@constants/fonts";
+import LoadingContainer from "@app/_common/containers/LoadingContainer";
 
 export function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -60,6 +61,7 @@ interface Props {
   };
 }
 const LngRootLayout = async ({ children, params: { lng } }: Props) => {
+  const { t, i18n } = await useTranslation(lng, "common");
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
 
@@ -82,7 +84,7 @@ const LngRootLayout = async ({ children, params: { lng } }: Props) => {
             <Navigation lng={lng} />
             {children}
             {/* {modal} */}
-            {/* <Footer i18n={i18n} lng={lng} /> */}
+            <Footer i18n={i18n} lng={lng} />
           </HydrationBoundary>
         </QueryProvider>
       </body>

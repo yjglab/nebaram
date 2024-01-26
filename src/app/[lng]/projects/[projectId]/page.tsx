@@ -37,7 +37,7 @@ interface Props {
     lng: string;
   };
 }
-const ProjectDetailPage: FC<Props> = async ({ params: { lng } }) => {
+const ProjectDetailPage: FC<Props> = ({ params: { lng } }) => {
   return (
     <main className="mt-16">
       <HeaderSection lng={lng} />

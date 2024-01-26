@@ -1,4 +1,4 @@
-import { clogo } from "@constants/images";
+import { nebaramLogoPublicUrl } from "@constants/url";
 import classNames from "classnames";
 import Image from "next/image";
 import { FC } from "react";
@@ -15,7 +15,7 @@ const LoadingContainer: FC<Props> = ({ isOverlay = false }) => {
       )}
     >
       <Image
-        src={clogo}
+        src={nebaramLogoPublicUrl}
         className="animate-spin"
         width={32}
         height={32}

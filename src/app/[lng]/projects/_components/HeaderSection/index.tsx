@@ -3,25 +3,22 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "@app/i18n/client";
+import { ProjectSectionCategory } from "../../page.client";
 
-type Category = "all" | "development" | "design";
 interface Props {
   lng: string;
   category: string;
-  setCategory: (category: Category) => void;
+  changeCategory: (category: ProjectSectionCategory) => void;
 }
-const HeaderSection: FC<Props> = ({ lng, category, setCategory }) => {
+const HeaderSection: FC<Props> = ({ lng, category, changeCategory }) => {
   const { t } = useTranslation(lng, "projects");
-
   const headerCategories = [
     [t("HeaderSection.category1"), "all"],
     [t("HeaderSection.category2"), "development"],
     [t("HeaderSection.category3"), "design"],
     [t("HeaderSection.category4"), "ongoing"],
   ];
-  const handleChangeCategory = (selectedCategory: Category) => {
-    setCategory(selectedCategory);
-  };
+
   return (
     <section className="mx-auto max-w-2xl px-6 mt-24 md:mt-32 lg:max-w-6xl ">
       <header className="relative flex flex-col justify-between gap-2 text-sm md:gap-0 lg:text-lg">
@@ -51,7 +48,9 @@ const HeaderSection: FC<Props> = ({ lng, category, setCategory }) => {
         {headerCategories.map((headerCategory, index) => (
           <motion.div
             key={headerCategory[1]}
-            onClick={() => handleChangeCategory(headerCategory[1] as Category)}
+            onClick={() =>
+              changeCategory(headerCategory[1] as ProjectSectionCategory)
+            }
             className={classNames(
               category === headerCategory[1] && headerCategory[1] === "ongoing"
                 ? "border-b-amber-500"
