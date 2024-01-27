@@ -14,40 +14,48 @@
         "projectCategory": "Web Motion Poster",
         "date": "2020.11",
         "thumbnailSrc": "/images/projects/project-section/journet.jpg",
-        "title1": "Journet",
-        "title2": "여행 키워드를 중심으로 journey와 internet을 연결한 웹 포스터",
-        "description1": "여행 키워드를 중심으로 journey와 internet을 연결한 웹 포스터에요. 바이러스로 인해 고통스럽고 우울한 삶을 지내왔던 이들에게 시각적으로나마 유의미한 경험을 제공하고자 해요.",
-        "description2": "JavaScript, HTML, CSS",
+        "title": [
+          "Journet",
+          "여행 키워드를 중심으로 journey와 internet을 연결한 웹 포스터"
+        ],
+        "description": "여행 키워드를 중심으로 journey와 internet을 연결한 웹 포스터에요. 바이러스로 인해 고통스럽고 우울한 삶을 지내왔던 이들에게 시각적으로나마 유의미한 경험을 제공하고자 해요.",
+        "skills": "JavaScript, HTML, CSS",
         "link": "https://www.behance.net/gallery/109969189/Journet-Journey-On-the-Internet"
       },
       {
         "projectCategory": "Web Motion Poster",
         "date": "2020.10",
         "thumbnailSrc": "/images/projects/project-section/trois-couleurs.jpg",
-        "title1": "Trois Couleurs",
-        "title2": "Krzysztof Kieslowski 감독의 세 가지 색 3부작 Web Poster",
-        "description1": "영화 Trous Couleurs의 아이덴티티를 시각화하여 제작한 웹 포스터에요.",
-        "description2": "JavaScript, HTML, CSS",
+        "title": [
+          "Trois Couleurs",
+          "Krzysztof Kieslowski 감독의 세 가지 색 3부작 Web Poster"
+        ],
+        "description": "영화 Trous Couleurs의 아이덴티티를 시각화하여 제작한 웹 포스터에요.",
+        "skills": "JavaScript, HTML, CSS",
         "link": "https://www.behance.net/gallery/107300171/Trois-Couleurs-Motion-Poster"
       },
       {
         "projectCategory": "3D Graphic",
         "date": "2020.09",
         "thumbnailSrc": "/images/projects/project-section/blockchain.jpg",
-        "title1": "BlockChain Infographic",
-        "title2": "블록체인의 개념과 활용성에 대해 소개하는 3D 그래픽 애니메이션",
-        "description1": "데이터의 분산처리, 탈중앙화를 핵심으로 한 기술인 블록체인의 개념을 3D 아트웍으로 쉽게 이해할 수 있도록 제작한 애니메이션이에요.",
-        "description2": "Cinema 4D",
+        "title": [
+          "BlockChain Infographic",
+          "블록체인의 개념과 활용성에 대해 소개하는 3D 그래픽 애니메이션"
+        ],
+        "description": "데이터의 분산처리, 탈중앙화를 핵심으로 한 기술인 블록체인의 개념을 3D 아트웍으로 쉽게 이해할 수 있도록 제작한 애니메이션이에요.",
+        "skills": "Cinema 4D",
         "link": "https://www.behance.net/gallery/133981975/BlockChain-Infographic"
       },
       {
         "projectCategory": "3D Graphic",
         "date": "2020.05",
         "thumbnailSrc": "/images/projects/project-section/yukcamera.jpg",
-        "title1": "Low Polygan Island",
-        "title2": "카메라 캐릭터를 이용한 3D 로우 폴리건 아트워크",
-        "description1": "평소 자주 가지고 다니던 카메라를 본따 제작한 캐릭터와 세계관을 모션 그래픽으로 제작한 3D 아트웍이에요.",
-        "description2": "Cinema 4D",
+        "title": [
+          "Low Polygan Island",
+          "카메라 캐릭터를 이용한 3D 로우 폴리건 아트워크"
+        ],
+        "description": "평소 자주 가지고 다니던 카메라를 본따 제작한 캐릭터와 세계관을 모션 그래픽으로 제작한 3D 아트웍이에요.",
+        "skills": "Cinema 4D",
         "link": "https://www.behance.net/gallery/100362891/YUK-BBI-BIKs-Love-House-Lowpolygon-Artwork"
       }
     ],
@@ -622,10 +630,9 @@
         "projectCategory": "Full Stack Development",
         "date": "2024.02",
         "thumbnailSrc": "/images/projects/project-section/introduce_thumb.jpg",
-        "title1": "introduce",
-        "title2": "내 작품을 가장 바르게 검증할 수 있는 곳.",
-        "description1": "인트로듀스는 자신의 프로젝트, 작품을 개발자들과 디자이너, 그리고 대중에게 공개해서 의견과 평가를 받을 수 있는 서비스에요.",
-        "description2": "TypeScript, React.js, Next.js, React-query(server), Redux-Toolkit(client), TailwindCSS, Emotion, Nest.js, PostgreSQL, Redis, Prisma, Vercel(client), FireBase(server)",
+        "title": ["introduce", "내 작품을 가장 바르게 검증할 수 있는 곳."],
+        "description": "인트로듀스는 자신의 프로젝트, 작품을 개발자들과 디자이너, 그리고 대중에게 공개해서 의견과 평가를 받을 수 있는 서비스에요.",
+        "skills": "TypeScript, React.js, Next.js, React-query(server), Redux-Toolkit(client), TailwindCSS, Emotion, Nest.js, PostgreSQL, Redis, Prisma, Vercel(client), FireBase(server)",
         "link": "https://github.com/yjglab/introduce.official"
       }
     ]

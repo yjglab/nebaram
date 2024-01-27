@@ -6,7 +6,7 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { FC, useState } from "react";
 import { useTranslation } from "@app/i18n/client";
 import Slider from "@app/_common/parts/Slider";
-import { ProjectDevelopment } from "../../page";
+import { ProjectDevelopment } from "@/@types";
 
 interface Props {
   lng: string;

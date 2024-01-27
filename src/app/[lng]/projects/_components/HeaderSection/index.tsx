@@ -1,9 +1,9 @@
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "@app/i18n/client";
-import { ProjectSectionCategory } from "../../page.client";
+import { ProjectSectionCategory } from "@/@types";
 
 interface Props {
   lng: string;

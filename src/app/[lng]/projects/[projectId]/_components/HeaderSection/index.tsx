@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { useTranslation } from "@app/i18n/client";
 import AnimatedTitle from "@app/_common/parts/AnimatedTitle";
-import { ProjectDevelopment } from "../../page";
+import { ProjectDevelopment } from "@/@types";
 
 interface Props {
   lng: string;
