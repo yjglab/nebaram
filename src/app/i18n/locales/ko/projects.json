@@ -11,6 +11,7 @@
 
     "projectsDesign": [
       {
+        "category": "design",
         "projectCategory": "Web Motion Poster",
         "date": "2020.11",
         "thumbnailSrc": "/images/projects/project-section/journet.jpg",
@@ -23,6 +24,7 @@
         "link": "https://www.behance.net/gallery/109969189/Journet-Journey-On-the-Internet"
       },
       {
+        "category": "design",
         "projectCategory": "Web Motion Poster",
         "date": "2020.10",
         "thumbnailSrc": "/images/projects/project-section/trois-couleurs.jpg",
@@ -35,6 +37,7 @@
         "link": "https://www.behance.net/gallery/107300171/Trois-Couleurs-Motion-Poster"
       },
       {
+        "category": "design",
         "projectCategory": "3D Graphic",
         "date": "2020.09",
         "thumbnailSrc": "/images/projects/project-section/blockchain.jpg",
@@ -47,6 +50,7 @@
         "link": "https://www.behance.net/gallery/133981975/BlockChain-Infographic"
       },
       {
+        "category": "design",
         "projectCategory": "3D Graphic",
         "date": "2020.05",
         "thumbnailSrc": "/images/projects/project-section/yukcamera.jpg",
@@ -61,6 +65,7 @@
     ],
     "projectsDevelopment": [
       {
+        "category": "development",
         "projectCategory": "Front-end Development",
         "date": "2023.08",
         "thumbnailSrc": "/images/projects/project-section/nebaram_thumb.jpeg",
@@ -144,6 +149,7 @@
         }
       },
       {
+        "category": "development",
         "projectCategory": "Full Stack Development",
         "date": "2023.03",
         "thumbnailSrc": "/images/projects/project-section/bloobolt_thumb.jpg",
@@ -324,6 +330,7 @@
         }
       },
       {
+        "category": "development",
         "projectCategory": "Full Stack Development",
         "date": "2023.06",
         "thumbnailSrc": "/images/projects/project-section/blooways_thumb.jpg",
@@ -441,6 +448,7 @@
         }
       },
       {
+        "category": "development",
         "projectCategory": "Front-end Development",
         "date": "2022.10",
         "thumbnailSrc": "/images/projects/project-section/mug_thumb.jpeg",
@@ -550,6 +558,7 @@
       },
 
       {
+        "category": "development",
         "projectCategory": "Full Stack Development",
         "date": "2021.11",
         "thumbnailSrc": "/images/projects/project-section/tira_thumb.jpg",
@@ -627,6 +636,7 @@
     ],
     "projectsOngoing": [
       {
+        "category": "ongoing",
         "projectCategory": "Full Stack Development",
         "date": "2024.02",
         "thumbnailSrc": "/images/projects/project-section/introduce_thumb.jpg",

@@ -105,7 +105,7 @@ const ProjectCard: FC<Props> = ({ lng, project, index, category }) => {
           </p>
           {project.skills}
         </div>
-        {category === "development" ? (
+        {project.category === "development" ? (
           <Link
             href={`${pathname}/${index + 1}`}
             scroll={false}

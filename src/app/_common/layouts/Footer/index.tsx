@@ -89,7 +89,7 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
             <div key={menu.name}>
               <h1 className="font-medium">{menu.name}</h1>
               <ul className="mt-4 space-y-3 text-sm md:mt-6 md:space-y-4">
-                {menu.contents.map((content) => (
+                {menu.contents?.map((content) => (
                   <li key={content.name}>
                     <a
                       rel="noreferrer"
@@ -107,7 +107,7 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
         </div>
       </div>
 
-      <p className="text-xs text-gray-400">{t("copyright")}</p>
+      <p className="text-xs text-gray-400">{t("Footer.copyright")}</p>
     </footer>
   );
 };

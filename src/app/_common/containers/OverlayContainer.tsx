@@ -32,8 +32,7 @@ const OverlayContainer: FC<PropsWithChildren<Props>> = ({ children }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
-          {/* <div className="fixed inset-0 bg-black/70 backdrop-blur-md" /> */}
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-md" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">

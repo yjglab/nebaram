@@ -1,150 +1,173 @@
 {
   "BannerSection": {
-    "title1": "Adapting and evolving responsive developer",
-    "title2": "Jaekyeong Yuk"
+    "title": ["Responsive Quickly Anywhere", "Dev. Jaekeong Yuk"]
   },
   "OutcomeSection": {
-    "header1": "Striving to create services that will be remembered by people for a long time",
-    "header2": "So I've been consistently working hard until now",
-    "title1": "Accumulated Work Days",
-    "value1": "{days}",
-    "value1Unit": "+",
-    "title2": "Accumulated Course Attendees",
-    "value2": "{attends}",
-    "value2Unit": "+",
-    "title3": "Projects Worked On <span>Web / Engineering / Design</span>",
-    "value3": "{services}",
-    "value3Unit": "+",
-    "title4": "Awards Won <span>Coding Competition Winner</span>",
-    "value4": "{awards}",
-    "value4Unit": ""
+    "header": [
+      "I aim to create services that people will remember for a long time",
+      "So I've been working consistently towards that goal"
+    ],
+    "contents": [
+      {
+        "title": "Accumulated Work Days",
+        "value": "{{days}}",
+        "valueUnit": "+"
+      },
+      {
+        "title": "Accumulated Course Attendees",
+        "value": "{{attends}}",
+        "valueUnit": "+"
+      },
+      {
+        "title": "Projects Worked On <0>Web/Engineering/Design</0>",
+        "value": "{{services}}",
+        "valueUnit": ""
+      },
+      {
+        "title": "Awards/Certifications <0>ICT Coding Contest Grand Prize</0>",
+        "value": "{{awards}}",
+        "valueUnit": ""
+      }
+    ]
   },
   "ObjectiveSection": {
     "title": "Goals as a Developer",
-    "description1": "I started developing because I wanted to solve the discomfort I felt in school on my own.",
-    "description2": "I want to create services that are easy for everyone to use and make life more convenient.",
-    "sliderTitle": "Representative Projects"
+    "description": [
+      "I started coding to solve the inconvenience I felt in school",
+      "I aim to create services that everyone can easily handle, making life more convenient"
+    ]
   },
   "HistorySection": {
-    "sectionTitle1": "I am still",
-    "sectionTitle2": "growing rapidly today",
-    "contentsCount": "12",
+    "sectionTitle": ["I'm Still", "Growing Rapidly Today"],
     "contents": [
       {
         "year": "2023",
-        "month": "September 2023",
-        "content": "PCCP JavaScript Coding Proficiency Certification, GREB Co., Ltd."
+        "month": "2023.09",
+        "content": "Programmers Coding Competency Certification (PCCP JavaScript), Grep Inc."
       },
       {
         "year": "",
-        "month": "August 2023",
-        "content": "Personal Branding, <span>Nebaram Website</span> Deployment"
+        "month": "2023.08",
+        "content": "Personal Brand, <0>Nevabram Website</0> Deployment"
       },
       {
         "year": "",
-        "month": "June 2023",
-        "content": "ICT Innovation Square Coding Competition <span>Grand Prize</span> (Jeonju)"
+        "month": "2023.06",
+        "content": "ICT Innovation Square Coding Contest <0>Grand Prize</0>"
       },
       {
         "year": "",
-        "month": "May 2023",
-        "content": "Real-time Chatroom Service, <span>BlooWays</span> Deployment"
+        "month": "2023.05",
+        "content": "Real-time Chat Room Service, <0>BlooWays</0> Deployment"
       },
       {
         "year": "",
-        "month": "February 2023",
-        "content": "Web Service Professional Community, <span>BlooBolt</span> Deployment"
+        "month": "2023.02",
+        "content": "Web Service Job Community, <0>BlooBolt</0> Deployment"
       },
       {
         "year": "2022",
-        "month": "October 2022",
-        "content": "Web Exhibition Object Information Design, <span>Museum Union Gallery</span> Deployment"
+        "month": "2022.10",
+        "content": "Web Exhibition Object Information Design, <0>Museum Union Gallery</0> Deployment"
       },
       {
         "year": "",
-        "month": "September 2022",
-        "content": "Information Processing Engineer Certification (Korea Industrial Human Resources Development Corporation)"
+        "month": "2022.09",
+        "content": "Information Processing Engineer Certification (Korea Industrial Human Resources Development Service)"
       },
       {
         "year": "2021",
-        "month": "November 2021",
-        "content": "Tiramisu Cake Online Store, <span>TIRA</span> Deployment"
+        "month": "2021.11",
+        "content": "Tiramisu Cake Shopping Mall, <0>TIRA</0> Deployment"
       },
       {
         "year": "",
-        "month": "August 2021",
+        "month": "2021.08",
         "content": "Dessert Brand, THERA Rebranding"
       },
       {
         "year": "",
-        "month": "July 2021",
-        "content": "Python Linear Algebra Module Learning Course Production <span>Over 3,200 students, Rating 4.9/5.0</span><div>*Invited as an instructor by major online learning platforms (Inflearn / Programmers)</div>"
+        "month": "2021.07",
+        "content": "Python Linear Algebra Module Learning Method Lecture Production <0>Accumulated Students 3200+, Rating 4.9/5.0</0><1>*Invited to lecture from a famous lecture platform (Inflearn / Programmers)</1>"
       },
       {
         "year": "2020",
-        "month": "July 2020",
-        "content": "Personal Tech Blog Operation <span>Daily Average Visits: 700, Biweekly Post Uploads</span>"
+        "month": "2020.07",
+        "content": "Operation of Personal Tech Blog <0>Daily Average Visitors 700, 2 Posts Uploaded Weekly</0>"
       },
       {
         "year": "",
-        "month": "May 2020",
+        "month": "2020.05",
         "content": "Design Project Production Activities: Typographic, Editorial / Interior Design, 3D Graphic, Branding"
       }
     ]
   },
-
   "SkillSection": {
-    "sectionTitle1": "Introducing My Strengths",
-    "sectionTitle2": "and Technical Competencies",
-    "description1": "I can handle development, design, publishing, and deployment on my own.",
-    "description2": "This enables me to communicate effectively with professionals from different roles.",
-
-    "skill1": "Front-End",
-    "skill1Title1": "Creating Smooth",
-    "skill1Title2": "and Unique UI",
-    "skill1Description1": "I can request and fetch data at the appropriate times, applying various animation effects for presentation. I can efficiently develop using libraries, but I'm also capable of implementing everything with pure JavaScript. After implementation, I continuously check that the features work as intended from the user's perspective.",
-    "skill1Description2": "<span>Skills</span>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR",
-
-    "skill2": "Back-End",
-    "skill2Title1": "Creating secure",
-    "skill2Title2": "Web Server & DB",
-    "skill2Description1": "I can build API servers for data requests and set up databases, and I can create real-time data transmission functionality using sockets. I'm experienced in deploying stable websites using AWS and proxy web servers like Nginx.",
-    "skill2Description2": "<span>Skills</span>Node.js, Nest.js, Express.js, Prisma, Sequelize, Socket.io, Puppeteer, AWS EC2+S3+Lambda, MySQL, PostgreSQL, MongoDB, Python",
-
-    "skill3": "Design / Publishing",
-    "skill3Title1": "Pursuing consistent",
-    "skill3Title2": "User-centered interfaces",
-    "skill3Description1": "Before starting development, we draw a wireframe in advance using a design tool and then proceed with publishing. I am capable of accurate, user-friendly and responsive publishing regardless of the order, from large screen to small screen, or from small screen to large screen.",
-    "skill3Description2": "<span>Skills</span>TailwindCSS, Emotion, Framer-motion, Styled-Components, SCSS, Illustrator, PhotoShop, InDesign",
-
-    "skill4": "Skill Communication",
-    "skill4Title1": "Collaborating effectively",
-    "skill4Title2": "With Designers",
-    "skill4Description1": "I also have a background in visual design, having dual majored in it. This experience allows me to understand the roles of different position holders in projects. Whether it's front-end work or publishing work, I can tailor my communication to match your needs. Moreover, I am confident that the features and screen publishing I handle will be error-free from a user perspective.",
-    "skill4Description2": "<span>Skills</span>Figma",
-
-    "projectsLinkLabel": "Explore My Projects",
+    "sectionTitle": ["Introducing Technical", "Competencies and Strengths"],
+    "description": [
+      "I have experience in development, design, publishing, and deployment.",
+      "Thanks to this, I can communicate seamlessly with professionals from other disciplines."
+    ],
+    "skills": [
+      {
+        "name": "Front-End",
+        "title": ["Prefer Smooth and Convenient", "Screen Development"],
+        "description": [
+          "<0></0>I can request and load data at the appropriate time, apply various animation effects, and express them. I can efficiently develop using libraries, but I can also implement in pure JavaScript. After implementation, I continuously check if the features work as intended from the user's perspective.",
+          "<0>Technologies Used</0>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR"
+        ],
+        "src": "/images/owner/skill-section/skill_01.jpg"
+      },
+      {
+        "name": "Back-End",
+        "title": ["Can Create Secure Web Servers and", "Databases"],
+        "description": [
+          "<0></0>I can build API servers for data requests and databases. I can create real-time data transmission functions using sockets. I can deploy stable websites using AWS and the Nginx proxy web server.",
+          "<0>Technologies Used</0>Node.js, Nest.js, Express.js, Prisma, Sequelize, Socket.io, Puppeteer, AWS EC2+S3+Lambda, MySQL, PostgreSQL, MongoDB, Python"
+        ],
+        "src": "/images/owner/skill-section/skill_02.jpeg"
+      },
+      {
+        "name": "Design / Publishing",
+        "title": ["Pursue User-Centric Consistent", "Interfaces"],
+        "description": [
+          "<0></0>Before starting development, I draw wireframes with design tools and proceed with publishing work. I can accurately and user-friendly responsive publishing, regardless of the order from large screens to small screens or vice versa.",
+          "<0>Technologies Used</0>TailwindCSS, Emotion, Framer-motion, Styled-Components, SCSS, Illustrator, PhotoShop, InDesign"
+        ],
+        "src": "/images/owner/skill-section/skill_03.jpeg"
+      },
+      {
+        "name": "Skill Communication",
+        "title": ["Smooth Collaboration with Designers"],
+        "description": [
+          "I also double majored in visual design. Therefore, I have a lot of experience collaborating with designers. Having participated in projects from both the designer and developer positions, I can work without difficulty in communication.",
+          "<0>Technologies Used</0>Figma"
+        ],
+        "src": "/images/owner/skill-section/skill_04.jpeg"
+      }
+    ],
+    "projectsLinkLabel": "Explore the projects I've worked on",
     "projectsLink": "Projects Page"
   },
 
   "QuestionSection": {
-    "sectionTitle": "Curious about me",
+    "sectionTitle": "I'm Curious About These Points",
     "questions": [
       {
         "title": "What are the advantages of working together?",
-        "description": "I have experienced various roles, so I have a good understanding of the roles of different position holders. If you require front-end work, I can act as a front-end developer, and for publishing work, I can switch to a publisher. Furthermore, when it comes to feature development and screen publishing, I ensure there are no issues from the user's perspective."
+        "description": "Having experienced various roles, I understand the roles of each position well. If you want backend work, I can communicate as a backend developer, and if you want publishing work, I can communicate as a publisher. I prioritize the environment that users look at most when creating a service, so I am confident that I will solve any issues perfectly in terms of feature development and screen publishing."
       },
       {
         "title": "What are the disadvantages of working together?",
-        "description": "During work, there may be occasions where we have to prioritize very fine details or minor errors, causing the priorities of the tasks to change. In situations where significant tasks need to be completed, small errors in functional or design aspects of smaller tasks might lead to changes. I'm a perfectionist who believes that even in situations requiring major task completion, addressing minor errors is crucial. Depending on your partner's preferences, this trait can be an advantage or a disadvantage."
+        "description": "During work, there are cases where the priority of tasks changes occasionally due to reviewing and resolving minor design issues or errors. As a perfectionist, I feel the need to resolve even small functional or design issues in situations where large-scale tasks need to be done. This aspect can be an advantage or a disadvantage depending on the partner's preference."
       },
       {
-        "title": "Do you do design work yourself? What tools do you use for collaboration with designers?",
-        "description": "Certainly. However, due to limited time and the need to invest more time in the development phase, I have developed and utilize our own design and publishing UI systems. While I prefer using Figma for collaboration, I'm open to using any tools that designers prefer."
+        "title": "Do you also design? What collaboration tools do you use with designers?",
+        "description": "Yes, I design myself. However, I invest more time in the development phase within a limited time frame, so I choose a design system and customize it for efficient progress. I prefer Figma as a collaboration tool, but I can use any tool that the designer prefers."
       },
       {
-        "title": "Are you currently conducting or planning any courses?",
-        "description": "I haven't attempted it recently due to my busy workload. However, in about a year, when I have a bit more free time, I plan to return with an impressive clone project development course!"
+        "title": "Are there any ongoing or upcoming lectures?",
+        "description": "The last lecture I conducted was on data analysis and visualization two years ago. Unfortunately, at the moment, I am focused on the upcoming service launch and haven't had the opportunity to try more. However, around next year, when I have a bit more time, I will return with a fantastic service clone lecture!"
       }
     ]
   }

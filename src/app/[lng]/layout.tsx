@@ -55,12 +55,16 @@ export async function generateMetadata({
 
 interface Props {
   children: React.ReactNode;
-  // modal: React.ReactNode;
+  modal: React.ReactNode;
   params: {
     lng: string;
   };
 }
-const LngRootLayout = async ({ children, params: { lng } }: Props) => {
+const LngRootLayout = async ({
+  children,
+  modal,
+  params: { lng } = { lng: fallbackLng },
+}: Props) => {
   const { t, i18n } = await useTranslation(lng, "common");
   const queryClient = new QueryClient();
   const dehydratedState = dehydrate(queryClient);
@@ -83,7 +87,7 @@ const LngRootLayout = async ({ children, params: { lng } }: Props) => {
           <HydrationBoundary state={dehydratedState}>
             <Navigation lng={lng} />
             {children}
-            {/* {modal} */}
+            {modal}
             <Footer i18n={i18n} lng={lng} />
           </HydrationBoundary>
         </QueryProvider>

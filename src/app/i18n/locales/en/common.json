@@ -1,85 +1,72 @@
 {
   "Navigation": {
     "companyName": "nebaram",
-    "about": "Introduction",
+    "about": "Introduction to Nebaram",
     "owner": "Developer",
     "projects": "Projects"
   },
   "Footer": {
     "copyright": "© 2023 Jaekyeong Yuk, All rights reserved.",
     "companyName": "nebaram",
-    "description": "Realizing people's new aspirations",
+    "description": "Realizing people's new wishes",
     "presidentNameLabel": "President",
     "presidentName": "Jaekyeong Yuk",
     "email": "yjgdesign@gmail.com",
 
     "services": {
       "name": "Services",
-      "content1": {
-        "name": "BlooBolt",
-        "link": "https://bloobolt.com"
-      },
-      "content2": {
-        "name": "BlooWays",
-        "link": "https://blooways.online"
-      },
-      "content3": {
-        "name": "Museum Union Gallery",
-        "link": "https://mug-lab.fly.dev"
-      },
-      "content4": {
-        "name": "TIRA",
-        "link": "https://tira-santorini.fly.dev"
-      }
-    },
-    "squares": {
-      "name": "Squares",
-      "content1": {
-        "name": "Nebaram Strategic Planning",
-        "link": "/"
-      },
-      "content2": {
-        "name": "Nebaram Design",
-        "link": "/"
-      },
-      "content3": {
-        "name": "Nebaram Frontend",
-        "link": "/"
-      },
-      "content4": {
-        "name": "Nebaram Backend",
-        "link": "/"
-      }
+      "contents": [
+        {
+          "name": "BlooBolt",
+          "link": "https://bloobolt.com"
+        },
+        {
+          "name": "BlooWays",
+          "link": "https://blooways.online"
+        },
+        {
+          "name": "Museum Union Gallery",
+          "link": "https://mug-lab.fly.dev"
+        },
+        {
+          "name": "TIRA",
+          "link": "https://tira-santorini.fly.dev"
+        }
+      ]
     },
     "company": {
       "name": "Brand",
-      "content1": {
-        "name": "Brand Introduction",
-        "link": "/"
-      },
-      "content2": {
-        "name": "CEO Developer",
-        "link": "/owner"
-      },
-      "content3": {
-        "name": "Projects",
-        "link": "/projects"
-      },
-      "content4": {
-        "name": "Blog",
-        "link": "https://yjg-lab.tistory.com"
-      }
+      "contents": [
+        {
+          "name": "Introduction",
+          "link": "/"
+        },
+        {
+          "name": "Lead Developer",
+          "link": "/owner"
+        },
+        {
+          "name": "Projects",
+          "link": "/projects"
+        },
+        {
+          "name": "Blog",
+          "link": "https://yjg-lab.tistory.com"
+        }
+      ]
     },
     "contact": {
       "name": "Contact",
-      "content1": {
-        "name": "Service Inquiries",
-        "link": "mailto:yjgdesign@gmail.com"
-      },
-      "content2": {
-        "name": "Advertising Inquiries",
-        "link": "mailto:yjgdesign@gmail.com"
-      }
+      "contents": [
+        {
+          "name": "Service Inquiries",
+          "link": "mailto:yjgdesign@gmail.com"
+        },
+        {
+          "name": "Advertising Inquiries",
+          "link": "mailto:yjgdesign@gmail.com"
+        }
+      ]
     }
   }
 }

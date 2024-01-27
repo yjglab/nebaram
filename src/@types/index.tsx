@@ -7,6 +7,7 @@ export type ProjectSectionCategory =
   | "ongoing";
 
 export interface ProjectDesign {
+  category: "design";
   projectCategory: string;
   date: string;
   thumbnailSrc: string;
@@ -17,6 +18,7 @@ export interface ProjectDesign {
 }
 
 export interface ProjectOngoing {
+  category: "ongoing";
   projectCategory: string;
   date: string;
   thumbnailSrc: string;
@@ -26,6 +28,7 @@ export interface ProjectOngoing {
   link: string;
 }
 export interface ProjectDevelopment {
+  category: "development";
   projectCategory: string;
   date: string;
   thumbnailSrc: string;

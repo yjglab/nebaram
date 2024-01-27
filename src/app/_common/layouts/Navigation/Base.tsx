@@ -56,7 +56,7 @@ const Base: FC<Props> = ({ i18n, lng }) => {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-black/10 pb-12 shadow-2xl shadow-black backdrop-blur-xl">
+              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-black/70 pb-12 shadow-2xl shadow-black backdrop-blur-xl">
                 <div className="item-center flex justify-end  px-6 py-3">
                   <button
                     type="button"
@@ -81,20 +81,21 @@ const Base: FC<Props> = ({ i18n, lng }) => {
                   </div>
                   <div className="h-[1.2px] w-full bg-white/30" />
 
-                  {languages
-                    .filter((l) => lng !== l)
-                    .map((l, index) => {
+                  {supportedLanguages
+                    .filter(
+                      (supportedLanguage) => lng !== supportedLanguage.value
+                    )
+                    .map((language) => {
                       return (
-                        <div key={l} className="flow-root">
-                          <button
-                            className="block p-2"
-                            type="button"
-                            aria-label="Language switch button"
-                          >
-                            {index > 0 && " 또는 "}
-                            <Link href={`/${l}/${rest.join("/")}`}>{l}</Link>
-                          </button>
-                        </div>
+                        <Link
+                          key={language.value}
+                          className="flex w-28 items-center rounded-md p-2 text-sm"
+                          type="button"
+                          aria-label="Language switch button"
+                          href={`/${language.value}/${rest.join("/")}`}
+                        >
+                          {language.locale}
+                        </Link>
                       );
                     })}
                 </div>
