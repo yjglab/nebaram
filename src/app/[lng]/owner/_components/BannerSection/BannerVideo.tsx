@@ -1,15 +1,7 @@
 "use client";
 
-import styled from "@emotion/styled";
 import { memo } from "react";
 import { motion } from "framer-motion";
-
-const ShadowBoxTop = styled.div`
-  box-shadow: 0 30px 130px 90px black;
-`;
-const ShadowBoxBottom = styled.div`
-  box-shadow: 0 -30px 130px 90px black;
-`;
 
 const BannerVideo = () => {
   return (
@@ -31,8 +23,8 @@ const BannerVideo = () => {
       }}
       className="w-full h-full absolute"
     >
-      <ShadowBoxTop className="absolute -top-36 z-10 h-48 w-full bg-black shadow-black"></ShadowBoxTop>
-      <ShadowBoxBottom className="absolute bottom-0 z-10 h-28 w-full bg-black shadow-black"></ShadowBoxBottom>
+      <div className="absolute -top-36 z-10 h-48 w-full bg-black shadow-outcomeSectionTop"></div>
+      <div className="absolute bottom-0 z-10 h-28 w-full bg-black shadow-outcomeSectionBottom"></div>
       <div className="bg-black/70 w-full h-full absolute z-10" />
       <video
         className="w-full h-full object-cover absolute"
