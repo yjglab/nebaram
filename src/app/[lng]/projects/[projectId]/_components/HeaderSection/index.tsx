@@ -9,11 +9,12 @@ import { ProjectDevelopment } from "@/@types";
 
 interface Props {
   project: ProjectDevelopment;
+  lng: string;
 }
-const HeaderSection: FC<Props> = ({ project }) => {
-  const navigator = useRouter();
+const HeaderSection: FC<Props> = ({ project, lng }) => {
+  const router = useRouter();
   const handleNavigateBack = () => {
-    navigator.back();
+    router.push(`/${lng}/projects`);
   };
 
   return (

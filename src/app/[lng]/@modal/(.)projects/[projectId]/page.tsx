@@ -51,7 +51,7 @@ const ProjectDetailPage: FC<Props> = async ({ params: { lng, projectId } }) => {
 
   return (
     <OverlayContainer>
-      <HeaderSection project={project} />
+      <HeaderSection project={project} lng={lng} />
       <SliderSection project={project} />
       <DescriptSection
         project={project}
