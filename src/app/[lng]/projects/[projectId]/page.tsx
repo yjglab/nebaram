@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { fallbackLng, languages } from "@app/i18n/settings";
 import { useTranslation } from "@app/i18n";
 import { FC } from "react";
+import { ProjectDevelopment } from "@/@types";
 
 export async function generateMetadata({
   params: { lng },
@@ -35,14 +36,26 @@ export async function generateMetadata({
 interface Props {
   params: {
     lng: string;
+    projectId: string;
   };
 }
-const ProjectDetailPage: FC<Props> = ({ params: { lng } }) => {
+const ProjectDetailPage: FC<Props> = async ({ params: { lng, projectId } }) => {
+  const { t } = await useTranslation(lng, "projects");
+  const project: ProjectDevelopment = t(
+    `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}`,
+    {
+      returnObjects: true,
+    }
+  );
+
   return (
     <main className="mt-16">
-      <HeaderSection lng={lng} />
-      <SliderSection lng={lng} />
-      <DescriptSection lng={lng} />
+      <HeaderSection project={project} />
+      <SliderSection project={project} />
+      <DescriptSection
+        project={project}
+        label={t("ProjectSection.projectDescriptionLabel")}
+      />
     </main>
   );
 };

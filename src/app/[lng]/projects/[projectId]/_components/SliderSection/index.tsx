@@ -1,27 +1,16 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { FC, useState } from "react";
-import { useTranslation } from "@app/i18n/client";
 import Slider from "@app/_common/parts/Slider";
 import { ProjectDevelopment } from "@/@types";
 
 interface Props {
-  lng: string;
+  project: ProjectDevelopment;
 }
-const SliderSection: FC<Props> = ({ lng }) => {
-  const { t } = useTranslation(lng, "projects");
-  const { projectId } = useParams() as { projectId: string };
+const SliderSection: FC<Props> = ({ project }) => {
   const [slideNumber, setSlideNumber] = useState(0);
-
-  const projectData: ProjectDevelopment = t(
-    `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}`,
-    {
-      returnObjects: true,
-    }
-  );
 
   return (
     <section className="flex flex-col items-center overflow-x-hidden pt-14 md:pt-20">
@@ -34,22 +23,22 @@ const SliderSection: FC<Props> = ({ lng }) => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <a
-            href={projectData.details.github.link}
+            href={project.details.github.link}
             rel="referrer"
             target="_blank"
             className="mr-2 flex items-center duration-200 hover:text-indigo-400"
           >
-            {projectData.details.github.label}
+            {project.details.github.label}
             <ArrowTopRightOnSquareIcon className="ml-1 w-4 stroke-2" />
           </a>
           |
           <a
-            href={projectData.details.production.link}
+            href={project.details.production.link}
             rel="referrer"
             target="_blank"
             className="ml-2 flex items-center duration-200 hover:text-indigo-400"
           >
-            {projectData.details.production.label}
+            {project.details.production.label}
             <ArrowTopRightOnSquareIcon className="ml-1 w-4 stroke-2" />
           </a>
         </motion.div>
@@ -64,7 +53,7 @@ const SliderSection: FC<Props> = ({ lng }) => {
       >
         <div className="relative flex aspect-video w-[90%] items-center sm:w-[80%] lg:w-full">
           <Slider
-            images={projectData.details.slides.map((slide) => slide.src)}
+            images={project.details.slides.map((slide) => slide.src)}
             setSlideNumber={setSlideNumber}
           />
         </div>
@@ -73,18 +62,18 @@ const SliderSection: FC<Props> = ({ lng }) => {
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-indigo-400 px-2.5 py-1 font-semibold">
-                {projectData.details.slides[slideNumber].scope}
+                {project.details.slides[slideNumber].scope}
               </div>
               <div className="font-semibold">
-                {projectData.details.slides[slideNumber].title}
+                {project.details.slides[slideNumber].title}
               </div>
             </div>
             <div>
-              {slideNumber + 1} / {projectData.details.slides.length}
+              {slideNumber + 1} / {project.details.slides.length}
             </div>
           </div>
-          <div className="mt-2.5 pl-1 font-light leading-6 md:leading-7">
-            {projectData.details.slides[slideNumber].description}
+          <div className="mt-2.5 pl-1 leading-6 md:leading-7">
+            {project.details.slides[slideNumber].description}
           </div>
         </div>
       </motion.div>

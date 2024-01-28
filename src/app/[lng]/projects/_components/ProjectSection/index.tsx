@@ -20,7 +20,6 @@ const ProjectSection: FC<Props> = ({ lng, category }) => {
   const { t } = useTranslation(lng, "projects");
 
   useEffect(() => {
-    let data: WholeProjects = [];
     const projectsDevelopment: ProjectDevelopment[] = t(
       "ProjectSection.projectsDevelopment",
       {
@@ -37,22 +36,22 @@ const ProjectSection: FC<Props> = ({ lng, category }) => {
       }
     );
     if (category === "all") {
-      data = [...projectOngoing, ...projectsDevelopment, ...projectDesign];
-      setProjects(data);
+      setProjects([
+        ...projectOngoing,
+        ...projectsDevelopment,
+        ...projectDesign,
+      ]);
     } else if (category === "design") {
-      data = [...projectDesign];
-      setProjects(data);
+      setProjects([...projectDesign]);
     } else if (category === "development") {
-      data = [...projectsDevelopment];
-      setProjects(data);
+      setProjects([...projectsDevelopment]);
     } else if (category === "ongoing") {
-      data = [...projectOngoing];
-      setProjects(data);
+      setProjects([...projectOngoing]);
     }
   }, [category]);
 
   return (
-    <section className="mb-20 px-6 font-medium">
+    <section className="mb-20 min-h-screen px-6 font-medium">
       <div className="mx-auto mt-10 max-w-2xl lg:max-w-6xl ">
         <div className="mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-6">
           {projects?.map((project, index) => (

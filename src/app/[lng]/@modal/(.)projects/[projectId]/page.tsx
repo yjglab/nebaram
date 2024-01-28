@@ -6,6 +6,7 @@ import HeaderSection from "@app/[lng]/projects/[projectId]/_components/HeaderSec
 import SliderSection from "@app/[lng]/projects/[projectId]/_components/SliderSection";
 import DescriptSection from "@app/[lng]/projects/[projectId]/_components/DescriptSection";
 import { FC } from "react";
+import { ProjectDevelopment } from "@/@types";
 
 export async function generateMetadata({
   params: { lng },
@@ -36,16 +37,27 @@ export async function generateMetadata({
 interface Props {
   params: {
     lng: string;
+    projectId: string;
   };
 }
-const ProjectDetailPage: FC<Props> = ({ params: { lng } }) => {
+const ProjectDetailPage: FC<Props> = async ({ params: { lng, projectId } }) => {
+  const { t } = await useTranslation(lng, "projects");
+  const project: ProjectDevelopment = t(
+    `ProjectSection.projectsDevelopment.${parseInt(projectId) - 1}`,
+    {
+      returnObjects: true,
+    }
+  );
+
   return (
     <OverlayContainer>
-      <HeaderSection lng={lng} />
-      <SliderSection lng={lng} />
-      <DescriptSection lng={lng} />
+      <HeaderSection project={project} />
+      <SliderSection project={project} />
+      <DescriptSection
+        project={project}
+        label={t("ProjectSection.projectDescriptionLabel")}
+      />
     </OverlayContainer>
   );
 };
-
 export default ProjectDetailPage;
