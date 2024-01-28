@@ -18,7 +18,7 @@ const DropMenu: FC<PropsWithChildren<Props>> = ({
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md  py-2 text-sm text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-            <span className="line-clamp-1 overflow-hidden text-ellipsis text-white">
+            <span className="line-clamp-1 overflow-hidden text-ellipsis text-white hover:text-gray-400 transition-colors">
               {title}
             </span>
             {chevron && (

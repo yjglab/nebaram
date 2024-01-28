@@ -26,7 +26,7 @@ const Base: FC<Props> = ({ i18n, lng }) => {
   const onClose = () => {
     setOpen(false);
   };
-
+  console.log(rest[0]);
   return (
     <nav className="fixed top-0 z-50 sm:pr-[15px] w-screen bg-black md:bg-black/50 backdrop-blur-md">
       <Scroller />
@@ -118,7 +118,11 @@ const Base: FC<Props> = ({ i18n, lng }) => {
             <div className="relative flex h-14 w-full items-center justify-between duration-200">
               <div className="flex">
                 <div className="ml-2 flex">
-                  <Link className="flex items-center" href="/" scroll={false}>
+                  <Link
+                    className="flex items-center hover:opacity-60 transition-opacity"
+                    href="/"
+                    scroll={false}
+                  >
                     <Image
                       src={nebaramLogoPublicUrl}
                       width={16}
@@ -137,10 +141,28 @@ const Base: FC<Props> = ({ i18n, lng }) => {
                 </div>
                 <Popover.Group className="hidden items-center md:ml-8 md:flex md:self-stretch">
                   <div className="flex space-x-8">
-                    <Link href={`/${lng}/owner`} scroll={false}>
+                    <Link
+                      href={`/${lng}/owner`}
+                      className={classNames(
+                        rest[0] === "owner"
+                          ? "border-b-indigo-400"
+                          : "border-b-transparent",
+                        "border-b-[3px] transition-all hover:text-gray-400"
+                      )}
+                      scroll={false}
+                    >
                       {t("Navigation.owner")}
                     </Link>
-                    <Link href={`/${lng}/projects`} scroll={false}>
+                    <Link
+                      href={`/${lng}/projects`}
+                      className={classNames(
+                        rest[0] === "projects"
+                          ? "border-b-indigo-400"
+                          : "border-b-transparent",
+                        "border-b-[3px] transition-all hover:text-gray-400"
+                      )}
+                      scroll={false}
+                    >
                       {t("Navigation.projects")}
                     </Link>
                   </div>

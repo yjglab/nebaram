@@ -64,7 +64,7 @@ const HeaderSection: FC<Props> = ({ lng }) => {
                 : category === headerCategory[1]
                 ? "border-b-indigo-400"
                 : "border-b-transparent",
-              "hover:border-b-gray-400 hover:text-gray-400 border-b-2 cursor-pointer duration-200"
+              "hover:text-gray-400 border-b-[3px] cursor-pointer duration-200"
             )}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
