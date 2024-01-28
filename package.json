@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.0.18",
+    "@reduxjs/toolkit": "^2.1.0",
     "@tanstack/react-query": "^5.15.5",
     "@tanstack/react-query-devtools": "^5.15.5",
     "accept-language": "3.0.18",
@@ -34,6 +35,9 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.2",
     "react-i18next": "13.5.0",
+    "react-redux": "^9.1.0",
+    "redux": "^5.0.1",
+    "redux-logger": "^3.0.6",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
