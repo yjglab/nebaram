@@ -16,6 +16,7 @@ const BannerSection: FC<Props> = ({ lng }) => {
   const [bannerOn, setBannerOn] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const bannerTimer = setTimeout(() => {
       setBannerOn(true);
     }, bannerOnDelay);

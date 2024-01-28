@@ -1,53 +1,46 @@
 "use client";
 
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { useTranslation } from "@app/i18n/client";
-import {
-  ProjectDesign,
-  ProjectDevelopment,
-  ProjectOngoing,
-  WholeProjects,
-} from "@/@types";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { SET_PROJECTS, SET_PROJECTS_DATA } from "@/redux/slices/projects.slice";
 
 interface Props {
   lng: string;
 }
 const ProjectSection: FC<Props> = ({ lng }) => {
-  const [projects, setProjects] = useState<WholeProjects>();
   const category = useAppSelector((state) => state.projects.category);
+  const projects = useAppSelector((state) => state.projects.projects);
   const dispatch = useAppDispatch();
   const { t } = useTranslation(lng, "projects");
 
   useEffect(() => {
-    const projectsDevelopment: ProjectDevelopment[] = t(
-      "ProjectSection.projectsDevelopment",
-      {
-        returnObjects: true,
-      }
+    window.scrollTo(0, 0);
+    dispatch(
+      SET_PROJECTS_DATA({
+        development: t("ProjectSection.projectsDevelopment", {
+          returnObjects: true,
+        }),
+        design: t("ProjectSection.projectsDesign", {
+          returnObjects: true,
+        }),
+        ongoing: t("ProjectSection.projectsOngoing", {
+          returnObjects: true,
+        }),
+      })
     );
-    const projectDesign: ProjectDesign[] = t("ProjectSection.projectsDesign", {
-      returnObjects: true,
-    });
-    const projectOngoing: ProjectOngoing[] = t(
-      "ProjectSection.projectsOngoing",
-      {
-        returnObjects: true,
-      }
-    );
+  }, []);
+
+  useEffect(() => {
     if (category === "all") {
-      setProjects([
-        ...projectOngoing,
-        ...projectsDevelopment,
-        ...projectDesign,
-      ]);
+      dispatch(SET_PROJECTS("all"));
     } else if (category === "design") {
-      setProjects([...projectDesign]);
+      dispatch(SET_PROJECTS("design"));
     } else if (category === "development") {
-      setProjects([...projectsDevelopment]);
+      dispatch(SET_PROJECTS("development"));
     } else if (category === "ongoing") {
-      setProjects([...projectOngoing]);
+      dispatch(SET_PROJECTS("ongoing"));
     }
   }, [category]);
 
@@ -61,7 +54,6 @@ const ProjectSection: FC<Props> = ({ lng }) => {
               lng={lng}
               project={project}
               index={index}
-              category={category}
             />
           ))}
         </div>

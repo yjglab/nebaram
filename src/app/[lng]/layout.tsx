@@ -13,7 +13,6 @@ import { useTranslation } from "@app/i18n";
 import Navigation from "@app/_common/layouts/Navigation";
 import Footer from "@app/_common/layouts/Footer";
 import { notoSans } from "@constants/fonts";
-import LoadingContainer from "@app/_common/containers/LoadingContainer";
 import ReduxProvider from "@app/(providers)/ReduxProvider";
 
 export function generateStaticParams() {

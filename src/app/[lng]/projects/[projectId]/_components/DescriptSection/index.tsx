@@ -1,9 +1,7 @@
 "use client";
 
-import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { FC } from "react";
-import { useTranslation } from "@app/i18n/client";
 import { Trans } from "react-i18next";
 import { ProjectDevelopment } from "@/@types";
 

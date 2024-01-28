@@ -1,4 +1,4 @@
-import { Metadata, NextPage } from "next";
+import { Metadata } from "next";
 import React, { FC } from "react";
 import { fallbackLng, languages } from "@app/i18n/settings";
 import { useTranslation } from "@app/i18n";

@@ -8,20 +8,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@app/i18n/client";
-import {
-  ProjectDesign,
-  ProjectDevelopment,
-  ProjectOngoing,
-  ProjectSectionCategory,
-} from "@/@types";
+import { ProjectDesign, ProjectDevelopment, ProjectOngoing } from "@/@types";
 
 interface Props {
   lng: string;
   project: ProjectDevelopment | ProjectDesign | ProjectOngoing;
   index: number;
-  category: ProjectSectionCategory;
 }
-const ProjectCard: FC<Props> = ({ lng, project, index, category }) => {
+const ProjectCard: FC<Props> = ({ lng, project, index }) => {
   const { t } = useTranslation(lng, "projects");
 
   const [projectCardHover, setprojectCardHover] = useState("");
