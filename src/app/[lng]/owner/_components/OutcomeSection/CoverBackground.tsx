@@ -27,7 +27,7 @@ const CoverBackground = () => {
 
   return (
     <figure ref={backgroundRef} className="absolute h-full w-full">
-      <div className="absolute -top-36 z-10 h-36 w-full bg-black shadow-outcomeSectionTop"></div>
+      <div className="absolute -top-36 z-10 h-36 w-full bg-black shadow-ownerOutcomeSectionTop"></div>
       <div className="absolute h-full w-full opacity-75">
         <Image
           className="object-cover"
@@ -38,7 +38,7 @@ const CoverBackground = () => {
           alt="outcome-section/image-01"
         />
       </div>
-      <div className="absolute -bottom-36 h-36 w-full bg-black shadow-outcomeSectionBottom"></div>
+      <div className="absolute -bottom-36 h-36 w-full bg-black shadow-ownerOutcomeSectionBottom"></div>
       <figcaption className="sr-only">Outcome Background Image</figcaption>
     </figure>
   );

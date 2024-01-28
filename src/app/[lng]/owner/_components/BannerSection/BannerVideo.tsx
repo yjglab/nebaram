@@ -23,8 +23,8 @@ const BannerVideo = () => {
       }}
       className="w-full h-full absolute"
     >
-      <div className="absolute -top-36 z-10 h-48 w-full bg-black shadow-outcomeSectionTop"></div>
-      <div className="absolute bottom-0 z-10 h-28 w-full bg-black shadow-outcomeSectionBottom"></div>
+      <div className="absolute -top-36 z-10 h-48 w-full bg-black shadow-ownerBannerTop"></div>
+      <div className="absolute bottom-0 z-10 h-28 w-full bg-black shadow-ownerBannerBottom"></div>
       <div className="bg-black/70 w-full h-full absolute z-10" />
       <video
         className="w-full h-full object-cover absolute"

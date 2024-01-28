@@ -71,7 +71,7 @@
         "thumbnailSrc": "/images/projects/project-section/nebaram_thumb.jpeg",
         "title": ["Nebaram", "Personal Branding for Developers"],
         "description": "Nebaram is a personal branding project that represents me as a web developer with four key competencies. Through Nebaram, I want to showcase what kind of developer I am, the projects I have worked on, and the strengths I possess.",
-        "skills": "TypeScript, React.js, Next.js, Next-intl, TailwindCSS, Emotion, Vercel",
+        "skills": "TypeScript, React.js, Next.js, Redux-toolkit, i18next, TailwindCSS, Vercel",
 
         "details": {
           "github": {
