@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronUpIcon } from "@heroicons/react/24/outline";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 const Scroller = () => {
   const [scollerOn, setScollerOn] = useState(false);
@@ -37,4 +37,4 @@ const Scroller = () => {
     </>
   );
 };
-export default Scroller;
+export default memo(Scroller);

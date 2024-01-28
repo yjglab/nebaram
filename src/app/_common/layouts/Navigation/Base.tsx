@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { usePathname } from "next/navigation";
 import { FC, Fragment, useState } from "react";
 import classNames from "classnames";
-import { languages, supportedLanguages } from "@app/i18n/settings";
+import { supportedLanguages } from "@app/i18n/settings";
 import Link from "next/link";
 import { poppins } from "@constants/fonts";
 import DropMenu from "@app/_common/parts/DropMenu";
@@ -26,14 +26,13 @@ const Base: FC<Props> = ({ i18n, lng }) => {
   const onClose = () => {
     setOpen(false);
   };
-  console.log(rest[0]);
   return (
     <nav className="fixed top-0 z-50 sm:pr-[15px] w-screen bg-black md:bg-black/50 backdrop-blur-md">
       <Scroller />
 
       {/* 모바일 */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative md:hidden" onClose={setOpen}>
+        <Dialog as="div" className="relative md:hidden" onClose={onClose}>
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-200"

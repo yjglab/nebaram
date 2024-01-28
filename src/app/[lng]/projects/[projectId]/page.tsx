@@ -49,7 +49,7 @@ const ProjectDetailPage: FC<Props> = async ({ params: { lng, projectId } }) => {
   );
 
   return (
-    <main className="mt-16">
+    <main className="min-h-screen mt-14 before:absolute before:-top-10 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/squared-bg-element-dark.svg')] before:bg-no-repeat before:bg-top before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2">
       <HeaderSection project={project} />
       <SliderSection project={project} />
       <DescriptSection

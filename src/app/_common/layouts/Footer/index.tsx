@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { i18n } from "i18next";
 import Image from "next/image";
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 
 interface FooterMenu {
   name: string;
@@ -66,7 +66,6 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
                 className="transition hover:opacity-75 "
               >
                 <span className="sr-only">GitHub</span>
-
                 <svg
                   className="h-6 w-6"
                   fill="currentColor"
@@ -112,4 +111,4 @@ const Footer: FC<Props> = ({ i18n, lng }) => {
   );
 };
 
-export default Footer;
+export default memo(Footer);
