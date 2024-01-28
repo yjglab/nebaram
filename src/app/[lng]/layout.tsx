@@ -14,6 +14,7 @@ import Navigation from "@app/_common/layouts/Navigation";
 import Footer from "@app/_common/layouts/Footer";
 import { notoSans } from "@constants/fonts";
 import LoadingContainer from "@app/_common/containers/LoadingContainer";
+import ReduxProvider from "@app/(providers)/ReduxProvider";
 
 export function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -85,10 +86,12 @@ const LngRootLayout = async ({
       <body className={classNames(notoSans.className, "min-h-screen w-full")}>
         <QueryProvider>
           <HydrationBoundary state={dehydratedState}>
-            <Navigation lng={lng} />
-            {children}
-            {modal}
-            <Footer i18n={i18n} lng={lng} />
+            <ReduxProvider>
+              <Navigation lng={lng} />
+              {children}
+              {modal}
+              <Footer i18n={i18n} lng={lng} />
+            </ReduxProvider>
           </HydrationBoundary>
         </QueryProvider>
       </body>

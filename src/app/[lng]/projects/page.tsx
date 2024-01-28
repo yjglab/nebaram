@@ -1,8 +1,9 @@
 import { Metadata, NextPage } from "next";
 import React, { FC } from "react";
-import ProjectsClientPage from "./page.client";
 import { fallbackLng, languages } from "@app/i18n/settings";
 import { useTranslation } from "@app/i18n";
+import HeaderSection from "./_components/HeaderSection";
+import ProjectSection from "./_components/ProjectSection";
 
 interface Props {
   params: {
@@ -32,7 +33,12 @@ export async function generateMetadata({ params: { lng } }: Props) {
 }
 
 const ProjectsPage: FC<Props> = async ({ params: { lng } }) => {
-  return <ProjectsClientPage lng={lng} />;
+  return (
+    <main>
+      <HeaderSection lng={lng} />
+      <ProjectSection lng={lng} />
+    </main>
+  );
 };
 
 export default ProjectsPage;

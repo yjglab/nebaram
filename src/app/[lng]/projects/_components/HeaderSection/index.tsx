@@ -1,23 +1,32 @@
+"use client";
+
 import classNames from "classnames";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import { useTranslation } from "@app/i18n/client";
 import { ProjectSectionCategory } from "@/@types";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import { SET_CATEGORY } from "@/redux/slices/projects.slice";
 
 interface Props {
   lng: string;
-  category: string;
-  changeCategory: (category: ProjectSectionCategory) => void;
 }
-const HeaderSection: FC<Props> = ({ lng, category, changeCategory }) => {
+const HeaderSection: FC<Props> = ({ lng }) => {
   const { t } = useTranslation(lng, "projects");
-  const headerCategories = [
+  const category = useAppSelector((state) => state.projects.category);
+  const dispatch = useAppDispatch();
+
+  const headerCategories: [string, ProjectSectionCategory][] = [
     [t("HeaderSection.categories.0"), "all"],
     [t("HeaderSection.categories.1"), "development"],
     [t("HeaderSection.categories.2"), "design"],
     [t("HeaderSection.categories.3"), "ongoing"],
   ];
+
+  const handleSetCategory = (targetCategory: ProjectSectionCategory) => {
+    dispatch(SET_CATEGORY(targetCategory));
+  };
 
   return (
     <section className="mx-auto max-w-2xl px-6 mt-24 md:mt-32 lg:max-w-6xl ">
@@ -48,9 +57,7 @@ const HeaderSection: FC<Props> = ({ lng, category, changeCategory }) => {
         {headerCategories.map((headerCategory, index) => (
           <motion.div
             key={headerCategory[1]}
-            onClick={() =>
-              changeCategory(headerCategory[1] as ProjectSectionCategory)
-            }
+            onClick={() => handleSetCategory(headerCategory[1])}
             className={classNames(
               category === headerCategory[1] && headerCategory[1] === "ongoing"
                 ? "border-b-amber-500"

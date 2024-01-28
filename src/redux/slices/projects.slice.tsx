@@ -1,18 +1,25 @@
+import { ProjectSectionCategory } from "@/@types";
 import { Draft, createSlice } from "@reduxjs/toolkit";
 
-export interface ProjectsState {}
+export interface ProjectsState {
+  category: ProjectSectionCategory;
+}
 
-export const initialState: ProjectsState = {};
+export const initialState: ProjectsState = {
+  category: "development",
+};
 
 export const projectsSlice = createSlice({
   name: "projects",
   initialState,
   reducers: {
-    A: (state: Draft<ProjectsState>) => {},
+    SET_CATEGORY: (state: Draft<ProjectsState>, { payload }) => {
+      state.category = payload;
+    },
   },
   extraReducers: (builder) => {
     builder;
   },
 });
 
-export const { A } = projectsSlice.actions;
+export const { SET_CATEGORY } = projectsSlice.actions;

@@ -7,16 +7,17 @@ import {
   ProjectDesign,
   ProjectDevelopment,
   ProjectOngoing,
-  ProjectSectionCategory,
   WholeProjects,
 } from "@/@types";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 interface Props {
   lng: string;
-  category: ProjectSectionCategory;
 }
-const ProjectSection: FC<Props> = ({ lng, category }) => {
+const ProjectSection: FC<Props> = ({ lng }) => {
   const [projects, setProjects] = useState<WholeProjects>();
+  const category = useAppSelector((state) => state.projects.category);
+  const dispatch = useAppDispatch();
   const { t } = useTranslation(lng, "projects");
 
   useEffect(() => {
