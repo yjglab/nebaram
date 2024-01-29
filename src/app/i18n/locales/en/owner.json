@@ -114,7 +114,7 @@
         "title": ["Prefer Smooth and Convenient", "Screen Development"],
         "description": [
           "<0></0>I can request and load data at the appropriate time, apply various animation effects, and express them. I can efficiently develop using libraries, but I can also implement in pure JavaScript. After implementation, I continuously check if the features work as intended from the user's perspective.",
-          "<0>Technologies Used</0>TypeScript, React.js, Next.js, Redux Toolkit & Saga, React-Query, SWR"
+          "<0>Technologies Used</0>TypeScript, React.js, Next.js, i18next, Redux Toolkit & Saga, React-Query, SWR"
         ],
         "src": "/images/owner/skill-section/skill_01.jpg"
       },

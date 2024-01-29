@@ -104,7 +104,7 @@
           "skills": {
             "label": "Skills",
             "description": [
-              "<0>Front-end</0><1>TypeScript React Next.js Next-intl(i18n Support) TailwindCSS Emotion</1>",
+              "<0>Front-end</0><1>TypeScript React Next.js Redux-Toolkit i18next TailwindCSS</1>",
               "<0>Deploy</0><1>Vercel</1>"
             ]
           },

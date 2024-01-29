@@ -17,19 +17,21 @@ const ProjectSection: FC<Props> = ({ lng }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    dispatch(
-      SET_PROJECTS_DATA({
-        development: t("ProjectSection.projectsDevelopment", {
-          returnObjects: true,
-        }),
-        design: t("ProjectSection.projectsDesign", {
-          returnObjects: true,
-        }),
-        ongoing: t("ProjectSection.projectsOngoing", {
-          returnObjects: true,
-        }),
-      })
-    );
+    if (!projects[0]) {
+      dispatch(
+        SET_PROJECTS_DATA({
+          development: t("ProjectSection.projectsDevelopment", {
+            returnObjects: true,
+          }),
+          design: t("ProjectSection.projectsDesign", {
+            returnObjects: true,
+          }),
+          ongoing: t("ProjectSection.projectsOngoing", {
+            returnObjects: true,
+          }),
+        })
+      );
+    }
   }, []);
 
   useEffect(() => {
