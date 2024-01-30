@@ -1,22 +1,21 @@
 # Nebaram V0.6 새 바람을 실현할 첫 도약
 
 ![image](https://github.com/yjglab/nebaram/assets/70316567/37a6f010-c733-4825-88f0-f2f3256cbb18)
-![lighthouse](https://github.com/yjglab/nebaram/assets/70316567/d7357bdd-7514-4e00-920c-4df263a450dd)
 
 ### 개요
 
 - 네바람은 저를 표현하는 퍼스널 브랜드입니다. 이 브랜드를 통해 스스로 어떤 목표를 가진 개발자인지, 어떤 강점들이 있는지를 앞으로 꾸준히 국제적으로 알리고자 제작되었습니다. [https://nebaram.vercel.app](https://nebaram.vercel.app "nebaram")
-- 이 프로젝트는 기존 개인 포트폴리오 사이트를 NextJS App Router로 이전하며 리뉴얼한 사이트입니다. 이전 사이트를 보시려면 [여기](https://yukjaekyeong.web.app)를 방문해주세요.
+- 이 프로젝트는 기존 개인 포트폴리오 사이트를 Next.js App Router로 이전하며 리뉴얼한 사이트입니다. 이전 사이트를 보시려면 [여기](https://yukjaekyeong.web.app)를 방문해주세요.
 
 <br />
 
 ### 구현부 요약
 
-- 기존 포트폴리오 웹을 Next@14로 이주하여 코드와 UI 리뉴얼
-- 초기 렌더링, SEO 개선 작업을 통해 페이지 성능 42% 향상 (LightHouse 기준, 67 -> 96)
-- 메타 데이터와 라우팅, JSON 번역 파일 제공하여 다국어 기능 구현
+- 기존 포트폴리오 웹을 Next App Router로 변환하여 코드와 UI 리뉴얼 및 렌더링 최적화
+- 초기 렌더링, SEO 개선 작업을 통해 페이지 성능 45% 향상 (LightHouse 기준, 67 -> 97.5)
+- 페이지별 JSON 다국어 메시지 파일 제공, 국제화(i18n) 라우팅 구현
 - 사용자 Viewport의 스크롤에 따라 적용되는 애니메이션 효과 적용
-- Apple HIG(Human Interface Guideline) 반영한 반응형 웹 퍼블리싱 적용
+- 동적 모션 UI 및 Apple HIG 반영한 반응형 웹 퍼블리싱 적용
 
 <br />
 
@@ -38,16 +37,15 @@
 
 > 0.6 (latest, 24.01.29)
 
-- 프로덕션 환경에서 페이지 인터셉트(병렬 라우팅)가 되지 않는 문제 해결을 시도하고자 기존에 사용된 국제화 라이브러리
-  next-intl를 i18next로 마이그레이션. (next-intl의 메시지 파일 번역 메서드가 정적 렌더링을 지원하지 않음)
-- 마이그레이션 완료된 브랜치에서 데이터 중복 로드를 막기 위해 Redux Toolkit 도입.
+- [국제화 라이브러리 마이그레이션 (next-intl -> i18next)](https://github.com/yjglab/nebaram/wiki/%EA%B5%AD%EC%A0%9C%ED%99%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EB%A7%88%EC%9D%B4%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%85%98-%5B24.01.23-%E2%80%90-24.01.29%5D)
+- 루트 레이아웃 및 페이지 제거, Locale Route 리디렉션 및 언어 감지 미들웨어 추가.
+- 데이터 중복 로드를 막기 위해 Redux Toolkit 도입.
 - 렌더링 최적화 진행.
 
 > 0.5 (23.12.27)
 
-- 종속성 업데이트 + 디렉토리 구조 재조정 + 리팩터링
-- Next@13 -> 14
-- next-intl@3beta -> 3.4
+- 디렉토리 구조 재조정 및 코드 리팩터링
+- 종속성 업데이트 (Next@13 -> @14 / next-intl@3beta -> @3.4)
 
 ### 주요 기능 소개
 
@@ -127,6 +125,8 @@
 - SEO: 시맨틱 태그 사용, 이미지 설명 입력, 사이트맵과 페이지 별로 메타데이터 추가. (크롤러의 웹 페이지 색인 과정 용이)
 - UX: 크기와 비율 고정, 이미지가 존재하는 컨테이너 공간 확보하여 레이아웃이 변동할 가능성 제거 / 페이지 이동, GIF와 같이 큰 이미지에 대한 로딩상황 제공 / 통일된 폰트와 명확한 색상 대비 적용 -> 컨텐츠에 집중.
 - 결과: 5개 성능 지표의 평균 지수가 67에서 96으로 향상 / FCP와 CLS, SEO를 각각 0.6초, 0.005, 100으로 개선.
+
+![image](https://github.com/yjglab/nebaram/assets/70316567/7e6a5a0f-ed25-4346-8d9f-119c388ecd02)
 
 ### References
 
