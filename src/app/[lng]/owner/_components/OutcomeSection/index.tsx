@@ -23,7 +23,7 @@ const OutcomeSection: FC<Props> = ({ lng }) => {
   const outcomes: Outcome[] = t("OutcomeSection.contents", {
     returnObjects: true,
     days: dayjs().diff(dayjs("2020-07-08"), "day"),
-    attends: 3200,
+    attends: 3800,
     services: 18,
     awards: 3,
   });
