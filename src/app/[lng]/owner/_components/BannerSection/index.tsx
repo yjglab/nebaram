@@ -7,7 +7,7 @@ import BannerCard from "./BannerCard";
 import BannerTitle from "./BannerTitle";
 import BannerVideo from "./BannerVideo";
 
-export const bannerOnDelay = 1300;
+export const bannerOnDelay = 1200;
 
 interface Props {
   lng: string;
