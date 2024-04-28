@@ -33,13 +33,23 @@
   "ObjectiveSection": {
     "title": "Goals as a Developer",
     "description": [
-      "I started coding to solve the inconvenience I felt in school",
-      "I aim to create services that everyone can easily handle, making life more convenient"
+      "Through the difficulties and success experiences, I pursue technological shared growth with developers.",
+      "And, I aim to build a platform that more than a million people use."
     ]
   },
   "HistorySection": {
     "sectionTitle": ["I'm Still", "Growing Rapidly Today"],
     "contents": [
+      {
+        "year": "2024",
+        "month": "2024.04",
+        "content": "[B2G] AI Digital Art_Teacher Platform<1>*Student/Teacher Web Integrated API, Teacher Web Client Development, Refactoring Progress</1>"
+      },
+      {
+        "year": "",
+        "month": "2024.03",
+        "content": "[Seoul Educational Network] AI Digital Art_Teacher Platform<1>*Student/Teacher Web Integrated API, Teacher Web Client Development Progress</1>"
+      },
       {
         "year": "2023",
         "month": "2023.09",
@@ -114,7 +124,7 @@
         "title": ["Prefer Smooth and Convenient", "Screen Development"],
         "description": [
           "<0></0>I can request and load data at the appropriate time, apply various animation effects, and express them. I can efficiently develop using libraries, but I can also implement in pure JavaScript. After implementation, I continuously check if the features work as intended from the user's perspective.",
-          "<0>Technologies Used</0>TypeScript, React.js, Next.js, i18next, Redux Toolkit & Saga, React-Query, SWR"
+          "<0>Technologies Used</0>TypeScript, React.js, Next.js, i18next, Redux Toolkit & Saga, Tanstack Query, SWR"
         ],
         "src": "/images/owner/skill-section/skill_01.jpg"
       },

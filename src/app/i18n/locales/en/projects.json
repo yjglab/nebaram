@@ -644,7 +644,7 @@
         "thumbnailSrc": "/images/projects/project-section/introduce_thumb.jpg",
         "title": ["introduce", "A Place to Validate My Works Most Fairly."],
         "description": "Introduce is a platform for developers, designers, and the public to showcase and receive feedback on their projects.",
-        "skills": "TypeScript, React.js, Next.js, React-query(server), Redux-Toolkit(client), TailwindCSS, Emotion, Nest.js, PostgreSQL, Redis, Prisma, Vercel(client), FireBase(server)",
+        "skills": "TypeScript, React.js, Next.js, Tanstack Query(server), Redux-Toolkit(client), TailwindCSS, Emotion, Nest.js, PostgreSQL, Redis, Prisma, Vercel(client), FireBase(server)",
         "link": "https://github.com/yjglab/introduce.official"
       }
     ]
