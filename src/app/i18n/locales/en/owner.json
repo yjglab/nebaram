@@ -43,12 +43,12 @@
       {
         "year": "2024",
         "month": "2024.04",
-        "content": "[B2G] AI Digital Art_Teacher Platform for Educational institutions<1>*Student/Teacher web integration API, Teacher Web Client development, refactoring, and E2E tests</1>"
+        "content": "Digital Art Education for Educational Institutions - Statistical Services for Teachers and Administrators<1>*Student/Teacher/Admin integration API, Teacher/Admin Web Client development</1>"
       },
       {
         "year": "",
         "month": "2024.03",
-        "content": "[Seoul Educational Network] AI Digital Art_Teacher Platform<1>*Student/Teacher Web Integrated API, Teacher Web Client Development</1>"
+        "content": "[Seoul Educational Network] AI Digital Art_Teacher Platform<1>*Student/Teacher Web Integrated API, Teacher/Officer Web Client Development</1>"
       },
       {
         "year": "2023",
@@ -159,25 +159,24 @@
     "projectsLinkLabel": "Explore the projects I've worked on",
     "projectsLink": "Projects Page"
   },
-
   "QuestionSection": {
-    "sectionTitle": "I'm Curious About These Points",
+    "sectionTitle": "Questions about me",
     "questions": [
       {
         "title": "What are the advantages of working together?",
-        "description": "Having experienced various roles, I understand the roles of each position well. If you want backend work, I can communicate as a backend developer, and if you want publishing work, I can communicate as a publisher. I prioritize the environment that users look at most when creating a service, so I am confident that I will solve any issues perfectly in terms of feature development and screen publishing."
+        "description": "Having experienced all roles, I understand each person's position well. Customized communication is possible according to requirements. In addition, a testing environment is provided for work results to ensure a high level of quality without errors. I guarantee it."
       },
       {
         "title": "What are the disadvantages of working together?",
-        "description": "During work, there are cases where the priority of tasks changes occasionally due to reviewing and resolving minor design issues or errors. As a perfectionist, I feel the need to resolve even small functional or design issues in situations where large-scale tasks need to be done. This aspect can be an advantage or a disadvantage depending on the partner's preference."
+        "description": "Because I am a cautious person in everything, it may take time to make a decision. However, think of this as a process to improve the quality of the entire project. Because I am a perfectionist, this can be either an advantage or a disadvantage depending on the partner's personality. It could be possible."
       },
       {
-        "title": "Do you also design? What collaboration tools do you use with designers?",
-        "description": "Yes, I design myself. However, I invest more time in the development phase within a limited time frame, so I choose a design system and customize it for efficient progress. I prefer Figma as a collaboration tool, but I can use any tool that the designer prefers."
+        "title": "Do you also design yourself? What tools do you use for collaboration with designers?",
+        "description": "I do it myself. However, since I have to invest more time in the development stage within a limited time, I choose a design system and customize it to use it for efficient progress. I prefer Figma as a collaboration tool, but it is the tool the designer wants. We are adjusting to this."
       },
       {
-        "title": "Are there any ongoing or upcoming lectures?",
-        "description": "The last lecture I produced was the data analysis lecture given two years ago. We are currently preparing to conduct project lectures to receive new services this year."
+        "title": "Are there any courses in progress or scheduled to be produced?",
+        "description": "The data analysis and visualization lecture conducted two years ago was the last lecture produced. We are currently working hard to prepare a new service clone lecture in the second half of this year."
       }
     ]
   }
