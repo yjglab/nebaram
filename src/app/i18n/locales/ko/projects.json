@@ -1,6 +1,6 @@
 {
   "HeaderSection": {
-    "categories": ["모든 프로젝트", "개발", "디자인", "제작중"]
+    "categories": ["모든 프로젝트", "개발", "디자인", "진행중"]
   },
   "ProjectSection": {
     "sectionTitle": "프로젝트 둘러보기",
@@ -638,12 +638,12 @@
       {
         "category": "ongoing",
         "projectCategory": "Full Stack Development",
-        "date": "2024.02",
-        "thumbnailSrc": "/images/projects/project-section/introduce_thumb.jpg",
-        "title": ["introduce", "당신의 작품을 가장 바르게 검증하는 곳"],
-        "description": "설명 준비중.",
+        "date": "2024.09",
+        "thumbnailSrc": "/images/projects/project-section/gitground_thumb.jpg",
+        "title": ["gitground", "내 프로젝트를 가장 바르게 검증하는 곳"],
+        "description": "",
         "skills": "TypeScript, React.js, Next.js, Zustand(client), TailwindCSS, Nest.js, MongoDB, Redis, Prisma, Amazon ECR",
-        "link": "https://github.com/yjglab/introduce.official"
+        "link": "https://github.com/yjglab"
       }
     ]
   }

@@ -25,13 +25,13 @@ const BannerTitle: FC<Props> = ({ lng, bannerOn }) => {
           "flex-col relative z-10 duration-1000 flex "
         )}
       >
-        <AnimatedTitle align="center" size="sm">
+        <AnimatedTitle align="center" size="xs">
           {t("BannerSection.title.0")}
         </AnimatedTitle>
       </h1>
 
       <motion.h2
-        className="mt-0 text-3xl font-semibold sm:text-5xl md:mt-5 lg:text-7xl "
+        className="mt-0 text-3xl font-semibold sm:text-4xl md:mt-5 lg:text-6xl "
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{

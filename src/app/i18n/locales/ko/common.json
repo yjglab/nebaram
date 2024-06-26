@@ -8,14 +8,18 @@
   "Footer": {
     "copyright": "© 2023 Jaekyeong Yuk, All rights reserved.",
     "companyName": "nebaram",
-    "description": "사람들의 새 바람을 실현합니다",
-    "presidentNameLabel": "대표자명",
+    "description": "건강한 성장과 효율을 추구합니다.",
+    "presidentNameLabel": "개발자",
     "presidentName": "육재경",
     "email": "yjgdesign@gmail.com",
 
     "services": {
       "name": "서비스",
       "contents": [
+        {
+          "name": "gitground",
+          "link": "https://github.com/yjglab"
+        },
         {
           "name": "BlooBolt",
           "link": "https://bloobolt.com"

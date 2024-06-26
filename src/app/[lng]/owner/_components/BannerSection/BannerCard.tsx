@@ -31,7 +31,7 @@ const BannerCard = () => {
         className="relative z-10 flex w-full items-center justify-center"
       >
         <motion.div
-          className="sm:[450px] relative z-20 flex aspect-square h-[78%] w-[78%] items-center justify-center sm:w-[450px] md:h-[520px] md:w-[520px] "
+          className="relative z-20 flex aspect-square h-[60%] w-[60%] items-center justify-center sm:w-[350px] md:h-[420px] md:w-[420px] "
           variants={{
             offscreen: {
               opacity: 0,
@@ -54,7 +54,7 @@ const BannerCard = () => {
           />
         </motion.div>
         <motion.svg
-          className="absolute h-[520px] w-[520px] scale-50 sm:scale-[0.75] md:scale-100"
+          className="absolute h-[420px] w-[420px] scale-50 sm:scale-[0.75] md:scale-100"
           initial="hidden"
           animate="visible"
         >
@@ -63,7 +63,7 @@ const BannerCard = () => {
             y="3"
             rx="24"
             stroke="#818cf8"
-            className="h-[510px] w-[510px] stroke-[5] "
+            className="h-[410px] w-[410px] stroke-[5] "
             variants={cardSvgVariants}
             custom={5}
           />

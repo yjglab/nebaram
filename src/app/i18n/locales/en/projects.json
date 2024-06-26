@@ -641,14 +641,14 @@
         "category": "ongoing",
         "projectCategory": "Full Stack Development",
         "date": "2024.02",
-        "thumbnailSrc": "/images/projects/project-section/introduce_thumb.jpg",
+        "thumbnailSrc": "/images/projects/project-section/gitground_thumb.jpg",
         "title": [
-          "introduce",
-          "A space where you can most accurately verify your projects."
+          "gitground",
+          "The ground you can most accurately verify your projects."
         ],
-        "description": "Introduce is a platform for developers, designers, and the public to showcase and receive feedback on their projects.",
+        "description": "",
         "skills": "TypeScript, React.js, Next.js, Zustand(client), TailwindCSS, Nest.js, MongoDB, Redis, Prisma, Amazon ECR",
-        "link": "https://github.com/yjglab/introduce.official"
+        "link": "https://github.com/yjglab"
       }
     ]
   }
